@@ -1,0 +1,23 @@
+{
+  "name": "primary",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "clsx": "^1.1.1",
+    "fs": "^0.0.1-security",
+    "gsap": "^3.6.0",
+    "lottie-web": "^5.7.6",
+    "next": "10.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1"
+  }
+}
