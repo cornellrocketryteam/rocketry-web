@@ -216,7 +216,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   mobileButton: {
-    margin: 5
+    margin: 5,
   },
 }));
 
@@ -226,15 +226,23 @@ export default function Apply() {
   const mediaXs = useMediaQuery(theme.breakpoints.only('xs'));
   const [applicationOpen, setApplicationOpen] = useState(true);
 
+  const freshmanDueDate = '10/1';
+  const nonFreshmanDueDate = '9/8';
+
+  const freshmanLink =
+    'https://docs.google.com/forms/d/1soWOWv5oeyhswul7IttXiuI130NXR7yJXcVqgS4c8vg/edit';
+  const nonFreshmanLink =
+    'https://docs.google.com/forms/d/16i_osd_6HiKYCoNoaj464LkVqi_AGc3CAQxnC4w3bWg/edit';
+
   // ‑ no break hyphen, copy and paste
   const timelineData = [
     { date: '8/23', label: 'applications go live' },
     { date: 'tbd', label: 'information session #1' },
     { date: 'tbd', label: 'information session #2' },
-    { date: '9/8', label: 'non‑freshman applications due' },
+    { date: nonFreshmanDueDate, label: 'non‑freshman applications due' },
     { date: 'tbd', label: 'information session #3' },
     { date: 'tbd', label: 'information session #4' },
-    { date: '10/1', label: 'freshman applications due' },
+    { date: freshmanDueDate, label: 'freshman applications due' },
   ];
 
   return (
@@ -337,13 +345,15 @@ export default function Apply() {
                   variant='contained'
                   color='secondary'
                   className={classes.mobileButton}
-                  size="small"
+                  size='small'
+                  href={freshmanLink}
+                  target='_blank'
                 >
                   Freshman App
                 </Button>
                 <br />
                 <Typography align='center' variant='caption'>
-                  DUE 10/1
+                  DUE {freshmanDueDate}
                 </Typography>
               </Grid>
               <Grid item xs>
@@ -351,13 +361,15 @@ export default function Apply() {
                   variant='contained'
                   color='secondary'
                   className={classes.mobileButton}
-                  size="small"
+                  size='small'
+                  href={nonFreshmanLink}
+                  target='_blank'
                 >
                   Non-freshman App
                 </Button>
                 <br />
                 <Typography align='center' variant='caption'>
-                  DUE 9/8
+                  DUE {nonFreshmanDueDate}
                 </Typography>
               </Grid>
             </Grid>
@@ -408,23 +420,28 @@ export default function Apply() {
               alignItems='center'
             >
               <Grid item xs>
-                <img
-                  className={classes.button}
-                  src='/static/images/apply-page/freshman button.svg'
-                  alt='Freshman Application'
-                />
+                <a href={freshmanLink} target='_blank'>
+                  <img
+                    className={classes.button}
+                    src='/static/images/apply-page/freshman button.svg'
+                    alt='Freshman Application'
+                  />
+                </a>
                 <Typography align='center' variant='body2'>
-                  DUE 10/1
+                  DUE {freshmanDueDate}
                 </Typography>
               </Grid>
               <Grid item xs>
-                <img
-                  className={classes.button}
-                  src='/static/images/apply-page/nonfreshman button.svg'
-                  alt='Non-Freshman Application'
-                />
+                <a href={nonFreshmanLink} target='_blank'>
+                  <img
+                    className={classes.button}
+                    src='/static/images/apply-page/nonfreshman button.svg'
+                    alt='Non-Freshman Application'
+                  />
+                </a>
+
                 <Typography align='center' variant='body2'>
-                  DUE 9/8
+                  DUE {nonFreshmanDueDate}
                 </Typography>
               </Grid>
             </Grid>
