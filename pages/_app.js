@@ -17,7 +17,7 @@ export default function MyApp(props) {
   // google analytics
   const router = useRouter()
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url)
     }
