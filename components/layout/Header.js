@@ -177,8 +177,6 @@ export default function Header({ active }) {
                 'Team',
                 'Rockets',
                 'Sponsors',
-                'Outreach',
-                'Blog',
               ].map((text) => (
                 <Link key={text} href={`/${text.toLowerCase()}`} passHref>
                   <MenuItem>{text}</MenuItem>
