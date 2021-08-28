@@ -131,6 +131,7 @@ const useStyles = makeStyles((theme) => ({
   },
   name: {
     marginTop: 8,
+    marginBottom: 8,
     // whiteSpace: 'nowrap',
   },
   subteamLeadLabel: {
@@ -322,18 +323,23 @@ export default function Team({ members, subteamLeads, teamLeads }) {
                 >
                   {subteam.subteam.toUpperCase()}
                 </Typography>
-                <img
-                  src={subteam.dir + '\\' + subteam.fileNames[0]}
-                  alt={subteam.fileNames[0]}
-                  className={classes.subteamLeadPic}
-                />
-                <Typography
-                  variant='body1'
-                  align='center'
-                  className={classes.name}
-                >
-                  {subteam.fileNames[0].split('.')[0]}
-                </Typography>
+
+                {subteam.fileNames.map((fileName) => (
+                  <div key={fileName}>
+                    <img
+                      src={subteam.dir + '\\' + fileName}
+                      alt={fileName}
+                      className={classes.subteamLeadPic}
+                    />
+                    <Typography
+                      variant='body1'
+                      align='center'
+                      className={classes.name}
+                    >
+                      {fileName.split('.')[0]}
+                    </Typography>
+                  </div>
+                ))}
               </Grid>
             ))}
           </Grid>

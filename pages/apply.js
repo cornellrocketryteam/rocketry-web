@@ -156,7 +156,7 @@ const useStyles = makeStyles((theme) => ({
     // borderRadius: 5,
   },
   buttons: {
-    marginTop: 50,
+    marginTop: 70,
   },
   button: {
     transition: '300ms ease',
@@ -237,11 +237,11 @@ export default function Apply() {
   // ‑ no break hyphen, copy and paste
   const timelineData = [
     { date: '8/23', label: 'applications go live' },
-    { date: 'tbd', label: 'information session #1' },
-    { date: 'tbd', label: 'information session #2' },
+    { date: '9/6', label: 'information session #1 @ 6 pm zoom' },
+    { date: '9/16', label: 'information session #2 location tbd' },
     { date: nonFreshmanDueDate, label: 'non‑freshman applications due' },
-    { date: 'tbd', label: 'information session #3' },
-    { date: 'tbd', label: 'information session #4' },
+    { date: '9/23', label: 'information session #3 location tbd' },
+    { date: '9/26', label: 'information session #4 @ 4:30 pm Upson 216' },
     { date: freshmanDueDate, label: 'freshman applications due' },
   ];
 
