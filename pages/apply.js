@@ -9,6 +9,7 @@ import {
   Button,
   Container,
   Avatar,
+  IconButton,
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
 
@@ -164,6 +165,18 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('xs')]: {
       margin: '0 5px 0 5px',
     },
+  },
+  scrollDownButton: {
+    height: 100,
+    width: 100,
+    position: 'absolute',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    top: '130%',
+  },
+  scrollDownIcon: {
+    height: 80,
+    width: 80,
   },
 
   //mobile application open
@@ -384,7 +397,8 @@ export default function Apply() {
                 Applications for Fall 2020 have closed
               </Typography>
             </div>
-          ) : mediaXs ? ( //display different applicationOpen page when on mobile browsers
+          ) : mediaXs ? (
+            //display different applicationOpen page when on mobile browsers
             <div className={classes.applicationOpenMobile}>
               <Typography variant='h6' align='center'>
                 RECRUITMENT TIMELINE
@@ -445,6 +459,7 @@ export default function Apply() {
               </Grid>
             </div>
           ) : (
+            // end mobile content
             <div className={classes.applicationOpen}>
               <Typography variant='h3' align='center'>
                 RECRUITMENT TIMELINE
@@ -504,12 +519,19 @@ export default function Apply() {
                       alt='Non-Freshman Application'
                     />
                   </a>
-
                   <Typography align='center' variant='body1'>
                     DUE {nonFreshmanDueDate}
                   </Typography>
                 </Grid>
               </Grid>
+
+              <IconButton className={classes.scrollDownButton}>
+                <img
+                  className={classes.scrollDownIcon}
+                  src='/static/images/apply-page/scrolldown.svg'
+                  alt='Scroll Down'
+                />
+              </IconButton>
             </div>
           )}
         </div>
