@@ -172,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     left: '50%',
     transform: 'translateX(-50%)',
-    top: '130%',
+    top: '125%',
   },
   scrollDownIcon: {
     height: 80,
