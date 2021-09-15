@@ -172,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     left: '50%',
     transform: 'translateX(-50%)',
-    top: '125%',
+    top: '120%',
   },
   scrollDownIcon: {
     height: 80,
@@ -313,8 +313,16 @@ export default function Apply() {
         'https://cornell.zoom.us/j/93851903660?pwd=OUs4OVppVGNuVGNIbml2Z3pKNktKZz09',
     },
     { date: nonFreshmanDueDate, label: 'non‑freshman applications due' },
-    { date: '9/16', label: 'information session #2', location: 'location tbd' },
-    { date: '9/23', label: 'information session #3', location: 'location tbd' },
+    {
+      date: '9/16',
+      label: 'information session #2',
+      location: '@ 6:30 pm Upson 222',
+    },
+    {
+      date: '9/23',
+      label: 'information session #3',
+      location: '@ 6:00 pm Upson 222',
+    },
     {
       date: '9/26',
       label: 'information session #4',
