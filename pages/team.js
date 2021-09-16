@@ -10,6 +10,7 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
+import Head from '../components/layout/Head';
 
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -169,6 +170,7 @@ export default function Team({ members, subteamLeads, teamLeads }) {
 
   return (
     <div className={classes.root}>
+      <Head title='Team | Cornell Rocketry Team' />
       <Header />
       <div className={classes.blueprint}>
         <Container maxWidth='lg' disableGutters>

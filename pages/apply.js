@@ -12,6 +12,7 @@ import {
   IconButton,
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
+import Head from '../components/layout/Head';
 
 const useStyles = makeStyles((theme) => ({
   splash: {
@@ -309,8 +310,7 @@ export default function Apply() {
       date: '9/6',
       label: 'information session #1 @ zoom',
       location: '@ 6 pm zoom',
-      link:
-        'https://cornell.zoom.us/j/93851903660?pwd=OUs4OVppVGNuVGNIbml2Z3pKNktKZz09',
+      link: 'https://cornell.zoom.us/j/93851903660?pwd=OUs4OVppVGNuVGNIbml2Z3pKNktKZz09',
     },
     { date: nonFreshmanDueDate, label: 'non‑freshman applications due' },
     { date: '9/16', label: 'information session #2', location: 'location tbd' },
@@ -325,13 +325,14 @@ export default function Apply() {
 
   return (
     <div>
+      <Header />
+      <Head title='Apply | Cornell Rocketry Team' />
       <div
         className={clsx(
           classes.splash,
           applicationOpen ? classes.backgroundOpen : classes.backgroundClosed
         )}
       >
-        <Header />
         <div className={classes.hud}>
           {!applicationOpen ? (
             <img

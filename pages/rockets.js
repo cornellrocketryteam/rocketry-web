@@ -15,6 +15,7 @@ import lottie from 'lottie-web';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Head from '../components/layout/Head';
 
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -321,6 +322,7 @@ export default function Rockets() {
 
   return (
     <div className={classes.root}>
+      <Head title='Rockets | Cornell Rocketry Team' />
       <Header />
       <Stars height={600} />
 
@@ -484,11 +486,13 @@ export default function Rockets() {
 
         <Typography variant='h6'>
           Every year, over 1,700 students and faculty gather in Southern New
-          Mexico to compete in the Spaceport America Cup &mdash; 
-          <b>the world’s largest intercollegiate rocket engineering competition</b>.
-          These competitors represent the best and brightest from more than 150
-          institutions located all across the world. Cornell Rocketry Team is
-          proud to represent our team each year and compete for the cup!
+          Mexico to compete in the Spaceport America Cup &mdash;
+          <b>
+            the world’s largest intercollegiate rocket engineering competition
+          </b>
+          . These competitors represent the best and brightest from more than
+          150 institutions located all across the world. Cornell Rocketry Team
+          is proud to represent our team each year and compete for the cup!
         </Typography>
         <hr className={classes.bigLine} />
         <Grid container>
