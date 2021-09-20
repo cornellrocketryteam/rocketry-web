@@ -310,13 +310,19 @@ export default function Apply() {
       date: '9/6',
       label: 'information session #1 @ zoom',
       location: '@ 6 pm zoom',
-      link: 'https://cornell.zoom.us/j/93851903660?pwd=OUs4OVppVGNuVGNIbml2Z3pKNktKZz09',
+      link:
+        'https://cornell.zoom.us/j/93851903660?pwd=OUs4OVppVGNuVGNIbml2Z3pKNktKZz09',
     },
-    { date: nonFreshmanDueDate, label: 'non‑freshman applications due' },
+    // { date: nonFreshmanDueDate, label: 'non‑freshman applications due' },
     {
       date: '9/16',
       label: 'information session #2',
       location: '@ 6:30 pm Upson 222',
+    },
+    {
+      date: '9/21',
+      label: 'Project Team Fest',
+      location: '@ 4:00-7:00 pm Upson ELL',
     },
     {
       date: '9/23',
