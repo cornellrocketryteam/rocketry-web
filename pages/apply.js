@@ -141,6 +141,12 @@ const useStyles = makeStyles((theme) => ({
   },
   label: {
     top: '150%',
+    [theme.breakpoints.only('md')]: {
+      fontSize: 14,
+    },
+    [theme.breakpoints.only('sm')]: {
+      fontSize: 11,
+    },
   },
   buttons: {
     marginTop: 80,
