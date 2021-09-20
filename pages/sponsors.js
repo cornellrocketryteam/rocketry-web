@@ -8,6 +8,7 @@ import {
   Button,
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
+import Head from '../components/layout/Head';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -90,6 +91,7 @@ export default function Rockets() {
 
   return (
     <div className={classes.root}>
+      <Head title='Sponsors | Cornell Rocketry Team' />
       <Header />
       {/* <img
         src='/static/images/sponsors-page/stars.png'
