@@ -15,6 +15,14 @@ const useStyles = makeStyles((theme) => ({
   root: {
     overflowX: 'hidden',
   },
+  background: {
+    zIndex: -1,
+    position: 'fixed',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+    height: '100vh',
+  },
   h100: {
     height: '100vh',
     position: 'relative',
@@ -120,6 +128,10 @@ export default function Test() {
   return (
     <div className={classes.root}>
       <Header />
+      <img
+        className={classes.background}
+        src='../static/images/home-page/background.png'
+      />
       <div className={classes.animationContainer}>
         <div ref={animRef} className={classes.animation}></div>
       </div>
