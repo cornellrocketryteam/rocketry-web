@@ -109,7 +109,7 @@ export default function Home() {
   useEffect(() => {
     ScrollLottie({
       target: backupAnimRef.current,
-      path: '../static/lotties/dataIncluded.json',
+      path: '../static/lotties/dataIncludedNew.json',
       duration: 3800 * 2,
       acceleration: 0.3,
     });
@@ -139,10 +139,10 @@ export default function Home() {
   return (
     <div className={classes.root}>
       <Header />
-      <img
+      {/* <img
         className={classes.background}
         src='../static/images/home-page/background.png'
-      />
+      /> */}
       <div className={classes.animationContainer}>
         <div ref={backupAnimRef} className={classes.animation}></div>
       </div>
