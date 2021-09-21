@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 100,
   },
   spacer: {
-    paddingTop: 2000,
+    paddingTop: 1950,
   },
   rocketPartText: {
     [theme.breakpoints.down('sm')]: {
