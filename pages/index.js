@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     overflowX: 'hidden',
   },
   background: {
-    zIndex: -1,
+    zIndex: -2,
     position: 'fixed',
     left: '50%',
     top: '50%',
@@ -67,6 +67,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
   const classes = useStyles();
+
+  const backupAnimRef = useRef();
   const animRef = useRef();
 
   const statsRef = useRef();
@@ -106,6 +108,15 @@ export default function Home() {
 
   useEffect(() => {
     ScrollLottie({
+      target: backupAnimRef.current,
+      path: '../static/lotties/dataIncluded.json',
+      duration: 3800 * 2,
+      acceleration: 0.3,
+    });
+  }, [backupAnimRef]);
+
+  useEffect(() => {
+    ScrollLottie({
       target: animRef.current,
       path: '../static/lotties/highResAnim.json',
       duration: 3800 * 2,
@@ -132,6 +143,9 @@ export default function Home() {
         className={classes.background}
         src='../static/images/home-page/background.png'
       />
+      <div className={classes.animationContainer}>
+        <div ref={backupAnimRef} className={classes.animation}></div>
+      </div>
       <div className={classes.animationContainer}>
         <div ref={animRef} className={classes.animation}></div>
       </div>
