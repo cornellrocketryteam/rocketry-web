@@ -1,20 +1,22 @@
-import {
-  makeStyles,
-  Typography,
-} from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 import Header from '../components/layout/Header';
+import Head from '../components/layout/Head';
+import Footer from '../components/layout/Footer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundImage: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/static/images/404-page/large.png')",
+    backgroundImage:
+      "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/static/images/404-page/large.png')",
     [theme.breakpoints.down('md')]: {
-      backgroundImage: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/static/images/404-page/medium.png')",
+      backgroundImage:
+        "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/static/images/404-page/medium.png')",
     },
     [theme.breakpoints.only('xs')]: {
-      backgroundImage: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/static/images/404-page/small.png')",
+      backgroundImage:
+        "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/static/images/404-page/small.png')",
     },
   },
   text: {
@@ -37,15 +39,17 @@ export default function Custom404() {
 
   return (
     <div className={classes.root}>
+      <Head title='404 | Cornell Rocketry Team' />
       <Header />
-        <div className={classes.text}>
-          <Typography variant='h1' align='center' className={classes.error}>
-            404
-          </Typography>
-          <Typography variant='h3' align='center'>
-            Oops! Looks like you're lost in space!
-          </Typography>
-        </div>
+      <div className={classes.text}>
+        <Typography variant='h1' align='center' className={classes.error}>
+          404
+        </Typography>
+        <Typography variant='h3' align='center'>
+          Oops! Looks like you're lost in space!
+        </Typography>
+      </div>
+      <Footer />
     </div>
   );
 }

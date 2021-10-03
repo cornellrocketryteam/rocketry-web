@@ -77,16 +77,13 @@
 }
 
 .stars {
-  background: #000
-    url('../public/static/images/stars/stars.png') top
-    center;
+  background: #000 url('../public/static/images/stars/stars.png') top center;
   z-index: -2;
 }
 
 .twinkling {
-  background: transparent
-    url('../public/static/images/stars/twinkling.png') repeat
-    top center;
+  background: transparent url('../public/static/images/stars/twinkling.png')
+    repeat top center;
   z-index: -1;
 
   -moz-animation: move-twink-back 500s linear infinite;
@@ -105,7 +102,7 @@
   left: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 70%,
     rgba(0, 0, 0, 1) 100%
   );
 }

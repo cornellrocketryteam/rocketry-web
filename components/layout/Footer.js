@@ -19,7 +19,6 @@ const transitionTime = 0.5;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: 350,
     backgroundColor: '#0C0C0C',
     borderTop: '1px solid #646464',
     height: 320,

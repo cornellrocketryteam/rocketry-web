@@ -51,12 +51,13 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     textAlign: 'center',
+    paddingBottom: 350,
   },
   title: {
     fontSize: 100,
   },
   spacer: {
-    paddingTop: 1950,
+    paddingTop: 1900,
   },
   rocketPartText: {
     [theme.breakpoints.down('sm')]: {

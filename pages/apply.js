@@ -13,6 +13,7 @@ import {
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
+import Footer from '../components/layout/Footer';
 
 const useStyles = makeStyles((theme) => ({
   splash: {
@@ -315,7 +316,8 @@ export default function Apply() {
       date: '9/6',
       label: 'information session #1 @ zoom',
       location: '@ 6 pm zoom',
-      link: 'https://cornell.zoom.us/j/93851903660?pwd=OUs4OVppVGNuVGNIbml2Z3pKNktKZz09',
+      link:
+        'https://cornell.zoom.us/j/93851903660?pwd=OUs4OVppVGNuVGNIbml2Z3pKNktKZz09',
     },
     // { date: nonFreshmanDueDate, label: 'non‑freshman applications due' },
     {
@@ -619,42 +621,11 @@ export default function Apply() {
                   grateful to have been able to contribute.”
                 </Typography>
               </div>
-              {/* <Grid
-                container
-                justify='center'
-                spacing={3}
-                className={classes.alumni}
-              >
-                <Grid item md={12}>
-                  <Avatar
-                    className={classes.alumniPic}
-                    alt='Matt Schneider'
-                    src='/static/images/apply-page/alumni/mattschneider.png'
-                  />
-                  <Typography variant='h6' align='center'>
-                    Matt Schneider '21
-                  </Typography>
-                </Grid>
-                <Grid item md={12}>
-                  <Typography variant='body1' className={classes.alumniQuote}>
-                    “As an incoming freshman, Cornell Rocketry provided me the
-                    opportunity to work on challenging problems and be a part of
-                    something bigger than myself. Early on I focused my efforts
-                    on expressing my creative potential and honing my design
-                    instincts, but came to see an equally significant value in
-                    the friendships and mentorships gained along the way. The
-                    team gave me the chance to develop as a leader, learning in
-                    the moment from my mistakes and taking on more
-                    responsibilities along the way. Without a doubt, my time on
-                    Cornell Rocketry was THE formative experience of my time in
-                    college and I’m grateful to have been able to contribute.”
-                  </Typography>
-                </Grid>
-              </Grid> */}
             </div>
           </Grid>
         </Grid>
       </Container>
+      <Footer />
     </div>
   );
 }

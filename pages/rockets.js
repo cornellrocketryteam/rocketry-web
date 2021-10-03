@@ -16,6 +16,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Head from '../components/layout/Head';
+import Footer from '../components/layout/Footer';
 
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -551,6 +552,7 @@ export default function Rockets() {
         </Grid>
         <Box py={5}></Box>
       </Container>
+      <Footer />
     </div>
   );
 

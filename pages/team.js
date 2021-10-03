@@ -11,6 +11,7 @@ import {
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
+import Footer from '../components/layout/Footer';
 
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -413,6 +414,7 @@ export default function Team({ members, subteamLeads, teamLeads }) {
           </div>
         ))}
       </Container>
+      <Footer />
     </div>
   );
 }

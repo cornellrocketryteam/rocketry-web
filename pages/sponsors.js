@@ -9,6 +9,7 @@ import {
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
+import Footer from '../components/layout/Footer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -190,6 +191,7 @@ export default function Rockets() {
           className={classes.skyline}
         />
       </div>
+      <Footer />
     </div>
   );
 
