@@ -4,7 +4,7 @@ import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  background: {
     height: '100vh',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -39,15 +39,17 @@ export default function Custom404() {
 
   return (
     <div className={classes.root}>
-      <Head title='404 | Cornell Rocketry Team' />
-      <Header />
-      <div className={classes.text}>
-        <Typography variant='h1' align='center' className={classes.error}>
-          404
-        </Typography>
-        <Typography variant='h3' align='center'>
-          Oops! Looks like you're lost in space!
-        </Typography>
+      <div className={classes.background}>
+        <Head title='404 | Cornell Rocketry Team' />
+        <Header />
+        <div className={classes.text}>
+          <Typography variant='h1' align='center' className={classes.error}>
+            404
+          </Typography>
+          <Typography variant='h3' align='center'>
+            Oops! Looks like you're lost in space!
+          </Typography>
+        </div>
       </div>
       <Footer />
     </div>

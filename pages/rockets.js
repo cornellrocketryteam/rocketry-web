@@ -26,9 +26,9 @@ const useStyles = makeStyles((theme) => ({
   //   height: '200vh',
   // },
   content: {
-    padding: '120px 50px 0 50px',
+    padding: '120px 50px 50px 50px',
     [theme.breakpoints.only('xs')]: {
-      padding: '80px 20px 0 20px',
+      padding: '80px 20px 30px 20px',
     },
   },
   mainRocketContainer: {

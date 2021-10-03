@@ -139,6 +139,10 @@ const useStyles = makeStyles((theme) => ({
   subteamLeadLabel: {
     color: '#bbbbbb',
   },
+
+  subteamsContainer: {
+    marginBottom: 100,
+  },
 }));
 
 export default function Team({ members, subteamLeads, teamLeads }) {

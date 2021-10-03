@@ -230,7 +230,7 @@ const useStyles = makeStyles((theme) => ({
   },
   moreInfo: {
     maxWidth: '100vw',
-    paddingBottom: 100,
+    paddingBottom: 150,
   },
   infoSection: {
     margin: '50px 20px 0px 20px',

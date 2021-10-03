@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     textAlign: 'center',
-    paddingBottom: 350,
+    paddingBottom: 450,
   },
   title: {
     fontSize: 100,
