@@ -67,10 +67,6 @@ const useStyles = makeStyles((theme) => ({
     },
     color: 'lightgrey',
     transition: `all ${transitionTime}s`,
-    // '&[data-active="true"]': {
-    //   color: 'grey',
-    //   transition: `all ${transitionTime}s`,
-    // },
   },
   collapseAppBarButtons: {
     flexGrow: 1,
@@ -92,10 +88,6 @@ const useStyles = makeStyles((theme) => ({
   appBarIcon: {
     color: 'lightgrey',
     transition: `all ${transitionTime}s`,
-    // '&[data-active="true"]': {
-    //   color: 'grey',
-    //   transition: `all ${transitionTime}s`,
-    // },
   },
   appBarButton: {
     marginLeft: 15,
@@ -106,10 +98,6 @@ const useStyles = makeStyles((theme) => ({
   homeButton: {
     color: 'white',
     transition: `all ${transitionTime}s`,
-    // '&[data-active="true"]': {
-    //   color: 'white',
-    //   transition: `all ${transitionTime}s`,
-    // },
   },
 }));
 
@@ -173,11 +161,7 @@ export default function Header({ active }) {
                 <MenuItem to={'/'}>Home</MenuItem>
               </Link>
 
-              {[
-                'Team',
-                'Rockets',
-                'Sponsors',
-              ].map((text) => (
+              {['Team', 'Rockets', 'Sponsors'].map((text) => (
                 <Link key={text} href={`/${text.toLowerCase()}`} passHref>
                   <MenuItem>{text}</MenuItem>
                 </Link>

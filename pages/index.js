@@ -10,6 +10,7 @@ import {
   Container,
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -131,6 +132,7 @@ export default function Home() {
           </div>
         </Container>
       </div>
+      <Footer />
     </div>
   );
 
