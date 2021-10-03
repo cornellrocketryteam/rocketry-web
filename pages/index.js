@@ -16,9 +16,21 @@ const useStyles = makeStyles((theme) => ({
   root: {
     overflowX: 'hidden',
   },
+  background: {
+    zIndex: -2,
+    position: 'fixed',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+    height: '100vh',
+  },
   h100: {
     height: '100vh',
     position: 'relative',
+  },
+  relative: {
+    position: 'relative',
+    overflowY: 'hidden',
   },
   center: {
     position: 'absolute',
@@ -43,71 +55,98 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: 100,
   },
-  statistics: {
-    opacity: 0,
+  spacer: {
+    paddingTop: 1950,
+  },
+  rocketPartText: {
+    [theme.breakpoints.down('sm')]: {
+      textShadow:
+        '0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;',
+    },
   },
 }));
 
 export default function Home() {
-  /*
-  Cornell Rocketry’s mission is to design, assemble, and launch high-powered rockets. 
-  Each year the team dedicates itself to pushing their limits even further by taking on different challenges. 
-  The team also values volunteering in the local area to help kids gain a passion for aerospace and science.
-  */
-
   const classes = useStyles();
+
+  const backupAnimRef = useRef();
   const animRef = useRef();
-  const statsRefContainer = useRef();
+
   const statsRef = useRef();
+  const whoRef = useRef();
+
+  const drillRef = useRef();
+  const blimsRef = useRef();
+  const avRef = useRef();
+  const motorRef = useRef();
+
+  const rocketParts = [
+    {
+      ref: drillRef,
+      name: 'Vertical Drill',
+      description:
+        'The rocket payload is a mechanism that ejects from the airframe, lands on the ground, and deploys an auger drill that actuates and collects a soil sample for analysis.',
+    },
+    {
+      ref: blimsRef,
+      name: 'BLiMS',
+      description:
+        'The Break Line Manipulation System autonomously pulls the parachute’s brake lines, steering the descending rocket to a predetermined GPS coordinate.',
+    },
+    {
+      ref: avRef,
+      name: 'AV Bay',
+      description:
+        'The avionics bay houses the main electrical boards, such as the Central Flight Computer, and flight batteries of the launch vehicle.',
+    },
+    {
+      ref: motorRef,
+      name: 'Rocket Motor',
+      description:
+        'Constructed from aluminum and steel, our ammonium-perchlorate solid motor is engineered to lift the launch vehicle to the target altitude, generating over 1,000 pounds of thrust at take-off.',
+    },
+  ];
+
+  useEffect(() => {
+    ScrollLottie({
+      target: backupAnimRef.current,
+      path: '../static/lotties/dataIncludedNew.json',
+      duration: 3800 * 2,
+      acceleration: 0.3,
+    });
+  }, [backupAnimRef]);
 
   useEffect(() => {
     ScrollLottie({
       target: animRef.current,
-      path: '../static/lotties/homePage.json',
-      duration: 2000,
-      acceleration: 0.5,
+      path: '../static/lotties/highResAnim.json',
+      duration: 3800 * 2,
+      acceleration: 0.3,
     });
   }, [animRef]);
 
   useEffect(() => {
-    let timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: statsRefContainer.current,
-        pin: true,
-        scrub: true,
-        start: `top ${
-          50 - (statsRef.current.clientHeight / window.innerHeight) * 50
-        }%`,
-        end: '+=800',
-        // markers: true, //debug markers
-      },
-    });
+    const statsTimeline = Timeline(statsRef, 800);
+    const whoTimeline = Timeline(whoRef, 800);
+  }, [statsRef, whoRef]);
 
-    timeline
-      .addLabel('start')
-      .fromTo(
-        statsRef.current,
-        { opacity: 0, yPercent: 5 },
-        { duration: 2, opacity: 1, yPercent: 0 },
-        '-=1'
-      )
-      .addLabel('middle')
-      .to(
-        statsRef.current,
-        {
-          duration: 2,
-          opacity: 0,
-          yPercent: -5,
-          display: 'none',
-        },
-        '+=1'
-      )
-      .addLabel('end');
-  }, [statsRefContainer, statsRef]);
+  useEffect(() => {
+    let drillTimeline = Timeline(drillRef, 600);
+    let blimsTimeline = Timeline(blimsRef, 500);
+    let avTimeline = Timeline(avRef, 500);
+    let motorTimeline = Timeline(motorRef, 550);
+  }, [drillRef, blimsRef, avRef, motorRef]);
 
   return (
     <div className={classes.root}>
       <Header />
+      {/* <img
+        className={classes.background}
+        src='../static/images/home-page/background.png'
+      /> */}
+      <div className={classes.animationContainer}>
+        <div ref={backupAnimRef} className={classes.animation}></div>
+      </div>
       <div className={classes.animationContainer}>
         <div ref={animRef} className={classes.animation}></div>
       </div>
@@ -118,8 +157,8 @@ export default function Home() {
           </Typography>
         </div>
 
-        <Container ref={statsRefContainer} className={classes.h100}>
-          <div ref={statsRef} className={classes.statistics}>
+        <Container className={classes.relative}>
+          <div ref={statsRef}>
             <Box mb={12}>
               <Typography variant='h2'>At a Glance</Typography>
             </Box>
@@ -131,10 +170,51 @@ export default function Home() {
             </Grid>
           </div>
         </Container>
+
+        <Container className={classes.relative} maxWidth='md'>
+          <div ref={whoRef}>
+            <Box mb={6}>
+              <Typography variant='h2'>Who We Are</Typography>
+            </Box>
+            <Typography variant='h5'>
+              Cornell Rocketry is an engineering project team dedicated to
+              designing, assembling, and launching high-powered rockets to
+              compete in the annual Spaceport America Cup.
+            </Typography>
+          </div>
+        </Container>
+
+        <Box className={classes.spacer} />
+
+        {rocketParts.map(({ ref, name, description }) => (
+          <RocketPart
+            reference={ref}
+            name={name}
+            description={description}
+            key={name}
+          />
+        ))}
       </div>
       <Footer />
     </div>
   );
+
+  function RocketPart({ reference, name, description }) {
+    return (
+      <Container className={classes.relative}>
+        <div ref={reference}>
+          <Grid container className={classes.rocketPartText}>
+            <Grid item xs={8} sm={6} md={4}>
+              <Box mb={6}>
+                <Typography variant='h4'>{name}</Typography>
+              </Box>
+              <Typography variant='h5'>{description}</Typography>
+            </Grid>
+          </Grid>
+        </div>
+      </Container>
+    );
+  }
 
   function StatsNumber({ number, label }) {
     return (
@@ -145,5 +225,47 @@ export default function Home() {
         <Typography variant='h5'>{label}</Typography>
       </Grid>
     );
+  }
+
+  function Timeline(ref, duration) {
+    const timeline = gsap.timeline({
+      scrollTrigger: ScrollTrigger(ref, duration),
+    });
+
+    timeline
+      .addLabel('start')
+      .fromTo(
+        ref.current,
+        { opacity: 0, yPercent: 5 },
+        { duration: 1, opacity: 1, yPercent: 0 },
+        '-=1' //increases the pause duration at 100% opacity
+      )
+      .to(
+        ref.current,
+        {
+          duration: 1,
+          opacity: 0,
+          yPercent: -5,
+          display: 'none',
+        },
+        '+=1' //increases the pause duration at 100% opacity
+      )
+      .addLabel('end');
+
+    return timeline;
+  }
+
+  function ScrollTrigger(ref, duration) {
+    const scrollTrigger = {
+      trigger: ref.current,
+      pin: true,
+      scrub: true,
+      start: `top ${
+        50 - (ref.current.clientHeight / window.innerHeight) * 50
+      }%`, // makes the content appear in the center of the screen
+      end: '+=' + duration,
+      // markers: true //debug markers
+    };
+    return scrollTrigger;
   }
 }

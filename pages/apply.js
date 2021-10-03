@@ -284,14 +284,13 @@ const useStyles = makeStyles((theme) => ({
   },
   alumniPic: {
     marginTop: 20,
+    marginBottom: 20,
     margin: 'auto',
     height: 200,
     width: 200,
   },
   alumniQuote: {
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
+    marginTop: 20,
   },
 }));
 
@@ -316,8 +315,7 @@ export default function Apply() {
       date: '9/6',
       label: 'information session #1 @ zoom',
       location: '@ 6 pm zoom',
-      link:
-        'https://cornell.zoom.us/j/93851903660?pwd=OUs4OVppVGNuVGNIbml2Z3pKNktKZz09',
+      link: 'https://cornell.zoom.us/j/93851903660?pwd=OUs4OVppVGNuVGNIbml2Z3pKNktKZz09',
     },
     // { date: nonFreshmanDueDate, label: 'non‑freshman applications due' },
     {
@@ -598,13 +596,36 @@ export default function Apply() {
               <Typography variant='h3' className={classes.infoHeading}>
                 Words from our Alumni.
               </Typography>
-              <Grid
+              <div>
+                <Avatar
+                  className={classes.alumniPic}
+                  alt='Matt Schneider'
+                  src='/static/images/apply-page/alumni/mattschneider.png'
+                />
+                <Typography variant='h6' align='center'>
+                  Matt Schneider '21
+                </Typography>
+                <Typography variant='body1' className={classes.alumniQuote}>
+                  “As an incoming freshman, Cornell Rocketry provided me the
+                  opportunity to work on challenging problems and be a part of
+                  something bigger than myself. Early on I focused my efforts on
+                  expressing my creative potential and honing my design
+                  instincts, but came to see an equally significant value in the
+                  friendships and mentorships gained along the way. The team
+                  gave me the chance to develop as a leader, learning in the
+                  moment from my mistakes and taking on more responsibilities
+                  along the way. Without a doubt, my time on Cornell Rocketry
+                  was THE formative experience of my time in college and I’m
+                  grateful to have been able to contribute.”
+                </Typography>
+              </div>
+              {/* <Grid
                 container
                 justify='center'
                 spacing={3}
                 className={classes.alumni}
               >
-                <Grid item md={4}>
+                <Grid item md={12}>
                   <Avatar
                     className={classes.alumniPic}
                     alt='Matt Schneider'
@@ -614,34 +635,22 @@ export default function Apply() {
                     Matt Schneider '21
                   </Typography>
                 </Grid>
-                <Grid item md={8}>
+                <Grid item md={12}>
                   <Typography variant='body1' className={classes.alumniQuote}>
-                    ...
+                    “As an incoming freshman, Cornell Rocketry provided me the
+                    opportunity to work on challenging problems and be a part of
+                    something bigger than myself. Early on I focused my efforts
+                    on expressing my creative potential and honing my design
+                    instincts, but came to see an equally significant value in
+                    the friendships and mentorships gained along the way. The
+                    team gave me the chance to develop as a leader, learning in
+                    the moment from my mistakes and taking on more
+                    responsibilities along the way. Without a doubt, my time on
+                    Cornell Rocketry was THE formative experience of my time in
+                    college and I’m grateful to have been able to contribute.”
                   </Typography>
                 </Grid>
-              </Grid>
-              <Grid
-                container
-                justify='center'
-                spacing={3}
-                className={classes.alumni}
-              >
-                <Grid item md={4}>
-                  <Avatar
-                    className={classes.alumniPic}
-                    alt='Sam DiPietro'
-                    src='/static/images/apply-page/alumni/samdipietro.png'
-                  />
-                  <Typography variant='h6' align='center'>
-                    Sam DiPietro '21
-                  </Typography>
-                </Grid>
-                <Grid item md={8}>
-                  <Typography variant='body1' className={classes.alumniQuote}>
-                    ...
-                  </Typography>
-                </Grid>
-              </Grid>
+              </Grid> */}
             </div>
           </Grid>
         </Grid>
