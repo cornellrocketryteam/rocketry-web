@@ -19,14 +19,17 @@ const transitionTime = 0.5;
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    marginTop: 350,
     backgroundColor: '#0C0C0C',
     borderTop: '1px solid #646464',
-    height: 300,
+    height: 320,
+    overflow: 'hidden',
   },
   fullHeight: {
     height: '100%',
   },
   logo: {
+    display: 'block',
     width: 100,
     margin: 'auto',
   },
@@ -51,6 +54,13 @@ const useStyles = makeStyles((theme) => ({
     color: 'lightgrey',
     transform: 'scale(1.5)',
   },
+  copyright: {
+    // padding: 10,
+    textAlign: 'center',
+    display: 'block',
+    color: 'lightgrey',
+    fontSize: 16,
+  },
 }));
 
 export default function Footer() {
@@ -70,55 +80,75 @@ export default function Footer() {
             <img src='/static/crt.png' alt='logo' className={classes.logo} />
           </Grid>
           <Grid item xs>
-            <Typography variant='h6' className={classes.heading}>
-              Site Map
-            </Typography>
-            <Link href='/' passHref>
-              <Typography variant='body' className={classes.link}>
-                Home
+            <CenterLeftAlign>
+              <Typography variant='h6' className={classes.heading}>
+                Site Map
               </Typography>
-            </Link>
-            {['Team', 'Rockets', 'Sponsors', 'Apply'].map((text) => (
-              <>
+              <Link href='/' passHref>
+                <Typography variant='body' className={classes.link}>
+                  Home
+                </Typography>
+              </Link>
+              {['Team', 'Rockets', 'Sponsors', 'Apply'].map((text) => (
                 <Link href={`/${text.toLowerCase()}`} key={text} passHref>
                   <Typography variant='body' className={classes.link}>
                     {text}
                   </Typography>
                 </Link>
-              </>
-            ))}
-            <a
-              href='https://cornellrocketryadmin.com/php/AdminMain.php'
-              target='_blank'
-            >
-              <Typography variant='body' className={classes.link}>
-                Login
-              </Typography>
-            </a>
+              ))}
+              <a
+                href='https://cornellrocketryadmin.com/php/AdminMain.php'
+                target='_blank'
+              >
+                <Typography variant='body' className={classes.link}>
+                  Login
+                </Typography>
+              </a>
+            </CenterLeftAlign>
           </Grid>
           <Grid item xs>
-            <Typography variant='h6' className={classes.heading} align='center'>
-              Social Media
-            </Typography>
-            <div className={classes.socialMediaIcons}>
-              <SocialMediaButton
-                link='https://www.facebook.com/CornellRocketry/'
-                icon={<FacebookIcon />}
-              />
-              <SocialMediaButton
-                link='https://www.instagram.com/cornellrocketry/?hl=en/'
-                icon={<InstagramIcon />}
-              />
-              <SocialMediaButton
-                link='https://www.youtube.com/channel/UCOIp04IIwcz8YvBcgrMYOhg'
-                icon={<YouTubeIcon />}
-              />
-            </div>
+            <CenterLeftAlign>
+              <Typography
+                variant='h6'
+                className={classes.heading}
+                align='center'
+              >
+                Social Media
+              </Typography>
+              <div className={classes.socialMediaIcons}>
+                <SocialMediaButton
+                  link='https://www.facebook.com/CornellRocketry/'
+                  icon={<FacebookIcon />}
+                />
+                <SocialMediaButton
+                  link='https://www.instagram.com/cornellrocketry/?hl=en/'
+                  icon={<InstagramIcon />}
+                />
+                <SocialMediaButton
+                  link='https://www.youtube.com/channel/UCOIp04IIwcz8YvBcgrMYOhg'
+                  icon={<YouTubeIcon />}
+                />
+              </div>
+            </CenterLeftAlign>
           </Grid>
         </Grid>
+        <Typography variant='body' className={classes.copyright}>
+          &copy; {new Date().getFullYear()} Cornell Rocketry Team
+        </Typography>
       </Container>
     </div>
   );
+
+  function CenterLeftAlign(children) {
+    return (
+      <div style={{ textAlign: 'center' }}>
+        <div
+          style={{ display: 'inline-block', textAlign: 'left' }}
+          {...children}
+        ></div>
+      </div>
+    );
+  }
 
   function SocialMediaButton({ link, icon }) {
     return (
