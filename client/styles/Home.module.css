@@ -1,0 +1,77 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* body {
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  overflow-x: hidden;
+} */
+
+#animation {
+  height: 100vh;
+  object-fit: contain;
+  /* /* position: absolute;
+  left: 50%;
+  transform: translate(-50%); */
+  /* z-index: -1; */
+  /* opacity: 0;  */
+}
+
+.content {
+  top: 0%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.h100 {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+}
+
+.center {
+  position: absolute;
+  left: 50%; 
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  width: 100%;
+  text-align: center;
+} 
+
+.intro h1 {
+  font-size: 100px;
+  width: 90vw;
+}
+
+.statistics {
+  margin-top: 200px;
+  position: relative;
+  left: 50%; 
+  transform: translate(-50%); 
+}
+
+.statistics h2 {
+  font-size: 80px;
+}
+
+.statistics h3 {
+  padding-top: 10px;
+  font-size: 25px;
+}
+
+.statsNum {
+  padding-bottom: 10px;
+}

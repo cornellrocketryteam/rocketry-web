@@ -1,0 +1,51 @@
+import {
+  makeStyles,
+  Typography,
+} from '@material-ui/core';
+import Header from '../components/layout/Header';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    height: '100vh',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundImage: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/static/images/404-page/large.png')",
+    [theme.breakpoints.down('md')]: {
+      backgroundImage: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/static/images/404-page/medium.png')",
+    },
+    [theme.breakpoints.only('xs')]: {
+      backgroundImage: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/static/images/404-page/small.png')",
+    },
+  },
+  text: {
+    width: '90%',
+    position: 'absolute',
+    top: '45%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+  },
+  error: {
+    fontSize: 120,
+    [theme.breakpoints.up('lg')]: {
+      fontSize: 200,
+    },
+  },
+}));
+
+export default function Custom404() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Header />
+        <div className={classes.text}>
+          <Typography variant='h1' align='center' className={classes.error}>
+            404
+          </Typography>
+          <Typography variant='h3' align='center'>
+            Oops! Looks like you're lost in space!
+          </Typography>
+        </div>
+    </div>
+  );
+}

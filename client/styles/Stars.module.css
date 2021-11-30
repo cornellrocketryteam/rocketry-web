@@ -1,0 +1,111 @@
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-webkit-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-moz-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-ms-keyframes move-clouds-back {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+.stars,
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200vh;
+  display: block;
+}
+
+.stars {
+  background: #000
+    url('../public/static/images/stars/stars.png') top
+    center;
+  z-index: -2;
+}
+
+.twinkling {
+  background: transparent
+    url('../public/static/images/stars/twinkling.png') repeat
+    top center;
+  z-index: -1;
+
+  -moz-animation: move-twink-back 500s linear infinite;
+  -ms-animation: move-twink-back 500s linear infinite;
+  -o-animation: move-twink-back 500s linear infinite;
+  -webkit-animation: move-twink-back 500s linear infinite;
+  animation: move-twink-back 500s linear infinite;
+}
+
+.twinkling::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
