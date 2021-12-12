@@ -416,7 +416,7 @@ export default function Apply() {
           {!applicationOpen ? (
             <div className={classes.applicationClosed}>
               <Typography variant='h3' align='center'>
-                Applications for Fall 2020 have closed
+                Applications for Fall 2021 have closed
               </Typography>
             </div>
           ) : mediaXs ? (
