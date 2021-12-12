@@ -300,7 +300,7 @@ export default function Apply() {
   const classes = useStyles();
   const theme = useTheme();
   const mediaXs = useMediaQuery(theme.breakpoints.only('xs'));
-  const [applicationOpen, setApplicationOpen] = useState(true);
+  const [applicationOpen, setApplicationOpen] = useState(false);
 
   const freshmanDueDate = '10/1';
   const nonFreshmanDueDate = '9/8';
