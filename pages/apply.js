@@ -117,14 +117,14 @@ const useStyles = makeStyles((theme) => ({
       top: '50%',
       transform: 'translateY(-50%)',
       backgroundColor: 'white',
-      width: '5vw',
+      width: '30vw',
       minWidth: 100,
       height: 3,
     },
   },
   leftLine: {
     '&:before': {
-      left: 'min(calc(15px - 5vw), calc(15px - 100px))', //width of the circle indicator - width of line
+      left: 'min(calc(15px - 30vw), calc(15px - 100px))', //width of the circle indicator - width of line
       content: "''",
       display: 'block',
       position: 'absolute',
@@ -132,7 +132,7 @@ const useStyles = makeStyles((theme) => ({
       top: '50%',
       transform: 'translateY(-50%)',
       backgroundColor: 'white',
-      width: '5vw',
+      width: '30vw',
       minWidth: 100,
       height: 3,
     },
@@ -154,6 +154,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('xl')]: {
       padding: '0 60px 0 60px',
     },
+    justifyContent: 'space-evenly',
+  },
+  buttonContainer: {
+    maxWidth: 500,
   },
   button: {
     transition: '300ms ease',
@@ -300,48 +304,21 @@ export default function Apply() {
   const classes = useStyles();
   const theme = useTheme();
   const mediaXs = useMediaQuery(theme.breakpoints.only('xs'));
-  const [applicationOpen, setApplicationOpen] = useState(false);
+  const [applicationOpen, setApplicationOpen] = useState(true);
 
-  const freshmanDueDate = '10/1';
+  const freshmanDueDate = '2/1';
   const nonFreshmanDueDate = '9/8';
 
   const freshmanLink =
-    'https://docs.google.com/forms/d/1soWOWv5oeyhswul7IttXiuI130NXR7yJXcVqgS4c8vg/edit';
+    'https://docs.google.com/forms/d/e/1FAIpQLSdediI0_HUZYIwZVUqbQ0jDqxK7x_4fXOnHllC4ZDb-uDA07A/viewform?usp=sf_link';
   const nonFreshmanLink =
     'https://docs.google.com/forms/d/16i_osd_6HiKYCoNoaj464LkVqi_AGc3CAQxnC4w3bWg/edit';
 
   // ‑ no break hyphen, copy and paste
   const timelineData = [
-    { date: '8/23', label: 'applications go live' },
-    {
-      date: '9/6',
-      label: 'information session #1 @ zoom',
-      location: '@ 6 pm zoom',
-      link:
-        'https://cornell.zoom.us/j/93851903660?pwd=OUs4OVppVGNuVGNIbml2Z3pKNktKZz09',
-    },
-    // { date: nonFreshmanDueDate, label: 'non‑freshman applications due' },
-    {
-      date: '9/16',
-      label: 'information session #2',
-      location: '@ 6:30 pm Upson 222',
-    },
-    {
-      date: '9/21',
-      label: 'Project Team Fest',
-      location: '@ 4:00-7:00 pm Upson ELL',
-    },
-    {
-      date: '9/23',
-      label: 'information session #3',
-      location: '@ 6:00 pm Upson 222',
-    },
-    {
-      date: '9/26',
-      label: 'information session #4',
-      location: '@ 4:30 pm Upson 216',
-    },
-    { date: freshmanDueDate, label: 'freshman applications due' },
+    { date: '1/26', label: 'business applications go live' },
+
+    { date: freshmanDueDate, label: 'applications due' },
   ];
 
   return (
@@ -462,7 +439,7 @@ export default function Apply() {
                     DUE {freshmanDueDate}
                   </Typography>
                 </Grid>
-                <Grid item xs>
+                {/* <Grid item xs>
                   <Button
                     variant='contained'
                     color='secondary'
@@ -477,7 +454,7 @@ export default function Apply() {
                   <Typography align='center' variant='caption'>
                     DUE {nonFreshmanDueDate}
                   </Typography>
-                </Grid>
+                </Grid> */}
               </Grid>
             </div>
           ) : (
@@ -518,10 +495,10 @@ export default function Apply() {
                 className={classes.buttons}
                 container
                 direction='row'
-                justifyContent='space-evenly'
+                // justifyContent='space-evenly'
                 alignItems='center'
               >
-                <Grid item xs>
+                <Grid item xs className={classes.buttonContainer}>
                   <a href={freshmanLink} target='_blank'>
                     <img
                       className={classes.button}
@@ -533,7 +510,7 @@ export default function Apply() {
                     DUE {freshmanDueDate}
                   </Typography>
                 </Grid>
-                <Grid item xs>
+                {/* <Grid item xs>
                   <a href={nonFreshmanLink} target='_blank'>
                     <img
                       className={classes.button}
@@ -544,7 +521,7 @@ export default function Apply() {
                   <Typography align='center' variant='body1'>
                     DUE {nonFreshmanDueDate}
                   </Typography>
-                </Grid>
+                </Grid> */}
               </Grid>
 
               <IconButton className={classes.scrollDownButton}>
