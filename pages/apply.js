@@ -117,14 +117,14 @@ const useStyles = makeStyles((theme) => ({
       top: '50%',
       transform: 'translateY(-50%)',
       backgroundColor: 'white',
-      width: '30vw',
+      width: '20vw',
       minWidth: 100,
       height: 3,
     },
   },
   leftLine: {
     '&:before': {
-      left: 'min(calc(15px - 30vw), calc(15px - 100px))', //width of the circle indicator - width of line
+      left: 'min(calc(15px - 20vw), calc(15px - 100px))', //width of the circle indicator - width of line
       content: "''",
       display: 'block',
       position: 'absolute',
@@ -132,7 +132,7 @@ const useStyles = makeStyles((theme) => ({
       top: '50%',
       transform: 'translateY(-50%)',
       backgroundColor: 'white',
-      width: '30vw',
+      width: '20vw',
       minWidth: 100,
       height: 3,
     },
@@ -317,7 +317,12 @@ export default function Apply() {
   // ‑ no break hyphen, copy and paste
   const timelineData = [
     { date: '1/26', label: 'business applications go live' },
-
+    {
+      date: '1/31',
+      label: 'information session @ zoom',
+      location: '@ 5 pm zoom',
+      link: 'https://cornell.zoom.us/j/98245271135?pwd=dHNhZDVoTVc4aUgwOFRzY1ZRTEhUQT09',
+    },
     { date: freshmanDueDate, label: 'applications due' },
   ];
 
