@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     top: '45%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
+    textAlign: "center",
   },
   countdown: {
     fontSize: 70,
@@ -18,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 150,
     },
   },
+  logo: {
+    paddingTop: 20,
+    height: 100
+  }
 }));
 
 
@@ -28,16 +33,19 @@ const calculateTimeUntil = (from, to) => {
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const elapsed = distance < 0;
 
-  return { days, hours, minutes, seconds };
+  return { elapsed, days, hours, minutes, seconds };
 }
 
-const launch = new Date("2022-03-19T13:00:00.000Z") // 2022-03-19 9:00am EDT
+// const launch = new Date("2022-03-19T13:00:00.000Z") // 2022-03-19 9:00am EDT
+const launch = new Date("2022-01-01T13:00:00.000Z") // 2022-03-19 9:00am EDT
+
 
 export default function Countdown() {
   const classes = useStyles();
 
-  const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [countdown, setCountdown] = useState({ elapsed: true, days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
     const timer = setInterval(() => setCountdown(calculateTimeUntil(new Date(), launch)), 1000);
@@ -47,14 +55,21 @@ export default function Countdown() {
   return (
     <div className={classes.root}>
       <Head title='Countdown' />
-      <Header hideMenu />
       <div className={classes.text}>
         <Typography variant='h1' align='center' className={classes.countdown}>
-          T&mdash;{countdown.days}d {countdown.hours}h {countdown.minutes}m {countdown.seconds}s
+          {countdown.elapsed ?
+            <>Cornell Rocketry Team</> :
+            <>T-{countdown.days}d {countdown.hours}h {countdown.minutes}m {countdown.seconds}s</>
+          }
         </Typography>
         <Typography variant='h3' align='center'>
-          Test Launch
+          {!countdown.elapsed && "Test Launch"}
         </Typography>
+        <img
+          src='/static/crt.png'
+          alt='logo'
+          className={classes.logo}
+        />
       </div>
     </div>
   );
