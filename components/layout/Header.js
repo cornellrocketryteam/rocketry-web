@@ -101,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header({ active }) {
+export default function Header({ active, hideMenu }) {
   const classes = useStyles();
 
   const [scrolled, setScrolled] = useState(false);
@@ -137,7 +137,7 @@ export default function Header({ active }) {
       <AppBar
         className={classes.appBar}
         data-active={active ? 'true' : scrolled.toString()}
-        //position={active ? "static" : "fixed"}
+      //position={active ? "static" : "fixed"}
       >
         <Toolbar>
           <div className={classes.collapseAppBarButtons}>
@@ -152,7 +152,7 @@ export default function Header({ active }) {
                 <MenuIcon />
               </IconButton>
             </Box>
-            <Menu
+            {!hideMenu && <Menu
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
               onClose={handleClose}
@@ -172,7 +172,7 @@ export default function Header({ active }) {
               <Link href={'/apply'} passHref>
                 <MenuItem>Apply</MenuItem>
               </Link>
-            </Menu>
+            </Menu>}
           </div>
 
           <div
@@ -189,59 +189,63 @@ export default function Header({ active }) {
               </IconButton>
             </Link>
 
-            <Link href='/' passHref>
-              <Button
-                className={`${classes.homeButton} ${classes.appBarButton}`}
-                data-active={active ? 'true' : scrolled.toString()}
-              >
-                Home
-              </Button>
-            </Link>
-            {['Team', 'Rockets', 'Sponsors'].map((text) => (
-              <Link href={`/${text.toLowerCase()}`} key={text} passHref>
-                <Button color='inherit' className={classes.appBarButton}>
-                  {text}
+            {!hideMenu && <>
+              <Link href='/' passHref>
+                <Button
+                  className={`${classes.homeButton} ${classes.appBarButton}`}
+                  data-active={active ? 'true' : scrolled.toString()}
+                >
+                  Home
                 </Button>
               </Link>
-            ))}
+              {['Team', 'Rockets', 'Sponsors'].map((text) => (
+                <Link href={`/${text.toLowerCase()}`} key={text} passHref>
+                  <Button color='inherit' className={classes.appBarButton}>
+                    {text}
+                  </Button>
+                </Link>
+              ))}
+            </>}
           </div>
 
-          <div>
-            <SocialMediaButton
-              link='https://www.facebook.com/CornellRocketry/'
-              icon={<FacebookIcon />}
-            />
-            <SocialMediaButton
-              link='https://www.instagram.com/cornellrocketry/?hl=en/'
-              icon={<InstagramIcon />}
-            />
-            <SocialMediaButton
-              link='https://www.youtube.com/channel/UCOIp04IIwcz8YvBcgrMYOhg'
-              icon={<YouTubeIcon />}
-            />
-          </div>
+          {!hideMenu && <>
+            <div>
+              <SocialMediaButton
+                link='https://www.facebook.com/CornellRocketry/'
+                icon={<FacebookIcon />}
+              />
+              <SocialMediaButton
+                link='https://www.instagram.com/cornellrocketry/?hl=en/'
+                icon={<InstagramIcon />}
+              />
+              <SocialMediaButton
+                link='https://www.youtube.com/channel/UCOIp04IIwcz8YvBcgrMYOhg'
+                icon={<YouTubeIcon />}
+              />
+            </div>
 
-          <div
-            className={classes.appBarButtons}
-            data-active={active ? 'true' : scrolled.toString()}
-          >
-            <Button
-              color='inherit'
-              className={classes.appBarButton}
-              href='mailto:cornellrocketry@gmail.com'
+            <div
+              className={classes.appBarButtons}
+              data-active={active ? 'true' : scrolled.toString()}
             >
-              Contact
-            </Button>
-            <Link href='/apply' passHref>
               <Button
-                variant='contained'
-                color='secondary'
+                color='inherit'
                 className={classes.appBarButton}
+                href='mailto:cornellrocketry@gmail.com'
               >
-                Apply
+                Contact
               </Button>
-            </Link>
-          </div>
+              <Link href='/apply' passHref>
+                <Button
+                  variant='contained'
+                  color='secondary'
+                  className={classes.appBarButton}
+                >
+                  Apply
+                </Button>
+              </Link>
+            </div>
+          </>}
         </Toolbar>
       </AppBar>
     </div>
