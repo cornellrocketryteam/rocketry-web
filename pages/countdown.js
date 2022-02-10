@@ -39,7 +39,7 @@ const calculateTimeUntil = (from, to) => {
 }
 
 const launch = new Date("2022-03-19T13:00:00.000Z") // 2022-03-19 9:00am EDT
-
+const reloadTime = 1000 /*ms*/ * 60 /*sec*/ * 15 /*min*/
 
 export default function Countdown() {
   const classes = useStyles();
@@ -47,8 +47,10 @@ export default function Countdown() {
   const [countdown, setCountdown] = useState({ elapsed: true, days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const timer = setInterval(() => setCountdown(calculateTimeUntil(new Date(), launch)), 1000);
-    return () => clearInterval(timer);
+    // assume monitor refresh rate is 120Hz: (120Hz)
+    const timer = setInterval(() => setCountdown(calculateTimeUntil(new Date(), launch)), 20);
+    const pageReloadTimer = setInterval(() => document.location.reload(), reloadTime)
+    return () => { clearInterval(timer); clearInterval(pageReloadTimer) };
   }, [setCountdown])
 
   return (
