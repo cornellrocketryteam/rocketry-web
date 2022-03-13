@@ -38,7 +38,7 @@ const calculateTimeUntil = (from, to) => {
   return { elapsed, days, hours, minutes, seconds };
 }
 
-const launch = new Date("2022-03-19T13:00:00.000Z") // 2022-03-19 9:00am EDT
+const launch = new Date("2022-03-27T13:00:00.000Z") // 2022-03-19 9:00am EDT
 const reloadTime = 1000 /*ms*/ * 60 /*sec*/ * 15 /*min*/
 
 export default function Countdown() {
@@ -64,7 +64,7 @@ export default function Countdown() {
           }
         </Typography>
         <Typography variant='h3' align='center'>
-          {!countdown.elapsed && "Test Launch"}
+          {!countdown.elapsed && "Dress Reharsal"}
         </Typography>
         <img
           src='/static/crt.png'
