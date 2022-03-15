@@ -31,8 +31,17 @@ const useStyles = makeStyles((theme) => ({
     color: "black"
   },
   madnessList: {
-    fontSize: "3em",
     columnCount: 2,
+    marginTop: 15,
+    "& :nth-child(1)": {
+      listStyle: "\"\uD83E\uDD47 \"",
+    },
+    "& :nth-child(2)": {
+      listStyle: "\"\uD83E\uDD48 \"",
+    },
+    "& :nth-child(3)": {
+      listStyle: "\"\uD83E\uDD49 \"",
+    }
   },
   countdown: {
     fontSize: 70,
@@ -59,6 +68,12 @@ const calculateTimeUntil = (from, to) => {
   return { elapsed, days, hours, minutes, seconds };
 }
 
+const decodeEntities = (inputStr) => {
+  var textarea = document.createElement("textarea");
+  textarea.innerHTML = inputStr;
+  return textarea.value;
+}
+
 const launch = new Date("2022-03-27T13:00:00.000Z") // 2022-03-19 9:00am EDT
 const reloadTime = 1000 /*ms*/ * 60 /*sec*/ * 15 /*min*/
 
@@ -67,6 +82,7 @@ export default function Countdown() {
 
   const [countdown, setCountdown] = useState({ elapsed: true, days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [madnessData, setMadnessData] = useState(null);
+  const [madnessUpdateTime, setMadnessUpdateTime] = useState(new Date());
 
   useEffect(() => {
     // assume monitor refresh rate is 120Hz: (120Hz)
@@ -83,7 +99,8 @@ export default function Countdown() {
     const data = await response.json()
     console.log(data)
     setMadnessData(data)
-  }, [setMadnessData])
+    setMadnessUpdateTime(new Date())
+  }, [setMadnessData, setMadnessUpdateTime])
 
   return (
     <div className={classes.root}>
@@ -106,9 +123,12 @@ export default function Countdown() {
       </div>
       {madnessData && <div className={classes.rocketryMadness}>
         <Typography variant='h2'>&#x1F3C0; Rocketry Madness</Typography>
-        <ol className={classes.madnessList}>
-          {madnessData.g.e.slice(0, 16).map((data, i) => <li key={i}>{data.n_d} ({data.p})</li>)}
-        </ol>
+        <Typography variant='h4'>(updated every 15 minutes, last {madnessUpdateTime.toLocaleTimeString()})</Typography>
+        <Typography variant='h3'>
+          <ol className={classes.madnessList}>
+            {madnessData.g.e.slice(0, 16).map((data, i) => <li key={i}>{decodeEntities(data.n_d)} ({data.p})</li>)}
+          </ol>
+        </Typography>
       </div>}
     </div>
   );
