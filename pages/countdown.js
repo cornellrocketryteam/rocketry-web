@@ -96,7 +96,7 @@ export default function Countdown() {
           }
         </Typography>
         <Typography variant='h3' align='center'>
-          {!countdown.elapsed && "Dress Reharsal"}
+          {!countdown.elapsed && "Dress Rehearsal"}
         </Typography>
         {!madnessData && <img
           src='/static/crt.png'
