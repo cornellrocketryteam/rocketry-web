@@ -4,8 +4,9 @@ import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
 import { useEffect, useState } from 'react';
 
-const MADNESS_GROUP_ID = "4559291"
-const MADNESS_URL = `https://fantasy.espncdn.com/tournament-challenge-bracket/2022/en/api/v7/group?groupID=${MADNESS_GROUP_ID}&sort=-1&start=0&length=50&periodPoints=false`
+const MADNESS_GROUP_ID = 4559291
+const MADNESS_YEAR = 2022
+const MADNESS_URL = `https://fantasy.espncdn.com/tournament-challenge-bracket/${MADNESS_YEAR}/en/api/v7/group?groupID=${MADNESS_GROUP_ID}&sort=-1&start=0&length=50&periodPoints=false`
 
 
 const useStyles = makeStyles((theme) => ({
@@ -18,14 +19,14 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   textMadness: {
-    height: "30vh",
+    height: "50vh",
     backgroundColor: "black",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center"
   },
   rocketryMadness: {
-    height: "70vh",
+    height: "50vh",
     backgroundColor: "white",
     padding: "20px",
     color: "black"
@@ -123,10 +124,10 @@ export default function Countdown() {
       </div>
       {madnessData && <div className={classes.rocketryMadness}>
         <Typography variant='h2'>&#x1F3C0; Rocketry Madness</Typography>
-        <Typography variant='h4'>(updated every 15 minutes, last {madnessUpdateTime.toLocaleTimeString()})</Typography>
+        <Typography variant='h4'>(Top {madnessData.g.e.length > 10 && "10"} brackets updated every 15 minutes, last {madnessUpdateTime.toLocaleTimeString()})</Typography>
         <Typography variant='h3'>
           <ol className={classes.madnessList}>
-            {madnessData.g.e.slice(0, 16).map((data, i) => <li key={i}>{decodeEntities(data.n_d)} ({data.p})</li>)}
+            {madnessData.g.e.slice(0, 10).map((data, i) => <li key={i}>{decodeEntities(data.n_d)} ({data.p})</li>)}
           </ol>
         </Typography>
       </div>}
