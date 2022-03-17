@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 const MADNESS_GROUP_ID = 4559291
 const MADNESS_YEAR = 2022
+const UPDATE_TIME = 2
 const MADNESS_URL = `https://fantasy.espncdn.com/tournament-challenge-bracket/${MADNESS_YEAR}/en/api/v7/group?groupID=${MADNESS_GROUP_ID}&sort=-1&start=0&length=50&periodPoints=false`
 
 
@@ -76,7 +77,7 @@ const decodeEntities = (inputStr) => {
 }
 
 const launch = new Date("2022-03-27T13:00:00.000Z") // 2022-03-19 9:00am EDT
-const reloadTime = 1000 /*ms*/ * 60 /*sec*/ * 15 /*min*/
+const reloadTime = 1000 /*ms*/ * 60 /*sec*/ * UPDATE_TIME /*min*/
 
 export default function Countdown() {
   const classes = useStyles();
@@ -124,7 +125,7 @@ export default function Countdown() {
       </div>
       {madnessData && <div className={classes.rocketryMadness}>
         <Typography variant='h2'>&#x1F3C0; Rocketry Madness</Typography>
-        <Typography variant='h4'>(Top {madnessData.g.e.length > 10 && "10"} brackets updated every 15 minutes, last {madnessUpdateTime.toLocaleTimeString()})</Typography>
+        <Typography variant='h4'>(Top {madnessData.g.e.length > 10 && "10"} brackets updated every {UPDATE_TIME} minutes, last {madnessUpdateTime.toLocaleTimeString()})</Typography>
         <Typography variant='h3'>
           <ol className={classes.madnessList}>
             {madnessData.g.e.slice(0, 10).map((data, i) => <li key={i}>{decodeEntities(data.n_d)} ({data.p})</li>)}
