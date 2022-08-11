@@ -467,8 +467,8 @@ export default function Rockets() {
           alignContent='space-between'
           className={classes.patchesContainer}
         >
-          {[2018, 2019, 2020].map((year) => (
-            <Grid item xs={8} sm={4} key={year}>
+          {[2018, 2019, 2020, 2022].map((year) => (
+            <Grid item xs={8} sm={3} key={year}>
               <img
                 src={`/static/images/rockets-page/patches/${year}Patch.png`}
                 alt={`${year} Patch`}

@@ -167,7 +167,7 @@ export default function Home() {
               <StatsNumber number={40} label={'Team Members'} />
               <StatsNumber number={6} label={'Subteams'} />
               <StatsNumber number={6} label={'Majors'} />
-              <StatsNumber number={5} label={'Rockets Launched'} />
+              <StatsNumber number={6} label={'Rockets Launched'} />
             </Grid>
           </div>
         </Container>
