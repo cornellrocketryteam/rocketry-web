@@ -11,9 +11,11 @@ import {
   Avatar,
   IconButton,
 } from '@material-ui/core';
+
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
+import Timeline from '../components/apply/Timeline';
 
 const useStyles = makeStyles((theme) => ({
   splash: {
@@ -304,7 +306,7 @@ export default function Apply() {
   const classes = useStyles();
   const theme = useTheme();
   const mediaXs = useMediaQuery(theme.breakpoints.only('xs'));
-  const [applicationOpen, setApplicationOpen] = useState(true);
+  const [applicationOpen, setApplicationOpen] = useState(false);
 
   const freshmanDueDate = '2/1';
   const nonFreshmanDueDate = '9/8';
@@ -398,7 +400,7 @@ export default function Apply() {
           {!applicationOpen ? (
             <div className={classes.applicationClosed}>
               <Typography variant='h3' align='center'>
-                Applications for Fall 2021 have closed
+                Applications for Fall 2022 will open soon.
               </Typography>
             </div>
           ) : mediaXs ? (
@@ -468,7 +470,7 @@ export default function Apply() {
               <Typography variant='h3' align='center'>
                 RECRUITMENT TIMELINE
               </Typography>
-              <Grid
+              {/* <Grid
                 className={classes.timeline}
                 container
                 direction='row'
@@ -495,7 +497,8 @@ export default function Apply() {
                     </div>
                   </Grid>
                 ))}
-              </Grid>
+              </Grid> */}
+              <Timeline />
               <Grid
                 className={classes.buttons}
                 container
