@@ -237,7 +237,7 @@ export default function Rockets() {
 
   const rocketTimelineData = [
     {
-      name: 'Big Red 1',
+      name: 'big red 1',
       year: 2022,
       data: [
         { property: 'height', value: '155"' },
