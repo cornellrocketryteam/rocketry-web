@@ -237,6 +237,20 @@ export default function Rockets() {
 
   const rocketTimelineData = [
     {
+      name: 'Big Red 1',
+      year: 2022,
+      data: [
+        { property: 'height', value: '155"' },
+        { property: 'diameter', value: '6.2"' },
+        { property: 'launch mass', value: '1112 lb' },
+        { property: 'motor diameter', value: '4.5"' },
+        { property: 'motor', value: 'Cesaroni Pro98' },
+        { property: 'airframe filament', value: 'Wound G12 Fiberglass' },
+      ],
+      description:
+        "Big Red 1 was CRT's competition rocket for the 2022 Spaceport America Cup. After multiple 3am starts and rain delays, Cornell Rocketry was the 5th team out of 100 teams to launch their rocket. Big Red 1 lifted off the pad on the 3rd ignition attempt and soared to 10367 feet. On the way down, the main parachute deployed prematurely due to hard accelerations caused by a delayed drogue parachute deployment. Even with this failure, the rocket was still smoothly recovered without damage. Cornell Rocketry placed 5th in 10K COTS and 10th overall.",
+    },
+    {
       name: 'polaris',
       year: 2019,
       data: [
@@ -335,24 +349,12 @@ export default function Rockets() {
                 Our Rockets
               </Typography>
               <RocketTable
-                name='polaris'
-                year='2019'
-                data={[
-                  { property: 'height', value: '147"' },
-                  { property: 'diameter', value: '6.17"' },
-                  { property: 'launch mass', value: '73 lb' },
-                  { property: 'motor diameter', value: '4.5"' },
-                  { property: 'motor', value: 'Cesaroni Pro98-6G N5600-P' },
-                  { property: 'airframe filament', value: 'Fiberglass' },
-                ]}
+                name={rocketTimelineData[0].name}
+                year={rocketTimelineData[0].year}
+                data={rocketTimelineData[0].data}
               />
               <Typography variant='body1' className={classes.description}>
-                Polaris is CRT's competition rocket for the 2019 Spaceport
-                America Cup. Its payload is a guided parafoil which ejects from
-                the forward section during descent. Unfortunately, Polaris
-                experienced a CATO due to imperfections in the commercially
-                built motor that was purchased, which caused an uneven burn, and
-                the eventual failure of the launch.
+                {rocketTimelineData[0].description}
               </Typography>
             </Grid>
             <Grid
