@@ -24,19 +24,6 @@ import MobileApplyButtons from '../components/apply/MobileApplyButtons';
 import Hud from '../components/apply/Hud';
 
 const useStyles = makeStyles((theme) => ({
-  splash: {
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  },
-  backgroundOpen: {
-    backgroundImage:
-      "radial-gradient(closest-side, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1) ), url('/static/images/apply-page/new mexico.png')",
-  },
-  backgroundClosed: {
-    backgroundImage:
-      "radial-gradient(closest-side, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1) ), url('/static/images/apply-page/earth.jpg')",
-  },
-
   applicationClosed: {
     position: 'absolute',
     top: '45%',
@@ -196,51 +183,46 @@ export default function Apply() {
     <div>
       <Header />
       <Head title='Apply | Cornell Rocketry Team' />
-      <div
-        className={clsx(
-          classes.splash,
-          applicationOpen ? classes.backgroundOpen : classes.backgroundClosed
+
+      <Hud applicationOpen={applicationOpen}>
+        {!applicationOpen ? (
+          <div className={classes.applicationClosed}>
+            <Typography variant='h3' align='center'>
+              Applications for Fall 2022 will open soon.
+            </Typography>
+          </div>
+        ) : mediaXs ? (
+          //display different applicationOpen page when on mobile browsers
+          <div className={classes.applicationOpenMobile}>
+            <MobileTimeline
+              timelineData={newTimelineData}
+              freshmanLink={freshmanLink}
+              nonFreshmanLink={nonFreshmanLink}
+            />
+            <MobileApplyButtons
+              freshmanLink={freshmanLink}
+              nonFreshmanLink={nonFreshmanLink}
+            />
+          </div>
+        ) : (
+          // end mobile content
+          <div className={classes.applicationOpen}>
+            <MainTimeline timelineData={newTimelineData} />
+            <ApplyButtons
+              freshmanLink={freshmanLink}
+              nonFreshmanLink={nonFreshmanLink}
+            />
+            <IconButton className={classes.scrollDownButton}>
+              <img
+                className={classes.scrollDownIcon}
+                src='/static/images/apply-page/scrolldown.svg'
+                alt='Scroll Down'
+              />
+            </IconButton>
+          </div>
         )}
-      >
-        <Hud applicationOpen={applicationOpen}>
-          {!applicationOpen ? (
-            <div className={classes.applicationClosed}>
-              <Typography variant='h3' align='center'>
-                Applications for Fall 2022 will open soon.
-              </Typography>
-            </div>
-          ) : mediaXs ? (
-            //display different applicationOpen page when on mobile browsers
-            <div className={classes.applicationOpenMobile}>
-              <MobileTimeline
-                timelineData={newTimelineData}
-                freshmanLink={freshmanLink}
-                nonFreshmanLink={nonFreshmanLink}
-              />
-              <MobileApplyButtons
-                freshmanLink={freshmanLink}
-                nonFreshmanLink={nonFreshmanLink}
-              />
-            </div>
-          ) : (
-            // end mobile content
-            <div className={classes.applicationOpen}>
-              <MainTimeline timelineData={newTimelineData} />
-              <ApplyButtons
-                freshmanLink={freshmanLink}
-                nonFreshmanLink={nonFreshmanLink}
-              />
-              <IconButton className={classes.scrollDownButton}>
-                <img
-                  className={classes.scrollDownIcon}
-                  src='/static/images/apply-page/scrolldown.svg'
-                  alt='Scroll Down'
-                />
-              </IconButton>
-            </div>
-          )}
-        </Hud>
-      </div>
+      </Hud>
+
       <Container maxWidth='xl'>
         <Grid container justify='center' className={classes.moreInfo}>
           <Grid item md={6}>
