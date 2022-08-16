@@ -17,9 +17,9 @@ import {
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
-import Timeline, {
-  MobileTimeline,
-} from '../components/apply/timelines/Timeline';
+import MainTimeline from '../components/apply/timelines/MainTimeline';
+
+import MobileTimeline from '../components/apply/timelines/MobileTimeline';
 
 const useStyles = makeStyles((theme) => ({
   splash: {
@@ -348,7 +348,7 @@ export default function Apply() {
               <Typography variant='h3' align='center'>
                 RECRUITMENT TIMELINE
               </Typography>
-              <Timeline timelineData={newTimelineData} />
+              <MainTimeline timelineData={newTimelineData} />
               <Grid
                 className={classes.buttons}
                 container
