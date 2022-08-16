@@ -320,19 +320,6 @@ export default function Rockets() {
       description:
         'Chewbacca was designed and built for the 2015 NASA Student Launch competition. It successfully competed accomplishing all milestones, and achieved an impressive 4th place overall.',
     },
-    {
-      name: 'coming soon',
-      year: '2021',
-      data: [
-        { property: 'height', value: '' },
-        { property: 'diameter', value: '' },
-        { property: 'launch mass', value: '' },
-        { property: 'motor diameter', value: '' },
-        { property: 'motor', value: '' },
-        { property: 'airframe filament', value: '' },
-      ],
-      description: '',
-    },
   ];
 
   return (

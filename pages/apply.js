@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import * as dayjs from 'dayjs';
-import * as arraySupport from 'dayjs/plugin/arraySupport';
 import clsx from 'clsx';
 import {
   makeStyles,
@@ -20,6 +19,9 @@ import Footer from '../components/layout/Footer';
 import MainTimeline from '../components/apply/timelines/MainTimeline';
 
 import MobileTimeline from '../components/apply/timelines/MobileTimeline';
+import ApplyButtons from '../components/apply/ApplyButtons';
+import MobileApplyButtons from '../components/apply/MobileApplyButtons';
+import Hud from '../components/apply/Hud';
 
 const useStyles = makeStyles((theme) => ({
   splash: {
@@ -79,10 +81,11 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
   },
+  applicationOpenMobile: {
+    marginTop: '10vh',
+  },
   applicationOpen: {
     position: 'absolute',
-    // marginTop: 180,
-    // marginTop: 300,
     top: '52%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
@@ -96,35 +99,7 @@ const useStyles = makeStyles((theme) => ({
       width: '90vw',
     },
   },
-  buttons: {
-    marginTop: 50,
-    [theme.breakpoints.up('md')]: {
-      padding: '0 60px 0 60px',
-    },
-    justifyContent: 'space-evenly',
-  },
-  buttonContainer: {
-    maxWidth: 500,
-  },
-  button: {
-    transition: '300ms ease',
-    cursor: 'pointer',
-    '&:hover': {
-      filter: 'brightness(140%)',
-    },
-    [theme.breakpoints.up('lg')]: {
-      margin: '0 5vw 0 5vw',
-    },
-    [theme.breakpoints.only('md')]: {
-      margin: '0 60px 0 60px',
-    },
-    [theme.breakpoints.only('sm')]: {
-      margin: '0 30px 0 30px',
-    },
-    [theme.breakpoints.only('xs')]: {
-      margin: '0 5px 0 5px',
-    },
-  },
+
   scrollDownButton: {
     height: 100,
     width: 100,
@@ -265,7 +240,45 @@ export default function Apply() {
           applicationOpen ? classes.backgroundOpen : classes.backgroundClosed
         )}
       >
-        <div className={classes.hud}>
+        <Hud applicationOpen={applicationOpen}>
+          {!applicationOpen ? (
+            <div className={classes.applicationClosed}>
+              <Typography variant='h3' align='center'>
+                Applications for Fall 2022 will open soon.
+              </Typography>
+            </div>
+          ) : mediaXs ? (
+            //display different applicationOpen page when on mobile browsers
+            <div className={classes.applicationOpenMobile}>
+              <MobileTimeline
+                timelineData={newTimelineData}
+                freshmanLink={freshmanLink}
+                nonFreshmanLink={nonFreshmanLink}
+              />
+              <MobileApplyButtons
+                freshmanLink={freshmanLink}
+                nonFreshmanLink={nonFreshmanLink}
+              />
+            </div>
+          ) : (
+            // end mobile content
+            <div className={classes.applicationOpen}>
+              <MainTimeline timelineData={newTimelineData} />
+              <ApplyButtons
+                freshmanLink={freshmanLink}
+                nonFreshmanLink={nonFreshmanLink}
+              />
+              <IconButton className={classes.scrollDownButton}>
+                <img
+                  className={classes.scrollDownIcon}
+                  src='/static/images/apply-page/scrolldown.svg'
+                  alt='Scroll Down'
+                />
+              </IconButton>
+            </div>
+          )}
+        </Hud>
+        {/* <div className={classes.hud}>
           {
             // Top left hud element changes based on whether the application is open/closed
             !applicationOpen ? (
@@ -337,51 +350,25 @@ export default function Apply() {
             </div>
           ) : mediaXs ? (
             //display different applicationOpen page when on mobile browsers
-            <MobileTimeline
-              timelineData={newTimelineData}
-              freshmanLink={freshmanLink}
-              nonFreshmanLink={nonFreshmanLink}
-            />
+            <div className={classes.applicationOpenMobile}>
+              <MobileTimeline
+                timelineData={newTimelineData}
+                freshmanLink={freshmanLink}
+                nonFreshmanLink={nonFreshmanLink}
+              />
+              <MobileApplyButtons
+                freshmanLink={freshmanLink}
+                nonFreshmanLink={nonFreshmanLink}
+              />
+            </div>
           ) : (
             // end mobile content
             <div className={classes.applicationOpen}>
-              <Typography variant='h3' align='center'>
-                RECRUITMENT TIMELINE
-              </Typography>
               <MainTimeline timelineData={newTimelineData} />
-              <Grid
-                className={classes.buttons}
-                container
-                direction='row'
-                // justifyContent='space-evenly'
-                alignItems='center'
-              >
-                <Grid item xs className={classes.buttonContainer}>
-                  <a href={freshmanLink} target='_blank'>
-                    <img
-                      className={classes.button}
-                      src='/static/images/apply-page/freshman button.svg'
-                      alt='Freshman Application'
-                    />
-                  </a>
-                  <Typography align='center' variant='body1'>
-                    DUE {freshmanDueDate}
-                  </Typography>
-                </Grid>
-                <Grid item xs className={classes.buttonContainer}>
-                  <a href={nonFreshmanLink} target='_blank'>
-                    <img
-                      className={classes.button}
-                      src='/static/images/apply-page/nonfreshman button.svg'
-                      alt='Non-Freshman Application'
-                    />
-                  </a>
-                  <Typography align='center' variant='body1'>
-                    DUE {nonFreshmanDueDate}
-                  </Typography>
-                </Grid>
-              </Grid>
-
+              <ApplyButtons
+                freshmanLink={freshmanLink}
+                nonFreshmanLink={nonFreshmanLink}
+              />
               <IconButton className={classes.scrollDownButton}>
                 <img
                   className={classes.scrollDownIcon}
@@ -391,7 +378,7 @@ export default function Apply() {
               </IconButton>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
       <Container maxWidth='xl'>
         <Grid container justify='center' className={classes.moreInfo}>

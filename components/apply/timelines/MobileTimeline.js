@@ -11,11 +11,7 @@ import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 
-const mobileTimelineStyles = makeStyles(() => ({
-  //mobile application open
-  applicationOpenMobile: {
-    marginTop: '10vh',
-  },
+const useStyles = makeStyles(() => ({
   mobileTimeline: {
     paddingTop: 10,
     position: 'relative',
@@ -55,18 +51,11 @@ const mobileTimelineStyles = makeStyles(() => ({
   },
 }));
 
-export default function MobileTimeline({
-  timelineData,
-  freshmanLink,
-  nonFreshmanLink,
-}) {
-  const classes = mobileTimelineStyles();
-
-  const freshmanDueDate = dayjs([2022, 9, 29]);
-  const nonFreshmanDueDate = dayjs([2022, 9, 1]);
+export default function MobileTimeline({ timelineData }) {
+  const classes = useStyles();
 
   return (
-    <div className={classes.applicationOpenMobile}>
+    <>
       <Typography variant='h6' align='center'>
         RECRUITMENT TIMELINE
       </Typography>
@@ -89,46 +78,6 @@ export default function MobileTimeline({
           </TimelineItem>
         ))}
       </MuiTimeline>
-      <Grid
-        container
-        direction='row'
-        justifyContent='space-evenly'
-        alignItems='center'
-        className={classes.mobileButtons}
-      >
-        <Grid item xs>
-          <Button
-            variant='contained'
-            color='secondary'
-            className={classes.mobileButton}
-            size='small'
-            href={freshmanLink}
-            target='_blank'
-          >
-            Freshman App
-          </Button>
-          <br />
-          <Typography align='center' variant='caption'>
-            DUE {freshmanDueDate.format('M/D')}
-          </Typography>
-        </Grid>
-        <Grid item xs>
-          <Button
-            variant='contained'
-            color='secondary'
-            className={classes.mobileButton}
-            size='small'
-            href={nonFreshmanLink}
-            target='_blank'
-          >
-            Non-freshman App
-          </Button>
-          <br />
-          <Typography align='center' variant='caption'>
-            DUE {nonFreshmanDueDate.format('M/D')}
-          </Typography>
-        </Grid>
-      </Grid>
-    </div>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 import * as dayjs from 'dayjs';
 
-import { makeStyles, withStyles } from '@material-ui/core';
+import { makeStyles, withStyles, Typography } from '@material-ui/core';
 
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -47,13 +47,11 @@ const StyledStepIcon = withStyles({
 })(StepIcon);
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  stepperTimeline: {
     marginTop: 50,
     [theme.breakpoints.only('md')]: {
       margin: '50px 50px 0 50px',
     },
-  },
-  stepperTimeline: {
     position: 'relative',
     backgroundColor: 'transparent',
   },
@@ -80,28 +78,33 @@ export default function MainTimeline({ timelineData }) {
   });
 
   return (
-    <div className={classes.root}>
-      <Stepper
-        activeStep={activeStep}
-        alternativeLabel
-        connector={<StyledStepConnector />}
-        className={classes.stepperTimeline}
-      >
-        {timelineData.map((data) => (
-          <Step key={data.label}>
-            <StepLabel
-              StepIconComponent={StyledStepIcon}
-              className={classes.timelineLabel}
-            >
-              {data.label.toUpperCase()}
-              <br />
-              <span className={classes.timelineLabelDate}>
-                {data.date.format('M/D')}
-              </span>
-            </StepLabel>
-          </Step>
-        ))}
-      </Stepper>
-    </div>
+    <>
+      <Typography variant='h3' align='center'>
+        RECRUITMENT TIMELINE
+      </Typography>
+      <div className={classes.root}>
+        <Stepper
+          activeStep={activeStep}
+          alternativeLabel
+          connector={<StyledStepConnector />}
+          className={classes.stepperTimeline}
+        >
+          {timelineData.map((data) => (
+            <Step key={data.label}>
+              <StepLabel
+                StepIconComponent={StyledStepIcon}
+                className={classes.timelineLabel}
+              >
+                {data.label.toUpperCase()}
+                <br />
+                <span className={classes.timelineLabelDate}>
+                  {data.date.format('M/D')}
+                </span>
+              </StepLabel>
+            </Step>
+          ))}
+        </Stepper>
+      </div>
+    </>
   );
 }
