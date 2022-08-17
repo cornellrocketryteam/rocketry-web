@@ -25,6 +25,7 @@ import ApplyButtons from '../components/apply/ApplyButtons';
 import MobileApplyButtons from '../components/apply/MobileApplyButtons';
 import Hud from '../components/apply/Hud';
 import InfoSessionTimeline from '../components/apply/timelines/InfoSessionTimeline';
+import MoreInfo from '../components/apply/MoreInfo';
 
 const useStyles = makeStyles((theme) => ({
   applicationClosed: {
@@ -102,11 +103,11 @@ export default function Apply() {
   const mediaXs = useMediaQuery(theme.breakpoints.only('xs'));
   const [applicationOpen, setApplicationOpen] = useState(true);
 
-  const freshmanDueDate = '2/1';
-  const nonFreshmanDueDate = '9/8';
+  const nonFreshmanDueDate = dayjs([2022, 8, 1, 23, 59]);
+  const freshmanDueDate = dayjs([2022, 8, 29, 23, 59]);
 
-  const freshmanLink = 'https://forms.gle/AoyFXQXMUcuhjCBB8';
   const nonFreshmanLink = 'https://forms.gle/xWpYYTj3oPMsavE29';
+  const freshmanLink = 'https://forms.gle/AoyFXQXMUcuhjCBB8';
 
   // NOTE: dayjs months are 0-indexed
   const timelineData = [
@@ -128,7 +129,7 @@ export default function Apply() {
       location: 'TBD',
     },
     {
-      date: dayjs([2022, 8, 1, 23, 59]),
+      date: nonFreshmanDueDate,
       label: 'Upperclassmen Apps Due',
       type: 'deadline',
     },
@@ -145,7 +146,7 @@ export default function Apply() {
       location: 'TBD',
     },
     {
-      date: dayjs([2022, 8, 29]),
+      date: freshmanDueDate,
       label: 'Freshman Apps Due',
       type: 'deadline',
     },
@@ -177,6 +178,8 @@ export default function Apply() {
             <MobileApplyButtons
               freshmanLink={freshmanLink}
               nonFreshmanLink={nonFreshmanLink}
+              freshmanDueDate={freshmanDueDate}
+              nonFreshmanDueDate={nonFreshmanDueDate}
             />
           </div>
         ) : (
@@ -189,6 +192,8 @@ export default function Apply() {
             <ApplyButtons
               freshmanLink={freshmanLink}
               nonFreshmanLink={nonFreshmanLink}
+              freshmanDueDate={freshmanDueDate}
+              nonFreshmanDueDate={nonFreshmanDueDate}
             />
             <IconButton className={classes.scrollDownButton}>
               <img
@@ -201,48 +206,7 @@ export default function Apply() {
         )}
       </Hud>
 
-      <Container maxWidth='xl'>
-        <Grid container justify='center' className={classes.moreInfo}>
-          <Grid item md={6}>
-            <div className={classes.infoSection}>
-              <Typography variant='h3' className={classes.infoHeading}>
-                Meet us at our information sessions.
-              </Typography>
-              <InfoSessionTimeline timelineData={timelineData} />
-            </div>
-          </Grid>
-          <Grid item md={6}>
-            <div className={classes.infoSection}>
-              <Typography variant='h3' className={classes.infoHeading}>
-                Words from our Alumni.
-              </Typography>
-              <div>
-                <Avatar
-                  className={classes.alumniPic}
-                  alt='Matt Schneider'
-                  src='/static/images/apply-page/alumni/mattschneider.png'
-                />
-                <Typography variant='h6' align='center'>
-                  Matt Schneider '21
-                </Typography>
-                <Typography variant='body1' className={classes.alumniQuote}>
-                  “As an incoming freshman, Cornell Rocketry provided me the
-                  opportunity to work on challenging problems and be a part of
-                  something bigger than myself. Early on I focused my efforts on
-                  expressing my creative potential and honing my design
-                  instincts, but came to see an equally significant value in the
-                  friendships and mentorships gained along the way. The team
-                  gave me the chance to develop as a leader, learning in the
-                  moment from my mistakes and taking on more responsibilities
-                  along the way. Without a doubt, my time on Cornell Rocketry
-                  was THE formative experience of my time in college and I’m
-                  grateful to have been able to contribute.”
-                </Typography>
-              </div>
-            </div>
-          </Grid>
-        </Grid>
-      </Container>
+      <MoreInfo timelineData={timelineData} />
       <Footer />
     </div>
   );

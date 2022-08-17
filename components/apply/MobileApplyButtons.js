@@ -12,9 +12,12 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function MobileApplyButtons({ freshmanLink, nonFreshmanLink }) {
-  const freshmanDueDate = dayjs([2022, 8, 29]);
-  const nonFreshmanDueDate = dayjs([2022, 8, 1]);
+export default function MobileApplyButtons({
+  freshmanLink,
+  nonFreshmanLink,
+  freshmanDueDate,
+  nonFreshmanDueDate,
+}) {
   const classes = useStyles();
 
   return (
@@ -38,7 +41,7 @@ export default function MobileApplyButtons({ freshmanLink, nonFreshmanLink }) {
         </Button>
         <br />
         <Typography align='center' variant='caption'>
-          DUE {freshmanDueDate.format('M/D')}
+          DUE {freshmanDueDate.format('M/D @ hh:mm A')}
         </Typography>
       </Grid>
       <Grid item xs>
@@ -54,7 +57,7 @@ export default function MobileApplyButtons({ freshmanLink, nonFreshmanLink }) {
         </Button>
         <br />
         <Typography align='center' variant='caption'>
-          DUE {nonFreshmanDueDate.format('M/D')}
+          DUE {nonFreshmanDueDate.format('M/D @ hh:mm A')}
         </Typography>
       </Grid>
     </Grid>

@@ -50,11 +50,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ApplyButtons({ freshmanLink, nonFreshmanLink }) {
+export default function ApplyButtons({
+  freshmanLink,
+  nonFreshmanLink,
+  freshmanDueDate,
+  nonFreshmanDueDate,
+}) {
   const classes = useStyles();
-
-  const freshmanDueDate = dayjs([2022, 8, 29]);
-  const nonFreshmanDueDate = dayjs([2022, 8, 1]);
 
   return (
     <Grid
@@ -72,8 +74,12 @@ export default function ApplyButtons({ freshmanLink, nonFreshmanLink }) {
             alt='Freshman Application'
           />
         </a>
-        <Typography align='center' variant='body1'>
-          DUE {freshmanDueDate.format('M/D')}
+        <Typography
+          align='center'
+          variant='body1'
+          className={classes.leftButton}
+        >
+          DUE {freshmanDueDate.format('M/D @ hh:mm A')}
         </Typography>
       </Grid>
       <Grid item xs className={classes.buttonContainer}>
@@ -84,8 +90,12 @@ export default function ApplyButtons({ freshmanLink, nonFreshmanLink }) {
             alt='Non-Freshman Application'
           />
         </a>
-        <Typography align='center' variant='body1'>
-          DUE {nonFreshmanDueDate.format('M/D')}
+        <Typography
+          align='center'
+          variant='body1'
+          className={classes.rightButton}
+        >
+          DUE {nonFreshmanDueDate.format('M/D @ hh:mm A')}
         </Typography>
       </Grid>
     </Grid>
