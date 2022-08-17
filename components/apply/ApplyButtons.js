@@ -53,8 +53,8 @@ const useStyles = makeStyles((theme) => ({
 export default function ApplyButtons({ freshmanLink, nonFreshmanLink }) {
   const classes = useStyles();
 
-  const freshmanDueDate = dayjs([2022, 9, 29]);
-  const nonFreshmanDueDate = dayjs([2022, 9, 1]);
+  const freshmanDueDate = dayjs([2022, 8, 29]);
+  const nonFreshmanDueDate = dayjs([2022, 8, 1]);
 
   return (
     <Grid

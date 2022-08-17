@@ -78,33 +78,28 @@ export default function MainTimeline({ timelineData }) {
   });
 
   return (
-    <>
-      <Typography variant='h3' align='center'>
-        RECRUITMENT TIMELINE
-      </Typography>
-      <div className={classes.root}>
-        <Stepper
-          activeStep={activeStep}
-          alternativeLabel
-          connector={<StyledStepConnector />}
-          className={classes.stepperTimeline}
-        >
-          {timelineData.map((data) => (
-            <Step key={data.label}>
-              <StepLabel
-                StepIconComponent={StyledStepIcon}
-                className={classes.timelineLabel}
-              >
-                {data.label.toUpperCase()}
-                <br />
-                <span className={classes.timelineLabelDate}>
-                  {data.date.format('M/D')}
-                </span>
-              </StepLabel>
-            </Step>
-          ))}
-        </Stepper>
-      </div>
-    </>
+    <div className={classes.root}>
+      <Stepper
+        activeStep={activeStep}
+        alternativeLabel
+        connector={<StyledStepConnector />}
+        className={classes.stepperTimeline}
+      >
+        {timelineData.map((data) => (
+          <Step key={data.label}>
+            <StepLabel
+              StepIconComponent={StyledStepIcon}
+              className={classes.timelineLabel}
+            >
+              {data.label.toUpperCase()}
+              <br />
+              <span className={classes.timelineLabelDate}>
+                {data.date.format('M/D')}
+              </span>
+            </StepLabel>
+          </Step>
+        ))}
+      </Stepper>
+    </div>
   );
 }

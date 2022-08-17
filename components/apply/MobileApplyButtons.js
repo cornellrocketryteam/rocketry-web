@@ -13,8 +13,8 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function MobileApplyButtons({ freshmanLink, nonFreshmanLink }) {
-  const freshmanDueDate = dayjs([2022, 9, 29]);
-  const nonFreshmanDueDate = dayjs([2022, 9, 1]);
+  const freshmanDueDate = dayjs([2022, 8, 29]);
+  const nonFreshmanDueDate = dayjs([2022, 8, 1]);
   const classes = useStyles();
 
   return (

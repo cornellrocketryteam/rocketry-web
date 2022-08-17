@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import * as dayjs from 'dayjs';
-import clsx from 'clsx';
+import * as arraySupport from 'dayjs/plugin/arraySupport';
+dayjs.extend(arraySupport);
+
 import {
   makeStyles,
   Grid,
@@ -22,6 +24,7 @@ import MobileTimeline from '../components/apply/timelines/MobileTimeline';
 import ApplyButtons from '../components/apply/ApplyButtons';
 import MobileApplyButtons from '../components/apply/MobileApplyButtons';
 import Hud from '../components/apply/Hud';
+import InfoSessionTimeline from '../components/apply/timelines/InfoSessionTimeline';
 
 const useStyles = makeStyles((theme) => ({
   applicationClosed: {
@@ -48,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
       width: '90vw',
     },
   },
-
   scrollDownButton: {
     height: 100,
     width: 100,
@@ -68,52 +70,16 @@ const useStyles = makeStyles((theme) => ({
   },
   infoSection: {
     margin: '50px 20px 0px 20px',
-    height: '100%',
     padding: 40,
+    [theme.breakpoints.down('sm')]: {
+      margin: '30px 5px 0px 5px',
+      padding: 20,
+    },
+    height: '100%',
     border: '2px solid #8D8D8D',
-    // borderRadius: 10,
   },
   infoHeading: {
     marginBottom: 35,
-  },
-  infoTimeline: {
-    paddingLeft: 0,
-    // paddingTop: 30,
-    position: 'relative',
-  },
-  infoDot: {
-    listStyleType: 'none',
-    paddingBottom: 20,
-    borderLeft: '2px solid #C0C0C0',
-    position: 'relative',
-    paddingLeft: 20,
-    marginLeft: 10,
-    '&:last-child': {
-      border: 0,
-      paddingBottom: 0,
-      marginLeft: 12,
-    },
-    '&:before': {
-      content: "''",
-      width: 18,
-      height: 18,
-      background: '#B22025',
-      border: '3px solid black',
-      borderRadius: '50%',
-      position: 'absolute',
-      left: -10,
-      top: 0,
-    },
-  },
-  infoText: {
-    position: 'relative',
-    top: -7,
-  },
-  infoLabel: {
-    fontWeight: 600,
-  },
-  infoButton: {
-    marginTop: 10,
   },
   alumni: {
     position: 'relative',
@@ -142,28 +108,46 @@ export default function Apply() {
   const freshmanLink = 'https://forms.gle/AoyFXQXMUcuhjCBB8';
   const nonFreshmanLink = 'https://forms.gle/xWpYYTj3oPMsavE29';
 
+  // NOTE: dayjs months are 0-indexed
   const newTimelineData = [
-    { date: dayjs([2022, 8, 24]), label: 'Info Session' },
     {
-      date: dayjs([2022, 8, 30]),
+      date: dayjs([2022, 7, 24]),
       label: 'Info Session',
+      type: 'info',
+      location: 'TBD',
     },
     {
-      date: dayjs([2022, 9, 1]),
-      label: 'Project Team Fest / Upperclassmen Apps Due',
-      location: '@ 4‑7pm ELL',
-    },
-    {
-      date: dayjs([2022, 9, 15]),
+      date: dayjs([2022, 7, 30]),
       label: 'Info Session',
+      type: 'info',
+      location: 'TBD',
     },
     {
-      date: dayjs([2022, 9, 21]),
+      date: dayjs([2022, 8, 1]),
+      label: 'Project Team Fest',
+      location: 'TBD',
+    },
+    {
+      date: dayjs([2022, 8, 1, 23, 59]),
+      label: 'Upperclassmen Apps Due',
+      type: 'deadline',
+    },
+    {
+      date: dayjs([2022, 8, 15]),
       label: 'Info Session',
+      type: 'info',
+      location: 'TBD',
     },
     {
-      date: dayjs([2022, 9, 29]),
+      date: dayjs([2022, 8, 21]),
+      label: 'Info Session',
+      type: 'info',
+      location: 'TBD',
+    },
+    {
+      date: dayjs([2022, 8, 29]),
       label: 'Freshman Apps Due',
+      type: 'deadline',
     },
   ];
 
@@ -194,6 +178,9 @@ export default function Apply() {
         ) : mediaXs ? (
           //display different applicationOpen page when on mobile browsers
           <div className={classes.applicationOpenMobile}>
+            <Typography variant='h6' align='center'>
+              RECRUITMENT TIMELINE
+            </Typography>
             <MobileTimeline
               timelineData={newTimelineData}
               freshmanLink={freshmanLink}
@@ -207,6 +194,9 @@ export default function Apply() {
         ) : (
           // end mobile content
           <div className={classes.applicationOpen}>
+            <Typography variant='h3' align='center'>
+              RECRUITMENT TIMELINE
+            </Typography>
             <MainTimeline timelineData={newTimelineData} />
             <ApplyButtons
               freshmanLink={freshmanLink}
@@ -230,33 +220,7 @@ export default function Apply() {
               <Typography variant='h3' className={classes.infoHeading}>
                 Meet us at our information sessions.
               </Typography>
-              <ul className={classes.infoTimeline}>
-                {timelineData.map((data, index) => (
-                  <li item xs key={index} className={classes.infoDot}>
-                    <div className={classes.infoText}>
-                      <Typography variant='h6' className={classes.infoLabel}>
-                        {data.label.toUpperCase()}
-                      </Typography>
-                      <Typography variant='body1'>
-                        {data.date.toUpperCase()}{' '}
-                        {data.location && data.location.toUpperCase()}
-                      </Typography>
-                      {data.link && (
-                        <Button
-                          href={data.link}
-                          target='_blank'
-                          size='small'
-                          variant='contained'
-                          color='secondary'
-                          className={classes.infoButton}
-                        >
-                          Join
-                        </Button>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              <InfoSessionTimeline timelineData={newTimelineData} />
             </div>
           </Grid>
           <Grid item md={6}>
