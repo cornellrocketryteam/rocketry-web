@@ -109,7 +109,7 @@ export default function Apply() {
   const nonFreshmanLink = 'https://forms.gle/xWpYYTj3oPMsavE29';
 
   // NOTE: dayjs months are 0-indexed
-  const newTimelineData = [
+  const timelineData = [
     {
       date: dayjs([2022, 7, 24]),
       label: 'Info Session',
@@ -151,18 +151,6 @@ export default function Apply() {
     },
   ];
 
-  // ‑ no break hyphen, copy and paste
-  const timelineData = [
-    { date: '1/26', label: 'business applications go live' },
-    {
-      date: '1/31',
-      label: 'information session @ zoom',
-      location: '@ 5 pm zoom',
-      link: 'https://cornell.zoom.us/j/98245271135?pwd=dHNhZDVoTVc4aUgwOFRzY1ZRTEhUQT09',
-    },
-    { date: freshmanDueDate, label: 'applications due' },
-  ];
-
   return (
     <div>
       <Header />
@@ -182,7 +170,7 @@ export default function Apply() {
               RECRUITMENT TIMELINE
             </Typography>
             <MobileTimeline
-              timelineData={newTimelineData}
+              timelineData={timelineData}
               freshmanLink={freshmanLink}
               nonFreshmanLink={nonFreshmanLink}
             />
@@ -197,7 +185,7 @@ export default function Apply() {
             <Typography variant='h3' align='center'>
               RECRUITMENT TIMELINE
             </Typography>
-            <MainTimeline timelineData={newTimelineData} />
+            <MainTimeline timelineData={timelineData} />
             <ApplyButtons
               freshmanLink={freshmanLink}
               nonFreshmanLink={nonFreshmanLink}
@@ -220,7 +208,7 @@ export default function Apply() {
               <Typography variant='h3' className={classes.infoHeading}>
                 Meet us at our information sessions.
               </Typography>
-              <InfoSessionTimeline timelineData={newTimelineData} />
+              <InfoSessionTimeline timelineData={timelineData} />
             </div>
           </Grid>
           <Grid item md={6}>
