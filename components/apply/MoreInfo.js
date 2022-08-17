@@ -13,6 +13,9 @@ import {
 import InfoSessionTimeline from './timelines/InfoSessionTimeline';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    scrollMarginTop: '45px',
+  },
   moreInfo: {
     maxWidth: '100vw',
     paddingBottom: 150,
@@ -45,11 +48,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MoreInfo({ timelineData }) {
+export default function MoreInfo({ moreInfoRef, timelineData }) {
   const classes = useStyles();
 
   return (
-    <Container maxWidth='xl'>
+    <Container maxWidth='xl' ref={moreInfoRef} className={classes.root}>
       <Grid container justify='center' className={classes.moreInfo}>
         <Grid item md={6}>
           <div className={classes.infoSection}>

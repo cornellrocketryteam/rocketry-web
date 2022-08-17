@@ -6,6 +6,7 @@ body {
     Poppins, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif; */
   font-family: Poppins, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {

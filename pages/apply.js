@@ -5,13 +5,9 @@ dayjs.extend(arraySupport);
 
 import {
   makeStyles,
-  Grid,
   Typography,
   useMediaQuery,
   useTheme,
-  Button,
-  Container,
-  Avatar,
   IconButton,
 } from '@material-ui/core';
 
@@ -24,8 +20,8 @@ import MobileTimeline from '../components/apply/timelines/MobileTimeline';
 import ApplyButtons from '../components/apply/ApplyButtons';
 import MobileApplyButtons from '../components/apply/MobileApplyButtons';
 import Hud from '../components/apply/Hud';
-import InfoSessionTimeline from '../components/apply/timelines/InfoSessionTimeline';
 import MoreInfo from '../components/apply/MoreInfo';
+import { useRef } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   applicationClosed: {
@@ -64,37 +60,6 @@ const useStyles = makeStyles((theme) => ({
     height: 80,
     width: 80,
   },
-
-  moreInfo: {
-    maxWidth: '100vw',
-    paddingBottom: 150,
-  },
-  infoSection: {
-    margin: '50px 20px 0px 20px',
-    padding: 40,
-    [theme.breakpoints.down('sm')]: {
-      margin: '30px 5px 0px 5px',
-      padding: 20,
-    },
-    height: '100%',
-    border: '2px solid #8D8D8D',
-  },
-  infoHeading: {
-    marginBottom: 35,
-  },
-  alumni: {
-    position: 'relative',
-  },
-  alumniPic: {
-    marginTop: 20,
-    marginBottom: 20,
-    margin: 'auto',
-    height: 200,
-    width: 200,
-  },
-  alumniQuote: {
-    marginTop: 20,
-  },
 }));
 
 export default function Apply() {
@@ -102,6 +67,7 @@ export default function Apply() {
   const theme = useTheme();
   const mediaXs = useMediaQuery(theme.breakpoints.only('xs'));
   const [applicationOpen, setApplicationOpen] = useState(true);
+  const moreInfoRef = useRef(null);
 
   const nonFreshmanDueDate = dayjs([2022, 8, 1, 23, 59]);
   const freshmanDueDate = dayjs([2022, 8, 29, 23, 59]);
@@ -195,7 +161,10 @@ export default function Apply() {
               freshmanDueDate={freshmanDueDate}
               nonFreshmanDueDate={nonFreshmanDueDate}
             />
-            <IconButton className={classes.scrollDownButton}>
+            <IconButton
+              className={classes.scrollDownButton}
+              onClick={() => moreInfoRef.current.scrollIntoView()}
+            >
               <img
                 className={classes.scrollDownIcon}
                 src='/static/images/apply-page/scrolldown.svg'
@@ -206,7 +175,7 @@ export default function Apply() {
         )}
       </Hud>
 
-      <MoreInfo timelineData={timelineData} />
+      <MoreInfo moreInfoRef={moreInfoRef} timelineData={timelineData} />
       <Footer />
     </div>
   );
