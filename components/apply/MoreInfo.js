@@ -17,14 +17,16 @@ const useStyles = makeStyles((theme) => ({
     scrollMarginTop: '45px',
   },
   moreInfo: {
+    padding: '50px 20px 0px 20px',
+    [theme.breakpoints.down('sm')]: {
+      padding: '30px 5px 0 5px',
+    },
     maxWidth: '100vw',
-    paddingBottom: 150,
+    marginBottom: 100,
   },
   infoSection: {
-    margin: '50px 20px 0px 20px',
     padding: 40,
     [theme.breakpoints.down('sm')]: {
-      margin: '30px 5px 0px 5px',
       padding: 20,
     },
     height: '100%',
@@ -46,6 +48,15 @@ const useStyles = makeStyles((theme) => ({
   alumniQuote: {
     marginTop: 20,
   },
+  teamPic: {
+    display: 'flex',
+    width: '80%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
+    margin: 'auto',
+    border: '2px solid #8D8D8D',
+  },
 }));
 
 export default function MoreInfo({ moreInfoRef, timelineData }) {
@@ -53,7 +64,7 @@ export default function MoreInfo({ moreInfoRef, timelineData }) {
 
   return (
     <Container maxWidth='xl' ref={moreInfoRef} className={classes.root}>
-      <Grid container justify='center' className={classes.moreInfo}>
+      <Grid container justify='center' className={classes.moreInfo} spacing={5}>
         <Grid item md={6}>
           <div className={classes.infoSection}>
             <Typography variant='h3' className={classes.infoHeading}>
@@ -91,6 +102,15 @@ export default function MoreInfo({ moreInfoRef, timelineData }) {
               </Typography>
             </div>
           </div>
+        </Grid>
+        <Grid item xs={12}>
+          {/* <div className={classes.infoSection}> */}
+          <img
+            src='/static/images/apply-page/team pic.jpg'
+            alt='CRT Team Picture'
+            className={classes.teamPic}
+          />
+          {/* </div> */}
         </Grid>
       </Grid>
     </Container>
