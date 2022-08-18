@@ -25,21 +25,22 @@ export default function Apply() {
   // NOTE: dayjs months are 0-indexed
   const timelineData = [
     {
-      date: dayjs([2022, 7, 24]),
+      date: dayjs([2022, 7, 24, 17, 30]),
       label: 'Info Session',
       type: 'info',
       location: 'TBD',
     },
     {
-      date: dayjs([2022, 7, 30]),
+      date: dayjs([2022, 7, 30, 19, 30]),
       label: 'Info Session',
       type: 'info',
       location: 'TBD',
+      link: 'https://cornell.zoom.us/s/91501962370',
     },
     {
-      date: dayjs([2022, 8, 1]),
+      date: dayjs([2022, 8, 1, 16, 0]),
       label: 'Project Team Fest',
-      location: 'TBD',
+      location: 'duffield',
     },
     {
       date: nonFreshmanDueDate,
@@ -47,13 +48,13 @@ export default function Apply() {
       type: 'deadline',
     },
     {
-      date: dayjs([2022, 8, 15]),
+      date: dayjs([2022, 8, 15, 17, 30]),
       label: 'Info Session',
       type: 'info',
       location: 'TBD',
     },
     {
-      date: dayjs([2022, 8, 21]),
+      date: dayjs([2022, 8, 21, 19, 0]),
       label: 'Info Session',
       type: 'info',
       location: 'TBD',

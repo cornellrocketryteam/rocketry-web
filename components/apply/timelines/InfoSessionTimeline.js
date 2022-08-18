@@ -32,19 +32,21 @@ export default function InfoSessionTimeline({ timelineData }) {
             </Box>
 
             <Typography variant='body1'>
-              {data.location && '@ ' + data.location.toUpperCase()}
+              {data.date.format('h:mm A')}
+              {data.location && ' @ ' + data.location.toUpperCase()}
             </Typography>
             {data.link && (
-              <Button
-                href={data.link}
-                target='_blank'
-                size='small'
-                variant='contained'
-                color='secondary'
-                className={classes.infoButton}
-              >
-                Join
-              </Button>
+              <Box mt={1}>
+                <Button
+                  href={data.link}
+                  target='_blank'
+                  size='small'
+                  variant='contained'
+                  color='secondary'
+                >
+                  Join
+                </Button>
+              </Box>
             )}
           </TimelineContent>
         </TimelineItem>
