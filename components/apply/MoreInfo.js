@@ -14,7 +14,7 @@ import InfoSessionTimeline from './timelines/InfoSessionTimeline';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    scrollMarginTop: '45px',
+    scrollMarginTop: '25px',
   },
   moreInfo: {
     padding: '50px 20px 0px 20px',
