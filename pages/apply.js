@@ -61,7 +61,7 @@ export default function Apply() {
     },
     {
       date: freshmanDueDate,
-      label: 'Freshman Apps Due',
+      label: 'Freshman / Transfer Apps Due',
       type: 'deadline',
     },
   ];
