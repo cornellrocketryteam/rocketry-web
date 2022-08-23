@@ -28,13 +28,13 @@ export default function Apply() {
       date: dayjs([2022, 7, 24, 17, 30]),
       label: 'Info Session',
       type: 'info',
-      location: 'TBD',
+      location: 'Upson 216',
     },
     {
       date: dayjs([2022, 7, 30, 19, 30]),
-      label: 'Info Session',
+      label: 'Zoom Info Session',
       type: 'info',
-      location: 'TBD',
+      location: 'Zoom',
       link: 'https://cornell.zoom.us/s/91501962370',
     },
     {
