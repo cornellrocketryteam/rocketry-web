@@ -50,10 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
   teamPic: {
     display: 'flex',
-    width: '80%',
-    [theme.breakpoints.down('sm')]: {
-      width: '100%',
-    },
+    width: '100%',
     margin: 'auto',
     border: '2px solid #8D8D8D',
   },
