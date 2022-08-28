@@ -190,7 +190,7 @@ export default function Rockets() {
   const theme = useTheme();
   const mediaXs = useMediaQuery(theme.breakpoints.only('xs'));
 
-  const polarisRef = useRef();
+  const mainRocketRef = useRef();
 
   const [rocketNav, setRocketNav] = useState(null);
   const [timelineNav, setTimelineNav] = useState(null);
@@ -208,11 +208,11 @@ export default function Rockets() {
 
   useEffect(() => {
     let anim = lottie.loadAnimation({
-      container: polarisRef.current,
+      container: mainRocketRef.current,
       renderer: 'canvas',
       loop: false,
       autoplay: true,
-      path: '../static/lotties/polarishd.json',
+      path: '../static/lotties/bigRed1SpinHD.json',
     });
 
     anim.setSpeed(0.75);
@@ -225,7 +225,7 @@ export default function Rockets() {
     anim.addEventListener('DOMLoaded', () => {
       console.log('Lottie Loaded');
       gsap.to(
-        polarisRef.current,
+        mainRocketRef.current,
         // { opacity: 0 },
         { duration: 0.5, opacity: 1 }
       );
@@ -233,7 +233,7 @@ export default function Rockets() {
     return () => {
       anim.destroy();
     };
-  }, [polarisRef]);
+  }, [mainRocketRef]);
 
   const rocketTimelineData = [
     {
@@ -352,7 +352,7 @@ export default function Rockets() {
               xl={6}
               className={classes.imgWrapper}
             >
-              <div ref={polarisRef} className={classes.rocketImage}>
+              <div ref={mainRocketRef} className={classes.rocketImage}>
                 <img
                   src='/static/images/rockets-page/rockets/spotlight.png'
                   className={classes.spotlight}
