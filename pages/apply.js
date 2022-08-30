@@ -31,7 +31,7 @@ export default function Apply() {
       location: 'Upson 216',
     },
     {
-      date: dayjs([2022, 7, 00, 19, 30]),
+      date: dayjs([2022, 7, 30, 19, 0]),
       label: 'Zoom Info Session',
       type: 'info',
       location: 'Zoom',
