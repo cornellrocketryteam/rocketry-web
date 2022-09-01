@@ -5,9 +5,9 @@ import {
   Grid,
   Typography,
   Container,
-  Hidden,
-  Button,
+  Tooltip,
   useMediaQuery,
+  Fade,
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
@@ -15,6 +15,7 @@ import Footer from '../components/layout/Footer';
 
 import { promises as fs } from 'fs';
 import path from 'path';
+import SubteamTooltip from '../components/team/SubteamTooltip';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     transition: '200ms',
     '&:hover': {
       opacity: 1,
-      transform: 'scale(1.05)',
+      transform: 'scale(1.01)',
     },
   },
   recoveryAndBusiness: {
@@ -173,6 +174,21 @@ export default function Team({ members, subteamLeads, teamLeads }) {
   6 - structures
  */
 
+  const subteamDescriptions = {
+    electrical:
+      "The Electrical subteam designs, manufactures, and tests electrical systems for launching the vehicle's payload. This subteam is responsible for the design and manufacture of an aerial system that will navigate the descending rocket to a predetermined GPS coordinate. Our sub team focuses on both data acquisition and interfacing with the payload for deployment. We take various measurements mid-flight, store the data, and communicate it to the ground using radio communication, and we focus on electrical design.",
+    embeddedSoftware:
+      "The Embedded Software team designs and creates a module to be flown on the launch vehicle which provides the team with continuous information about the rocket's position and velocity. Once the launch vehicle has landed, the subteam handles recovery and tracking. This often includes designing custom flight software for the launch vehicle and ground station which involves collecting and analyzing data to determine when to launch the parachutes and the payload.",
+    propulsion:
+      'The propulsion team handles the lift requirements of the launch vehicle. As a research and development based team, propulsion designs, simulates, manufactures, and tests rocket motors and engines for use on the launch vehicle. Design focus is on lifting the launch vehicle to a prescribed altitude while maintaining control of thrust throughout the ascent.',
+    recoveryAndPayload:
+      'The Recovery and Payload subteam is responsible for the design and manufacture of an aerial system that will navigate the descending rocket to a predetermined GPS coordinate. The payload is an autonomous flight vehicle that deploys from the descending rocket and navigates to the ground. Each year the subteam decides on a new payload, designing and fabricating it from scratch.',
+    business:
+      "The Business team handles the team's finances, web development, content and design creation, sponsorship relations, events, and logistics. The business team ensures that the team always has the funding to complete our operations, and always has the organization to bring our team to the Spaceport America Cup.",
+    structures:
+      'The Structures subteam handles the overall structure and recovery systems of the competition launch vehicle. The subteam chooses the rocket motor, performs rocket motion simulations to accurately predict the launch vehicle’s attitude of apogee, and designs various parts of the rocket including the parachute recovery system, the nose cone, and the booster section. Structures is also responsible for other components such as the AV pay, motor mount and rocket fins.',
+  };
+
   return (
     <div className={classes.root}>
       <Head title='Team | Cornell Rocketry Team' />
@@ -187,53 +203,61 @@ export default function Team({ members, subteamLeads, teamLeads }) {
             className={classes.blueprintGrid}
           >
             <Grid item xs={5} lg={4}>
-              <img
-                src='/static/images/team-page/blueprint/recoveryandpayload.svg'
-                alt='Recovery & Payload'
-                className={clsx(
-                  classes.blueprintComponent,
-                  classes.recoveryAndBusiness
-                )}
-                onClick={() => setSelectedSubteam(5)}
-              />
-              <img
-                src='/static/images/team-page/blueprint/business.svg'
-                alt='Business'
-                className={clsx(
-                  classes.blueprintComponent,
-                  classes.recoveryAndBusiness
-                )}
-                onClick={() => setSelectedSubteam(1)}
-              />
+              <SubteamTooltip title={subteamDescriptions.recoveryAndPayload}>
+                <img
+                  src='/static/images/team-page/blueprint/recoveryandpayload.svg'
+                  alt='Recovery & Payload'
+                  className={clsx(
+                    classes.blueprintComponent,
+                    classes.recoveryAndBusiness
+                  )}
+                  onClick={() => setSelectedSubteam(5)}
+                />
+              </SubteamTooltip>
+              <SubteamTooltip title={subteamDescriptions.business}>
+                <img
+                  src='/static/images/team-page/blueprint/business.svg'
+                  alt='Business'
+                  className={clsx(
+                    classes.blueprintComponent,
+                    classes.recoveryAndBusiness
+                  )}
+                  onClick={() => setSelectedSubteam(1)}
+                />
+              </SubteamTooltip>
             </Grid>
             <Grid item xs={2} lg={4}>
               <div className={classes.blueprintRocket}>
-                <img
-                  src={
-                    !xs
-                      ? '/static/images/team-page/blueprint/newstructures.svg'
-                      : '/static/images/team-page/blueprint/newstructures xs.svg'
-                  }
-                  alt='Structures'
-                  className={clsx(
-                    classes.blueprintComponent,
-                    classes.structures
-                  )}
-                  onClick={() => setSelectedSubteam(6)}
-                />
-                <img
-                  src={
-                    !xs
-                      ? '/static/images/team-page/blueprint/newpropulsion.svg'
-                      : '/static/images/team-page/blueprint/newpropulsion xs.svg'
-                  }
-                  alt='Propulsion'
-                  className={clsx(
-                    classes.blueprintComponent,
-                    classes.propulsion
-                  )}
-                  onClick={() => setSelectedSubteam(4)}
-                />
+                <SubteamTooltip title={subteamDescriptions.structures}>
+                  <img
+                    src={
+                      !xs
+                        ? '/static/images/team-page/blueprint/structures.svg'
+                        : '/static/images/team-page/blueprint/structures xs.svg'
+                    }
+                    alt='Structures'
+                    className={clsx(
+                      classes.blueprintComponent,
+                      classes.structures
+                    )}
+                    onClick={() => setSelectedSubteam(6)}
+                  />
+                </SubteamTooltip>
+                <SubteamTooltip title={subteamDescriptions.propulsion}>
+                  <img
+                    src={
+                      !xs
+                        ? '/static/images/team-page/blueprint/propulsion.svg'
+                        : '/static/images/team-page/blueprint/propulsion xs.svg'
+                    }
+                    alt='Propulsion'
+                    className={clsx(
+                      classes.blueprintComponent,
+                      classes.propulsion
+                    )}
+                    onClick={() => setSelectedSubteam(4)}
+                  />
+                </SubteamTooltip>
                 <Typography
                   variant='h5'
                   align='center'
@@ -245,24 +269,29 @@ export default function Team({ members, subteamLeads, teamLeads }) {
               </div>
             </Grid>
             <Grid item xs={5} lg={4} className={classes.blueprintCircuitBoard}>
-              <img
-                src='/static/images/team-page/blueprint/electrical.svg'
-                alt='Electrical'
-                className={clsx(
-                  classes.blueprintComponent,
-                  classes.circuitBoardComponent
-                )}
-                onClick={() => setSelectedSubteam(2)}
-              />
-              <img
-                src='/static/images/team-page/blueprint/embeddedsoftware.svg'
-                alt='Embedded Software'
-                className={clsx(
-                  classes.blueprintComponent,
-                  classes.circuitBoardComponent
-                )}
-                onClick={() => setSelectedSubteam(3)}
-              />
+              <SubteamTooltip title={subteamDescriptions.electrical}>
+                <img
+                  src='/static/images/team-page/blueprint/electrical.svg'
+                  alt='Electrical'
+                  className={clsx(
+                    classes.blueprintComponent,
+                    classes.circuitBoardComponent
+                  )}
+                  onClick={() => setSelectedSubteam(2)}
+                />
+              </SubteamTooltip>
+
+              <SubteamTooltip title={subteamDescriptions.embeddedSoftware}>
+                <img
+                  src='/static/images/team-page/blueprint/embeddedsoftware.svg'
+                  alt='Embedded Software'
+                  className={clsx(
+                    classes.blueprintComponent,
+                    classes.circuitBoardComponent
+                  )}
+                  onClick={() => setSelectedSubteam(3)}
+                />
+              </SubteamTooltip>
             </Grid>
           </Grid>
         </Container>

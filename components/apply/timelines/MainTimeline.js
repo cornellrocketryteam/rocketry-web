@@ -1,6 +1,6 @@
 import * as dayjs from 'dayjs';
 
-import { makeStyles, withStyles, Typography } from '@material-ui/core';
+import { makeStyles, withStyles } from '@material-ui/core';
 
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
