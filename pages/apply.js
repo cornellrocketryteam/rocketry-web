@@ -31,11 +31,12 @@ export default function Apply() {
       location: 'Upson 216',
     },
     {
-      date: dayjs([2022, 7, 30, 19, 30]),
+      date: dayjs([2022, 7, 30, 19, 0]),
       label: 'Zoom Info Session',
       type: 'info',
       location: 'Zoom',
-      link: 'https://cornell.zoom.us/j/91501962370?pwd=aFByVStIcWpMaVBLWmp1ODdxOXd6Zz09',
+      link:
+        'https://cornell.zoom.us/j/91501962370?pwd=aFByVStIcWpMaVBLWmp1ODdxOXd6Zz09',
     },
     {
       date: dayjs([2022, 8, 1, 16, 0]),
