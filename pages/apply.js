@@ -51,7 +51,7 @@ export default function Apply() {
       date: dayjs([2022, 8, 15, 17, 30]),
       label: 'Info Session',
       type: 'info',
-      location: 'TBD',
+      location: 'Upson B02',
     },
     {
       date: dayjs([2022, 8, 21, 19, 0]),
