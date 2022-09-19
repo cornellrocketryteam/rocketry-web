@@ -58,7 +58,7 @@ export default function Apply() {
       date: dayjs([2022, 8, 21, 19, 0]),
       label: 'Info Session',
       type: 'info',
-      location: 'TBD',
+      location: 'Hollister 206',
     },
     {
       date: freshmanDueDate,
