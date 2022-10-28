@@ -74,7 +74,7 @@ export default function HudContent({
     return (
       <div className={classes.applicationClosed}>
         <Typography variant='h3' align='center'>
-          Applications for Fall 2022 will open soon.
+          Applications for Fall 2022 are now closed.
         </Typography>
       </div>
     );
