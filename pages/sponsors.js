@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Rockets() {
+export default function Sponsors() {
   const classes = useStyles();
 
   return (
