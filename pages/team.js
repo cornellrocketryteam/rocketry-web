@@ -5,9 +5,7 @@ import {
   Grid,
   Typography,
   Container,
-  Tooltip,
   useMediaQuery,
-  Fade,
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
@@ -307,13 +305,7 @@ export default function Team({ members, subteamLeads, teamLeads }) {
           >
             TEAM LEADS
           </Typography>
-          <Grid
-            container
-            alignItems='center'
-            justify='center'
-            alignItems='flex-start'
-            spacing={3}
-          >
+          <Grid container justify='center' alignItems='flex-start' spacing={3}>
             {teamLeads.fileNames.map((name) => (
               <Grid item sm={4} md={3} key={name}>
                 <img
@@ -345,7 +337,6 @@ export default function Team({ members, subteamLeads, teamLeads }) {
           </Typography>
           <Grid
             container
-            alignItems='center'
             justify='space-evenly'
             alignItems='flex-start'
             spacing={3}
@@ -397,7 +388,6 @@ export default function Team({ members, subteamLeads, teamLeads }) {
                 </Typography>
                 <Grid
                   container
-                  alignItems='center'
                   justify='center'
                   alignItems='flex-start'
                   spacing={3}

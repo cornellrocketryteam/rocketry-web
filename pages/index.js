@@ -136,15 +136,13 @@ export default function Home() {
     let blimsTimeline = Timeline(blimsRef, 500);
     let avTimeline = Timeline(avRef, 500);
     let motorTimeline = Timeline(motorRef, 550);
-  }, [drillRef, blimsRef, avRef, motorRef]);
+  });
+  // }, [drillRef, blimsRef, avRef, motorRef]);
+  // Removing this line fixes issue when clicking navbar Home when on homepage
 
   return (
     <div className={classes.root}>
       <Header />
-      {/* <img
-        className={classes.background}
-        src='../static/images/home-page/background.png'
-      /> */}
       <div className={classes.animationContainer}>
         <div ref={backupAnimRef} className={classes.animation}></div>
       </div>
@@ -164,7 +162,7 @@ export default function Home() {
               <Typography variant='h2'>At a Glance</Typography>
             </Box>
             <Grid container direction='row' justify='space-between' spacing={3}>
-              <StatsNumber number={40} label={'Team Members'} />
+              <StatsNumber number={47} label={'Team Members'} />
               <StatsNumber number={6} label={'Subteams'} />
               <StatsNumber number={6} label={'Majors'} />
               <StatsNumber number={6} label={'Rockets Launched'} />
