@@ -142,37 +142,41 @@ export default function Rockets() {
           sponsors={[
             'altium',
             'ansys',
-            'atlassian',
             'boeing',
             'cornell',
-            'datablue',
             'monster',
             'solidworks',
+            'varda',
           ].sort()}
         />
-        <SponsorBlock
-          level='gold sponsors'
-          sponsors={['galvez-white', 'intel', 'phillips66', 'tmf']}
-        />
+        <SponsorBlock level='gold sponsors' sponsors={['anduril', 'nysg']} />
         <SponsorBlock
           level='silver sponsors'
-          sponsors={[
-            'exxon',
-            'icarus',
-            'lutron',
-            'peterpaul',
-            'shell',
-            'southernballoon',
-            'tms',
-          ].sort()}
+          sponsors={['exxon', 'lutron', 'shell'].sort()}
         />
-        <SponsorBlock level='bronze sponsors' sponsors={['swagelok'].sort()} />
+        <SponsorBlock level='bronze sponsors' sponsors={['overleaf'].sort()} />
         <div>
           <Typography variant='h5' className={classes.sponsorLevel}>
             CONTRIBUTERS
           </Typography>
-          <Grid container spacing={3} justify='center' alignItems='center'>
-            {['Tekant', 'Schneider', 'McDonnell', 'Fay', 'Irons', 'Webster']
+          <Grid
+            container
+            spacing={3}
+            justifyContent='center'
+            alignItems='center'
+          >
+            {[
+              'Hawes',
+              'Frey',
+              'Polito',
+              'Noles',
+              'Powis',
+              'Espinosa',
+              'Allen',
+              'McNay',
+              'Schultz',
+              'Mukasey',
+            ]
               .sort()
               .map((name) => (
                 <Grid item key={name} xs={12} sm={4} md={3}>
