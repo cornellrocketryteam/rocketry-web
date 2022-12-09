@@ -242,7 +242,7 @@ export default function Rockets() {
       data: [
         { property: 'height', value: '155"' },
         { property: 'diameter', value: '6.2"' },
-        { property: 'launch mass', value: '1112 lb' },
+        { property: 'launch mass', value: '112 lb' },
         { property: 'motor diameter', value: '4.5"' },
         { property: 'motor', value: 'Cesaroni Pro98' },
         { property: 'airframe filament', value: 'Wound G12 Fiberglass' },
