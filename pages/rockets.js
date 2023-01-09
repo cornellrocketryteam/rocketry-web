@@ -1,13 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
-import {
-  Container,
-  makeStyles,
-  Typography,
-  Grid,
-  useMediaQuery,
-  useTheme,
-  Box,
-} from '@material-ui/core';
+import { Container, Typography, Grid, useMediaQuery, useTheme, Box } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import Header from '../components/layout/Header';
 import Stars from '../components/Stars';
 import { gsap } from 'gsap/dist/gsap';
@@ -18,8 +11,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
 
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const useStyles = makeStyles((theme) => ({
   // root: {
@@ -60,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },

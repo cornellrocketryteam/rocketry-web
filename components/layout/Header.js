@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import {
   AppBar,
   Toolbar,
@@ -8,15 +8,15 @@ import {
   Menu,
   MenuItem,
   Box,
-} from '@material-ui/core';
+} from '@mui/material';
 
 import Link from 'next/link';
 
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-// import TwitterIcon from '@material-ui/icons/Twitter';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import MenuIcon from '@material-ui/icons/Menu';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+// import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const transitionTime = 0.5;
 
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
     width: 55,
   },
   appBarButtons: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
     color: 'lightgrey',
@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   appBarIconButton: {
     marginRight: -2,
     marginLeft: -2,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginRight: -4,
       marginLeft: -4,
       '&:hover': {
@@ -148,7 +148,7 @@ export default function Header({ active, hideMenu }) {
                 color='inherit'
                 aria-label='menu'
                 onClick={handleClick}
-              >
+                size="large">
                 <MenuIcon />
               </IconButton>
             </Box>
@@ -180,7 +180,7 @@ export default function Header({ active, hideMenu }) {
             data-active={active ? 'true' : scrolled.toString()}
           >
             <Link href='/' passHref>
-              <IconButton className={classes.logoButton}>
+              <IconButton className={classes.logoButton} size="large">
                 <img
                   src='/static/crt.png'
                   alt='logo'
@@ -254,7 +254,7 @@ export default function Header({ active, hideMenu }) {
   function SocialMediaButton({ link, icon }) {
     return (
       <Link href={link} passHref>
-        <IconButton className={classes.appBarIconButton} target='_blank'>
+        <IconButton className={classes.appBarIconButton} target='_blank' size="large">
           <icon.type
             className={classes.appBarIcon}
             data-active={active ? 'true' : scrolled.toString()}

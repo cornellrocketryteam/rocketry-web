@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     height: '20vw',
     maxHeight: 280,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },

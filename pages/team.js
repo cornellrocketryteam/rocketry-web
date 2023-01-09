@@ -1,12 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import clsx from 'clsx';
-import {
-  makeStyles,
-  Grid,
-  Typography,
-  Container,
-  useMediaQuery,
-} from '@material-ui/core';
+import { Grid, Typography, Container, useMediaQuery } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
@@ -29,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     // [theme.breakpoints.only('lg')]: {
     //   padding: '80px 0 80px 0',
     // },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       padding: '60px 10px 60px 10px',
     },
   },
@@ -95,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
   blueprintCircuitBoard: {
     position: 'relative',
     height: 300,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       height: 100,
     },
   },

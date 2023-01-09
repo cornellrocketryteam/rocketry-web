@@ -2,13 +2,9 @@ import * as dayjs from 'dayjs';
 import * as arraySupport from 'dayjs/plugin/arraySupport';
 dayjs.extend(arraySupport);
 
-import {
-  makeStyles,
-  Typography,
-  useMediaQuery,
-  useTheme,
-  IconButton,
-} from '@material-ui/core';
+import { Typography, useMediaQuery, useTheme, IconButton } from '@mui/material';
+
+import makeStyles from '@mui/styles/makeStyles';
 
 import MainTimeline from './timelines/MainTimeline';
 
@@ -38,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       width: '80vw',
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: '90vw',
     },
   },

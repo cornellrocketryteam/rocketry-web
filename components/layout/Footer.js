@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import {
   Grid,
   Button,
   IconButton,
   Container,
   Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 
 import Link from 'next/link';
 
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import MenuIcon from '@material-ui/icons/Menu';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const transitionTime = 0.5;
 
@@ -152,7 +152,7 @@ export default function Footer() {
   function SocialMediaButton({ link, icon }) {
     return (
       <Link href={link} passHref>
-        <IconButton className={classes.iconButton} target='_blank'>
+        <IconButton className={classes.iconButton} target='_blank' size="large">
           <icon.type className={classes.icon} />
         </IconButton>
       </Link>

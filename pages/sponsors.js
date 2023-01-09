@@ -1,11 +1,5 @@
-import {
-  makeStyles,
-  Grid,
-  Typography,
-  Container,
-  Hidden,
-  Button,
-} from '@material-ui/core';
+import { Grid, Typography, Container, Hidden, Button } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
@@ -37,11 +31,11 @@ const useStyles = makeStyles((theme) => ({
     margin: '100px auto 20px auto',
     display: 'block',
     height: 850,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       height: 500,
       margin: '30px auto 0 auto',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 400,
     },
   },
@@ -57,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: 'none',
   },
   thankYou: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginTop: 50,
     },
   },
@@ -98,7 +92,7 @@ export default function Sponsors() {
       <Container maxWidth='lg' className={classes.content}>
         <Grid container spacing={3} justifyContent='center' alignItems='center'>
           <Grid item xs={12} md={5}>
-            <Hidden smDown>
+            <Hidden mdDown>
               <Typography
                 variant='h2'
                 align='center'
@@ -146,29 +140,27 @@ export default function Sponsors() {
   );
 
   function TopLeftContent() {
-    return (
-      <>
-        <Typography variant='body1' className={classes.topText} align='justify'>
-          Cornell Rocketry would like to express our gratitude to all of our
-          sponsors for supporting our various endeavors and goals. Our progress
-          as a team has been attributed to your generosity and belief in the
-          team's ability to achieve great things. None of our accomplishments
-          would have been possible without your donations.
-        </Typography>
-        <Hidden smDown>
-          <br />
-        </Hidden>
-        <Button
-          href='https://securelb.imodules.com/s/1717/giving/interior.aspx?sid=1717&gid=2&pgid=403&cid=1031&dids=145&bledit=1'
-          target='_blank'
-          variant='contained'
-          color='secondary'
-          className={classes.topButton}
-        >
-          Donate
-        </Button>
-      </>
-    );
+    return <>
+      <Typography variant='body1' className={classes.topText} align='justify'>
+        Cornell Rocketry would like to express our gratitude to all of our
+        sponsors for supporting our various endeavors and goals. Our progress
+        as a team has been attributed to your generosity and belief in the
+        team's ability to achieve great things. None of our accomplishments
+        would have been possible without your donations.
+      </Typography>
+      <Hidden mdDown>
+        <br />
+      </Hidden>
+      <Button
+        href='https://securelb.imodules.com/s/1717/giving/interior.aspx?sid=1717&gid=2&pgid=403&cid=1031&dids=145&bledit=1'
+        target='_blank'
+        variant='contained'
+        color='secondary'
+        className={classes.topButton}
+      >
+        Donate
+      </Button>
+    </>;
   }
 
   function TopRightContent() {

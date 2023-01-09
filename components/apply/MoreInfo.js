@@ -2,13 +2,9 @@ import * as dayjs from 'dayjs';
 import * as arraySupport from 'dayjs/plugin/arraySupport';
 dayjs.extend(arraySupport);
 
-import {
-  makeStyles,
-  Grid,
-  Typography,
-  Container,
-  Avatar,
-} from '@material-ui/core';
+import { Grid, Typography, Container, Avatar } from '@mui/material';
+
+import makeStyles from '@mui/styles/makeStyles';
 
 import InfoSessionTimeline from './timelines/InfoSessionTimeline';
 
@@ -18,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   moreInfo: {
     padding: '50px 20px 0px 20px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       padding: '30px 5px 0 5px',
     },
     maxWidth: '100vw',
@@ -26,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   infoSection: {
     padding: 40,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       padding: 20,
     },
     height: '100%',

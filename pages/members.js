@@ -1,12 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import clsx from 'clsx';
-import {
-  makeStyles,
-  Grid,
-  Typography,
-  Container,
-  useMediaQuery,
-} from '@material-ui/core';
+import { Grid, Typography, Container, useMediaQuery } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
