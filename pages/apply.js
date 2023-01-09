@@ -13,7 +13,7 @@ import { useRef } from 'react';
 import HudContent from '../components/apply/HudContent';
 
 export default function Apply() {
-  const [applicationOpen, setApplicationOpen] = useState(false);
+  const [applicationOpen, setApplicationOpen] = useState(true);
   const moreInfoRef = useRef(null);
 
   const nonFreshmanDueDate = dayjs([2022, 8, 1, 23, 59]);
@@ -35,7 +35,8 @@ export default function Apply() {
       label: 'Zoom Info Session',
       type: 'info',
       location: 'Zoom',
-      link: 'https://cornell.zoom.us/j/91501962370?pwd=aFByVStIcWpMaVBLWmp1ODdxOXd6Zz09',
+      link:
+        'https://cornell.zoom.us/j/91501962370?pwd=aFByVStIcWpMaVBLWmp1ODdxOXd6Zz09',
     },
     {
       date: dayjs([2022, 8, 1, 16, 0]),

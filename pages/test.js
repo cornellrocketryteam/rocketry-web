@@ -147,7 +147,12 @@ export default function Test() {
             <Box mb={12}>
               <Typography variant='h2'>At a Glance</Typography>
             </Box>
-            <Grid container direction='row' justify='space-between' spacing={3}>
+            <Grid
+              container
+              direction='row'
+              justifyContent='space-between'
+              spacing={3}
+            >
               <StatsNumber number={40} label={'Team Members'} />
               <StatsNumber number={6} label={'Subteams'} />
               <StatsNumber number={6} label={'Majors'} />

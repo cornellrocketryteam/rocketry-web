@@ -196,7 +196,7 @@ export default function Team({ members, subteamLeads, teamLeads }) {
           <Grid
             container
             alignItems='center'
-            justify='center'
+            justifyContent='center'
             spacing={0}
             className={classes.blueprintGrid}
           >
@@ -305,7 +305,12 @@ export default function Team({ members, subteamLeads, teamLeads }) {
           >
             TEAM LEADS
           </Typography>
-          <Grid container justify='center' alignItems='flex-start' spacing={3}>
+          <Grid
+            container
+            justifyContent='center'
+            alignItems='flex-start'
+            spacing={3}
+          >
             {teamLeads.fileNames.map((name) => (
               <Grid item sm={4} md={3} key={name}>
                 <img
@@ -388,7 +393,7 @@ export default function Team({ members, subteamLeads, teamLeads }) {
                 </Typography>
                 <Grid
                   container
-                  justify='center'
+                  justifyContent='center'
                   alignItems='flex-start'
                   spacing={3}
                 >
