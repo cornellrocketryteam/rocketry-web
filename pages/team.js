@@ -342,7 +342,7 @@ export default function Team({ members, subteamLeads, teamLeads }) {
           </Typography>
           <Grid
             container
-            justify='space-evenly'
+            justifyContent='space-evenly'
             alignItems='flex-start'
             spacing={3}
           >
