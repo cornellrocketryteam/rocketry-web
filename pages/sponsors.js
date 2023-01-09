@@ -1,10 +1,10 @@
-import { Grid, Typography, Container, Hidden, Button } from '@mui/material';
-import makeStyles from '@mui/styles/makeStyles';
-import Header from '../components/layout/Header';
-import Head from '../components/layout/Head';
-import Footer from '../components/layout/Footer';
+import { Button, Container, Grid, Hidden, Typography } from '@mui/material';
 
+import Footer from '../components/layout/Footer';
+import Head from '../components/layout/Head';
+import Header from '../components/layout/Header';
 import { SponsorsInfo } from '../public/static/sponsors/sponsors';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -77,8 +77,9 @@ const useStyles = makeStyles((theme) => ({
   },
   skyline: {
     position: 'relative',
-    top: 5,
+    top: 7,
     width: '100%',
+    zIndex: 0,
   },
 }));
 
@@ -140,27 +141,29 @@ export default function Sponsors() {
   );
 
   function TopLeftContent() {
-    return <>
-      <Typography variant='body1' className={classes.topText} align='justify'>
-        Cornell Rocketry would like to express our gratitude to all of our
-        sponsors for supporting our various endeavors and goals. Our progress
-        as a team has been attributed to your generosity and belief in the
-        team's ability to achieve great things. None of our accomplishments
-        would have been possible without your donations.
-      </Typography>
-      <Hidden mdDown>
-        <br />
-      </Hidden>
-      <Button
-        href='https://securelb.imodules.com/s/1717/giving/interior.aspx?sid=1717&gid=2&pgid=403&cid=1031&dids=145&bledit=1'
-        target='_blank'
-        variant='contained'
-        color='secondary'
-        className={classes.topButton}
-      >
-        Donate
-      </Button>
-    </>;
+    return (
+      <>
+        <Typography variant='body1' className={classes.topText} align='justify'>
+          Cornell Rocketry would like to express our gratitude to all of our
+          sponsors for supporting our various endeavors and goals. Our progress
+          as a team has been attributed to your generosity and belief in the
+          team's ability to achieve great things. None of our accomplishments
+          would have been possible without your donations.
+        </Typography>
+        <Hidden mdDown>
+          <br />
+        </Hidden>
+        <Button
+          href='https://securelb.imodules.com/s/1717/giving/interior.aspx?sid=1717&gid=2&pgid=403&cid=1031&dids=145&bledit=1'
+          target='_blank'
+          variant='contained'
+          color='secondary'
+          className={classes.topButton}
+        >
+          Donate
+        </Button>
+      </>
+    );
   }
 
   function TopRightContent() {

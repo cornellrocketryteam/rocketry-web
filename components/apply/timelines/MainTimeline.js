@@ -1,15 +1,14 @@
 import * as dayjs from 'dayjs';
 
-import makeStyles from '@mui/styles/makeStyles';
-import withStyles from '@mui/styles/withStyles';
-
-import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
 import StepConnector from '@mui/material/StepConnector';
 import StepIcon from '@mui/material/StepIcon';
-import { useState } from 'react';
+import StepLabel from '@mui/material/StepLabel';
+import Stepper from '@mui/material/Stepper';
+import makeStyles from '@mui/styles/makeStyles';
 import { useEffect } from 'react';
+import { useState } from 'react';
+import withStyles from '@mui/styles/withStyles';
 
 const StyledStepConnector = withStyles({
   active: {
@@ -48,6 +47,9 @@ const StyledStepIcon = withStyles({
 })(StepIcon);
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    padding: '30px 0',
+  },
   stepperTimeline: {
     marginTop: 50,
     [theme.breakpoints.only('md')]: {

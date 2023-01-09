@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import makeStyles from '@mui/styles/makeStyles';
 import {
   AppBar,
-  Toolbar,
+  Box,
   Button,
   IconButton,
   Menu,
   MenuItem,
-  Box,
+  Toolbar,
 } from '@mui/material';
-
-import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-// import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import Link from 'next/link';
 import MenuIcon from '@mui/icons-material/Menu';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import makeStyles from '@mui/styles/makeStyles';
+
+// import TwitterIcon from '@mui/icons-material/Twitter';
 
 const transitionTime = 0.5;
 
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     backgroundColor: 'transparent',
-    // borderBottom: '1px solid black',
+    backgroundImage: 'none',
     color: 'white',
     transition: `all ${transitionTime}s`,
     boxShadow: 'none',
@@ -137,7 +137,7 @@ export default function Header({ active, hideMenu }) {
       <AppBar
         className={classes.appBar}
         data-active={active ? 'true' : scrolled.toString()}
-      //position={active ? "static" : "fixed"}
+        //position={active ? "static" : "fixed"}
       >
         <Toolbar>
           <div className={classes.collapseAppBarButtons}>
@@ -148,31 +148,34 @@ export default function Header({ active, hideMenu }) {
                 color='inherit'
                 aria-label='menu'
                 onClick={handleClick}
-                size="large">
+                size='large'
+              >
                 <MenuIcon />
               </IconButton>
             </Box>
-            {!hideMenu && <Menu
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              <Link href='/' passHref>
-                <MenuItem to={'/'}>Home</MenuItem>
-              </Link>
-
-              {['Team', 'Rockets', 'Sponsors'].map((text) => (
-                <Link key={text} href={`/${text.toLowerCase()}`} passHref>
-                  <MenuItem>{text}</MenuItem>
+            {!hideMenu && (
+              <Menu
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <Link href='/' passHref>
+                  <MenuItem to={'/'}>Home</MenuItem>
                 </Link>
-              ))}
-              <Link href='mailto:cornellrocketry@gmail.com' passHref>
-                <MenuItem>Contact</MenuItem>
-              </Link>
-              <Link href={'/apply'} passHref>
-                <MenuItem>Apply</MenuItem>
-              </Link>
-            </Menu>}
+
+                {['Team', 'Rockets', 'Sponsors'].map((text) => (
+                  <Link key={text} href={`/${text.toLowerCase()}`} passHref>
+                    <MenuItem>{text}</MenuItem>
+                  </Link>
+                ))}
+                <Link href='mailto:cornellrocketry@gmail.com' passHref>
+                  <MenuItem>Contact</MenuItem>
+                </Link>
+                <Link href={'/apply'} passHref>
+                  <MenuItem>Apply</MenuItem>
+                </Link>
+              </Menu>
+            )}
           </div>
 
           <div
@@ -180,7 +183,7 @@ export default function Header({ active, hideMenu }) {
             data-active={active ? 'true' : scrolled.toString()}
           >
             <Link href='/' passHref>
-              <IconButton className={classes.logoButton} size="large">
+              <IconButton className={classes.logoButton} size='large'>
                 <img
                   src='/static/crt.png'
                   alt='logo'
@@ -189,63 +192,67 @@ export default function Header({ active, hideMenu }) {
               </IconButton>
             </Link>
 
-            {!hideMenu && <>
-              <Link href='/' passHref>
-                <Button
-                  className={`${classes.homeButton} ${classes.appBarButton}`}
-                  data-active={active ? 'true' : scrolled.toString()}
-                >
-                  Home
-                </Button>
-              </Link>
-              {['Team', 'Rockets', 'Sponsors'].map((text) => (
-                <Link href={`/${text.toLowerCase()}`} key={text} passHref>
-                  <Button color='inherit' className={classes.appBarButton}>
-                    {text}
+            {!hideMenu && (
+              <>
+                <Link href='/' passHref>
+                  <Button
+                    className={`${classes.homeButton} ${classes.appBarButton}`}
+                    data-active={active ? 'true' : scrolled.toString()}
+                  >
+                    Home
                   </Button>
                 </Link>
-              ))}
-            </>}
+                {['Team', 'Rockets', 'Sponsors'].map((text) => (
+                  <Link href={`/${text.toLowerCase()}`} key={text} passHref>
+                    <Button color='inherit' className={classes.appBarButton}>
+                      {text}
+                    </Button>
+                  </Link>
+                ))}
+              </>
+            )}
           </div>
 
-          {!hideMenu && <>
-            <div>
-              <SocialMediaButton
-                link='https://www.facebook.com/CornellRocketry/'
-                icon={<FacebookIcon />}
-              />
-              <SocialMediaButton
-                link='https://www.instagram.com/cornellrocketry/?hl=en/'
-                icon={<InstagramIcon />}
-              />
-              <SocialMediaButton
-                link='https://www.youtube.com/channel/UCOIp04IIwcz8YvBcgrMYOhg'
-                icon={<YouTubeIcon />}
-              />
-            </div>
+          {!hideMenu && (
+            <>
+              <div>
+                <SocialMediaButton
+                  link='https://www.facebook.com/CornellRocketry/'
+                  icon={<FacebookIcon />}
+                />
+                <SocialMediaButton
+                  link='https://www.instagram.com/cornellrocketry/?hl=en/'
+                  icon={<InstagramIcon />}
+                />
+                <SocialMediaButton
+                  link='https://www.youtube.com/channel/UCOIp04IIwcz8YvBcgrMYOhg'
+                  icon={<YouTubeIcon />}
+                />
+              </div>
 
-            <div
-              className={classes.appBarButtons}
-              data-active={active ? 'true' : scrolled.toString()}
-            >
-              <Button
-                color='inherit'
-                className={classes.appBarButton}
-                href='mailto:cornellrocketry@gmail.com'
+              <div
+                className={classes.appBarButtons}
+                data-active={active ? 'true' : scrolled.toString()}
               >
-                Contact
-              </Button>
-              <Link href='/apply' passHref>
                 <Button
-                  variant='contained'
-                  color='secondary'
+                  color='inherit'
                   className={classes.appBarButton}
+                  href='mailto:cornellrocketry@gmail.com'
                 >
-                  Apply
+                  Contact
                 </Button>
-              </Link>
-            </div>
-          </>}
+                <Link href='/apply' passHref>
+                  <Button
+                    variant='contained'
+                    color='secondary'
+                    className={classes.appBarButton}
+                  >
+                    Apply
+                  </Button>
+                </Link>
+              </div>
+            </>
+          )}
         </Toolbar>
       </AppBar>
     </div>
@@ -254,7 +261,11 @@ export default function Header({ active, hideMenu }) {
   function SocialMediaButton({ link, icon }) {
     return (
       <Link href={link} passHref>
-        <IconButton className={classes.appBarIconButton} target='_blank' size="large">
+        <IconButton
+          className={classes.appBarIconButton}
+          target='_blank'
+          size='large'
+        >
           <icon.type
             className={classes.appBarIcon}
             data-active={active ? 'true' : scrolled.toString()}
