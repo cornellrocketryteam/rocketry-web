@@ -30,6 +30,14 @@
         {
           "name": "varda",
           "link": "https://varda.com/"
+        },
+        {
+          "name": "omega",
+          "link": "https://www.omega.com/"
+        },
+        {
+          "name": "marotta",
+          "link": "https://marotta.com/"
         }
       ],
 
@@ -41,6 +49,10 @@
         {
           "name": "nysg",
           "link": "https://www.nyspacegrant.org/"
+        },
+        {
+          "name": "valveworks",
+          "link": "https://www.valveworksusa.com/"
         }
       ],
 
@@ -63,6 +75,10 @@
         {
           "name": "overleaf",
           "link": "https://www.overleaf.com/"
+        },
+        {
+          "name": "oshpark",
+          "link": "https://oshpark.com/"
         }
       ]
     },

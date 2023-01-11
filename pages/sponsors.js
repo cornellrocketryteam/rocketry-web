@@ -213,6 +213,7 @@ export default function Sponsors() {
   }
 
   function SponsorLevelBlock({ imageDir, levelName, sponsors }) {
+    sponsors.sort((a, b) => a['name'].localeCompare(b['name']));
     return (
       <>
         <Typography variant='h5' className={classes.sponsorLevel}>
