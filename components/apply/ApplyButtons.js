@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-evenly',
   },
   buttonContainer: {
-    maxWidth: 500,
+    maxWidth: 400,
   },
   button: {
     transition: '300ms ease',
@@ -66,38 +66,56 @@ export default function ApplyButtons({
       // justifyContent='space-evenly'
       alignItems='center'
     >
-      <Grid item xs className={classes.buttonContainer}>
-        <a href={freshmanLink} target='_blank'>
-          <img
-            className={clsx(classes.button, classes.leftButton)}
-            src='/static/images/apply-page/freshman button.svg'
-            alt='Freshman Application'
-          />
-        </a>
-        <Typography
-          align='center'
-          variant='body1'
-          className={classes.leftButton}
+      {freshmanLink && (
+        <Grid
+          item
+          xs
+          className={clsx(
+            classes.buttonContainer,
+            nonFreshmanLink ? classes.leftButton : null
+          )}
         >
-          DUE {freshmanDueDate.format('M/D @ hh:mm A')}
-        </Typography>
-      </Grid>
-      <Grid item xs className={classes.buttonContainer}>
-        <a href={nonFreshmanLink} target='_blank'>
-          <img
-            className={clsx(classes.button, classes.rightButton)}
-            src='/static/images/apply-page/nonfreshman button.svg'
-            alt='Non-Freshman Application'
-          />
-        </a>
-        <Typography
-          align='center'
-          variant='body1'
-          className={classes.rightButton}
+          <a href={freshmanLink} target='_blank'>
+            <img
+              className={classes.button}
+              src='/static/images/apply-page/freshman button.svg'
+              alt='Freshman Application'
+            />
+          </a>
+          <Typography
+            align='center'
+            variant='body1'
+            // className={classes.leftButton}
+          >
+            DUE {freshmanDueDate.format('M/D @ hh:mm A')}
+          </Typography>
+        </Grid>
+      )}
+      {nonFreshmanLink && (
+        <Grid
+          item
+          xs
+          className={clsx(
+            classes.buttonContainer,
+            freshmanLink ? classes.rightButton : null
+          )}
         >
-          DUE {nonFreshmanDueDate.format('M/D @ hh:mm A')}
-        </Typography>
-      </Grid>
+          <a href={nonFreshmanLink} target='_blank'>
+            <img
+              className={classes.button}
+              src='/static/images/apply-page/nonfreshman button.svg'
+              alt='Non-Freshman Application'
+            />
+          </a>
+          <Typography
+            align='center'
+            variant='body1'
+            // className={classes.rightButton}
+          >
+            DUE {nonFreshmanDueDate.format('M/D @ hh:mm A')}
+          </Typography>
+        </Grid>
+      )}
     </Grid>
   );
 }
