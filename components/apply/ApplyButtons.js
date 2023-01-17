@@ -82,11 +82,7 @@ export default function ApplyButtons({
               alt='Freshman Application'
             />
           </a>
-          <Typography
-            align='center'
-            variant='body1'
-            // className={classes.leftButton}
-          >
+          <Typography align='center' variant='body1'>
             DUE {freshmanDueDate.format('M/D @ hh:mm A')}
           </Typography>
         </Grid>
@@ -107,11 +103,7 @@ export default function ApplyButtons({
               alt='Non-Freshman Application'
             />
           </a>
-          <Typography
-            align='center'
-            variant='body1'
-            // className={classes.rightButton}
-          >
+          <Typography align='center' variant='body1'>
             DUE {nonFreshmanDueDate.format('M/D @ hh:mm A')}
           </Typography>
         </Grid>

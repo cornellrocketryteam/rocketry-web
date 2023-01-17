@@ -24,11 +24,24 @@ export default function Apply() {
 
   // NOTE: dayjs months are 0-indexed
   // format: [year, month (0 indexed), day, hour (24 hr time), minute]
+  // fields: date, label, type, location
   const timelineData = [
     {
       date: dayjs([2023, 0, 13, 23, 59]),
-      label: 'Prop Applications open',
+      label: 'Prop Applications Open',
       type: 'deadline',
+    },
+    {
+      date: dayjs([2023, 0, 26, 19, 0]),
+      label: 'Info Session',
+      location: 'TBD',
+      type: 'info',
+    },
+    {
+      date: dayjs([2023, 0, 30, 19, 0]),
+      label: 'Info Session',
+      location: 'TBD',
+      type: 'info',
     },
     {
       date: freshmanDueDate,
