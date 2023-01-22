@@ -1,5 +1,3 @@
-import { useState, useRef, useEffect } from 'react';
-import clsx from 'clsx';
 import {
   makeStyles,
   Grid,
@@ -8,6 +6,7 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
+import Stars from '../components/Stars';
 import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
 
@@ -15,8 +14,30 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 const useStyles = makeStyles((theme) => ({
+  content: {
+    // matches rockets page
+    padding: '120px 50px 50px 50px',
+    [theme.breakpoints.only('xs')]: {
+      padding: '80px 20px 30px 20px',
+    },
+  },
+  description: {
+    // matches rockets page
+    marginTop: 30,
+    paddingLeft: 10,
+    paddingRight: 10,
+    color: theme.typography.h5.color,
+    // doesnt match rockets page
+    fontSize: 18,
+  },
+  teamPic: {
+    display: 'flex',
+    width: '100%',
+    margin: 'auto',
+    border: '2px solid #8D8D8D',
+  },
   teamLeadContainer: {
-    marginTop: 100,
+    marginTop: 60,
   },
   teamHeading: {
     color: theme.palette.secondary.main,
@@ -60,11 +81,32 @@ export default function Members({ members, subteamLeads, teamLeads }) {
     <div className={classes.root}>
       <Head title='Members | Cornell Rocketry Team' />
       <Header />
+      <Stars height={600} />
+
+      <Container maxWidth='lg' className={classes.content}>
+        <Grid container spacing={5}>
+          <Grid item xs={9} md={8} lg={6} xl={6}>
+            <Typography variant='h2' className={classes.title}>
+              Our Team
+            </Typography>
+            <Typography className={classes.description}>
+              Our team likes rockets Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Exercitationem iste eos odit, quas inventore,
+              quo laudantium, modi vel amet hic blanditiis odio et excepturi aut
+              velit expedita ad temporibus dolores.
+            </Typography>
+          </Grid>
+          <Grid item xs={9} md={8} lg={6} xl={6}>
+            <img
+              src='/static/images/apply-page/team pic.jpg'
+              alt='CRT Team Picture'
+              className={classes.teamPic}
+            />
+          </Grid>
+        </Grid>
+      </Container>
 
       <Container maxWidth='lg' className={classes.teamLeadContainer}>
-        <Typography variant='h2' align='center' className={classes.title}>
-          Our Team
-        </Typography>
         <Typography variant='h4' align='center' className={classes.teamHeading}>
           TEAM LEADS
         </Typography>
