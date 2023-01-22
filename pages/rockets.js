@@ -242,7 +242,7 @@ export default function Rockets() {
       data: [
         { property: 'height', value: '155"' },
         { property: 'diameter', value: '6.2"' },
-        { property: 'launch mass', value: '1112 lb' },
+        { property: 'launch mass', value: '112 lb' },
         { property: 'motor diameter', value: '4.5"' },
         { property: 'motor', value: 'Cesaroni Pro98' },
         { property: 'airframe filament', value: 'Wound G12 Fiberglass' },
@@ -330,7 +330,7 @@ export default function Rockets() {
 
       <Container maxWidth='lg' className={classes.content}>
         <div className={classes.mainRocketContainer}>
-          <Grid container spacing={5} justify='center'>
+          <Grid container spacing={5} justifyContent='center'>
             <Grid item xs={9} md={8} lg={6} xl={6}>
               <Typography variant='h2' className={classes.title}>
                 Our Rockets
@@ -451,7 +451,7 @@ export default function Rockets() {
         <Grid
           container
           spacing={6}
-          justify='center'
+          justifyContent='center'
           alignItems='flex-end'
           alignContent='space-between'
           className={classes.patchesContainer}

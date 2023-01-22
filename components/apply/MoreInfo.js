@@ -61,7 +61,12 @@ export default function MoreInfo({ moreInfoRef, timelineData }) {
 
   return (
     <Container maxWidth='xl' ref={moreInfoRef} className={classes.root}>
-      <Grid container justify='center' className={classes.moreInfo} spacing={5}>
+      <Grid
+        container
+        justifyContent='center'
+        className={classes.moreInfo}
+        spacing={5}
+      >
         <Grid item md={6}>
           <div className={classes.infoSection}>
             <Typography variant='h3' className={classes.infoHeading}>

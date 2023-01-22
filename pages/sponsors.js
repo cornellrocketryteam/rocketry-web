@@ -1,4 +1,3 @@
-// import { useRef, useEffect, useState } from 'react';
 import {
   makeStyles,
   Grid,
@@ -10,6 +9,8 @@ import {
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
+
+import { SponsorsInfo } from '../public/static/sponsors/sponsors';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -94,13 +95,8 @@ export default function Sponsors() {
     <div className={classes.root}>
       <Head title='Sponsors | Cornell Rocketry Team' />
       <Header />
-      {/* <img
-        src='/static/images/sponsors-page/stars.png'
-        alt='Stars'
-        className={classes.stars}
-      /> */}
       <Container maxWidth='lg' className={classes.content}>
-        <Grid container spacing={3} justify='center' alignItems='center'>
+        <Grid container spacing={3} justifyContent='center' alignItems='center'>
           <Grid item xs={12} md={5}>
             <Hidden smDown>
               <Typography
@@ -137,60 +133,14 @@ export default function Sponsors() {
         <Typography variant='h3' className={classes.thankYou}>
           Thank You to Our Sponsors!
         </Typography>
-        <SponsorBlock
-          level='platinum sponsors'
-          sponsors={[
-            'altium',
-            'ansys',
-            'atlassian',
-            'boeing',
-            'cornell',
-            'datablue',
-            'monster',
-            'solidworks',
-          ].sort()}
-        />
-        <SponsorBlock
-          level='gold sponsors'
-          sponsors={['galvez-white', 'intel', 'phillips66', 'tmf']}
-        />
-        <SponsorBlock
-          level='silver sponsors'
-          sponsors={[
-            'exxon',
-            'icarus',
-            'lutron',
-            'peterpaul',
-            'shell',
-            'southernballoon',
-            'tms',
-          ].sort()}
-        />
-        <SponsorBlock level='bronze sponsors' sponsors={['swagelok'].sort()} />
-        <div>
-          <Typography variant='h5' className={classes.sponsorLevel}>
-            CONTRIBUTERS
-          </Typography>
-          <Grid container spacing={3} justify='center' alignItems='center'>
-            {['Tekant', 'Schneider', 'McDonnell', 'Fay', 'Irons', 'Webster']
-              .sort()
-              .map((name) => (
-                <Grid item key={name} xs={12} sm={4} md={3}>
-                  <Typography variant='h4' className={classes.contributer}>
-                    The {name} Family
-                  </Typography>
-                </Grid>
-              ))}
-          </Grid>
-        </div>
+
+        <SponsorLogos {...SponsorsInfo} />
       </Container>
-      <div className={classes.skylineWrapper}>
-        <img
-          src='/static/images/sponsors-page/cornell skyline dark.png'
-          alt='Cornell Skyline'
-          className={classes.skyline}
-        />
-      </div>
+      <img
+        src='/static/images/sponsors-page/cornell skyline dark.png'
+        alt='Cornell Skyline'
+        className={classes.skyline}
+      />
       <Footer />
     </div>
   );
@@ -246,25 +196,63 @@ export default function Sponsors() {
     );
   }
 
-  function SponsorBlock({ level, sponsors }) {
+  function SponsorLogos({ imageDir, levels, contributers }) {
     return (
-      <div>
+      <>
+        {Object.keys(levels).map((levelName) => (
+          <SponsorLevelBlock
+            key={levelName}
+            imageDir={imageDir}
+            levelName={levelName}
+            sponsors={levels[levelName]}
+          />
+        ))}
+        <Contributers contributers={contributers} />
+      </>
+    );
+  }
+
+  function SponsorLevelBlock({ imageDir, levelName, sponsors }) {
+    sponsors.sort((a, b) => a['name'].localeCompare(b['name']));
+    return (
+      <>
         <Typography variant='h5' className={classes.sponsorLevel}>
-          {level.toUpperCase()}
+          {levelName.toUpperCase() + ' SPONSORS'}
         </Typography>
-        <Grid container spacing={3} justify='center' alignItems='center'>
-          {sponsors.map((name) => (
+        <Grid container spacing={3} justifyContent='center' alignItems='center'>
+          {sponsors.map(({ name, link }) => (
             <Grid item key={name} xs={12} sm={4} md={3}>
-              <img
-                src={`/static/images/sponsors-page/${level}/${name}.png`}
-                alt={name}
-                className={classes.sponsorLogo}
-              />
+              <a href={link} target='_blank' rel='noopener noreferrer'>
+                <img
+                  src={`${imageDir}${name}.png`}
+                  alt={name}
+                  className={classes.sponsorLogo}
+                />
+              </a>
             </Grid>
           ))}
         </Grid>
         <hr className={classes.bigLine} />
-      </div>
+      </>
+    );
+  }
+
+  function Contributers({ contributers }) {
+    return (
+      <>
+        <Typography variant='h5' className={classes.sponsorLevel}>
+          CONTRIBUTERS
+        </Typography>
+        <Grid container spacing={3} justifyContent='center' alignItems='center'>
+          {contributers.sort().map((name) => (
+            <Grid item key={name} xs={12} sm={4} md={3}>
+              <Typography variant='h4' className={classes.contributer}>
+                The {name} Family
+              </Typography>
+            </Grid>
+          ))}
+        </Grid>
+      </>
     );
   }
 }

@@ -110,7 +110,12 @@ export default function Members({ members, subteamLeads, teamLeads }) {
         <Typography variant='h4' align='center' className={classes.teamHeading}>
           TEAM LEADS
         </Typography>
-        <Grid container justify='center' alignItems='flex-start' spacing={3}>
+        <Grid
+          container
+          justifyContent='center'
+          alignItems='flex-start'
+          spacing={3}
+        >
           {teamLeads.fileNames.map((name) => (
             <Grid item sm={4} md={3} key={name}>
               <img
@@ -136,7 +141,7 @@ export default function Members({ members, subteamLeads, teamLeads }) {
         </Typography>
         <Grid
           container
-          justify='space-evenly'
+          justifyContent='space-evenly'
           alignItems='flex-start'
           spacing={3}
         >
@@ -185,7 +190,7 @@ export default function Members({ members, subteamLeads, teamLeads }) {
               </Typography>
               <Grid
                 container
-                justify='center'
+                justifyContent='center'
                 alignItems='flex-start'
                 spacing={3}
               >
