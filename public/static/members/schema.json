@@ -1,0 +1,53 @@
+{
+  "title": "Team Members",
+  "type": "object",
+  "required": ["teamMembers"],
+  "properties": {
+    "teamMembers": {
+      "type": "array",
+      "format": "list",
+      "title": "Team Members",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "title": "Member",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "subteam": {
+            "type": "string",
+            "enum": [
+              "business",
+              "electrical",
+              "propulsion",
+              "recovery and payload",
+              "software",
+              "structures"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "enum": ["team lead", "subteam lead", "member"],
+            "default": "member"
+          },
+          "college": {
+            "type": "string",
+            "enum": ["COE", "CAS", "CALS", "Dyson", "Hotel", "ILR"],
+            "default": "COE"
+          },
+          "graduationYear": {
+            "type": "integer"
+          },
+          "major": {
+            "type": "string"
+          },
+          "minor": {
+            "type": "string",
+            "default": "None"
+          }
+        }
+      }
+    }
+  }
+}

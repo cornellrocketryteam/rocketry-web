@@ -34,7 +34,7 @@ export default function Apply() {
     {
       date: dayjs([2023, 0, 26, 19, 0]),
       label: 'Info Session',
-      location: 'TBD',
+      location: 'Upson 216',
       type: 'info',
     },
     {
