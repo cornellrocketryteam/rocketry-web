@@ -19,9 +19,6 @@ import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
 
 const useStyles = makeStyles((theme) => ({
-  // root: {
-  //   height: '200vh',
-  // },
   content: {
     padding: '100px 50px 200px 50px',
     [theme.breakpoints.only('xs')]: {
@@ -45,6 +42,25 @@ export default function Faq() {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
+  const questionsAndAnswers = [
+    [
+      'Am I expected to have prior technical experience in order to apply?',
+      'Nope! What we mainly look for is genuine interest in the team and what we do. We teach our new members everything they need to know.',
+    ],
+    [
+      'Do you only accept certain majors?',
+      'Once again, nope! A related major is one way to show interest in what we do, but there are many ways to show interest, regardless of major.',
+    ],
+    [
+      'I’m unsure which subteam to apply to. Do I have to pick a subteam in order to apply?',
+      'No worries! In our application you can indicate both your first and second choice subteam, and your application will be reviewed by both subteams!',
+    ],
+    [
+      'What do you guys do on a day-to-day basis?',
+      'How much flexibility is there in roles? If I’m on one subteam, can I still be somewhat involved with another?',
+    ],
+  ];
 
   return (
     <div className={classes.root}>
