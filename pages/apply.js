@@ -13,51 +13,35 @@ import { useRef } from 'react';
 import HudContent from '../components/apply/HudContent';
 
 export default function Apply() {
-  const [applicationOpen, setApplicationOpen] = useState(false);
+  const [applicationOpen, setApplicationOpen] = useState(true);
   const moreInfoRef = useRef(null);
 
-  const nonFreshmanDueDate = dayjs([2022, 8, 1, 23, 59]);
-  const freshmanDueDate = dayjs([2022, 8, 29, 23, 59]);
+  const nonFreshmanDueDate = dayjs([0, 0, 0, 0, 0]);
+  const freshmanDueDate = dayjs([2023, 1, 2, 23, 59]);
 
-  const nonFreshmanLink = 'https://forms.gle/xWpYYTj3oPMsavE29';
-  const freshmanLink = 'https://forms.gle/AoyFXQXMUcuhjCBB8';
+  const nonFreshmanLink = false;
+  const freshmanLink = 'https://forms.gle/yDx7akqYw6TxQn94A';
 
   // NOTE: dayjs months are 0-indexed
+  // format: [year, month (0 indexed), day, hour (24 hr time), minute]
+  // fields: date, label, type, location
   const timelineData = [
     {
-      date: dayjs([2022, 7, 24, 17, 30]),
-      label: 'Info Session',
-      type: 'info',
-      location: 'Upson 216',
-    },
-    {
-      date: dayjs([2022, 7, 30, 19, 0]),
-      label: 'Zoom Info Session',
-      type: 'info',
-      location: 'Zoom',
-      link: 'https://cornell.zoom.us/j/91501962370?pwd=aFByVStIcWpMaVBLWmp1ODdxOXd6Zz09',
-    },
-    {
-      date: dayjs([2022, 8, 1, 16, 0]),
-      label: 'Project Team Fest',
-      location: 'duffield',
-    },
-    {
-      date: nonFreshmanDueDate,
-      label: 'Upperclassmen Apps Due',
+      date: dayjs([2023, 0, 13, 23, 59]),
+      label: 'Prop Applications Open',
       type: 'deadline',
     },
     {
-      date: dayjs([2022, 8, 15, 17, 30]),
+      date: dayjs([2023, 0, 26, 19, 15]),
       label: 'Info Session',
+      location: 'Upson 216',
       type: 'info',
-      location: 'Upson B02',
     },
     {
-      date: dayjs([2022, 8, 21, 19, 0]),
+      date: dayjs([2023, 0, 30, 19, 0]),
       label: 'Info Session',
+      location: 'Phillips 219',
       type: 'info',
-      location: 'Hollister 206',
     },
     {
       date: freshmanDueDate,

@@ -1,7 +1,7 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 // Create a theme instance.
-var mainTheme = createMuiTheme({
+var mainTheme = createTheme({
   typography: {
     fontFamily: ['Poppins', 'sans-serif'].join(','),
     h4: {
@@ -25,12 +25,3 @@ var mainTheme = createMuiTheme({
 mainTheme = responsiveFontSizes(mainTheme);
 
 export default mainTheme;
-
-export const adminTheme = createMuiTheme({
-  palette: {
-    type: 'dark',
-    background: {
-      default: '#161c24',
-    },
-  },
-});

@@ -1,0 +1,99 @@
+{
+  "SponsorsInfo": {
+    "imageDir": "/static/images/sponsors-page/logos/",
+    "levels": {
+      "platinum": [
+        {
+          "name": "altium",
+          "link": "https://www.altium.com/"
+        },
+        {
+          "name": "ansys",
+          "link": "https://www.ansys.com/"
+        },
+        {
+          "name": "boeing",
+          "link": "https://www.boeing.com/"
+        },
+        {
+          "name": "cornell",
+          "link": "https://www.engineering.cornell.edu/"
+        },
+        {
+          "name": "monster",
+          "link": "https://www.monstertool.com/"
+        },
+        {
+          "name": "solidworks",
+          "link": "https://www.solidworks.com/"
+        },
+        {
+          "name": "varda",
+          "link": "https://varda.com/"
+        },
+        {
+          "name": "omega",
+          "link": "https://www.omega.com/"
+        },
+        {
+          "name": "marotta",
+          "link": "https://marotta.com/"
+        }
+      ],
+
+      "gold": [
+        {
+          "name": "anduril",
+          "link": "https://www.anduril.com/"
+        },
+        {
+          "name": "nysg",
+          "link": "https://www.nyspacegrant.org/"
+        },
+        {
+          "name": "valworx",
+          "link": "https://www.valworx.com/"
+        }
+      ],
+
+      "silver": [
+        {
+          "name": "exxon",
+          "link": "https://www.exxon.com/"
+        },
+        {
+          "name": "lutron",
+          "link": "https://www.lutron.com/"
+        },
+        {
+          "name": "shell",
+          "link": "https://www.shell.com/"
+        }
+      ],
+
+      "bronze": [
+        {
+          "name": "overleaf",
+          "link": "https://www.overleaf.com/"
+        },
+        {
+          "name": "oshpark",
+          "link": "https://oshpark.com/"
+        }
+      ]
+    },
+
+    "contributers": [
+      "Hawes",
+      "Frey",
+      "Polito",
+      "Noles",
+      "Powis",
+      "Espinosa",
+      "Allen",
+      "McNay",
+      "Schultz",
+      "Mukasey"
+    ]
+  }
+}

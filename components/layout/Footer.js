@@ -84,13 +84,13 @@ export default function Footer() {
                 Site Map
               </Typography>
               <Link href='/' passHref>
-                <Typography variant='body' className={classes.link}>
+                <Typography variant='body1' className={classes.link}>
                   Home
                 </Typography>
               </Link>
               {['Team', 'Rockets', 'Sponsors', 'Apply'].map((text) => (
                 <Link href={`/${text.toLowerCase()}`} key={text} passHref>
-                  <Typography variant='body' className={classes.link}>
+                  <Typography variant='body1' className={classes.link}>
                     {text}
                   </Typography>
                 </Link>
@@ -99,7 +99,7 @@ export default function Footer() {
                 href='https://cornellrocketryadmin.com/php/AdminMain.php'
                 target='_blank'
               >
-                <Typography variant='body' className={classes.link}>
+                <Typography variant='body1' className={classes.link}>
                   Login
                 </Typography>
               </a>
@@ -131,7 +131,7 @@ export default function Footer() {
             </CenterLeftAlign>
           </Grid>
         </Grid>
-        <Typography variant='body' className={classes.copyright}>
+        <Typography variant='body1' className={classes.copyright}>
           &copy; {new Date().getFullYear()} Cornell Rocketry Team
         </Typography>
       </Container>

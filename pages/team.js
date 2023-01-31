@@ -5,9 +5,7 @@ import {
   Grid,
   Typography,
   Container,
-  Tooltip,
   useMediaQuery,
-  Fade,
 } from '@material-ui/core';
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
@@ -198,7 +196,7 @@ export default function Team({ members, subteamLeads, teamLeads }) {
           <Grid
             container
             alignItems='center'
-            justify='center'
+            justifyContent='center'
             spacing={0}
             className={classes.blueprintGrid}
           >
@@ -309,8 +307,7 @@ export default function Team({ members, subteamLeads, teamLeads }) {
           </Typography>
           <Grid
             container
-            alignItems='center'
-            justify='center'
+            justifyContent='center'
             alignItems='flex-start'
             spacing={3}
           >
@@ -345,8 +342,7 @@ export default function Team({ members, subteamLeads, teamLeads }) {
           </Typography>
           <Grid
             container
-            alignItems='center'
-            justify='space-evenly'
+            justifyContent='space-evenly'
             alignItems='flex-start'
             spacing={3}
           >
@@ -397,8 +393,7 @@ export default function Team({ members, subteamLeads, teamLeads }) {
                 </Typography>
                 <Grid
                   container
-                  alignItems='center'
-                  justify='center'
+                  justifyContent='center'
                   alignItems='flex-start'
                   spacing={3}
                 >
