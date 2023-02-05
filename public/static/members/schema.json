@@ -1,50 +1,68 @@
 {
   "title": "Team Members",
   "type": "object",
-  "required": ["teamMembers"],
   "properties": {
-    "teamMembers": {
-      "type": "array",
-      "format": "list",
-      "title": "Team Members",
-      "uniqueItems": true,
-      "items": {
-        "type": "object",
-        "title": "Member",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "subteam": {
-            "type": "string",
-            "enum": [
-              "business",
-              "electrical",
-              "propulsion",
-              "recovery and payload",
-              "software",
-              "structures"
-            ]
-          },
-          "type": {
-            "type": "string",
-            "enum": ["team lead", "subteam lead", "member"],
-            "default": "member"
-          },
-          "college": {
-            "type": "string",
-            "enum": ["COE", "CAS", "CALS", "Dyson", "Hotel", "ILR"],
-            "default": "COE"
-          },
-          "graduationYear": {
-            "type": "integer"
-          },
-          "major": {
-            "type": "string"
-          },
-          "minor": {
-            "type": "string",
-            "default": "None"
+    "TeamMembers": {
+      "type": "object",
+      "properties": {
+        "imageDir": {
+          "type": "string",
+          "default": "/static/images/members-page/"
+        },
+        "members": {
+          "type": "array",
+          "format": "list",
+          "title": "Team Members",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "title": "member",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "subteam": {
+                "type": "string",
+                "enum": [
+                  "business",
+                  "electrical",
+                  "propulsion",
+                  "recovery and payload",
+                  "software",
+                  "structures"
+                ]
+              },
+              "position": {
+                "type": "string",
+                "enum": ["team lead", "subteam lead", "member"],
+                "default": "member"
+              },
+              "college": {
+                "type": "string",
+                "enum": ["COE", "CAS", "CALS", "Dyson", "Hotel", "ILR"],
+                "default": "COE"
+              },
+              "graduationYear": {
+                "type": "integer"
+              },
+              "major": {
+                "type": "array",
+                "format": "list",
+                "items": {
+                  "type": "string",
+                  "title": "major"
+                },
+                "default": [""]
+              },
+              "minor": {
+                "type": "array",
+                "format": "list",
+                "items": {
+                  "type": "string",
+                  "title": "minor"
+                }
+              }
+            }
           }
         }
       }

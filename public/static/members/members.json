@@ -1,0 +1,34 @@
+{
+  "TeamMembers": {
+    "imageDir": "/static/images/members-page/",
+    "members": [
+      {
+        "name": "Anchey Peng",
+        "subteam": "business",
+        "position": "subteam lead",
+        "college": "CAS",
+        "graduationYear": 2024,
+        "major": ["Computer Science"],
+        "minor": []
+      },
+      {
+        "name": "Charles Chen",
+        "subteam": "business",
+        "position": "member",
+        "college": "CAS",
+        "graduationYear": 2025,
+        "major": ["Economics", "Government"],
+        "minor": []
+      },
+      {
+        "name": "Sam Noles",
+        "subteam": "recovery and payload",
+        "position": "team lead",
+        "college": "COE",
+        "graduationYear": 2023,
+        "major": ["Engineering Physics"],
+        "minor": []
+      }
+    ]
+  }
+}

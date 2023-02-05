@@ -13,6 +13,8 @@ import Footer from '../components/layout/Footer';
 import { promises as fs } from 'fs';
 import path from 'path';
 
+import { TeamMembers } from '../public/static/members/members';
+
 const useStyles = makeStyles((theme) => ({
   content: {
     // matches rockets page
@@ -241,6 +243,39 @@ export default function Members({ members, subteamLeads, teamLeads }) {
       <Footer />
     </div>
   );
+
+  function categorizeMembers(members) {
+    const subteams = [
+      'business',
+      'electrical',
+      'embedded software',
+      'propulsion',
+      'recovery & payload',
+      'structures',
+    ];
+
+    const categorizedMembers = {};
+
+    subteams.forEach((subteam) => {
+      const subteamFiltered = members.filter(
+        (member) => member.subteam == subteam
+      );
+
+      categorizedMembers[subteam]['subteamLeads'] = subteamFiltered.filter(
+        (member) => member.position == 'subteam lead'
+      );
+
+      categorizedMembers[subteam]['subteamMembers'] = subteamFiltered.filter(
+        (member) => member.position == 'member lead'
+      );
+    });
+
+    categorizedMembers['team leads'] = members.filter(
+      (member) => member.position == 'team lead'
+    );
+
+    return categorizedMembers;
+  }
 }
 
 export async function getStaticProps() {
