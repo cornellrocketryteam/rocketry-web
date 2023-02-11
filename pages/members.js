@@ -76,8 +76,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Members({ members, subteamLeads, teamLeads }) {
-  const xs = useMediaQuery('(max-width:600px)'); //true for extra small screen sizes
+  // const xs = useMediaQuery('(max-width:600px)'); //true for extra small screen sizes
   const classes = useStyles();
+
+  imageDir = TeamMembers.imageDir;
 
   return (
     <div className={classes.root}>
