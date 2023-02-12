@@ -1,18 +1,17 @@
 import {
-  makeStyles,
+  Container,
   Grid,
   Typography,
-  Container,
+  makeStyles,
   useMediaQuery,
 } from '@material-ui/core';
+
+import Footer from '../components/layout/Footer';
+import Head from '../components/layout/Head';
 import Header from '../components/layout/Header';
 import Stars from '../components/Stars';
-import Head from '../components/layout/Head';
-import Footer from '../components/layout/Footer';
-
-import { promises as fs } from 'fs';
-import path from 'path';
-
+import SubteamBLock from '../components/members/SubteamBlock';
+import TeamLeads from '../components/members/TeamLeads';
 import { TeamMembers } from '../public/static/members/members';
 
 const useStyles = makeStyles((theme) => ({
@@ -38,48 +37,14 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     border: '2px solid #8D8D8D',
   },
-  teamLeadContainer: {
-    marginTop: 60,
-  },
-  teamHeading: {
-    color: theme.palette.secondary.main,
-    margin: '40px 0 20px 0',
-  },
-  teamLeadPic: {
-    display: 'block',
-    margin: 'auto',
-    width: '100%',
-    maxWidth: 210,
-  },
-  subteam: {
-    marginBottom: 8,
-    color: '#bbbbbb',
-  },
-  subteamLeadPic: {
-    display: 'block',
-    margin: 'auto',
-    width: '100%',
-    maxWidth: 200,
-  },
-  name: {
-    marginTop: 8,
-    marginBottom: 8,
-    // whiteSpace: 'nowrap',
-  },
-  subteamLeadLabel: {
-    color: '#bbbbbb',
-  },
-
-  subteamsContainer: {
-    marginBottom: 100,
-  },
 }));
 
-export default function Members({ members, subteamLeads, teamLeads }) {
+export default function Members() {
   // const xs = useMediaQuery('(max-width:600px)'); //true for extra small screen sizes
   const classes = useStyles();
 
-  imageDir = TeamMembers.imageDir;
+  const imageDir = TeamMembers.imageDir;
+  const categorizedMembers = categorizeMembers(TeamMembers.members);
 
   return (
     <div className={classes.root}>
@@ -110,138 +75,16 @@ export default function Members({ members, subteamLeads, teamLeads }) {
         </Grid>
       </Container>
 
-      <Container maxWidth='lg' className={classes.teamLeadContainer}>
-        <Typography variant='h4' align='center' className={classes.teamHeading}>
-          TEAM LEADS
-        </Typography>
-        <Grid
-          container
-          justifyContent='center'
-          alignItems='flex-start'
-          spacing={3}
-        >
-          {teamLeads.fileNames.map((name) => (
-            <Grid item sm={4} md={3} key={name}>
-              <img
-                src={teamLeads.dir + '\\' + name}
-                alt={name}
-                className={classes.teamLeadPic}
-              />
-              <Typography
-                variant='body1'
-                align='center'
-                className={classes.name}
-              >
-                {name.split('.')[0]}
-              </Typography>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+      <TeamLeads
+        imageDir={imageDir}
+        teamLeads={categorizedMembers['teamLeads']}
+      />
 
-      <Container maxWidth='lg' className={classes.subteamLeadContainer}>
-        <Typography variant='h4' align='center' className={classes.teamHeading}>
-          SUBTEAM LEADS
-        </Typography>
-        <Grid
-          container
-          justifyContent='space-evenly'
-          alignItems='flex-start'
-          spacing={3}
-        >
-          {subteamLeads.map((subteam) => (
-            <Grid item sm={4} md={4} lg={2} key={subteam}>
-              <Typography
-                variant='body1'
-                align='center'
-                className={classes.subteam}
-              >
-                {subteam.subteam.toUpperCase()}
-              </Typography>
-
-              {subteam.fileNames.map((fileName) => (
-                <div key={fileName}>
-                  <img
-                    src={subteam.dir + '\\' + fileName}
-                    alt={fileName}
-                    className={classes.subteamLeadPic}
-                  />
-                  <Typography
-                    variant='body1'
-                    align='center'
-                    className={classes.name}
-                  >
-                    {fileName.split('.')[0]}
-                  </Typography>
-                </div>
-              ))}
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-
-      <Container maxWidth='lg' className={classes.subteamsContainer}>
-        {members.map((subteam, index) => (
-          <div key={subteam}>
-            <>
-              <Typography
-                variant='h4'
-                align='center'
-                className={classes.teamHeading}
-                key={subteam}
-              >
-                {subteam.subteam.toUpperCase()}
-              </Typography>
-              <Grid
-                container
-                justifyContent='center'
-                alignItems='flex-start'
-                spacing={3}
-              >
-                {subteamLeads[index].fileNames.map((name) => (
-                  <Grid item sm={4} md={4} lg={2} key={name}>
-                    <img
-                      src={subteamLeads[index].dir + '\\' + name}
-                      alt={name}
-                      className={classes.subteamLeadPic}
-                    />
-                    <Typography
-                      variant='body1'
-                      align='center'
-                      className={classes.name}
-                    >
-                      {name.split('.')[0]}
-                    </Typography>
-                    <Typography
-                      variant='body2'
-                      align='center'
-                      className={classes.subteamLeadLabel}
-                    >
-                      <i>Subteam Lead</i>
-                    </Typography>
-                  </Grid>
-                ))}
-                {subteam.fileNames.map((name) => (
-                  <Grid item sm={4} md={4} lg={2} key={name}>
-                    <img
-                      src={subteam.dir + '\\' + name}
-                      alt={name}
-                      className={classes.subteamLeadPic}
-                    />
-                    <Typography
-                      variant='body1'
-                      align='center'
-                      className={classes.name}
-                    >
-                      {name.split('.')[0]}
-                    </Typography>
-                  </Grid>
-                ))}
-              </Grid>
-            </>
-          </div>
-        ))}
-      </Container>
+      <SubteamBLock
+        imageDir={imageDir}
+        subteamLeads={categorizedMembers['subteamLeads']}
+        subteamMembers={categorizedMembers['subteamMembers']}
+      />
       <Footer />
     </div>
   );
@@ -258,77 +101,28 @@ export default function Members({ members, subteamLeads, teamLeads }) {
 
     const categorizedMembers = {};
 
+    categorizedMembers['teamLeads'] = members.filter(
+      (member) => member.position == 'team lead'
+    );
+
+    categorizedMembers['subteamLeads'] = {};
+
+    categorizedMembers['subteamMembers'] = {};
+
     subteams.forEach((subteam) => {
       const subteamFiltered = members.filter(
         (member) => member.subteam == subteam
       );
 
-      categorizedMembers[subteam]['subteamLeads'] = subteamFiltered.filter(
+      categorizedMembers['subteamLeads'][subteam] = subteamFiltered.filter(
         (member) => member.position == 'subteam lead'
       );
 
-      categorizedMembers[subteam]['subteamMembers'] = subteamFiltered.filter(
-        (member) => member.position == 'member lead'
+      categorizedMembers['subteamMembers'][subteam] = subteamFiltered.filter(
+        (member) => member.position == 'member'
       );
     });
 
-    categorizedMembers['team leads'] = members.filter(
-      (member) => member.position == 'team lead'
-    );
-
     return categorizedMembers;
   }
-}
-
-export async function getStaticProps() {
-  const subteams = [
-    'business',
-    'electrical',
-    'embedded software',
-    'propulsion',
-    'recovery & payload',
-    'structures',
-  ];
-
-  const teamDirectory = path.join(
-    process.cwd(),
-    'public/static/images/team-page'
-  );
-
-  const membersImages = subteams.map(async (subteam) => {
-    var subteamDirectory = path.join(teamDirectory, 'members', subteam);
-    var fileNames = await fs.readdir(subteamDirectory);
-
-    return {
-      subteam,
-      dir: subteamDirectory.split('public')[1],
-      fileNames,
-    };
-  });
-
-  const subteamLeadImages = subteams.map(async (subteam) => {
-    var subteamDirectory = path.join(teamDirectory, 'subteam leads', subteam);
-    var fileNames = await fs.readdir(subteamDirectory);
-
-    return {
-      subteam,
-      dir: subteamDirectory.split('public')[1],
-      fileNames,
-    };
-  });
-
-  const teamLeadDirectory = path.join(teamDirectory, 'team leads');
-  const fileNames = await fs.readdir(teamLeadDirectory);
-  const teamLeadImages = {
-    dir: teamLeadDirectory.split('public')[1],
-    fileNames,
-  };
-
-  return {
-    props: {
-      members: await Promise.all(membersImages),
-      subteamLeads: await Promise.all(subteamLeadImages),
-      teamLeads: teamLeadImages,
-    },
-  };
 }

@@ -22,6 +22,8 @@ const useStyles = makeStyles((theme) => ({
 export default function SponsorLevelBlock({ imageDir, levelName, sponsors }) {
   const classes = useStyles();
 
+  sponsors.sort((a, b) => a['name'].localeCompare(b['name']));
+
   return (
     <>
       <Typography variant='h5' className={classes.sponsorLevel}>
