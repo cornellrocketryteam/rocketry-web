@@ -1,10 +1,4 @@
-import {
-  Container,
-  Grid,
-  Typography,
-  makeStyles,
-  useMediaQuery,
-} from '@material-ui/core';
+import { Typography, makeStyles } from '@material-ui/core';
 
 import MemberDialog from './MemberDialog';
 import { useState } from 'react';
@@ -53,7 +47,12 @@ export default function MemberPic({ imageDir, member }) {
         </Typography>
       </button>
 
-      <MemberDialog handleClose={handleClose} open={open} />
+      <MemberDialog
+        imageDir={imageDir}
+        member={member}
+        handleClose={handleClose}
+        open={open}
+      />
     </>
   );
 }
