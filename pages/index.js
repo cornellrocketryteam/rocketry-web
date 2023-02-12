@@ -1,16 +1,17 @@
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import ScrollLottie from '../lib/ScrollLottie';
-import { useRef, useEffect } from 'react';
 import {
-  makeStyles,
-  Typography,
-  Grid,
   Box,
   Container,
+  Grid,
+  Typography,
+  makeStyles,
 } from '@material-ui/core';
-import Header from '../components/layout/Header';
+import { useEffect, useRef } from 'react';
+
 import Footer from '../components/layout/Footer';
+import Header from '../components/layout/Header';
+import ScrollLottie from '../lib/ScrollLottie';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { gsap } from 'gsap/dist/gsap';
 
 const useStyles = makeStyles((theme) => ({
   root: {

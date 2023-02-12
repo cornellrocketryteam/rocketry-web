@@ -6,7 +6,16 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 
+import MemberDialog from './MemberDialog';
+import { useState } from 'react';
+
 const useStyles = makeStyles((theme) => ({
+  clickable: {
+    all: 'unset',
+    display: 'block',
+    margin: 'auto',
+    cursor: 'pointer',
+  },
   memberPic: {
     display: 'block',
     margin: 'auto',
@@ -21,16 +30,30 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MemberPic({ imageDir, member }) {
   const classes = useStyles();
+
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <>
-      <img
-        src={`${imageDir}${member.name}.jpg`}
-        alt={member.name}
-        className={classes.memberPic}
-      />
-      <Typography variant='body1' align='center' className={classes.name}>
-        {member.name}
-      </Typography>
+      <button className={classes.clickable} onClick={handleClickOpen}>
+        <img
+          src={`${imageDir}${member.name}.jpg`}
+          alt={member.name}
+          className={classes.memberPic}
+        />
+        <Typography variant='body1' align='center' className={classes.name}>
+          {member.name}
+        </Typography>
+      </button>
+
+      <MemberDialog handleClose={handleClose} open={open} />
     </>
   );
 }

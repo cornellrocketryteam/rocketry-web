@@ -15,6 +15,9 @@ import TeamLeads from '../components/members/TeamLeads';
 import { TeamMembers } from '../public/static/members/members';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    height: '100%',
+  },
   content: {
     // matches rockets page
     padding: '120px 50px 50px 50px',

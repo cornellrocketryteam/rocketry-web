@@ -18,7 +18,6 @@ export default function SubteamBLock({
   subteamLeads,
   subteamMembers,
 }) {
-  console.log(subteamMembers);
   const classes = useStyles();
   return (
     <Container maxWidth='lg' className={classes.subteamsContainer}>
