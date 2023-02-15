@@ -38,6 +38,10 @@
         {
           "name": "marotta",
           "link": "https://marotta.com/"
+        },
+        {
+          "name": "titan",
+          "link": "https://www.titanfittings.com/"
         }
       ],
 
@@ -79,6 +83,10 @@
         {
           "name": "oshpark",
           "link": "https://oshpark.com/"
+        },
+        {
+          "name": "celsius",
+          "link": "https://www.celsius.com/"
         }
       ]
     },
