@@ -45,21 +45,21 @@
               "graduationYear": {
                 "type": "integer"
               },
-              "major": {
+              "majors": {
                 "type": "array",
                 "format": "list",
                 "items": {
                   "type": "string",
-                  "title": "major"
+                  "title": "majors"
                 },
                 "default": [""]
               },
-              "minor": {
+              "minors": {
                 "type": "array",
                 "format": "list",
                 "items": {
                   "type": "string",
-                  "title": "minor"
+                  "title": "minors"
                 }
               }
             }

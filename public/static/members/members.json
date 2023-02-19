@@ -8,8 +8,8 @@
         "position": "subteam lead",
         "college": "CAS",
         "graduationYear": 2024,
-        "major": ["Computer Science"],
-        "minor": []
+        "majors": ["Computer Science"],
+        "minors": []
       },
       {
         "name": "Charles Chen",
@@ -17,8 +17,8 @@
         "position": "member",
         "college": "CAS",
         "graduationYear": 2025,
-        "major": ["Economics", "Government"],
-        "minor": []
+        "majors": ["Economics", "Government"],
+        "minors": ["Space", "Art"]
       },
       {
         "name": "Sam Noles",
@@ -26,8 +26,8 @@
         "position": "team lead",
         "college": "COE",
         "graduationYear": 2023,
-        "major": ["Engineering Physics"],
-        "minor": []
+        "majors": ["Engineering Physics"],
+        "minors": []
       }
     ]
   }

@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar,
-  Toolbar,
+  Box,
   Button,
   IconButton,
   Menu,
   MenuItem,
-  Box,
+  Toolbar,
 } from '@material-ui/core';
-
-import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-// import TwitterIcon from '@material-ui/icons/Twitter';
-import YouTubeIcon from '@material-ui/icons/YouTube';
+import Link from 'next/link';
 import MenuIcon from '@material-ui/icons/Menu';
+import SocialMediaButton from '../SocialMediaButton';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import { makeStyles } from '@material-ui/core/styles';
+
+// import TwitterIcon from '@material-ui/icons/Twitter';
 
 const transitionTime = 0.5;
 
@@ -139,7 +140,6 @@ export default function Header({ active, hideMenu }) {
       <AppBar
         className={classes.appBar}
         data-active={active ? 'true' : scrolled.toString()}
-        //position={active ? "static" : "fixed"}
       >
         <Toolbar>
           <div className={classes.collapseAppBarButtons}>
@@ -258,17 +258,4 @@ export default function Header({ active, hideMenu }) {
       </AppBar>
     </div>
   );
-
-  function SocialMediaButton({ link, icon }) {
-    return (
-      <Link href={link} passHref>
-        <IconButton className={classes.appBarIconButton} target='_blank'>
-          <icon.type
-            className={classes.appBarIcon}
-            data-active={active ? 'true' : scrolled.toString()}
-          />
-        </IconButton>
-      </Link>
-    );
-  }
 }
