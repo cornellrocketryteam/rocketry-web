@@ -1,0 +1,7 @@
+property: 'Q', value: 'Am I expected to have prior technical experience in order to apply?'
+        },
+        { property: 'A', value: 'Nope! What we mainly look for is genuine interest in the team and what we do. We teach our new members everything they need to know.' },
+        { property: 'Q', value: 'Do you only accept certain majors?' },
+        { property: 'A', value: 'Once again, nope! A related major is one way to show interest in what we do, but there are many ways to show interest, regardless of major.' },
+        { property: 'Q', value: ' I’m unsure which subteam to apply to. Do I have to pick a subteam in order to apply?' },
+        { property: 'A', value: 'No worries! In our application you can indicate both your first and second choice subteam, and your application will be reviewed by both subteams!' }
