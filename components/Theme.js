@@ -17,7 +17,7 @@ var mainTheme = createTheme({
       default: '#000000',
     },
     secondary: {
-      main: '#b22025',
+      main: '#b31b1b',
     },
   },
 });
