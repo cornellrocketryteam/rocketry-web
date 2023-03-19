@@ -38,9 +38,10 @@ export default function MemberPic({ imageDir, member }) {
     <>
       <button className={classes.clickable} onClick={handleClickOpen}>
         <img
-          src={
-            `${imageDir}${member.name}.jpg` || `${imageDir}${member.name}.JPG`
-          }
+          src={`${imageDir}${member.name}.jpg`}
+          // onerror="this.onerror=null; this.src='dog.jpg'"
+          onError={`this.onerror=null; this.src=${imageDir}${member.name}.JPG`}
+          // src={`${imageDir}${member.name}.jpg`}
           alt={member.name}
           className={classes.memberPic}
         />
