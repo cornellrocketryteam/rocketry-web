@@ -1,7 +1,7 @@
 import { Typography, makeStyles } from '@material-ui/core';
 
 import MemberDialog from './MemberDialog';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   clickable: {
@@ -27,6 +27,9 @@ export default function MemberPic({ imageDir, member }) {
 
   const [open, setOpen] = useState(false);
 
+  const [, updateState] = useState();
+  const forceUpdate = useCallback(() => updateState({}), []);
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -42,6 +45,7 @@ export default function MemberPic({ imageDir, member }) {
           onError={({ currentTarget }) => {
             currentTarget.onerror = null; // prevents looping
             currentTarget.src = `${imageDir}${member.name}.JPG`;
+            forceUpdate();
           }}
           alt={member.name}
           className={classes.memberPic}
