@@ -27,9 +27,6 @@ export default function MemberPic({ imageDir, member }) {
 
   const [open, setOpen] = useState(false);
 
-  const [, updateState] = useState();
-  const forceUpdate = useCallback(() => updateState({}), []);
-
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -43,9 +40,8 @@ export default function MemberPic({ imageDir, member }) {
         <img
           src={`${imageDir}${member.name}.jpg`}
           onError={({ currentTarget }) => {
-            currentTarget.onerror = null; // prevents looping
+            // currentTarget.onerror = null; // prevents looping
             currentTarget.src = `${imageDir}${member.name}.JPG`;
-            forceUpdate();
           }}
           alt={member.name}
           className={classes.memberPic}
