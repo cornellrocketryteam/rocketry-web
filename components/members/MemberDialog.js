@@ -86,6 +86,10 @@ export default function MemberDialog({ imageDir, member, handleClose, open }) {
           <Grid item xs={3}>
             <img
               src={`${imageDir}${name}.jpg`}
+              onError={({ currentTarget }) => {
+                currentTarget.onerror = null; // prevents looping
+                currentTarget.src = `${imageDir}${name}.JPG`;
+              }}
               alt={name}
               className={classes.memberPic}
             />
