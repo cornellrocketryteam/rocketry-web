@@ -1,10 +1,4 @@
-import {
-  Container,
-  Grid,
-  Typography,
-  makeStyles,
-  useMediaQuery,
-} from '@material-ui/core';
+import { Container, Grid, Typography, makeStyles } from '@material-ui/core';
 
 import Footer from '../components/layout/Footer';
 import Head from '../components/layout/Head';
@@ -62,10 +56,12 @@ export default function Members() {
               Our Team
             </Typography>
             <Typography className={classes.description}>
-              Our team likes rockets Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Exercitationem iste eos odit, quas inventore,
-              quo laudantium, modi vel amet hic blanditiis odio et excepturi aut
-              velit expedita ad temporibus dolores.
+              Cornell Rocketry Team (CRT) is an engineering student project team
+              dedicated to designing, assembling, and launching high-powered
+              rockets. Since 2012, we have been working to provide hands-on
+              experience in aerospace engineering. CRT has six sub teams:
+              business, electrical, software, propulsion, recovery and payload,
+              and structures.
             </Typography>
           </Grid>
           <Grid item xs={9} md={8} lg={6} xl={6}>
@@ -96,16 +92,16 @@ export default function Members() {
     const subteams = [
       'business',
       'electrical',
-      'embedded software',
+      'software',
       'propulsion',
-      'recovery & payload',
+      'recovery and payload',
       'structures',
     ];
 
     const categorizedMembers = {};
 
     categorizedMembers['teamLeads'] = members.filter(
-      (member) => member.position == 'team lead'
+      (member) => member.position.toLowerCase() == 'team lead'
     );
 
     categorizedMembers['subteamLeads'] = {};
@@ -114,15 +110,15 @@ export default function Members() {
 
     subteams.forEach((subteam) => {
       const subteamFiltered = members.filter(
-        (member) => member.subteam == subteam
+        (member) => member.subteam.toLowerCase() == subteam
       );
 
       categorizedMembers['subteamLeads'][subteam] = subteamFiltered.filter(
-        (member) => member.position == 'subteam lead'
+        (member) => member.position.toLowerCase() == 'subteam lead'
       );
 
       categorizedMembers['subteamMembers'][subteam] = subteamFiltered.filter(
-        (member) => member.position == 'member'
+        (member) => member.position.toLowerCase() == 'member'
       );
     });
 

@@ -4,8 +4,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import IconButton from '@material-ui/core/IconButton';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import { LinkedIn } from '@material-ui/icons';
+import { LinkedIn, GitHub } from '@material-ui/icons';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import React from 'react';
 import SocialMediaButton from '../SocialMediaButton';
@@ -68,7 +67,8 @@ const useStyles = makeStyles((theme) => ({
 export default function MemberDialog({ imageDir, member, handleClose, open }) {
   const classes = useStyles();
 
-  const { name, majors, minors, graduationYear, college } = member;
+  const { name, major, minor, gradYear, college, bio, linkedin, github } =
+    member;
 
   return (
     <Dialog
@@ -96,36 +96,28 @@ export default function MemberDialog({ imageDir, member, handleClose, open }) {
             </Typography>
             <br />
             <Typography variant='body1'>
-              <span className={classes.semiBold}>Major:</span>{' '}
-              {majors.map((m, index) => (index == 0 ? m : ', ' + m))}
+              <span className={classes.semiBold}>Major: </span> {major}
               <br />
-              {minors.length != 0 && (
+              {minor && (
                 <>
-                  <span className={classes.semiBold}>Minor:</span>{' '}
-                  {minors.map((m, index) => (index == 0 ? m : ', ' + m))}
+                  <span className={classes.semiBold}>Minor: </span> {minor}
                   <br />
                 </>
               )}
-              <span className={classes.semiBold}>Graduation Year:</span>{' '}
-              {graduationYear}
+              <span className={classes.semiBold}>Graduation Year: </span>
+              {gradYear}
               <br />
               <span className={classes.semiBold}>College: </span> {college}
               <br />
               <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptate aliquid iure ipsam consectetur, ad commodi cupiditate
-              repudiandae eius quod, laborum dignissimos unde libero ducimus
-              placeat eos dicta doloremque! Quos, totam!
+              {bio}
             </Typography>
             <div className={classes.socialMedia}>
-              <SocialMediaButton
-                link='https://www.facebook.com/CornellRocketry/'
-                icon={<InstagramIcon />}
-              />
-              <SocialMediaButton
-                link='https://www.facebook.com/CornellRocketry/'
-                icon={<LinkedIn />}
-              />
+              {linkedin && (
+                <SocialMediaButton link={linkedin} icon={<LinkedIn />} />
+              )}
+
+              {github && <SocialMediaButton link={github} icon={<GitHub />} />}
             </div>
           </Grid>
         </Grid>

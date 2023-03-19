@@ -42,25 +42,14 @@
                 "enum": ["COE", "CAS", "CALS", "Dyson", "Hotel", "ILR"],
                 "default": "COE"
               },
-              "graduationYear": {
+              "gradYear": {
                 "type": "integer"
               },
-              "majors": {
-                "type": "array",
-                "format": "list",
-                "items": {
-                  "type": "string",
-                  "title": "majors"
-                },
-                "default": [""]
+              "major": {
+                "type": "string"
               },
-              "minors": {
-                "type": "array",
-                "format": "list",
-                "items": {
-                  "type": "string",
-                  "title": "minors"
-                }
+              "minor": {
+                "type": "string"
               }
             }
           }

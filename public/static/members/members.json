@@ -3,31 +3,884 @@
     "imageDir": "/static/images/members-page/",
     "members": [
       {
-        "name": "Anchey Peng",
-        "subteam": "business",
-        "position": "subteam lead",
-        "college": "CAS",
-        "graduationYear": 2024,
-        "majors": ["Computer Science"],
-        "minors": []
+        "name": "Sarah Hawes",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "minor": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "linkedin": "https://www.linkedin.com/in/sarah-hawes-54352222a/",
+        "bio": "Outside of Rocketry, she enjoys playing volleyball, hiking, watching movies with friends, and reading about space science."
       },
       {
-        "name": "Charles Chen",
-        "subteam": "business",
+        "name": "Nick Johnson",
+        "subteam": "Recovery and Payload",
         "position": "member",
-        "college": "CAS",
-        "graduationYear": 2025,
-        "majors": ["Economics", "Government"],
-        "minors": ["Space", "Art"]
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "bio": "He spends his free-time building pretty much anything that flies, boxing, and playing the guitar. "
+      },
+      {
+        "name": "Ben Rotstein",
+        "subteam": "Propulsion",
+        "position": "subteam lead",
+        "major": "Mechanical Engineering",
+        "minor": "Aerospace Engineering",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "bio": "He really enjoys theater, and he is one of the managers for a student company that does lighting and sound for events! He also really enjoys skiing, mountain biking, history and geography, and video games."
+      },
+      {
+        "name": "Aidan Herz",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "minor": "Theatre",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "bio": "Outside of Rocketry, they enjoy participating in the Risley community and doing theatre."
+      },
+      {
+        "name": "Kevin Salazar",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "minor": "History",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "bio": "He enjoys camping, mountain biking, hiking, and anything to do with the great outdoors. He is also a big film buff and enjoys watching any and all classic films whenever he gets the chance."
+      },
+      {
+        "name": "Matthew Chekhlov",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Math and Physics",
+        "college": "Arts and Sciences",
+        "gradYear": 2025,
+        "bio": "He likes to fish many of the lakes and streams around Ithaca, as well as surfcast around Long Island and primarily Montauk. He also enjoys biking and running, and frequently bikes very large distances to fish. Finally, he likes to forge and cast metals in my small home foundry, as well as mess around with amateur chemistry when he has time."
+      },
+      {
+        "name": "Katarina Duric",
+        "subteam": "Electrical",
+        "position": "subteam lead",
+        "major": "Electrical and Computer Engineering",
+        "minor": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "bio": "Outside of Rocketry, she plays the piano, enjoys long walks and trying out new places to eat at with her friends. She love reading classics, listening to rock and alt rock, playing board games, and watching thriller movies."
+      },
+      {
+        "name": "Reva Nair",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "minor": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "bio": "Outside of Rocketry, she loves dancing. She has done dance for over 12 years and is on Cornell Nazaqat. She also enjoys all aerospace stuff and loves designing satellites through SSDS's Cislunar Explorers. She is also a member of Cornell Theta Tau. "
+      },
+      {
+        "name": "Sourish Dutta",
+        "subteam": "Structures",
+        "position": "subteam lead",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "bio": "Outside of rocketry, he like scooking new recipes from different cuisines and experimenting with them. He also like playing tennis and going on hikes around Ithaca."
+      },
+      {
+        "name": "Anchey Peng",
+        "subteam": "Business",
+        "position": "subteam lead",
+        "major": "Computer Science",
+        "college": "Arts and Sciences",
+        "gradYear": 2024,
+        "linkedin": "https://www.linkedin.com/in/anchey-peng/",
+        "github": "https://github.com/ancheypeng",
+        "bio": "Outside of Rockety, he enjoys cooking, watching Netflix, and playing with his dog."
+      },
+      {
+        "name": "Nicole Barrera",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2023,
+        "bio": "She is specializing in engineering simulation and enjoys exploring simulation and analysis through her projects on rocketry. Additionally, she is also an Ansys Teaching Assistant, helping students in multiple mechanical and biomechanical courses which employ Ansys software. Nicole is from San Jose, CA and outside of rocketry she enjoys going on nature walks and learning about wildlife."
+      },
+      {
+        "name": "Christopher Lonergan",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "minor": "Philosophy and Computer Science",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "linkedin": "https://www.linkedin.com/in/christopher-lonergan-71a521237/",
+        "bio": "He likes climbing and petting cats."
+      },
+      {
+        "name": "Emily Matteson",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2023,
+        "linkedin": "https://www.linkedin.com/in/emilyematteson/",
+        "bio": "She loves working on Rocketry because of the interdisciplinary challenges of working on a complex project that is bigger than any one person, and she was CRT's structures lead for 2021 - 2022. Emily works to mentor, support, and uplift her teammates to develop their engineering skills. Outside of Rocketry, Emily is the Chief Engineer on Cornell’s Cislunar Explorers CubeSat Research Team, a TA for the Cornell Engineering Leadership Certification Program, a 2022 Brooke Owens Fellow, and a 2023 Matthew Isakowitz Fellow. When she is not building rockets, Emily can be found stargazing in an open field, bouldering and top-roping in an indoor gym, or skiing on the icy slopes of the East Coast. Emily is from Tenafly, NJ."
+      },
+      {
+        "name": "Aidan McNay",
+        "subteam": "Electrical",
+        "position": "team lead",
+        "major": "Electrical and Computer Engineering",
+        "minor": "Computer Science (anticipated)",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "linkedin": "https://www.linkedin.com/in/aidan-mcnay-0ba928201/",
+        "github": "https://github.com/Aidan-McNay",
+        "bio": "He enjoys playing the chimes, playing board games, and spending time with Rocketry members outside of Rocketry!"
+      },
+      {
+        "name": "Caleb Farrelly",
+        "subteam": "Propulsion",
+        "position": "subteam lead",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "bio": "Outside of Rocketry, he enjoys hiking, flying FPV drones, and traveling the world."
+      },
+      {
+        "name": "Stephen Felce",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "linkedin": "https://www.linkedin.com/in/stephen-felce-055254221/",
+        "bio": "Is is a part of Cornell Christian Union, enjoys going on hikes, road trips, and watching movies with his friends."
+      },
+      {
+        "name": "Beth Polito",
+        "subteam": "Electrical",
+        "position": "subteam lead",
+        "major": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "bio": "Outside of Rocketry, she is involved in music at Cornell and has performed with various ensembles as a harpist. She is also the Vice President of the Amateur Radio Club at Cornell."
+      },
+      {
+        "name": "Will Barkoff",
+        "subteam": "Software",
+        "position": "subteam lead",
+        "major": "Computer Science",
+        "minor": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "linkedin": "https://www.linkedin.com/in/willbarkoff",
+        "github": "https://github.com/willbarkoff/",
+        "bio": "He is currently the President of Cornell Hillel, and a member of Cornell Amateur Radio Club. He also TA's CS 3110: Functional Programming and Data Structures. In his free time, he enjoys biking!"
+      },
+      {
+        "name": "Dean Sheerer",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "minor": "Design Strategy",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "linkedin": "www.linkedin.com/in/dean-sheerer",
+        "bio": "Outside of Rocketry he enjoys hiking, drawing, longboarding, and hanging out with friends. "
+      },
+      {
+        "name": "Gavin Block",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "bio": "Outside of Rocketry, he likes 3D printing, building his own projects, baking, playing guitar, and programming. "
+      },
+      {
+        "name": "Katlyn Moulia Arriola",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "bio": "She is the captain of Cornell's Quidditch Team and sings in the Chorale! She is also a part of the Meinig Family Cornell National Scholars, so she is working on improving her leadership skills. She enjoys costume designing, drawing, and creating future game ideas!"
+      },
+      {
+        "name": "Cameron Goddard",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science",
+        "minor": "Electrical and Computer Engineering, Infomation Science",
+        "college": "Arts and Sciences",
+        "gradYear": 2025,
+        "linkedin": "https://www.linkedin.com/in/cameron-goddard/",
+        "github": "https://github.com/cameron-goddard",
+        "bio": "Outside of Rocketry, he likes to spend hours on Wikipedia, play the saxophone, and listen to music."
+      },
+      {
+        "name": "Yuvan Chugh",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Engineering",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "bio": "Outside of Rocketry, he enjoys singing, playing the guitar, and a capella. He also likes playing soccer, table tennis, and lawn tennis."
+      },
+      {
+        "name": "Nandita Nagarajan",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "minor": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "bio": "She loves to sing, and has been singing for about 14 years!"
       },
       {
         "name": "Sam Noles",
-        "subteam": "recovery and payload",
+        "subteam": "Software",
         "position": "team lead",
-        "college": "COE",
-        "graduationYear": 2023,
-        "majors": ["Engineering Physics"],
-        "minors": []
+        "major": "Engineering Physics",
+        "minor": "Aerospace Engineering",
+        "college": "Engineering",
+        "gradYear": 2023,
+        "bio": "He enjoys fishing, flying drones, and pursuing personal engineering projects in his free time. He is also an avid South Park and Nathan for You fan."
+      },
+      {
+        "name": "Gabe Mitchell",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2023,
+        "bio": "Outside of Rocketry, he likes spending time with his friends, lifting weights, and learning new things."
+      },
+      {
+        "name": "Matt Bryan",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "bio": "Outside of rocketry, he enjoys working for the Cornell Athletic Communications department as a student statistician. He also enjoys researching topics in sports analytics at both the professional and college level. "
+      },
+      {
+        "name": "Antti Meriluoto",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "bio": "Outside of Rocketry, he likes to play guitar, play soccer, give campus tours, and watch Game of Thrones."
+      },
+      {
+        "name": "Ashley Espinosa",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "minor": "Aerospace Engineering",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "linkedin": "https://www.linkedin.com/in/ashley-espinosa/",
+        "bio": "Outside of rocketry, she enjoys hanging out with her friends and exploring what the area has to offer, whether it's skiing at Greek Peak or Collegetown boba runs. She also enjoys competing on the Cornell Sport Taekwondo team!"
+      },
+      {
+        "name": "Nissi Ragland",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science",
+        "minor": "Cognitive Science",
+        "college": "Arts and Sciences",
+        "gradYear": 2025,
+        "linkedin": "https://www.linkedin.com/in/nissi-ragland/",
+        "bio": "Outside of Rocketry, she really enjoys playing tennis! She also loves trying new things and exploring new places! "
+      },
+      {
+        "name": "Daria Kot",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Computer Science",
+        "minor": "Robotics",
+        "college": "Engineering",
+        "gradYear": 2025,
+        "linkedin": "https://www.linkedin.com/in/daria-kot-7a8518253/",
+        "bio": "Outside of Rocketry, she enjoys a dabble in art. She also enjoys woodworking and has recently gotten into boxing."
+      },
+      {
+        "name": "Charles Chen",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Economics and Government",
+        "minor": "Law and Society, Astrobiology",
+        "college": "Arts and Sciences",
+        "gradYear": 2025,
+        "bio": "Outside of rocketry, he is an active as an ambassador for the College of Arts and Sciences, and he is researching data analytics at Cornell's Planetary Habitability and Technology Lab. He is passionate about philanthropy and non-profit service — on campus, he leads the Zambia Community Education Initiative with the goal of constructing a secondary school in Chisekesi, Zambia, and he is the VP of Philanthropy for the Professional Fraternity Council. In my spare time, he likes to play tennis with the university's reserve team, practice my cooking skills, and learn new things! "
+      },
+      {
+        "name": "Julia VanPutte",
+        "subteam": "Business",
+        "position": "subteam lead",
+        "major": "Operations Research and Information Engineering",
+        "minor": "Data Science",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "linkedin": "https://www.linkedin.com/in/julia-vanputte-5043791b7/",
+        "bio": "She likes to cuddle with my cat Rory, cook lots of rice, hike, online shop, hangout with her friends, and watch the beautiful ithaca sunsets. Her nickname is JVP the MVP."
+      },
+      {
+        "name": "Zach Garcia",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science, Electrical and Computer Engineering",
+        "minor": "Robotics",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "linkedin": "https://www.linkedin.com/in/zachgarcia42",
+        "bio": "Oustside of Rocketry, he is a member of the Cornell Amateur Radio Club and does research in the Space Systems Design Studio."
+      },
+      {
+        "name": "Priya Abiram",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "minor": "Aerospace Engineering",
+        "college": "Engineering",
+        "gradYear": 2026,
+        "linkedin": "https://www.linkedin.com/in/priya-abiram/",
+        "bio": "Outside of Rocketry, she is a member of the Alpha CubeSat Satellite Research Team. She is also a pilot, scuba diver, and adrenaline junkie."
+      },
+      {
+        "name": "Nicholas Natsoulas",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2023,
+        "linkedin": "https://www.linkedin.com/in/nicholasnatsoulas",
+        "github": "https://github.com/Natsoulas",
+        "bio": "She enjoys playing musical instruments, learning foreign languages, reading books, and traveling!"
+      },
+      {
+        "name": "Murphy Klein",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Engineering Physics",
+        "minor": "Potentially Mechanical Engineering or Aerospace Engineering.",
+        "college": "Engineering",
+        "gradYear": 2026,
+        "bio": "Outside of Rocketry, he likes to play ice hockey, and he is currently a member on the club ice hockey team. He also enjoys playing the electric guitar and weightlifting."
+      },
+      {
+        "name": "Mary Yuan",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Computer Science",
+        "minor": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2026,
+        "bio": "Outside of Rocketry, she likes to play sudoku, crochet, draw, and read."
+      },
+      {
+        "name": "Matthew Lew",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "minor": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2026,
+        "bio": "Outside of Rocketry, he loves rock climbing, playing chess, and having a good time with friends. He also loves hiking Ithaca falls and walking around Beebe lake when the weather is nice!"
+      },
+      {
+        "name": "Spenser Wu",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Operations Research",
+        "college": "Engineering",
+        "gradYear": 2026,
+        "bio": "Outside of Rocketry, he likes to practice editing in Premier Pro and After Effects, visit the pavilion in the botanical gardens, and work in the RPL. His favorite T-shirt of all time is the Uniqlo U Airism Tee."
+      },
+      {
+        "name": "Claire Cahill",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2026,
+        "bio": "She has studied ballet since she was 3, writes science fiction, and is a big nerd about astronomy and telescopes."
+      },
+      {
+        "name": "Nicole Li",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "minor": "Computer Science and Philosophy (potentially)",
+        "college": "Engineering",
+        "gradYear": 2026,
+        "bio": "Outside of Rocketry, she enjoys watching movies, travelling, playing the piano, and going on boba runs. She is also a roller coaster enthusiast."
+      },
+      {
+        "name": "Zack Hatzis",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "minor": "Business",
+        "college": "Engineering",
+        "gradYear": 2023,
+        "linkedin": "https://www.linkedin.com/in/zack-hatzis-a8b98a1b7",
+        "bio": "Outside of Rocketry, he enjoys hiking, lifting, rowing, music discovery, hanging out with friends and traveling."
+      }
+    ],
+    "Sheet1": [
+      {
+        "name": "Sarah Hawes",
+        "Subteam": "Electrical",
+        "Major": "Electrical and Computer Engineering",
+        "Minor": "Computer Science",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "What do you like to do outside of rocketry?": "Outside of rocketry I enjoy playing volleyball, hiking, watching movies with friends, and reading about space science.",
+        "Anything else you want to include in your bio?": "It is rocket science!",
+        "bio": "Outside of Rocketry, she enjoys playing volleyball, hiking, watching movies with friends, and reading about space science."
+      },
+      {
+        "name": "Nick Johnson",
+        "Subteam": "Recovery and Payload",
+        "Major": "Computer Science",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "What do you like to do outside of rocketry?": "I spend my free-time building pretty much anything that flies, boxing, and playing the guitar. ",
+        "Anything else you want to include in your bio?": "n/a",
+        "bio": "He spends his free-time building pretty much anything that flies, boxing, and playing the guitar. "
+      },
+      {
+        "name": "Ben Rotstein",
+        "Subteam": "Propulsion",
+        "Major": "Mechanical Engineering",
+        "Minor": "Aerospace Engineering",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "What do you like to do outside of rocketry?": "I really enjoy theater, and am one of the managers for a student company that does lighting and sound for events! I also really enjoy skiing, mountain biking, history and geography, and video games.",
+        "Anything else you want to include in your bio?": "Rockets are cool!",
+        "bio": "He really enjoys theater, and he is one of the managers for a student company that does lighting and sound for events! He also really enjoys skiing, mountain biking, history and geography, and video games."
+      },
+      {
+        "name": "Aidan Bartholomew Herz",
+        "Subteam": "Recovery and Payload",
+        "Major": "Mechanical Engineering",
+        "Minor": "Theatre",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "What do you like to do outside of rocketry?": "Participating in the Risley community and doing theatre.",
+        "bio": "Outside of Rocketry, he enjoys participating in the Risley community and doing theatre."
+      },
+      {
+        "name": "Kevin Salazar",
+        "Subteam": "Propulsion",
+        "Major": "Mechanical Engineering",
+        "Minor": "History",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "What do you like to do outside of rocketry?": "I enjoy camping, mountain biking, hiking, and anything to do with the great outdoors. I also am a big film buff and enjoy watching any and all classic films whenever I get the chance.",
+        "Anything else you want to include in your bio?": "no",
+        "bio": "He enjoys camping, mountain biking, hiking, and anything to do with the great outdoors. He is also a big film buff and enjoys watching any and all classic films whenever he gets the chance."
+      },
+      {
+        "name": "Matthew Chekhlov",
+        "Subteam": "Propulsion",
+        "Major": "Math and Physics",
+        "College": "Arts and Sciences",
+        "Grad year": 2025,
+        "What do you like to do outside of rocketry?": "I like to fish many of the lakes and streams around Ithaca, as well as surfcast around Long Island and primarily Montauk. I also enjoy biking and running, and frequently bike very large distances to fish. Finally, I like to forge and cast metals in my small home foundry, as well as mess around with amateur chemistry when I have time.",
+        "Anything else you want to include in your bio?": "Not especially.",
+        "bio": "He likes to fish many of the lakes and streams around Ithaca, as well as surfcast around Long Island and primarily Montauk. He also enjoys biking and running, and frequently bikes very large distances to fish. Finally, he likes to forge and cast metals in my small home foundry, as well as mess around with amateur chemistry when he has time."
+      },
+      {
+        "name": "Katarina Duric",
+        "Subteam": "Electrical",
+        "Major": "Electrical and Computer Engineering",
+        "Minor": "Computer Science",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "What do you like to do outside of rocketry?": "I play the piano, enjoy long walks and trying out new places to eat at with my friends. I love reading classics, listening to rock and alt rock, playing board games, and watching thriller movies.",
+        "bio": "Outside of Rocketry, she plays the piano, enjoys long walks and trying out new places to eat at with her friends. She love reading classics, listening to rock and alt rock, playing board games, and watching thriller movies."
+      },
+      {
+        "name": "Reva Nair",
+        "Subteam": "Structures",
+        "Major": "Mechanical Engineering",
+        "Minor": "Computer Science",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "What do you like to do outside of rocketry?": "I love dancing! I've done dance for over 12 years and am on Cornell Nazaqat. I also enjoy all aerospace stuff and love designing satellites through SSDS's Cislunar Explorers. I'm also a member of Cornell Theta Tau. ",
+        "bio": "Outside of Rocketry, she loves dancing. She has done dance for over 12 years and is on Cornell Nazaqat. She also enjoys all aerospace stuff and loves designing satellites through SSDS's Cislunar Explorers. She is also a member of Cornell Theta Tau. "
+      },
+      {
+        "name": "Sourish Dutta",
+        "Subteam": "Structures",
+        "Major": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "What do you like to do outside of rocketry?": "Outside of rocketry, I like cooking new recipes from different cuisines and experimenting with them. I also like playing tennis and going on hikes around Ithaca.",
+        "bio": "Outside of rocketry, he like scooking new recipes from different cuisines and experimenting with them. He also like playing tennis and going on hikes around Ithaca."
+      },
+      {
+        "name": "Anchey Peng",
+        "Subteam": "Business",
+        "Major": "Computer Science",
+        "College": "Arts and Sciences",
+        "Grad year": 2024,
+        "LINKEDIN": "https://www.linkedin.com/in/anchey-peng/",
+        "GITHUB": "https://github.com/ancheypeng",
+        "What do you like to do outside of rocketry?": "Cooking, watching Netflix, playing with my dog",
+        "bio": "Outside of Rockety, he enjoys cooking, watching Netflix, and playing with his dog."
+      },
+      {
+        "name": "Nicole Barrera",
+        "Subteam": "Structures",
+        "Major": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2023,
+        "What do you like to do outside of rocketry?": "I enjoy going on nature walks and learning about wildlife",
+        "bio": "She is specializing in engineering simulation and enjoys exploring simulation and analysis through her projects on rocketry. Additionally, she is also an Ansys Teaching Assistant, helping students in multiple mechanical and biomechanical courses which employ Ansys software. Nicole is from San Jose, CA and outside of rocketry she enjoys going on nature walks and learning about wildlife."
+      },
+      {
+        "name": "Chris Lonergan",
+        "Subteam": "Electrical",
+        "Major": "Electrical and Computer Engineering",
+        "Minor": "Philosophy and Computer Science",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "LINKEDIN": "https://www.linkedin.com/in/christopher-lonergan-71a521237/",
+        "What do you like to do outside of rocketry?": "I like climbing and petting cats.",
+        "bio": "He likes climbing and petting cats."
+      },
+      {
+        "name": "Emily Matteson",
+        "Subteam": "Structures",
+        "Major": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2023,
+        "LINKEDIN": "https://www.linkedin.com/in/emilyematteson/",
+        "What do you like to do outside of rocketry?": "Emily is a senior year Mechanical Engineering major and is CRT’s Structures Lead Emeritus (2021-2022). She loves working on Rocketry because of the interdisciplinary challenges of working on a complex project that is bigger than any one person. Emily works to mentor, support, and uplift her teammates to develop their engineering skills. Outside of Rocketry, Emily is the Chief Engineer on Cornell’s Cislunar Explorers CubeSat Research Team, a TA for the Cornell Engineering Leadership Certification Program, a 2022 Brooke Owens Fellow, and a 2023 Matthew Isakowitz Fellow. When she is not building rockets, Emily can be found stargazing in an open field, bouldering and top-roping in an indoor gym, or skiing on the icy slopes of the East Coast. Emily is from Tenafly, NJ.",
+        "Anything else you want to include in your bio?": "(Can you copy and paste my answer from Question 6 into my bio please)",
+        "bio": "She loves working on Rocketry because of the interdisciplinary challenges of working on a complex project that is bigger than any one person, and she was CRT's structures lead for 2021 - 2022. Emily works to mentor, support, and uplift her teammates to develop their engineering skills. Outside of Rocketry, Emily is the Chief Engineer on Cornell’s Cislunar Explorers CubeSat Research Team, a TA for the Cornell Engineering Leadership Certification Program, a 2022 Brooke Owens Fellow, and a 2023 Matthew Isakowitz Fellow. When she is not building rockets, Emily can be found stargazing in an open field, bouldering and top-roping in an indoor gym, or skiing on the icy slopes of the East Coast. Emily is from Tenafly, NJ."
+      },
+      {
+        "name": "Aidan McNay",
+        "Subteam": "Electrical",
+        "Major": "Electrical and Computer Engineering",
+        "Minor": "Computer Science (anticipated)",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "LINKEDIN": "https://www.linkedin.com/in/aidan-mcnay-0ba928201/",
+        "GITHUB": "https://github.com/Aidan-McNay",
+        "What do you like to do outside of rocketry?": "I enjoy playing the chimes, playing board games, and spending time with Rocketry members outside of Rocketry!",
+        "Anything else you want to include in your bio?": "Nope!",
+        "bio": "He enjoys playing the chimes, playing board games, and spending time with Rocketry members outside of Rocketry!"
+      },
+      {
+        "name": "Caleb Farrelly",
+        "Subteam": "Propulsion",
+        "Major": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "What do you like to do outside of rocketry?": "Hike, fly FPV drones, travel the world\n\n",
+        "bio": "Outside of Rocketry, he enjoys hiking, flying FPV drones, and traveling the world."
+      },
+      {
+        "name": "Stephen Felce",
+        "Subteam": "Structures",
+        "Major": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "LINKEDIN": "https://www.linkedin.com/in/stephen-felce-055254221/",
+        "What do you like to do outside of rocketry?": "I'm part of Cornell Christian Union. I enjoy going on hikes, road trips and watching movies with my friends.",
+        "bio": "Is is a part of Cornell Christian Union, enjoys going on hikes, road trips, and watching movies with his friends."
+      },
+      {
+        "name": "Elizabeth Polito",
+        "Subteam": "Electrical",
+        "Major": "Electrical and Computer Engineering",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "What do you like to do outside of rocketry?": "Outside of Rocketry, I am involved in music at Cornell and have performed with various ensembles as a harpist. In addition, I am the Vice President of the Amateur Radio Club at Cornell.",
+        "bio": "Outside of Rocketry, she is involved in music at Cornell and has performed with various ensembles as a harpist. She is also the Vice President of the Amateur Radio Club at Cornell."
+      },
+      {
+        "name": "Will Barkoff",
+        "Subteam": "Software",
+        "Major": "Computer Science",
+        "Minor": "Electrical and Computer Engineering",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "LINKEDIN": "https://www.linkedin.com/in/willbarkoff",
+        "GITHUB": "https://github.com/willbarkoff/",
+        "What do you like to do outside of rocketry?": "I am currently the President of Cornell Hillel, and a member of Cornell Amateur Radio Club. I also TA CS 3110: Functional Programming and Data Structures. In my free time, I enjoy biking!",
+        "bio": "He is currently the President of Cornell Hillel, and a member of Cornell Amateur Radio Club. He also TA's CS 3110: Functional Programming and Data Structures. In his free time, he enjoys biking!"
+      },
+      {
+        "name": "Dean Sheerer",
+        "Subteam": "Recovery and Payload",
+        "Major": "Mechanical Engineering",
+        "Minor": "Design Strategy",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "LINKEDIN": "www.linkedin.com/in/dean-sheerer",
+        "What do you like to do outside of rocketry?": "Outside of Rocketry I enjoy hiking, drawing, longboarding, and hanging out with friends. ",
+        "Anything else you want to include in your bio?": "naw b ",
+        "bio": "Outside of Rocketry he enjoys hiking, drawing, longboarding, and hanging out with friends. "
+      },
+      {
+        "name": "Gavin Block",
+        "Subteam": "Structures",
+        "Major": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "What do you like to do outside of rocketry?": "I like 3D printing, building my own projects, baking, playing guitar, and programming. ",
+        "bio": "Outside of Rocketry, he likes 3D printing, building his own projects, baking, playing guitar, and programming. "
+      },
+      {
+        "name": "Katlyn Moulia Arriola",
+        "Subteam": "Structures",
+        "Major": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "What do you like to do outside of rocketry?": "I am the captain of Cornell's Quidditch Team and sing in the Chorale! I am also a part of the Meinig Family Cornell National Scholars, so I am working on improving my leadership skills. I enjoy costume designing, drawing, and creating future game ideas!",
+        "Anything else you want to include in your bio?": "If we're allowed to talk about our projects, I would like to have that the project that I'm working on is the Redesign and Construction of the Avionics Bay (AV Bay)! Thank you so much!",
+        "bio": "She is the captain of Cornell's Quidditch Team and sings in the Chorale! She is also a part of the Meinig Family Cornell National Scholars, so she is working on improving her leadership skills. She enjoys costume designing, drawing, and creating future game ideas!"
+      },
+      {
+        "name": "Cameron Goddard",
+        "Subteam": "Software",
+        "Major": "Computer Science",
+        "Minor": "ECE, Info Sci",
+        "College": "Arts and Sciences",
+        "Grad year": 2025,
+        "LINKEDIN": "https://www.linkedin.com/in/cameron-goddard/",
+        "GITHUB": "https://github.com/cameron-goddard",
+        "What do you like to do outside of rocketry?": "Spend hours on Wikipedia, play the saxophone, listen to music",
+        "Anything else you want to include in your bio?": "N/A",
+        "bio": "Outside of Rocketry, he likes to spend hours on Wikipedia, play the saxophone, and listen to music."
+      },
+      {
+        "name": "Yuvan Chugh",
+        "Subteam": "Business",
+        "Major": "Engineering",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "What do you like to do outside of rocketry?": "Enjoy singing, playing the guitar and a capella, Enjoy playing soccer, table tennis, lawn tennis",
+        "Anything else you want to include in your bio?": "-",
+        "bio": "Outside of Rocketry, he enjoys singing, playing the guitar, and a capella. He also likes playing soccer, table tennis, and lawn tennis."
+      },
+      {
+        "name": "Nandita Nagarajan",
+        "Subteam": "Electrical",
+        "Major": "Electrical and Computer Engineering",
+        "Minor": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "What do you like to do outside of rocketry?": "I love to sing, and have been singing for about 14 years!",
+        "Anything else you want to include in your bio?": "Nothing else :)",
+        "bio": "She loves to sing, and has been singing for about 14 years!"
+      },
+      {
+        "name": "Samuel Noles",
+        "Subteam": "Software",
+        "Major": "Engineering Physics",
+        "Minor": "Aerospace Engineering",
+        "College": "Engineering",
+        "Grad year": 2023,
+        "What do you like to do outside of rocketry?": "Sam enjoys fishing, flying drones and pursuing personal engineering projects in his free time.",
+        "Anything else you want to include in your bio?": "Sam is an avid South Park and Nathan for You fan.",
+        "bio": "He enjoys fishing, flying drones, and pursuing personal engineering projects in his free time. He is also an avid South Park and Nathan for You fan."
+      },
+      {
+        "name": "Gabe Mitchell",
+        "Subteam": "Recovery and Payload",
+        "Major": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2023,
+        "What do you like to do outside of rocketry?": "I like spending time with my friends, lifting weights, and learning new things.",
+        "Anything else you want to include in your bio?": "None",
+        "bio": "Outside of Rocketry, he likes spending time with his friends, lifting weights, and learning new things."
+      },
+      {
+        "name": "Matthew Bryan",
+        "Subteam": "Recovery and Payload",
+        "Major": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "What do you like to do outside of rocketry?": "Outside of rocketry, I enjoy working for the Cornell Athletic Communications department as a student statistician. I also enjoy researching topics in sports analytics at both the professional and college level. ",
+        "bio": "Outside of rocketry, he enjoys working for the Cornell Athletic Communications department as a student statistician. He also enjoys researching topics in sports analytics at both the professional and college level. "
+      },
+      {
+        "name": "Antti Meriluoto",
+        "Subteam": "Software",
+        "Major": "Computer Science",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "What do you like to do outside of rocketry?": "Play guitar, play soccer, give campus tours, watch Game of Thrones",
+        "bio": "Outside of Rocketry, he likes to play guitar, play soccer, give campus tours, and watch Game of Thrones."
+      },
+      {
+        "name": "Ashley Espinosa",
+        "Subteam": "Propulsion",
+        "Major": "Mechanical Engineering",
+        "Minor": "Aerospace Engineering",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "LINKEDIN": "https://www.linkedin.com/in/ashley-espinosa/",
+        "What do you like to do outside of rocketry?": "Outside of rocketry I enjoy hanging out with my friends and exploring what the area has to offer, whether it's skiing at Greek Peak or Collegetown boba runs. I also enjoy competing on the Cornell Sport Taekwondo team!",
+        "bio": "Outside of rocketry, she enjoys hanging out with her friends and exploring what the area has to offer, whether it's skiing at Greek Peak or Collegetown boba runs. She also enjoys competing on the Cornell Sport Taekwondo team!"
+      },
+      {
+        "name": "Nissi Ragland",
+        "Subteam": "Software",
+        "Major": "Computer Science",
+        "Minor": "Cognitive Science",
+        "College": "Arts and Sciences",
+        "Grad year": 2025,
+        "LINKEDIN": "https://www.linkedin.com/in/nissi-ragland/",
+        "What do you like to do outside of rocketry?": "I really enjoy playing tennis! I also love trying new things and exploring new places! ",
+        "Anything else you want to include in your bio?": "I'm from the Big Island of Hawaiʻi :)",
+        "bio": "Outside of Rocketry, she really enjoys playing tennis! She also loves trying new things and exploring new places! "
+      },
+      {
+        "name": "Daria Kot",
+        "Subteam": "Recovery and Payload",
+        "Major": "Computer Science",
+        "Minor": "Robotics",
+        "College": "Engineering",
+        "Grad year": 2025,
+        "LINKEDIN": "https://www.linkedin.com/in/daria-kot-7a8518253/",
+        "What do you like to do outside of rocketry?": "Outside of Rocketry I enjoy myself a dabble in art. I also enjoy woodworking and have recently gotten into boxing.",
+        "bio": "Outside of Rocketry, she enjoys a dabble in art. She also enjoys woodworking and has recently gotten into boxing."
+      },
+      {
+        "name": "Charles Chen",
+        "Subteam": "Business",
+        "Major": "Economics and Government",
+        "Minor": "Law and Society, Astrobiology",
+        "College": "Arts and Sciences",
+        "Grad year": 2025,
+        "What do you like to do outside of rocketry?": "Outside of rocketry, I'm active as an ambassador for the College of Arts and Sciences, and I'm researching data analytics at Cornell's Planetary Habitability and Technology Lab. I'm passionate about philanthropy and non-profit service — on campus, I lead the Zambia Community Education Initiative with the goal of constructing a secondary school in Chisekesi, Zambia, and I'm the VP of Philanthropy for the Professional Fraternity Council. In my spare time, I like to play tennis with the university's reserve team, practice my cooking skills, and learn new things! ",
+        "Anything else you want to include in your bio?": "More doors than wheels",
+        "bio": "Outside of rocketry, he is an active as an ambassador for the College of Arts and Sciences, and he is researching data analytics at Cornell's Planetary Habitability and Technology Lab. He is passionate about philanthropy and non-profit service — on campus, he leads the Zambia Community Education Initiative with the goal of constructing a secondary school in Chisekesi, Zambia, and he is the VP of Philanthropy for the Professional Fraternity Council. In my spare time, he likes to play tennis with the university's reserve team, practice my cooking skills, and learn new things! "
+      },
+      {
+        "name": "Julia VanPutte",
+        "Subteam": "Business",
+        "Major": "Operations Research and Information Engineering",
+        "Minor": "Data Science",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "LINKEDIN": "https://www.linkedin.com/in/julia-vanputte-5043791b7/",
+        "What do you like to do outside of rocketry?": "I like to cuddle with my cat Rory, cook lots of rice, hike, online shop, hangout with my friends, and watch the beautiful ithaca sunsets. ",
+        "Anything else you want to include in your bio?": "My nickname is JVP the MVP.",
+        "bio": "She likes to cuddle with my cat Rory, cook lots of rice, hike, online shop, hangout with her friends, and watch the beautiful ithaca sunsets. Her nickname is JVP the MVP."
+      },
+      {
+        "name": "Zach Garcia",
+        "Subteam": "Software",
+        "Major": "Computer Science and Electrical and Computer Engineering",
+        "Minor": "Robotics",
+        "College": "Engineering",
+        "Grad year": 2024,
+        "LINKEDIN": "https://www.linkedin.com/in/zachgarcia42",
+        "What do you like to do outside of rocketry?": "Cornell Amateur Radio Club and Research in the Space Systems Design Studio",
+        "Anything else you want to include in your bio?": "N/A",
+        "bio": "Oustside of Rocketry, he is a member of the Cornell Amateur Radio Club and does research in the Space Systems Design Studio."
+      },
+      {
+        "name": "Priya Abiram",
+        "Subteam": "Recovery and Payload",
+        "Major": "Mechanical Engineering",
+        "Minor": "Aerospace Engineering",
+        "College": "Engineering",
+        "Grad year": 2026,
+        "LINKEDIN": "https://www.linkedin.com/in/priya-abiram/",
+        "What do you like to do outside of rocketry?": "Alpha CubeSat Satellite Research Team, Pilot, Scuba Diver, Adrenaline Junkie",
+        "bio": "Outside of Rocketry, she is a member of the Alpha CubeSat Satellite Research Team. She is also a pilot, scuba diver, and adrenaline junkie."
+      },
+      {
+        "name": "Nicholas Natsoulas",
+        "Subteam": "Propulsion",
+        "Major": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2023,
+        "LINKEDIN": "https://www.linkedin.com/in/nicholasnatsoulas",
+        "GITHUB": "https://github.com/Natsoulas",
+        "What do you like to do outside of rocketry?": "I enjoy playing musical instruments, learning foreign languages, reading books, and traveling!",
+        "bio": "She enjoys playing musical instruments, learning foreign languages, reading books, and traveling!"
+      },
+      {
+        "name": "Murphy Klein",
+        "Subteam": "Propulsion",
+        "Major": "Engineering Physics",
+        "Minor": "Potentially Mechanical Engineering or Aerospace Engineering.",
+        "College": "Engineering",
+        "Grad year": 2026,
+        "What do you like to do outside of rocketry?": "I like to play ice hockey, and I am currently a member on the club ice hockey team. I also enjoy playing the electric guitar and weightlifting.",
+        "bio": "Outside of Rocketry, he likes to play ice hockey, and he is currently a member on the club ice hockey team. He also enjoys playing the electric guitar and weightlifting."
+      },
+      {
+        "name": "Mary Yuan",
+        "Subteam": "Structures",
+        "Major": "Computer Science",
+        "Minor": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2026,
+        "What do you like to do outside of rocketry?": "I like to play sudoku, crochet, draw, and read.¬†",
+        "Anything else you want to include in your bio?": "I like crunchy grapes.¬†",
+        "bio": "Outside of Rocketry, she likes to play sudoku, crochet, draw, and read."
+      },
+      {
+        "name": "Matthew Lew",
+        "Subteam": "Structures",
+        "Major": "Mechanical Engineering",
+        "Minor": "Computer Science",
+        "College": "Engineering",
+        "Grad year": 2026,
+        "What do you like to do outside of rocketry?": "I love rock climbing, playing chess, and having a good time with friends. I also love hiking Ithaca falls and walking around Beebe lake when the weather is nice!¬†¬†",
+        "bio": "Outside of Rocketry, he loves rock climbing, playing chess, and having a good time with friends. He also loves hiking Ithaca falls and walking around Beebe lake when the weather is nice!"
+      },
+      {
+        "name": "Spenser Wu",
+        "Subteam": "Business",
+        "Major": "Operations Research",
+        "Minor": "Undecided",
+        "College": "Engineering",
+        "Grad year": 2026,
+        "What do you like to do outside of rocketry?": "Practice editing in Premier Pro and After Effects, visit the pavilion in the botanical gardens, and work in the RPL.¬†",
+        "Anything else you want to include in your bio?": "My favorite T-shirt of all time is the Uniqlo U Airism Oversized Tee in neutral/pastel colorways. Buy it true to size, and it looks fantastic with literally anything.¬† It also happens to be a great pump cover for the gym. Is this explanation longer than my previous response? Yes. But that's how much I love this T-shirt.",
+        "bio": "Outside of Rocketry, he likes to practice editing in Premier Pro and After Effects, visit the pavilion in the botanical gardens, and work in the RPL. \"My favorite T-shirt of all time is the Uniqlo U Airism Oversized Tee in neutral/pastel colorways. Buy it true to size, and it looks fantastic with literally anything. It also happens to be a great pump cover for the gym. Is this explanation longer than my previous response? Yes. But that's how much I love this T-shirt.\""
+      },
+      {
+        "name": "Claire Cahill",
+        "Subteam": "Structures",
+        "Major": "Mechanical Engineering",
+        "College": "Engineering",
+        "Grad year": 2026,
+        "What do you like to do outside of rocketry?": "I've studied ballet since I was 3, I write science fiction, and I'm a big nerd about astronomy and telescopes.¬†",
+        "bio": "She has studied ballet since she was 3, writes science fiction, and is a big nerd about astronomy and telescopes."
+      },
+      {
+        "name": "Nicole Li",
+        "Subteam": "Electrical",
+        "Major": "Electrical and Computer Engineering",
+        "Minor": "CS and Philosophy (potentially)",
+        "College": "Engineering",
+        "Grad year": 2026,
+        "What do you like to do outside of rocketry?": "Watching movies, travelling, playing the piano, and going on boba runs",
+        "Anything else you want to include in your bio?": "roller coaster enthusiast :)",
+        "bio": "Outside of Rocketry, she enjoys watching movies, travelling, playing the piano, and going on boba runs. She is also a roller coaster enthusiast."
       }
     ]
   }
