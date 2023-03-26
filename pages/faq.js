@@ -17,6 +17,8 @@ import Header from '../components/layout/Header';
 import Stars from '../components/Stars';
 import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
+import { FaqList } from '../public/static/faq/faqlist';
+
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -44,25 +46,6 @@ export default function Faq() {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const questionsAndAnswers = [
-    {
-      q: 'Am I expected to have prior technical experience in order to apply?',
-      a: 'Nope! What we mainly look for is genuine interest in the team and what we do. We teach our new members everything they need to know.'
-    },
-    {
-      q: 'Do you only accept certain majors?',
-      a: 'Once again, nope! A related major is one way to show interest in what we do, but there are many ways to show interest, regardless of major.',
-    },
-    {
-      q: 'I’m unsure which subteam to apply to. Do I have to pick a subteam in order to apply?',
-      a: 'No worries! In our application you can indicate both your first and second choice subteam, and your application will be reviewed by both subteams!',
-    },
-    {
-      q: 'What do you guys do on a day-to-day basis?',
-      a: 'How much flexibility is there in roles? If I’m on one subteam, can I still be somewhat involved with another?',
-    },
-  ];
-
   return (
     <div className={classes.root}>
       <Head title='FAQ | Cornell Rocketry Team' />
@@ -74,7 +57,7 @@ export default function Faq() {
           FAQ
         </Typography>
         <FaqDisplay
-          data={questionsAndAnswers}
+          data={FaqList}
         />
       </Container>
       <Footer />

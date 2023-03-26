@@ -1,0 +1,52 @@
+{
+  "FaqList": [
+    {
+      "q": "Am I expected to have prior technical experience in order to apply?",
+      "a": "Nope! What we mainly look for is genuine interest in the team and what we do. We teach our new members everything they need to know."
+    },
+    {
+      "q": "Do you only accept certain majors?",
+      "a": "Once again, nope! A related major is one way to show interest in what we do, but there are many ways to show interest, regardless of major."
+    },
+    {
+      "q": "I’m unsure which subteam to apply to. Do I have to pick a subteam in order to apply?",
+      "a": "No worries! In our application you can indicate both your first and second choice subteam, and your application will be reviewed by both subteams!"
+    },
+    {
+      "q": "What do you guys do on a day-to-day basis?",
+      "a": "How much flexibility is there in roles? If I’m on one subteam, can I still be somewhat involved with another?"
+    },
+    {
+      "q": "When does the competition season start?",
+      "a": "We start designing the rocket in early August so that we can machine the parts in time for our competition in June/July"
+    },
+    {
+      "q": "How often do meetings take place?",
+      "a": "Weekly. Our all-team meeting takes place on Sunday afternoons, and your sub-team meeting time depends on what works best for all members of your sub-team!"
+    },
+    {
+      "q": "What are you looking for in new recruits?",
+      "a": "We are looking for new members that exhibit curiosity about our work and have the desire to learn new things! It shows us that you have a genuine interest in our team and are excited about being a part of the cool projects we work on. "
+    },
+    {
+      "q": "Do you make a new rocket each year, or do you improve everything done from last year?",
+      "a": "We build the rocket from scratch every year, but we take the lessons learned from what worked and did not work in previous years to make each rocket better than the last."
+    },
+    {
+      "q": "Can only freshmen apply?",
+      "a": "Rocketry accepts non-freshmen as well through a separate application which can be found on our website."
+    },
+    {
+      "q": "How high does the rocket go?",
+      "a": "We shoot for a 10,000 ft apogee. "
+    },
+    {
+      "q": "When does the competition season start?",
+      "a": "We start designing the rocket in early August so that we can machine the parts in time for our competition in June/July."
+    },
+    {
+      "q": "What opportunities does CRT provide for team members to grow in multiple aspects (Technically, Socially, and Academically)?",
+      "a": "Our members find plenty of ways to learn new things as a part of CRT. Building their own L1 rockets, taking on leadership roles, public speaking, engineering presentations, team collaboration, academic mentorship, and participating in industry-based design review cycles, are a few of the interpersonal and intrapersonal skill development opportunities CRT members have!"
+    }
+  ]
+}
