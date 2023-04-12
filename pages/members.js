@@ -62,6 +62,9 @@ export default function Members() {
               experience in aerospace engineering. CRT has six sub teams:
               business, electrical, software, propulsion, recovery and payload,
               and structures.
+              <br />
+              <br />
+              Click on any of our members below to learn more about them!
             </Typography>
           </Grid>
           <Grid item xs={9} md={8} lg={6} xl={6}>
