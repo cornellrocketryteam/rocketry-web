@@ -17,8 +17,6 @@ import SocialMediaButton from '../SocialMediaButton';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import { makeStyles } from '@material-ui/core/styles';
 
-// import TwitterIcon from '@material-ui/icons/Twitter';
-
 const transitionTime = 0.5;
 
 const useStyles = makeStyles((theme) => ({
@@ -105,6 +103,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header({ active, hideMenu }) {
+  const pages = ['Members', 'Subteams', 'Rockets', 'Sponsors'];
+
   const classes = useStyles();
 
   const [scrolled, setScrolled] = useState(false);
@@ -164,7 +164,7 @@ export default function Header({ active, hideMenu }) {
                   <MenuItem to={'/'}>Home</MenuItem>
                 </Link>
 
-                {['Team', 'Rockets', 'Sponsors'].map((text) => (
+                {pages.map((text) => (
                   <Link key={text} href={`/${text.toLowerCase()}`} passHref>
                     <MenuItem>{text}</MenuItem>
                   </Link>
@@ -203,7 +203,7 @@ export default function Header({ active, hideMenu }) {
                     Home
                   </Button>
                 </Link>
-                {['Team', 'Rockets', 'Sponsors'].map((text) => (
+                {pages.map((text) => (
                   <Link href={`/${text.toLowerCase()}`} key={text} passHref>
                     <Button color='inherit' className={classes.appBarButton}>
                       {text}
