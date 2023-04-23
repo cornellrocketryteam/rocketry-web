@@ -13,10 +13,6 @@
       "a": "No worries! In our application you can indicate both your first and second choice subteam, and your application will be reviewed by both subteams!"
     },
     {
-      "q": "What do you guys do on a day-to-day basis?",
-      "a": "How much flexibility is there in roles? If I’m on one subteam, can I still be somewhat involved with another?"
-    },
-    {
       "q": "When does the competition season start?",
       "a": "We start designing the rocket in early August so that we can machine the parts in time for our competition in June/July"
     },
@@ -47,6 +43,10 @@
     {
       "q": "What opportunities does CRT provide for team members to grow in multiple aspects (Technically, Socially, and Academically)?",
       "a": "Our members find plenty of ways to learn new things as a part of CRT. Building their own L1 rockets, taking on leadership roles, public speaking, engineering presentations, team collaboration, academic mentorship, and participating in industry-based design review cycles, are a few of the interpersonal and intrapersonal skill development opportunities CRT members have!"
+    },
+    {
+      "q": "What does Rocketry do for fun?",
+      "a": "Dinners together, rocketry parties, intramural soccer, movie nights, and hanging out all the time!"
     }
   ]
 }
