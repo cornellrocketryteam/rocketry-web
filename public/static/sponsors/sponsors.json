@@ -38,6 +38,14 @@
         {
           "name": "marotta",
           "link": "https://marotta.com/"
+        },
+        {
+          "name": "titan",
+          "link": "https://www.titanfittings.com/"
+        },
+        {
+          "name": "sbgsystems",
+          "link": "https://www.sbg-systems.com/"
         }
       ],
 
@@ -79,6 +87,18 @@
         {
           "name": "oshpark",
           "link": "https://oshpark.com/"
+        },
+        {
+          "name": "celsius",
+          "link": "https://www.celsius.com/"
+        },
+        {
+          "name": "graphitestore",
+          "link": "https://www.graphitestore.com/"
+        },
+        {
+          "name": "secoseals",
+          "link": "https://secoseals.com/"
         }
       ]
     },
@@ -93,7 +113,8 @@
       "Allen",
       "McNay",
       "Schultz",
-      "Mukasey"
+      "Mukasey",
+      "Barkoff"
     ]
   }
 }
