@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header({ active, hideMenu }) {
-  const pages = ['Members', 'Subteams', 'Rockets', 'Sponsors'];
+  const pages = ['Members', 'Subteams', 'Rockets', 'Sponsors', 'FAQ'];
 
   const classes = useStyles();
 
