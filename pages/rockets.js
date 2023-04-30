@@ -1,25 +1,26 @@
-import { useRef, useEffect, useState } from 'react';
-import {
-  Container,
-  makeStyles,
-  Typography,
-  Grid,
-  useMediaQuery,
-  useTheme,
-  Box,
-} from '@material-ui/core';
-import Header from '../components/layout/Header';
-import Stars from '../components/Stars';
-import { gsap } from 'gsap/dist/gsap';
-import lottie from 'lottie-web';
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Head from '../components/layout/Head';
-import Footer from '../components/layout/Footer';
+
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  makeStyles,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core';
+import { useEffect, useRef, useState } from 'react';
 
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import Footer from '../components/layout/Footer';
+import Head from '../components/layout/Head';
+import Header from '../components/layout/Header';
+import Slider from 'react-slick';
+import Stars from '../components/Stars';
+import { gsap } from 'gsap/dist/gsap';
+import lottie from 'lottie-web';
 
 const useStyles = makeStyles((theme) => ({
   // root: {
@@ -456,8 +457,8 @@ export default function Rockets() {
           alignContent='space-between'
           className={classes.patchesContainer}
         >
-          {[2018, 2019, 2020, 2022].map((year) => (
-            <Grid item xs={8} sm={3} key={year}>
+          {[2018, 2019, 2020, 2021, 2022, 2023].map((year) => (
+            <Grid item xs={8} sm={4} key={year}>
               <img
                 src={`/static/images/rockets-page/patches/${year}Patch.png`}
                 alt={`${year} Patch`}
