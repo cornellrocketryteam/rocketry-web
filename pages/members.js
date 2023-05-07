@@ -69,7 +69,7 @@ export default function Members() {
           </Grid>
           <Grid item xs={9} md={8} lg={6} xl={6}>
             <img
-              src='/static/images/apply-page/team pic.jpg'
+              src='/static/images/members-page/team pic.jpg'
               alt='CRT Team Picture'
               className={classes.teamPic}
             />

@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
     // overflow: 'hidden',
   },
   blueprint: {
-    backgroundImage: 'url("/static/images/team-page/blueprint/blueprint.svg")',
+    backgroundImage:
+      'url("/static/images/subteams-page/blueprint/blueprint.svg")',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     width: '100%',
@@ -162,7 +163,7 @@ export default function Subteams() {
 
   return (
     <div className={classes.root}>
-      <Head title='Team | Cornell Rocketry Team' />
+      <Head title='Subteams | Cornell Rocketry Team' />
       <Header />
       <div className={classes.blueprint}>
         <Container maxWidth='lg' disableGutters>
@@ -176,7 +177,7 @@ export default function Subteams() {
             <Grid item xs={5} lg={4}>
               <SubteamTooltip title={subteamDescriptions.recoveryAndPayload}>
                 <img
-                  src='/static/images/team-page/blueprint/recoveryandpayload.svg'
+                  src='/static/images/subteams-page/blueprint/recoveryandpayload.svg'
                   alt='Recovery & Payload'
                   className={clsx(
                     classes.blueprintComponent,
@@ -186,7 +187,7 @@ export default function Subteams() {
               </SubteamTooltip>
               <SubteamTooltip title={subteamDescriptions.business}>
                 <img
-                  src='/static/images/team-page/blueprint/business.svg'
+                  src='/static/images/subteams-page/blueprint/business.svg'
                   alt='Business'
                   className={clsx(
                     classes.blueprintComponent,
@@ -201,8 +202,8 @@ export default function Subteams() {
                   <img
                     src={
                       !xs
-                        ? '/static/images/team-page/blueprint/structures.svg'
-                        : '/static/images/team-page/blueprint/structures xs.svg'
+                        ? '/static/images/subteams-page/blueprint/structures.svg'
+                        : '/static/images/subteams-page/blueprint/structures xs.svg'
                     }
                     alt='Structures'
                     className={clsx(
@@ -215,8 +216,8 @@ export default function Subteams() {
                   <img
                     src={
                       !xs
-                        ? '/static/images/team-page/blueprint/propulsion.svg'
-                        : '/static/images/team-page/blueprint/propulsion xs.svg'
+                        ? '/static/images/subteams-page/blueprint/propulsion.svg'
+                        : '/static/images/subteams-page/blueprint/propulsion xs.svg'
                     }
                     alt='Propulsion'
                     className={clsx(
@@ -230,7 +231,7 @@ export default function Subteams() {
             <Grid item xs={5} lg={4} className={classes.blueprintCircuitBoard}>
               <SubteamTooltip title={subteamDescriptions.electrical}>
                 <img
-                  src='/static/images/team-page/blueprint/electrical.svg'
+                  src='/static/images/subteams-page/blueprint/electrical.svg'
                   alt='Electrical'
                   className={clsx(
                     classes.blueprintComponent,
@@ -241,7 +242,7 @@ export default function Subteams() {
 
               <SubteamTooltip title={subteamDescriptions.embeddedSoftware}>
                 <img
-                  src='/static/images/team-page/blueprint/embeddedsoftware.svg'
+                  src='/static/images/subteams-page/blueprint/embeddedsoftware.svg'
                   alt='Embedded Software'
                   className={clsx(
                     classes.blueprintComponent,

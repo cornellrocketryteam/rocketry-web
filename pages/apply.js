@@ -1,19 +1,28 @@
-import { useState } from 'react';
-import * as dayjs from 'dayjs';
 import * as arraySupport from 'dayjs/plugin/arraySupport';
-dayjs.extend(arraySupport);
+import * as dayjs from 'dayjs';
 
-import Header from '../components/layout/Header';
-import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
-
+import Head from '../components/layout/Head';
+import Header from '../components/layout/Header';
 import Hud from '../components/apply/Hud';
+import HudContent from '../components/apply/HudContent';
 import MoreInfo from '../components/apply/MoreInfo';
 import { useRef } from 'react';
-import HudContent from '../components/apply/HudContent';
+import { useState } from 'react';
+
+dayjs.extend(arraySupport);
+
+
+
+
+
+
+
+
+
 
 export default function Apply() {
-  const [applicationOpen, setApplicationOpen] = useState(true);
+  const [applicationOpen, setApplicationOpen] = useState(false);
   const moreInfoRef = useRef(null);
 
   const nonFreshmanDueDate = dayjs([0, 0, 0, 0, 0]);

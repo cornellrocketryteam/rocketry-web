@@ -1,21 +1,21 @@
-import * as dayjs from 'dayjs';
 import * as arraySupport from 'dayjs/plugin/arraySupport';
-dayjs.extend(arraySupport);
+import * as dayjs from 'dayjs';
 
 import {
-  makeStyles,
+  IconButton,
   Typography,
+  makeStyles,
   useMediaQuery,
   useTheme,
-  IconButton,
 } from '@material-ui/core';
 
-import MainTimeline from './timelines/MainTimeline';
-
-import MobileTimeline from './timelines/MobileTimeline';
 import ApplyButtons from './ApplyButtons';
+import MainTimeline from './timelines/MainTimeline';
 import MobileApplyButtons from './MobileApplyButtons';
+import MobileTimeline from './timelines/MobileTimeline';
 import ScrollDownButton from './ScrollDownButton';
+
+dayjs.extend(arraySupport);
 
 const useStyles = makeStyles((theme) => ({
   applicationClosed: {
@@ -74,7 +74,7 @@ export default function HudContent({
     return (
       <div className={classes.applicationClosed}>
         <Typography variant='h3' align='center'>
-          Applications for Fall 2022 are now closed.
+          Applications will open in Fall 2023.
         </Typography>
       </div>
     );

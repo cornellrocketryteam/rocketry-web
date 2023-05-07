@@ -1,16 +1,17 @@
-import * as dayjs from 'dayjs';
 import * as arraySupport from 'dayjs/plugin/arraySupport';
-dayjs.extend(arraySupport);
+import * as dayjs from 'dayjs';
 
 import {
-  makeStyles,
+  Avatar,
+  Container,
   Grid,
   Typography,
-  Container,
-  Avatar,
+  makeStyles,
 } from '@material-ui/core';
 
 import InfoSessionTimeline from './timelines/InfoSessionTimeline';
+
+dayjs.extend(arraySupport);
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,12 +48,6 @@ const useStyles = makeStyles((theme) => ({
   },
   alumniQuote: {
     marginTop: 20,
-  },
-  teamPic: {
-    display: 'flex',
-    width: '100%',
-    margin: 'auto',
-    border: '2px solid #8D8D8D',
   },
 }));
 
@@ -104,15 +99,6 @@ export default function MoreInfo({ moreInfoRef, timelineData }) {
               </Typography>
             </div>
           </div>
-        </Grid>
-        <Grid item xs={12}>
-          {/* <div className={classes.infoSection}> */}
-          <img
-            src='/static/images/apply-page/team pic.jpg'
-            alt='CRT Team Picture'
-            className={classes.teamPic}
-          />
-          {/* </div> */}
         </Grid>
       </Grid>
     </Container>
