@@ -1,9 +1,4 @@
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-} from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { useEffect, useRef } from 'react';
 
@@ -48,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
   animation: {
     height: '100vh',
     opacity: 0,
+    overflowY: 'hidden',
   },
   content: {
     textAlign: 'center',
@@ -264,8 +260,9 @@ export default function Home() {
       trigger: ref.current,
       pin: true,
       scrub: true,
-      start: `top ${50 - (ref.current.clientHeight / window.innerHeight) * 50
-        }%`, // makes the content appear in the center of the screen
+      start: `top ${
+        50 - (ref.current.clientHeight / window.innerHeight) * 50
+      }%`, // makes the content appear in the center of the screen
       end: '+=' + duration,
       // markers: true //debug markers
     };

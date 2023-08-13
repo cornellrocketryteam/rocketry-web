@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appBar: {
+    backgroundImage: 'none',
     backgroundColor: 'transparent',
     borderBottom: '1px solid #00000000',
     color: 'white',
@@ -150,7 +151,8 @@ export default function Header({ active, hideMenu }) {
                 color='inherit'
                 aria-label='menu'
                 onClick={handleClick}
-                size="large">
+                size='large'
+              >
                 <MenuIcon />
               </IconButton>
             </Box>
@@ -184,7 +186,7 @@ export default function Header({ active, hideMenu }) {
             data-active={active ? 'true' : scrolled.toString()}
           >
             <Link href='/' passHref>
-              <IconButton className={classes.logoButton} size="large">
+              <IconButton className={classes.logoButton} size='large'>
                 <img
                   src='/static/crt.png'
                   alt='logo'
