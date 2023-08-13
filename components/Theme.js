@@ -1,7 +1,7 @@
-import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { createTheme, responsiveFontSizes, adaptV4Theme } from '@mui/material/styles';
 
 // Create a theme instance.
-var mainTheme = createTheme({
+var mainTheme = createTheme(adaptV4Theme({
   typography: {
     fontFamily: ['Poppins', 'sans-serif'].join(','),
     h4: {
@@ -12,7 +12,7 @@ var mainTheme = createTheme({
     },
   },
   palette: {
-    type: 'dark',
+    mode: 'dark',
     background: {
       default: '#000000',
     },
@@ -20,7 +20,7 @@ var mainTheme = createTheme({
       main: '#b31b1b',
     },
   },
-});
+}));
 
 mainTheme = responsiveFontSizes(mainTheme);
 

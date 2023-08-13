@@ -1,4 +1,5 @@
-import { Container, Grid, Typography, makeStyles } from '@material-ui/core';
+import { Container, Grid, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 import SubteamLeads from './SubteamLeads';
 import SubteamMembers from './SubteamMembers';

@@ -1,4 +1,5 @@
-import { Typography, makeStyles } from '@material-ui/core';
+import { Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 import MemberDialog from './MemberDialog';
 import { useState, useCallback } from 'react';

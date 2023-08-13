@@ -6,16 +6,16 @@ import {
   Menu,
   MenuItem,
   Toolbar,
-} from '@material-ui/core';
+} from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import Link from 'next/link';
-import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
 import SocialMediaButton from '../SocialMediaButton';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import { makeStyles } from '@material-ui/core/styles';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import { makeStyles } from '@mui/styles';
 
 const transitionTime = 0.5;
 
@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     width: 55,
   },
   appBarButtons: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
     color: 'lightgrey',
@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   appBarIconButton: {
     marginRight: -2,
     marginLeft: -2,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginRight: -4,
       marginLeft: -4,
       '&:hover': {
@@ -150,7 +150,7 @@ export default function Header({ active, hideMenu }) {
                 color='inherit'
                 aria-label='menu'
                 onClick={handleClick}
-              >
+                size="large">
                 <MenuIcon />
               </IconButton>
             </Box>
@@ -184,7 +184,7 @@ export default function Header({ active, hideMenu }) {
             data-active={active ? 'true' : scrolled.toString()}
           >
             <Link href='/' passHref>
-              <IconButton className={classes.logoButton}>
+              <IconButton className={classes.logoButton} size="large">
                 <img
                   src='/static/crt.png'
                   alt='logo'

@@ -1,7 +1,8 @@
 import React from 'react';
 import * as dayjs from 'dayjs';
 
-import { makeStyles, Typography, Grid, Button } from '@material-ui/core';
+import { Typography, Grid, Button } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
   root: {

@@ -2,7 +2,8 @@ import React from 'react';
 import * as dayjs from 'dayjs';
 import clsx from 'clsx';
 
-import { makeStyles, Typography, Grid } from '@material-ui/core';
+import { Typography, Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
   buttons: {

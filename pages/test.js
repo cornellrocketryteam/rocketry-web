@@ -3,12 +3,12 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import ScrollLottie from '../lib/Test';
 import { useRef, useEffect } from 'react';
 import {
-  makeStyles,
   Typography,
   Grid,
   Box,
   Container,
-} from '@material-ui/core';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import Header from '../components/layout/Header';
 
 const useStyles = makeStyles((theme) => ({
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 2000,
   },
   rocketPartText: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       textShadow:
         '0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;',
     },
@@ -249,9 +249,8 @@ export default function Test() {
       trigger: ref.current,
       pin: true,
       scrub: true,
-      start: `top ${
-        50 - (ref.current.clientHeight / window.innerHeight) * 50
-      }%`, // makes the content appear in the center of the screen
+      start: `top ${50 - (ref.current.clientHeight / window.innerHeight) * 50
+        }%`, // makes the content appear in the center of the screen
       end: '+=' + duration,
       // markers: true //debug markers
     };

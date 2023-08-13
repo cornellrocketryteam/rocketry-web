@@ -1,5 +1,6 @@
 import React from 'react';
-import { makeStyles, withStyles, Tooltip, Fade, Zoom } from '@material-ui/core';
+import { Tooltip, Fade, Zoom } from '@mui/material';
+import { withStyles } from '@mui/styles';
 
 const StyledTooltip = withStyles({
   tooltip: {

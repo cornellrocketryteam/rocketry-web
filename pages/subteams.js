@@ -2,9 +2,9 @@ import {
   Container,
   Grid,
   Typography,
-  makeStyles,
   useMediaQuery,
-} from '@material-ui/core';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 import Footer from '../components/layout/Footer';
 import Head from '../components/layout/Head';
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     // [theme.breakpoints.only('lg')]: {
     //   padding: '80px 0 80px 0',
     // },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       padding: '60px 10px 60px 10px',
     },
   },
@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
   blueprintCircuitBoard: {
     position: 'relative',
     height: 300,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       height: 100,
     },
   },

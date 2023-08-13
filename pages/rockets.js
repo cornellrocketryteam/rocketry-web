@@ -6,14 +6,14 @@ import {
   Container,
   Grid,
   Typography,
-  makeStyles,
   useMediaQuery,
   useTheme,
-} from '@material-ui/core';
+} from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
+import { makeStyles } from '@mui/styles';
 
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Footer from '../components/layout/Footer';
 import Head from '../components/layout/Head';
 import Header from '../components/layout/Header';
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },

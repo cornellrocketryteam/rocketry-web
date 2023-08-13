@@ -1,12 +1,13 @@
 import * as dayjs from 'dayjs';
 
-import { makeStyles, withStyles } from '@material-ui/core';
+import { makeStyles, withStyles } from '@mui/styles';
 
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
-import StepConnector from '@material-ui/core/StepConnector';
-import StepIcon from '@material-ui/core/StepIcon';
+
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+import StepConnector from '@mui/material/StepConnector';
+import StepIcon from '@mui/material/StepIcon';
 import { useState } from 'react';
 import { useEffect } from 'react';
 

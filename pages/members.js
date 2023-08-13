@@ -1,4 +1,5 @@
-import { Container, Grid, Typography, makeStyles } from '@material-ui/core';
+import { Container, Grid, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 import Footer from '../components/layout/Footer';
 import Head from '../components/layout/Head';

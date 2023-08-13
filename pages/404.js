@@ -1,4 +1,4 @@
-import { makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography } from '@mui/material';
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center',
     backgroundImage:
       "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/static/images/404-page/large.png')",
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       backgroundImage:
         "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/static/images/404-page/medium.png')",
     },

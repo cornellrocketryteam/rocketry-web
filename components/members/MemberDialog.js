@@ -1,15 +1,15 @@
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { makeStyles, withStyles } from '@mui/styles';
 
-import CloseIcon from '@material-ui/icons/Close';
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import IconButton from '@material-ui/core/IconButton';
-import { LinkedIn, GitHub } from '@material-ui/icons';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
+import CloseIcon from '@mui/icons-material/Close';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import IconButton from '@mui/material/IconButton';
+import { LinkedIn, GitHub } from '@mui/icons-material';
+import MuiDialogTitle from '@mui/material/DialogTitle';
 import React from 'react';
 import SocialMediaButton from '../SocialMediaButton';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import Typography from '@mui/material/Typography';
 
 const styles = (theme) => ({
   root: {
@@ -33,7 +33,7 @@ const DialogTitle = withStyles(styles)((props) => {
           aria-label='close'
           className={classes.closeButton}
           onClick={onClose}
-        >
+          size="large">
           <CloseIcon />
         </IconButton>
       ) : null}

@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 import MemberPic from './MemberPic';
 
 export default function SubteamMembers({ imageDir, subteamMembers, subteam }) {

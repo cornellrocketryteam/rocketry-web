@@ -2,7 +2,8 @@ import * as dayjs from 'dayjs';
 import * as arraySupport from 'dayjs/plugin/arraySupport';
 dayjs.extend(arraySupport);
 
-import { makeStyles, IconButton } from '@material-ui/core';
+import { IconButton } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   scrollDownButton: {
@@ -25,7 +26,7 @@ export default function ScrollDownButton({ moreInfoRef }) {
     <IconButton
       className={classes.scrollDownButton}
       onClick={() => moreInfoRef.current.scrollIntoView()}
-    >
+      size="large">
       <img
         className={classes.scrollDownIcon}
         src='/static/images/apply-page/scrolldown.svg'

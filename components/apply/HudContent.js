@@ -2,12 +2,11 @@ import * as arraySupport from 'dayjs/plugin/arraySupport';
 import * as dayjs from 'dayjs';
 
 import {
-  IconButton,
   Typography,
-  makeStyles,
   useMediaQuery,
   useTheme,
-} from '@material-ui/core';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 import ApplyButtons from './ApplyButtons';
 import MainTimeline from './timelines/MainTimeline';
@@ -38,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       width: '80vw',
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: '90vw',
     },
   },

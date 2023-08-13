@@ -1,6 +1,6 @@
-import { IconButton } from '@material-ui/core';
+import { IconButton } from '@mui/material';
 import Link from 'next/link';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/styles';
 
 const transitionTime = 0.5;
 
@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   appBarIconButton: {
     marginRight: -2,
     marginLeft: -2,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginRight: -4,
       marginLeft: -4,
       '&:hover': {
@@ -27,7 +27,7 @@ export default function SocialMediaButton({ link, icon }) {
 
   return (
     <Link href={link} passHref>
-      <IconButton className={classes.appBarIconButton} target='_blank'>
+      <IconButton className={classes.appBarIconButton} target='_blank' size="large">
         <icon.type className={classes.appBarIcon} />
       </IconButton>
     </Link>
