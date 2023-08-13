@@ -1,4 +1,5 @@
-import { makeStyles, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import Header from '../components/layout/Header';
 import Head from '../components/layout/Head';
 import Footer from '../components/layout/Footer';
