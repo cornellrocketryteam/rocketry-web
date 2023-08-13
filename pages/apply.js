@@ -13,44 +13,35 @@ import { useState } from 'react';
 dayjs.extend(arraySupport);
 
 
-
-
-
-
-
-
-
-
 export default function Apply() {
-  const [applicationOpen, setApplicationOpen] = useState(false);
+  const [applicationOpen, setApplicationOpen] = useState(true);
   const moreInfoRef = useRef(null);
 
-  const nonFreshmanDueDate = dayjs([0, 0, 0, 0, 0]);
-  const freshmanDueDate = dayjs([2023, 1, 2, 23, 59]);
+  const nonFreshmanDueDate = dayjs([2023, 7, 31, 23, 59]);
+  const freshmanDueDate = dayjs([2023, 8, 28, 23, 59]);
 
-  const nonFreshmanLink = false;
-  const freshmanLink = 'https://forms.gle/yDx7akqYw6TxQn94A';
+  const nonFreshmanLink = 'https://forms.gle/HgTC4s3WYknzd6qh8';
+  const freshmanLink = 'https://forms.gle/P4Ute5zgNNLXwozW8';
 
   // NOTE: dayjs months are 0-indexed
   // format: [year, month (0 indexed), day, hour (24 hr time), minute]
   // fields: date, label, type, location
   const timelineData = [
     {
-      date: dayjs([2023, 0, 13, 23, 59]),
-      label: 'Prop Applications Open',
+      date: dayjs([2023, 7, 14, 23, 59]),
+      label: 'Applications Open',
       type: 'deadline',
     },
     {
-      date: dayjs([2023, 0, 26, 19, 15]),
-      label: 'Info Session',
-      location: 'Upson 216',
+      date: dayjs([2023, 7, 31, 16, 0]),
+      label: 'Project Team Fest',
+      location: 'Duffield Atrium',
       type: 'info',
     },
     {
-      date: dayjs([2023, 0, 30, 19, 0]),
-      label: 'Info Session',
-      location: 'Phillips 219',
-      type: 'info',
+      date: nonFreshmanDueDate,
+      label: 'Upperclassman Apps Due',
+      type: 'deadline',
     },
     {
       date: freshmanDueDate,

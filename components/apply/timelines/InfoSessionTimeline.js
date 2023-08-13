@@ -15,7 +15,7 @@ export default function InfoSessionTimeline({ timelineData }) {
   return (
     <MuiTimeline>
       {timelineData.map((data, index) => (
-        <TimelineItem>
+        <TimelineItem key={index}>
           <TimelineOppositeContent style={{ flex: 0.2 }}>
             <Typography color='textSecondary'>
               {data.date.format('M/D')}
