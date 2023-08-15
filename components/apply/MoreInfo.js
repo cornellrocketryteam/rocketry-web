@@ -1,16 +1,11 @@
 import * as arraySupport from 'dayjs/plugin/arraySupport';
 import * as dayjs from 'dayjs';
 
-import {
-  Avatar,
-  Container,
-  Grid,
-  Typography,
-} from '@mui/material';
+import { Avatar, Container, Grid, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-
 import InfoSessionTimeline from './timelines/InfoSessionTimeline';
+import AlumniCarousel from './AlumniCarousel';
 
 dayjs.extend(arraySupport);
 
@@ -76,29 +71,7 @@ export default function MoreInfo({ moreInfoRef, timelineData }) {
             <Typography variant='h3' className={classes.infoHeading}>
               Words from our Alumni.
             </Typography>
-            <div>
-              <Avatar
-                className={classes.alumniPic}
-                alt='Matt Schneider'
-                src='/static/images/apply-page/alumni/mattschneider.png'
-              />
-              <Typography variant='h6' align='center'>
-                Matt Schneider '21
-              </Typography>
-              <Typography variant='body1' className={classes.alumniQuote}>
-                “As an incoming freshman, Cornell Rocketry provided me the
-                opportunity to work on challenging problems and be a part of
-                something bigger than myself. Early on I focused my efforts on
-                expressing my creative potential and honing my design instincts,
-                but came to see an equally significant value in the friendships
-                and mentorships gained along the way. The team gave me the
-                chance to develop as a leader, learning in the moment from my
-                mistakes and taking on more responsibilities along the way.
-                Without a doubt, my time on Cornell Rocketry was THE formative
-                experience of my time in college and I’m grateful to have been
-                able to contribute.”
-              </Typography>
-            </div>
+            <AlumniCarousel />
           </div>
         </Grid>
       </Grid>
