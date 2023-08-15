@@ -23,9 +23,6 @@ import { gsap } from 'gsap/dist/gsap';
 import lottie from 'lottie-web';
 
 const useStyles = makeStyles((theme) => ({
-  // root: {
-  //   height: '200vh',
-  // },
   content: {
     padding: '120px 50px 50px 50px',
     [theme.breakpoints.only('xs')]: {
