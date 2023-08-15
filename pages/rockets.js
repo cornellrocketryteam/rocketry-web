@@ -238,6 +238,20 @@ export default function Rockets() {
 
   const rocketTimelineData = [
     {
+      name: 'ursa major',
+      year: 2023,
+      data: [
+        { property: 'height', value: '174"' },
+        { property: 'diameter', value: '6.3"' },
+        { property: 'launch mass', value: '148.5 lb' },
+        { property: 'motor diameter', value: '5"' },
+        { property: 'motor', value: 'SRAD Solid' },
+        { property: 'airframe filament', value: 'G12 Fiberglass' },
+      ],
+      description:
+        "Ursa Major was CRT's competition rocket for the 2023 Spaceport America Cup. Ursa Major successfully launched and achieved a 10,115 ft apogee out of the predicted 10,201 ft, and our team received a great flight score for being within 300 ft of the prediction. Both parachutes were also successfully deployed! Cornell Rocketry took home first place in the 10K Solid SRAD category, and was awarded second place overall out of all competing teams!",
+    },
+    {
       name: 'big red 1',
       year: 2022,
       data: [
