@@ -25,7 +25,7 @@
       {
         "name": "Ben Rotstein",
         "subteam": "Propulsion",
-        "position": "subteam lead",
+        "position": "team lead",
         "major": "Mechanical Engineering",
         "minor": "Aerospace Engineering",
         "college": "Engineering",
@@ -64,7 +64,7 @@
       {
         "name": "Katarina Duric",
         "subteam": "Electrical",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Electrical and Computer Engineering",
         "minor": "Computer Science",
         "college": "Engineering",
@@ -84,7 +84,7 @@
       {
         "name": "Sourish Dutta",
         "subteam": "Structures",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2023,
@@ -94,7 +94,7 @@
       {
         "name": "Anchey Peng",
         "subteam": "Business",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Computer Science",
         "college": "Arts and Sciences",
         "gradYear": 2024,
@@ -103,18 +103,9 @@
         "bio": "Outside of Rockety, he enjoys cooking, watching Netflix, and playing with his dog."
       },
       {
-        "name": "Nicole Barrera",
-        "subteam": "Structures",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2023,
-        "bio": "She is specializing in engineering simulation and enjoys exploring simulation and analysis through her projects on rocketry. Additionally, she is also an Ansys Teaching Assistant, helping students in multiple mechanical and biomechanical courses which employ Ansys software. Nicole is from San Jose, CA and outside of rocketry she enjoys going on nature walks and learning about wildlife."
-      },
-      {
         "name": "Christopher Lonergan",
         "subteam": "Electrical",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Electrical and Computer Engineering",
         "minor": "Philosophy and Computer Science",
         "college": "Engineering",
@@ -123,19 +114,9 @@
         "bio": "He likes climbing and petting cats."
       },
       {
-        "name": "Emily Matteson",
-        "subteam": "Structures",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2023,
-        "linkedin": "https://www.linkedin.com/in/emilyematteson/",
-        "bio": "She loves working on Rocketry because of the interdisciplinary challenges of working on a complex project that is bigger than any one person, and she was CRT's structures lead for 2021 - 2022. Emily works to mentor, support, and uplift her teammates to develop their engineering skills. Outside of Rocketry, Emily is the Chief Engineer on Cornell’s Cislunar Explorers CubeSat Research Team, a TA for the Cornell Engineering Leadership Certification Program, a 2022 Brooke Owens Fellow, and a 2023 Matthew Isakowitz Fellow. When she is not building rockets, Emily can be found stargazing in an open field, bouldering and top-roping in an indoor gym, or skiing on the icy slopes of the East Coast. Emily is from Tenafly, NJ."
-      },
-      {
         "name": "Aidan McNay",
         "subteam": "Electrical",
-        "position": "team lead",
+        "position": "member",
         "major": "Electrical and Computer Engineering",
         "minor": "Computer Science (anticipated)",
         "college": "Engineering",
@@ -166,7 +147,7 @@
       {
         "name": "Beth Polito",
         "subteam": "Electrical",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Electrical and Computer Engineering",
         "college": "Engineering",
         "gradYear": 2025,
@@ -175,7 +156,7 @@
       {
         "name": "Will Barkoff",
         "subteam": "Software",
-        "position": "subteam lead",
+        "position": "team lead",
         "major": "Computer Science",
         "minor": "Electrical and Computer Engineering",
         "college": "Engineering",
@@ -187,7 +168,7 @@
       {
         "name": "Dean Sheerer",
         "subteam": "Recovery and Payload",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "minor": "Design Strategy",
         "college": "Engineering",
@@ -198,7 +179,7 @@
       {
         "name": "Gavin Block",
         "subteam": "Structures",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2024,
@@ -207,7 +188,7 @@
       {
         "name": "Katlyn Moulia Arriola",
         "subteam": "Structures",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2025,
@@ -228,7 +209,7 @@
       {
         "name": "Yuvan Chugh",
         "subteam": "Business",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Engineering",
         "college": "Engineering",
         "gradYear": 2025,
@@ -237,7 +218,7 @@
       {
         "name": "Nandita Nagarajan",
         "subteam": "Electrical",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Electrical and Computer Engineering",
         "minor": "Mechanical Engineering",
         "college": "Engineering",
@@ -245,28 +226,9 @@
         "bio": "She loves to sing, and has been singing for about 14 years!"
       },
       {
-        "name": "Sam Noles",
-        "subteam": "Software",
-        "position": "team lead",
-        "major": "Engineering Physics",
-        "minor": "Aerospace Engineering",
-        "college": "Engineering",
-        "gradYear": 2023,
-        "bio": "He enjoys fishing, flying drones, and pursuing personal engineering projects in his free time. He is also an avid South Park and Nathan for You fan."
-      },
-      {
-        "name": "Gabe Mitchell",
-        "subteam": "Recovery and Payload",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2023,
-        "bio": "Outside of Rocketry, he likes spending time with his friends, lifting weights, and learning new things."
-      },
-      {
         "name": "Matt Bryan",
         "subteam": "Recovery and Payload",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2024,
@@ -284,7 +246,7 @@
       {
         "name": "Ashley Espinosa",
         "subteam": "Propulsion",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "minor": "Aerospace Engineering",
         "college": "Engineering",
@@ -295,7 +257,7 @@
       {
         "name": "Nissi Ragland",
         "subteam": "Software",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Computer Science",
         "minor": "Cognitive Science",
         "college": "Arts and Sciences",
@@ -327,7 +289,7 @@
       {
         "name": "Julia VanPutte",
         "subteam": "Business",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Operations Research and Information Engineering",
         "minor": "Data Science",
         "college": "Engineering",
@@ -379,6 +341,14 @@
         "bio": "Outside of Rocketry, he likes to play ice hockey, and he is currently a member on the club ice hockey team. He also enjoys playing the electric guitar and weightlifting."
       },
       {
+        "name": "James Montague",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2026
+      },
+      {
         "name": "Mary Yuan",
         "subteam": "Structures",
         "position": "member",
@@ -426,17 +396,6 @@
         "college": "Engineering",
         "gradYear": 2026,
         "bio": "Outside of Rocketry, she enjoys watching movies, travelling, playing the piano, and going on boba runs. She is also a roller coaster enthusiast."
-      },
-      {
-        "name": "Zack Hatzis",
-        "subteam": "Electrical",
-        "position": "member",
-        "major": "Electrical and Computer Engineering",
-        "minor": "Business",
-        "college": "Engineering",
-        "gradYear": 2023,
-        "linkedin": "https://www.linkedin.com/in/zack-hatzis-a8b98a1b7",
-        "bio": "Outside of Rocketry, he enjoys hiking, lifting, rowing, music discovery, hanging out with friends and traveling."
       }
     ]
   }
