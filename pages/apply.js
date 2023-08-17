@@ -33,6 +33,12 @@ export default function Apply() {
       type: 'deadline',
     },
     {
+      date: dayjs([2023, 7, 24, 18, 0]),
+      label: 'Information Session #1',
+      location: '222 Upson Hall (Tentative)',
+      type: 'info',
+    },
+    {
       date: dayjs([2023, 7, 31, 16, 0]),
       label: 'Project Team Fest',
       location: 'Duffield Atrium',
@@ -40,12 +46,30 @@ export default function Apply() {
     },
     {
       date: nonFreshmanDueDate,
-      label: 'Upperclassman Apps Due',
+      label: 'Upperclass Apps Due',
       type: 'deadline',
     },
     {
+      date: dayjs([2023, 8, 7, 18, 0]),
+      label: 'Information Session #2',
+      location: '222 Upson Hall (Tentative)',
+      type: 'info',
+    },
+    {
+      date: dayjs([2023, 8, 17, 17, 0]),
+      label: 'Information Session #3',
+      location: '216 Upson Hall',
+      type: 'info',
+    },
+    {
+      date: dayjs([2023, 8, 27, 19, 0]),
+      label: 'Information Session #4',
+      location: '225 Upson Hall (Tentative)',
+      type: 'info',
+    },
+    {
       date: freshmanDueDate,
-      label: 'Freshman / Transfer Apps Due',
+      label: 'First-year Apps Due',
       type: 'deadline',
     },
   ];
