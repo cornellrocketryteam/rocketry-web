@@ -56,15 +56,21 @@ export default function Apply() {
       type: 'info',
     },
     {
+      date: dayjs([2023, 8, 10, 11, 0]),
+      label: 'Club Fest',
+      location: 'Arts Quad',
+      type: 'info'
+    },
+    {
       date: dayjs([2023, 8, 17, 17, 0]),
       label: 'Information Session #3',
       location: '216 Upson Hall',
       type: 'info',
     },
     {
-      date: dayjs([2023, 8, 27, 19, 0]),
+      date: dayjs([2023, 8, 26, 18, 0]),
       label: 'Information Session #4',
-      location: '225 Upson Hall (Tentative)',
+      location: '222 Robert Purcell Community Center (Tentative)',
       type: 'info',
     },
     {
