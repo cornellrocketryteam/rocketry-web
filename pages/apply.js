@@ -70,7 +70,7 @@ export default function Apply() {
     {
       date: dayjs([2023, 8, 26, 18, 0]),
       label: 'Information Session #4',
-      location: '222 Robert Purcell Community Center (Tentative)',
+      location: '205 Robert Purcell Community Center (Auditorium)',
       type: 'info',
     },
     {
