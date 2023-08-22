@@ -35,7 +35,7 @@ export default function Apply() {
     {
       date: dayjs([2023, 7, 24, 18, 0]),
       label: 'Information Session #1',
-      location: '222 Upson Hall (Tentative)',
+      location: '222 Upson Hall',
       type: 'info',
     },
     {
@@ -52,7 +52,7 @@ export default function Apply() {
     {
       date: dayjs([2023, 8, 7, 18, 0]),
       label: 'Information Session #2',
-      location: '222 Upson Hall (Tentative)',
+      location: '222 Upson Hall',
       type: 'info',
     },
     {
@@ -70,7 +70,7 @@ export default function Apply() {
     {
       date: dayjs([2023, 8, 26, 18, 0]),
       label: 'Information Session #4',
-      location: '205 Robert Purcell Community Center (Auditorium)',
+      location: '205 Robert Purcell Community Center',
       type: 'info',
     },
     {
