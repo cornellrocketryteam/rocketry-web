@@ -45,6 +45,10 @@ const useStyles = makeStyles((theme) => ({
   alumniQuote: {
     marginTop: 20,
   },
+  video: {
+    width: '100%',
+    height: 600,
+  },
 }));
 
 export default function MoreInfo({ moreInfoRef, timelineData }) {
@@ -72,6 +76,18 @@ export default function MoreInfo({ moreInfoRef, timelineData }) {
               Words from our Alumni.
             </Typography>
             <AlumniCarousel />
+          </div>
+        </Grid>
+        <Grid item md={12}>
+          <div className={classes.infoSection}>
+            <iframe
+              className={classes.video}
+              src='https://www.youtube.com/embed/roTs-19zDyE?si=UglhiBwIZI1KXZ8l'
+              title='YouTube video player'
+              frameborder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              allowfullscreen
+            ></iframe>
           </div>
         </Grid>
       </Grid>
