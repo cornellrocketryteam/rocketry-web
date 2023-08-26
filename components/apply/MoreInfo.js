@@ -82,7 +82,7 @@ export default function MoreInfo({ moreInfoRef, timelineData }) {
           <div className={classes.infoSection}>
             <iframe
               className={classes.video}
-              src='https://www.youtube.com/embed/roTs-19zDyE?si=UglhiBwIZI1KXZ8l'
+              src='https://www.youtube.com/embed/roTs-19zDyE?si=UglhiBwIZI1KXZ8l&rel=0'
               title='YouTube video player'
               frameborder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
