@@ -171,7 +171,7 @@ export default function Header({ active, hideMenu }) {
                     <MenuItem>{text}</MenuItem>
                   </Link>
                 ))}
-                <Link href='mailto:cornellrocketry@gmail.com' passHref>
+                <Link href='mailto:rocketry@cornell.edu' passHref>
                   <MenuItem>Contact</MenuItem>
                 </Link>
                 <Link href={'/apply'} passHref>
@@ -240,7 +240,7 @@ export default function Header({ active, hideMenu }) {
                 <Button
                   color='inherit'
                   className={classes.appBarButton}
-                  href='mailto:cornellrocketry@gmail.com'
+                  href='mailto:rocketry@cornell.edu'
                 >
                   Contact
                 </Button>
