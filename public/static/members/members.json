@@ -3,6 +3,14 @@
     "imageDir": "/static/images/members-page/",
     "members": [
       {
+        "name": "Akshitha Jupally",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Applied Engineering Physics",
+        "college": "Engineering",
+        "gradYear": 2026
+      },
+      {
         "name": "Sarah Hawes",
         "subteam": "Electrical",
         "position": "member",
