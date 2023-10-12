@@ -52,7 +52,7 @@
       },
       {
         "name": "Kevin Salazar",
-        "subteam": "Propulsion",
+        "subteam": "Structures",
         "position": "member",
         "major": "Mechanical Engineering",
         "minor": "History",
@@ -81,7 +81,7 @@
       },
       {
         "name": "Reva Nair",
-        "subteam": "Structures",
+        "subteam": "Software",
         "position": "member",
         "major": "Mechanical Engineering",
         "minor": "Computer Science",
@@ -404,6 +404,56 @@
         "college": "Engineering",
         "gradYear": 2026,
         "bio": "Outside of Rocketry, she enjoys watching movies, travelling, playing the piano, and going on boba runs. She is also a roller coaster enthusiast."
+      },
+      {
+        "name": "Anushka Singh",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Applied Economics and Management and Information Science",
+        "college": "Dyson",
+        "gradYear": 2027
+      },
+      {
+        "name": "Arya Bhandari",
+        "subteam": "Propulsion",
+        "position": "member",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Gabriella Best",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Italivi Diaz",
+        "subteam": "Structures",
+        "position": "member",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Nikhil Sampath",
+        "subteam": "Electrical",
+        "position": "member",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Sebastian Bachman",
+        "subteam": "Electrical",
+        "position": "member",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Trevor Dales",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "college": "Engineering",
+        "gradYear": 2027
       }
     ]
   }
