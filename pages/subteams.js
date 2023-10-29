@@ -4,13 +4,13 @@ import {
   Typography,
   useMediaQuery,
 } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 
 import Footer from '../components/layout/Footer';
 import Head from '../components/layout/Head';
 import Header from '../components/layout/Header';
 import SubteamTooltip from '../components/team/SubteamTooltip';
 import clsx from 'clsx';
+import { makeStyles } from '@mui/styles';
 import { useRef } from 'react';
 
 const useStyles = makeStyles((theme) => ({
@@ -158,7 +158,7 @@ export default function Subteams() {
     business:
       "The Business team handles the team's finances, web development, content and design creation, sponsorship relations, events, and logistics. The business team ensures that the team always has the funding to complete our operations, and always has the organization to bring our team to the Spaceport America Cup.",
     structures:
-      'The Structures subteam handles the overall structure and recovery systems of the competition launch vehicle. The subteam chooses the rocket motor, performs rocket motion simulations to accurately predict the launch vehicle’s attitude of apogee, and designs various parts of the rocket including the parachute recovery system, the nose cone, and the booster section. Structures is also responsible for other components such as the AV pay, motor mount and rocket fins.',
+      'The Structures subteam handles the overall structure and recovery systems of the competition launch vehicle. The subteam chooses the rocket motor, performs rocket motion simulations to accurately predict the launch vehicle’s attitude of apogee, and designs various parts of the rocket including the parachute recovery system, the nose cone, and the booster section. Structures is also responsible for other components such as the AV bay, motor mount and rocket fins.',
   };
 
   return (
