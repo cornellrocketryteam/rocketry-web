@@ -1,11 +1,11 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { useEffect, useRef } from 'react';
 
 import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
 import ScrollLottie from '../lib/ScrollLottie';
 import { gsap } from 'gsap/dist/gsap';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -163,10 +163,10 @@ export default function Home() {
               justifyContent='space-between'
               spacing={3}
             >
-              <StatsNumber number={47} label={'Team Members'} />
+              <StatsNumber number={55} label={'Team Members'} />
               <StatsNumber number={6} label={'Subteams'} />
-              <StatsNumber number={6} label={'Majors'} />
-              <StatsNumber number={6} label={'Rockets Launched'} />
+              <StatsNumber number={10} label={'Majors'} />
+              <StatsNumber number={7} label={'Rockets Launched'} />
             </Grid>
           </div>
         </Container>
