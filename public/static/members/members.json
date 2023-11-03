@@ -411,47 +411,157 @@
         "position": "member",
         "major": "Applied Economics and Management and Information Science",
         "college": "Dyson",
-        "gradYear": 2027
+        "gradYear": 2026
       },
       {
         "name": "Arya Bhandari",
         "subteam": "Propulsion",
         "position": "member",
+        "major": "Computer Science",
         "college": "Engineering",
-        "gradYear": 2027
+        "gradYear": 2026
       },
       {
         "name": "Gabriella Best",
         "subteam": "Recovery and Payload",
         "position": "member",
-        "college": "Engineering",
-        "gradYear": 2027
+        "major": "Computer Science",
+        "college": "Arts and Sciences",
+        "gradYear": 2026
       },
       {
         "name": "Italivi Diaz",
         "subteam": "Structures",
         "position": "member",
+        "major": "Mechanical Engineering",
         "college": "Engineering",
-        "gradYear": 2027
+        "gradYear": 2026
       },
       {
         "name": "Nikhil Sampath",
         "subteam": "Electrical",
         "position": "member",
+        "major": "Electrical and Computer Engineering",
         "college": "Engineering",
-        "gradYear": 2027
+        "gradYear": 2026
       },
       {
         "name": "Sebastian Bachman",
         "subteam": "Electrical",
         "position": "member",
+        "major": "Electrical and Computer Engineering",
         "college": "Engineering",
-        "gradYear": 2027
+        "gradYear": 2026
       },
       {
         "name": "Trevor Dales",
         "subteam": "Recovery and Payload",
         "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2026
+      },
+      {
+        "name": "Ruth Zhao",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Design and Environmental Analysis",
+        "college": "Human Ecology",
+        "gradYear": 2027
+      },
+      {
+        "name": "Amanda Park",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Operations Research and Information Engineering",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Dev Shukla",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Applied Economics and Management and Information Science",
+        "college": "Dyson",
+        "gradYear": 2027
+      },
+      {
+        "name": "Ben Zou",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Thomas Rimer",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Applied Engineering Physics",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Ayanna Fulga",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Sophia Yang",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Applied Engineering Physics",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Naga Nagamuralee",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Aidan Friedman",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Rohan Sonakya",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Aly Nathoo",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Benjamin O'Connor",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Pranav Shankar",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2027
       }
