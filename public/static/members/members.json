@@ -564,6 +564,14 @@
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2027
+      },
+      {
+        "name": "Max Larsson",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science, Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2027
       }
     ]
   }
