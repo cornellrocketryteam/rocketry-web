@@ -1,5 +1,4 @@
 import { Container, Grid, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 
 import Footer from '../components/layout/Footer';
 import Head from '../components/layout/Head';
@@ -7,7 +6,8 @@ import Header from '../components/layout/Header';
 import Stars from '../components/Stars';
 import SubteamBLock from '../components/members/SubteamBlock';
 import TeamLeads from '../components/members/TeamLeads';
-import { TeamMembers } from '../public/static/members/members';
+import TeamMembersJSON from '../public/static/members/members';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,8 +38,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Members() {
-  // const xs = useMediaQuery('(max-width:600px)'); //true for extra small screen sizes
   const classes = useStyles();
+
+  const TeamMembers = TeamMembersJSON['TeamMembers'];
 
   const imageDir = TeamMembers.imageDir;
   const categorizedMembers = categorizeMembers(TeamMembers.members);
@@ -93,6 +94,10 @@ export default function Members() {
   );
 
   function categorizeMembers(members) {
+    members.sort((a, b) => {
+      return a.name.localeCompare(b.name);
+    });
+
     const subteams = [
       'business',
       'electrical',
