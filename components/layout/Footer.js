@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@mui/styles';
-import {
-  Grid,
-  Button,
-  IconButton,
-  Container,
-  Typography,
-} from '@mui/material';
-
-import Link from 'next/link';
+import { Button, Container, Grid, IconButton, Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Link from 'next/link';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { makeStyles } from '@mui/styles';
 
 const transitionTime = 0.5;
 
@@ -87,21 +80,20 @@ export default function Footer() {
                   Home
                 </Typography>
               </Link>
-              {['Team', 'Rockets', 'Sponsors', 'Apply'].map((text) => (
+              {[
+                'Members',
+                'Subteams',
+                'Rockets',
+                'Sponsors',
+                'FAQ',
+                'Apply',
+              ].map((text) => (
                 <Link href={`/${text.toLowerCase()}`} key={text} passHref>
                   <Typography variant='body1' className={classes.link}>
                     {text}
                   </Typography>
                 </Link>
               ))}
-              <a
-                href='https://cornellrocketryadmin.com/php/AdminMain.php'
-                target='_blank'
-              >
-                <Typography variant='body1' className={classes.link}>
-                  Login
-                </Typography>
-              </a>
             </CenterLeftAlign>
           </Grid>
           <Grid item xs>
@@ -151,7 +143,7 @@ export default function Footer() {
   function SocialMediaButton({ link, icon }) {
     return (
       <Link href={link} passHref>
-        <IconButton className={classes.iconButton} target='_blank' size="large">
+        <IconButton className={classes.iconButton} target='_blank' size='large'>
           <icon.type className={classes.icon} />
         </IconButton>
       </Link>
