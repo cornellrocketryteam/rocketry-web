@@ -8,13 +8,11 @@ import Hud from '../components/apply/Hud';
 import HudContent from '../components/apply/HudContent';
 import MoreInfo from '../components/apply/MoreInfo';
 import { useRef } from 'react';
-import { useState } from 'react';
 
 dayjs.extend(arraySupport);
 
-
 export default function Apply() {
-  const [applicationOpen, setApplicationOpen] = useState(true);
+  const applicationOpen = false;
   const moreInfoRef = useRef(null);
 
   const nonFreshmanDueDate = dayjs([2023, 7, 31, 23, 59]);
@@ -59,7 +57,7 @@ export default function Apply() {
       date: dayjs([2023, 8, 10, 11, 0]),
       label: 'Club Fest',
       location: 'Arts Quad',
-      type: 'info'
+      type: 'info',
     },
     {
       date: dayjs([2023, 8, 17, 17, 0]),

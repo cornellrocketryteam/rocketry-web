@@ -1,18 +1,14 @@
 import * as arraySupport from 'dayjs/plugin/arraySupport';
 import * as dayjs from 'dayjs';
 
-import {
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { Typography, useMediaQuery, useTheme } from '@mui/material';
 
 import ApplyButtons from './ApplyButtons';
 import MainTimeline from './timelines/MainTimeline';
 import MobileApplyButtons from './MobileApplyButtons';
 import MobileTimeline from './timelines/MobileTimeline';
 import ScrollDownButton from './ScrollDownButton';
+import { makeStyles } from '@mui/styles';
 
 dayjs.extend(arraySupport);
 
@@ -73,7 +69,7 @@ export default function HudContent({
     return (
       <div className={classes.applicationClosed}>
         <Typography variant='h3' align='center'>
-          Applications will open in Fall 2023.
+          Applications are now closed.
         </Typography>
       </div>
     );
