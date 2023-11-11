@@ -19,9 +19,11 @@ import Header from '../components/layout/Header';
 import RocketsJson from '../public/static/rockets/rockets';
 import Slider from 'react-slick';
 import Stars from '../components/Stars';
+import { promises as fs } from 'fs';
 import { gsap } from 'gsap/dist/gsap';
 import lottie from 'lottie-web';
 import { makeStyles } from '@mui/styles';
+import path from 'path';
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -184,7 +186,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Rockets() {
+export default function Rockets({ patchesDirectory, patchesFileNames }) {
   const classes = useStyles();
   const theme = useTheme();
   const mediaXs = useMediaQuery(theme.breakpoints.only('xs'));
@@ -370,11 +372,11 @@ export default function Rockets() {
           alignContent='space-between'
           className={classes.patchesContainer}
         >
-          {[2018, 2019, 2020, 2021, 2022, 2023].map((year) => (
-            <Grid item xs={8} sm={4} key={year}>
+          {patchesFileNames.map((fileName) => (
+            <Grid item xs={8} sm={4} key={fileName}>
               <img
-                src={`/static/images/rockets-page/patches/${year}Patch.png`}
-                alt={`${year} Patch`}
+                src={`${patchesDirectory}/${fileName}`}
+                alt={`${fileName}`}
                 className={classes.patch}
               />
             </Grid>
@@ -531,4 +533,33 @@ export default function Rockets() {
       />
     );
   }
+}
+
+export async function getStaticProps() {
+  const subteams = [
+    'business',
+    'electrical',
+    'embedded software',
+    'propulsion',
+    'recovery & payload',
+    'structures',
+  ];
+
+  const patchesDirectory = path.join(
+    process.cwd(),
+    'public/static/images/rockets-page/patches'
+  );
+
+  const patchesFileNames = await fs.readdir(patchesDirectory);
+
+  patchesFileNames.sort((a, b) => {
+    return b.localeCompare(a);
+  });
+
+  return {
+    props: {
+      patchesDirectory: patchesDirectory.split('public')[1],
+      patchesFileNames: patchesFileNames,
+    },
+  };
 }
