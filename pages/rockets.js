@@ -10,17 +10,18 @@ import {
   useTheme,
 } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
-import { makeStyles } from '@mui/styles';
 
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Footer from '../components/layout/Footer';
 import Head from '../components/layout/Head';
 import Header from '../components/layout/Header';
+import RocketsJson from '../public/static/rockets/rockets';
 import Slider from 'react-slick';
 import Stars from '../components/Stars';
 import { gsap } from 'gsap/dist/gsap';
 import lottie from 'lottie-web';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -233,106 +234,7 @@ export default function Rockets() {
     };
   }, [mainRocketRef]);
 
-  const rocketTimelineData = [
-    {
-      name: 'ursa major',
-      year: 2023,
-      data: [
-        { property: 'height', value: '174"' },
-        { property: 'diameter', value: '6.3"' },
-        { property: 'launch mass', value: '148.5 lb' },
-        { property: 'motor diameter', value: '5"' },
-        { property: 'motor', value: 'SRAD Solid' },
-        { property: 'airframe filament', value: 'G12 Fiberglass' },
-      ],
-      description:
-        "Ursa Major was CRT's competition rocket for the 2023 Spaceport America Cup. Our first ever rocket with a student researched and developed (SRAD) motor, Ursa Major successfully launched and achieved a 10,115 ft apogee out of the predicted 10,201 ft, earning an excellent flight score on the first day of launches. Both parachutes were also successfully deployed at the correct altitudes, and the rocket was recovered with no damage! Cornell Rocketry took home first place in the 10K Solid SRAD category, and was awarded second place overall out of all competing teams!",
-    },
-    {
-      name: 'big red 1',
-      year: 2022,
-      data: [
-        { property: 'height', value: '155"' },
-        { property: 'diameter', value: '6.2"' },
-        { property: 'launch mass', value: '112 lb' },
-        { property: 'motor diameter', value: '4.5"' },
-        { property: 'motor', value: 'Cesaroni Pro98' },
-        { property: 'airframe filament', value: 'Wound G12 Fiberglass' },
-      ],
-      description:
-        "Big Red 1 was CRT's competition rocket for the 2022 Spaceport America Cup. After multiple 3am starts and rain delays, Cornell Rocketry was the 5th team out of 100 teams to launch their rocket. Big Red 1 lifted off the pad on the 3rd ignition attempt and soared to 10367 feet. On the way down, the main parachute deployed prematurely due to hard accelerations caused by a delayed drogue parachute deployment. Even with this failure, the rocket was still smoothly recovered without damage. Cornell Rocketry placed 5th in 10K COTS and 10th overall.",
-    },
-    {
-      name: 'polaris',
-      year: 2019,
-      data: [
-        { property: 'height', value: '147"' },
-        { property: 'diameter', value: '6.17"' },
-        { property: 'launch mass', value: '73 lb' },
-        { property: 'motor diameter', value: '4.5"' },
-        { property: 'motor', value: 'Cesaroni Pro98' },
-        { property: 'airframe filament', value: 'Wound G12 Fiberglass' },
-      ],
-      description:
-        "Polaris is CRT's competition rocket for the 2019 Spaceport America Cup. Its payload is a guided parafoil which ejects from the forward section during descent. Unfortunately, Polaris experienced a CATO due to imperfections in the commercially built motor that was purchased, which caused an uneven burn, and the eventual failure of the launch.",
-    },
-    {
-      name: 'flammea',
-      year: 2018,
-      data: [
-        { property: 'height', value: '103"' },
-        { property: 'diameter', value: '5.00"' },
-        { property: 'launch mass', value: '39 lb' },
-        { property: 'motor diameter', value: '2.95"' },
-        { property: 'motor', value: 'AeroTech L1520T' },
-        { property: 'airframe filament', value: 'Wound Fiberglass' },
-      ],
-      description:
-        "Flammea was CRT's competition rocket for the 2018 NASA Student Launch. Its payload is a Deployable Rover System (DRS), which deploys a rover from the rocket upon landing. The rover autonomously traverses across 5 feet of unknown terrain using object avoidance and unfolds a set of solar panels.",
-    },
-    {
-      name: 'ezra',
-      year: 2017,
-      data: [
-        { property: 'height', value: '109"' },
-        { property: 'diameter', value: '5.15"' },
-        { property: 'launch mass', value: '45 lb' },
-        { property: 'motor diameter', value: '3.86"' },
-        { property: 'motor', value: 'AeroTech L1300R‑P' },
-        { property: 'airframe filament', value: 'Wound G12 Fiberglass' },
-      ],
-      description:
-        "Ezra was CRT's competition rocket for the 2017 NASA Student Launch. It has a total length of 109 inches and a diameter of 5.15 inches. It utilizes an AeroTech L1300R-P motor and achieves a liftoff thrust of 297 lbs. Ezra houses a Controlled Landing Mechanism (CLM), which lands upright after launch, a Roll Control System (RCS) to manage the roll of the rocket, and a Target Detectiong System (TDS) to capture targets on the ground during flight. With Ezra, we placed 3rd in competition and took home the Safety as well as Documentation award.",
-    },
-    {
-      name: 'space jam',
-      year: 2016,
-      data: [
-        { property: 'height', value: '74.5"' },
-        { property: 'diameter', value: '3.98"' },
-        { property: 'launch mass', value: '19 lb' },
-        { property: 'motor diameter', value: '2.13"' },
-        { property: 'motor', value: 'Cesaroni K740 C‑Star' },
-        { property: 'airframe filament', value: 'Wound Fiberglass' },
-      ],
-      description:
-        "Space Jam competed in the NASA Student Launch Competition for 2015-2016. It has a total length of 74.5 inches, diameter of 3.98 inches, and features full fiberglass airframe and fins. It utilizes a Cesaroni K740 motor and achieves a liftoff thrust of 191.1 lbs and a rail exit velocity of 70.1 ft/s. On board, it houses the Payload Enclosure Mechanism (PEM) for securing the payload through flight, and holds an avionics bay packed with a multitude of tracking electronics and radios for sending telemetry back to the ground station. On Space Jam's most recent flight, it reached an altitude of 5,277 feet, just 3 feet shy of the target apogee of 1 mile!",
-    },
-    {
-      name: 'chewbacca',
-      year: 2015,
-      data: [
-        { property: 'height', value: '78"' },
-        { property: 'diameter', value: '4.00"' },
-        { property: 'launch mass', value: '17 lb' },
-        { property: 'motor diameter', value: '2.13"' },
-        { property: 'motor', value: 'Cesaroni J760‑WT' },
-        { property: 'airframe filament', value: 'Wound Fiberglass' },
-      ],
-      description:
-        'Chewbacca was designed and built for the 2015 NASA Student Launch competition. It successfully competed accomplishing all milestones, and achieved an impressive 4th place overall.',
-    },
-  ];
+  const rocketTimelineData = RocketsJson['rockets'];
 
   return (
     <div className={classes.root}>
