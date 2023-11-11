@@ -1,13 +1,12 @@
 import { Container, Grid, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
-
 
 import Footer from '../components/layout/Footer';
 import Head from '../components/layout/Head';
 import Header from '../components/layout/Header';
 import SponsorLogos from '../components/sponsors/SponsorLogos';
-import { SponsorsInfo } from '../public/static/sponsors/sponsors';
+import SponsorsInfoJSON from '../public/static/sponsors/sponsors';
 import TopContent from '../components/sponsors/TopContent';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,7 +46,7 @@ export default function Sponsors() {
           Thank You to Our Sponsors!
         </Typography>
 
-        <SponsorLogos {...SponsorsInfo} />
+        <SponsorLogos {...SponsorsInfoJSON['SponsorsInfo']} />
       </Container>
       <img
         src='/static/images/sponsors-page/cornell skyline dark.png'
