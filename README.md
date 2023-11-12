@@ -114,13 +114,13 @@ Start by installing the required software to be able to run the website.
 
 ### Homepage
 
-The only content that changes on the homepage year to year is the "At a Glance" statistics. These can be manually updated on the homepage file [index.js](pages\index.js). Using `Ctrl + F` is an easy way to find where to update the numbers.
+The only content that changes on the homepage year to year is the "At a Glance" statistics. These can be manually updated on the homepage file [index.js](pages/index.js). Using `Ctrl + F` is an easy way to find where to update the numbers.
 
 ### Members Page
 
 The members page must be updated whenever there are new members added to the team. 
 
-This can be done using the JSON file [members.json](public\static\members\members.json). Member pictures must be placed in the folder [public/static/images/members-page](public\static\images\members-page). The picture file names must match with the member's name in the JSON file. Make sure that the JSON file is formatted correctly or the page will not load.
+This can be done using the JSON file [members.json](public/static/members/members.json). Member pictures must be placed in the folder [public/static/images/members-page](public/static/images/members-page). The picture file names must match with the member's name in the JSON file. Make sure that the JSON file is formatted correctly or the page will not load.
 
 The photos should be cropped to a **3:4 aspect ratio**, and they should be compressed or reduced in size so that the file size is smaller and the images will load faster on the website. Cropping to 375 x 500 pixels will match the correct aspect ratio and minimize the file size, but larger images can also be used.
 
@@ -129,7 +129,7 @@ The photos should be cropped to a **3:4 aspect ratio**, and they should be compr
 
 The rockets page must be updated each year with new rocket information and the year's competition patch. 
 
-The information about each year's rocket can be updated through the JSON file [rockets.json](public\static\rockets\rockets.json). When adding a new rocket to the JSON file, the corresponding image of the rocket must also be added to the folder [public/static/images/rockets-page/rockets](public/static/images/rockets-page/rockets). 
+The information about each year's rocket can be updated through the JSON file [rockets.json](public/static/rockets/rockets.json). When adding a new rocket to the JSON file, the corresponding image of the rocket must also be added to the folder [public/static/images/rockets-page/rockets](public/static/images/rockets-page/rockets). 
 
 Competition patches can be updated by adding the new patch to the folder [public/static/images/rockets-page/patches](public/static/images/rockets-page/patches), and the patch will be automatically added on the website.
 
@@ -138,14 +138,14 @@ Competition patches can be updated by adding the new patch to the folder [public
 
 The sponsors page must be updated whenever there are new sponsors or the sponsorship packet has been updated. 
 
-Sponsor logos can be updated through the JSON file [sponsors.json](public\static\sponsors\sponsors.json). When adding a new sponsor logo to the JSON file, the corresponding logo image must also be added to the folder [public/static/images/sponsors-page/logos](public/static/images/sponsors-page/logos). Logos might have to be edited using Photoshop or some other software to remove the background and to ensure readability. Try to find versions of company logos that will look good on the website, for example some companies have light and dark versions of their logos.
+Sponsor logos can be updated through the JSON file [sponsors.json](public/static/sponsors/sponsors.json). When adding a new sponsor logo to the JSON file, the corresponding logo image must also be added to the folder [public/static/images/sponsors-page/logos](public/static/images/sponsors-page/logos). Logos might have to be edited using Photoshop or some other software to remove the background and to ensure readability. Try to find versions of company logos that will look good on the website, for example some companies have light and dark versions of their logos.
 
 The sponsorship packet can be updated by replacing the file [CRT Sponsorship Packet.pdf](public/static/CRT%20Sponsorship%20Packet.pdf). Make sure that the same file name is used for the new packet.
 
 
 ### FAQ Page
 
-The FAQ page can be updated using the JSON file [faq.json](public\static\faq\faq.json).
+The FAQ page can be updated using the JSON file [faq.json](public/static/faq/faq.json).
 
 ### Apply Page
 
