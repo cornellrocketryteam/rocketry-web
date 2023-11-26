@@ -1,0 +1,52 @@
+{
+  "dayjsFormatString": "M/D H:mm a",
+  "applicationOpen": true,
+  "upperclassDueDate": "8/31 11:59 pm",
+  "firstYearDueDate": "9/28 11:59 pm",
+  "upperclassApplicationLink": "https://forms.gle/HgTC4s3WYknzd6qh8",
+  "firstYearApplicationLink": "https://forms.gle/P4Ute5zgNNLXwozW8",
+  "timelineData": [
+    {
+      "date": "8/14 11:59 pm",
+      "label": "Applications Open"
+    },
+    {
+      "date": "8/24 6:00 pm",
+      "label": "Information Session #1",
+      "location": "222 Upson Hall"
+    },
+    {
+      "date": "8/31 4:00 pm",
+      "label": "Project Team Fest",
+      "location": "Duffield Atrium"
+    },
+    {
+      "date": "8/31 11:59 pm",
+      "label": "Upperclass Apps Due"
+    },
+    {
+      "date": "9/7 6:00 pm",
+      "label": "Information Session #2",
+      "location": "222 Upson Hall"
+    },
+    {
+      "date": "9/10 11:00 am",
+      "label": "Club Fest",
+      "location": "Arts Quad"
+    },
+    {
+      "date": "9/17 5:00 pm",
+      "label": "Information Session #2",
+      "location": "216 Upson Hall"
+    },
+    {
+      "date": "9/26 6:00 pm",
+      "label": "Information Session #4",
+      "location": "205 Robert Purcell Community Center"
+    },
+    {
+      "date": "9/28 11:59 pm",
+      "label": "First-year Apps Due"
+    }
+  ]
+}

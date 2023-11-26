@@ -28,14 +28,21 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#usage">Usage</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li>
+      <a href="#usage">Updating the website</a>
+      <ul>
+        <li><a href="#general">General</a></li>
+        <li><a href="#homepage">Homepage</a></li>
+        <li><a href="#members-page">Members Page</a></li>
+        <li><a href="#Rockets-page">Rockets Page</a></li>
+        <li><a href="#Sponsors-page">Sponsors Page</a></li>
+        <li><a href="#FAQ-page">FAQ Page</a></li>
+        <li><a href="#apply-page">apply Page</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 
@@ -150,6 +157,15 @@ The FAQ page can be updated using the JSON file [faq.json](public/static/faq/faq
 ### Apply Page
 
 The apply page must be updated whenever the team is recruiting.
+
+The content on the apply page can be updated through the JSON file [apply.json](public/static/apply/apply.json). There are multiple fields in the JSON file that need to be changed each time the team recruits. 
+
+- `dayjsFormatString` should not be changed.
+- `applicationOpen` determines whether the application page will show the open or closed version. It should be set to `true` when recruitment is ongoing and set to `false` when recruitment is finished.
+- `upperclassDueDate`, `firstYearDueDate`, `upperclassApplicationLink`, and `firstYearApplicationLink` should be updated to the corresponding dates and links for the current year.
+- `timelineData` contains all of the events and key dates that will be shown on the apply page's timeline. This includes dates like the application open, information sessions, club fests, and the application due dates. For reference, the file [example.json](public/static/apply/example.json) shows a properly formatted json file with all of the necessary information for the timeline. 
+  - Make sure to include all information sessions and application due dates
+  - All timeline dates must be formatted in the format `M/D H:mm a` where `M` is the month, `D` is the day, `H` is the hour, `mm` is the minutes, and `a` is either am or pm. More details about this format can be found [here](https://day.js.org/docs/en/parse/string-format). Reference [example.json](public/static/apply/example.json) for properly formatted dates.
 
 
 

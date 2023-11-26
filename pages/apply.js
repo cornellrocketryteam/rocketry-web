@@ -1,6 +1,8 @@
 import * as arraySupport from 'dayjs/plugin/arraySupport';
+import * as customParseFormat from 'dayjs/plugin/customParseFormat';
 import * as dayjs from 'dayjs';
 
+import ApplyJson from '../public/static/apply/apply';
 import Footer from '../components/layout/Footer';
 import Head from '../components/layout/Head';
 import Header from '../components/layout/Header';
@@ -10,73 +12,30 @@ import MoreInfo from '../components/apply/MoreInfo';
 import { useRef } from 'react';
 
 dayjs.extend(arraySupport);
+dayjs.extend(customParseFormat);
 
 export default function Apply() {
-  const applicationOpen = false;
+  const applicationOpen = ApplyJson['applicationOpen'];
   const moreInfoRef = useRef(null);
 
-  const nonFreshmanDueDate = dayjs([2023, 7, 31, 23, 59]);
-  const freshmanDueDate = dayjs([2023, 8, 28, 23, 59]);
+  const dayjsFormatString = ApplyJson['dayjsFormatString'];
 
-  const nonFreshmanLink = 'https://forms.gle/HgTC4s3WYknzd6qh8';
-  const freshmanLink = 'https://forms.gle/P4Ute5zgNNLXwozW8';
+  const upperclassDueDate = dayjs(
+    ApplyJson['upperclassDueDate'],
+    dayjsFormatString
+  );
+  const firstYearDueDate = dayjs(
+    ApplyJson['firstYearDueDate'],
+    dayjsFormatString
+  );
 
-  // NOTE: dayjs months are 0-indexed
-  // format: [year, month (0 indexed), day, hour (24 hr time), minute]
-  // fields: date, label, type, location
-  const timelineData = [
-    {
-      date: dayjs([2023, 7, 14, 23, 59]),
-      label: 'Applications Open',
-      type: 'deadline',
-    },
-    {
-      date: dayjs([2023, 7, 24, 18, 0]),
-      label: 'Information Session #1',
-      location: '222 Upson Hall',
-      type: 'info',
-    },
-    {
-      date: dayjs([2023, 7, 31, 16, 0]),
-      label: 'Project Team Fest',
-      location: 'Duffield Atrium',
-      type: 'info',
-    },
-    {
-      date: nonFreshmanDueDate,
-      label: 'Upperclass Apps Due',
-      type: 'deadline',
-    },
-    {
-      date: dayjs([2023, 8, 7, 18, 0]),
-      label: 'Information Session #2',
-      location: '222 Upson Hall',
-      type: 'info',
-    },
-    {
-      date: dayjs([2023, 8, 10, 11, 0]),
-      label: 'Club Fest',
-      location: 'Arts Quad',
-      type: 'info',
-    },
-    {
-      date: dayjs([2023, 8, 17, 17, 0]),
-      label: 'Information Session #3',
-      location: '216 Upson Hall',
-      type: 'info',
-    },
-    {
-      date: dayjs([2023, 8, 26, 18, 0]),
-      label: 'Information Session #4',
-      location: '205 Robert Purcell Community Center',
-      type: 'info',
-    },
-    {
-      date: freshmanDueDate,
-      label: 'First-year Apps Due',
-      type: 'deadline',
-    },
-  ];
+  const upperclassApplicationLink = ApplyJson['upperclassApplicationLink'];
+  const firstYearApplicationLink = ApplyJson['firstYearApplicationLink'];
+
+  const timelineData = parseTimelineData(
+    ApplyJson['timelineData'],
+    dayjsFormatString
+  );
 
   return (
     <div>
@@ -87,10 +46,10 @@ export default function Apply() {
         <HudContent
           applicationOpen={applicationOpen}
           timelineData={timelineData}
-          freshmanLink={freshmanLink}
-          nonFreshmanLink={nonFreshmanLink}
-          freshmanDueDate={freshmanDueDate}
-          nonFreshmanDueDate={nonFreshmanDueDate}
+          freshmanLink={firstYearApplicationLink}
+          nonFreshmanLink={upperclassApplicationLink}
+          freshmanDueDate={firstYearDueDate}
+          nonFreshmanDueDate={upperclassDueDate}
           moreInfoRef={moreInfoRef}
         />
       </Hud>
@@ -99,4 +58,12 @@ export default function Apply() {
       <Footer />
     </div>
   );
+}
+
+function parseTimelineData(timelineData, dayjsFormatString) {
+  timelineData.forEach((event) => {
+    event['date'] = dayjs(event['date'], dayjsFormatString);
+  });
+
+  return timelineData;
 }
