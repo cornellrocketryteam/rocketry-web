@@ -16,6 +16,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SocialMediaButton from '../SocialMediaButton';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { makeStyles } from '@mui/styles';
+import { EmailOutlined, EmailRounded } from '@mui/icons-material';
 
 const transitionTime = 0.5;
 
@@ -174,6 +175,9 @@ export default function Header({ active, hideMenu }) {
                 <Link href='mailto:rocketry@cornell.edu' passHref>
                   <MenuItem>Contact</MenuItem>
                 </Link>
+                <Link href={'https://g.cornellrocketryteam.com/give'} passHref>
+                  <MenuItem>Give</MenuItem>
+                </Link>
                 <Link href={'/apply'} passHref>
                   <MenuItem>Apply</MenuItem>
                 </Link>
@@ -231,19 +235,26 @@ export default function Header({ active, hideMenu }) {
                   link='https://www.youtube.com/channel/UCOIp04IIwcz8YvBcgrMYOhg'
                   icon={<YouTubeIcon />}
                 />
+                <SocialMediaButton
+                  link='mailto:rocketry@cornell.edu'
+                  icon={<EmailRounded />}
+                />
+
               </div>
 
               <div
                 className={classes.appBarButtons}
                 data-active={active ? 'true' : scrolled.toString()}
               >
-                <Button
-                  color='inherit'
-                  className={classes.appBarButton}
-                  href='mailto:rocketry@cornell.edu'
-                >
-                  Contact
-                </Button>
+                <Link href='https://g.cornellrocketryteam.com/give' passHref>
+                  <Button
+                    variant='contained'
+                    color='primary'
+                    className={classes.appBarButton}
+                  >
+                    Give
+                  </Button>
+                </Link>
                 <Link href='/apply' passHref>
                   <Button
                     variant='contained'

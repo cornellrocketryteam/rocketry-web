@@ -16,6 +16,9 @@ var mainTheme = createTheme({
     background: {
       default: '#000000',
     },
+    primary: {
+      main: '#e0e0e0',
+    },
     secondary: {
       main: '#b31b1b',
     },
