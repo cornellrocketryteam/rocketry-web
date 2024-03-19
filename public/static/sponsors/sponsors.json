@@ -50,9 +50,12 @@
         {
           "name": "skbcases",
           "link": "https://www.skbcases.com/"
+        },
+        {
+          "name": "kennametal",
+          "link": "https://www.kennametal.com/us/en/home.html"
         }
       ],
-
       "gold": [
         {
           "name": "anduril",
@@ -65,9 +68,12 @@
         {
           "name": "valworx",
           "link": "https://www.valworx.com/"
+        },
+        {
+          "name": "firebird",
+          "link": "https://www.flyfirebird.com/fb/"
         }
       ],
-
       "silver": [
         {
           "name": "exxon",
@@ -80,9 +86,12 @@
         {
           "name": "shell",
           "link": "https://www.shell.com/"
+        },
+        {
+          "name": "winsource",
+          "link": "https://www.win-source.net/"
         }
       ],
-
       "bronze": [
         {
           "name": "overleaf",
@@ -106,7 +115,6 @@
         }
       ]
     },
-
     "contributers": [
       "Hawes",
       "Frey",
