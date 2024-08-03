@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     display: 'block',
     color: 'lightgrey',
-    fontSize: 14
+    fontSize: 14,
   },
 }));
 
