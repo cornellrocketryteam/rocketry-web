@@ -50,13 +50,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     display: 'block',
     color: 'lightgrey',
-    fontSize: 14,
+    fontSize: 12,
   },
   projectteam: {
     textAlign: 'center',
     display: 'block',
     color: 'lightgrey',
-    fontSize: 14,
+    fontSize: 12,
   },
 }));
 
@@ -128,11 +128,11 @@ export default function Footer() {
             </CenterLeftAlign>
           </Grid>
         </Grid>
-        <Typography variant='body1' className={classes.copyright}>
-          &copy; {new Date().getFullYear()} Cornell Rocketry Team
-        </Typography>
         <Typography variant='body1' className={classes.projectteam}>
           Registered Project Team of Cornell University
+        </Typography>
+        <Typography variant='body1' className={classes.copyright}>
+          &copy; {new Date().getFullYear()} Cornell Rocketry Team
         </Typography>
       </Container>
     </div>
