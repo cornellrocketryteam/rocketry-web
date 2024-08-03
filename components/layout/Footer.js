@@ -133,7 +133,7 @@ export default function Footer() {
         </Typography>
         <Typography variant='body1' className={classes.projectteam}>
           Registered Project Team of Cornell University
-        <Typography>
+        </Typography>
       </Container>
     </div>
   );
