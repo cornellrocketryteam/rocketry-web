@@ -22,25 +22,6 @@
         "bio": "Outside of Rocketry, she enjoys playing volleyball, hiking, watching movies with friends, and reading about space science."
       },
       {
-        "name": "Nick Johnson",
-        "subteam": "Recovery and Payload",
-        "position": "member",
-        "major": "Computer Science",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "bio": "He spends his free-time building pretty much anything that flies, boxing, and playing the guitar. "
-      },
-      {
-        "name": "Ben Rotstein",
-        "subteam": "Propulsion",
-        "position": "team lead",
-        "major": "Mechanical Engineering",
-        "minor": "Aerospace Engineering",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "bio": "He really enjoys theater, and he is one of the managers for a student company that does lighting and sound for events! He also really enjoys skiing, mountain biking, history and geography, and video games."
-      },
-      {
         "name": "Alice Herz",
         "subteam": "Recovery and Payload",
         "position": "member",
@@ -51,19 +32,9 @@
         "bio": "Outside of Rocketry, they enjoy participating in the Risley community and doing theatre."
       },
       {
-        "name": "Kevin Salazar",
-        "subteam": "Structures",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "minor": "History",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "bio": "He enjoys camping, mountain biking, hiking, and anything to do with the great outdoors. He is also a big film buff and enjoys watching any and all classic films whenever he gets the chance."
-      },
-      {
         "name": "Matthew Chekhlov",
         "subteam": "Propulsion",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Math and Physics",
         "college": "Arts and Sciences",
         "gradYear": 2025,
@@ -90,53 +61,9 @@
         "bio": "Outside of Rocketry, she loves dancing. She has done dance for over 12 years and is on Cornell Nazaqat. She also enjoys all aerospace stuff and loves designing satellites through SSDS's Cislunar Explorers. She is also a member of Cornell Theta Tau. "
       },
       {
-        "name": "Sourish Dutta",
-        "subteam": "Propulsion",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2023,
-        "linkedin": "www.linkedin.com/in/sourishdutta02",
-        "bio": "Outside of rocketry, he likes cooking new recipes from different cuisines and experimenting with them. He also like playing tennis and going on hikes around Ithaca."
-      },
-      {
-        "name": "Anchey Peng",
-        "subteam": "Business",
-        "position": "member",
-        "major": "Computer Science",
-        "college": "Arts and Sciences",
-        "gradYear": 2024,
-        "linkedin": "https://www.linkedin.com/in/anchey-peng/",
-        "github": "https://github.com/ancheypeng",
-        "bio": "Outside of Rockety, he enjoys cooking, watching Netflix, and playing with his dog."
-      },
-      {
-        "name": "Christopher Lonergan",
-        "subteam": "Electrical",
-        "position": "subteam lead",
-        "major": "Electrical and Computer Engineering",
-        "minor": "Philosophy and Computer Science",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "linkedin": "https://www.linkedin.com/in/christopher-lonergan-71a521237/",
-        "bio": "He likes climbing and petting cats."
-      },
-      {
-        "name": "Aidan McNay",
-        "subteam": "Electrical",
-        "position": "member",
-        "major": "Electrical and Computer Engineering",
-        "minor": "Computer Science (anticipated)",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "linkedin": "https://www.linkedin.com/in/aidan-mcnay-0ba928201/",
-        "github": "https://github.com/Aidan-McNay",
-        "bio": "He enjoys playing the chimes, playing board games, and spending time with Rocketry members outside of Rocketry!"
-      },
-      {
         "name": "Caleb Farrelly",
         "subteam": "Propulsion",
-        "position": "subteam lead",
+        "position": "team lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2025,
@@ -162,21 +89,9 @@
         "bio": "Outside of Rocketry, she is involved in music at Cornell and has performed with various ensembles as a harpist. She is also the Vice President of the Amateur Radio Club at Cornell."
       },
       {
-        "name": "Will Barkoff",
-        "subteam": "Software",
-        "position": "team lead",
-        "major": "Computer Science",
-        "minor": "Electrical and Computer Engineering",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "linkedin": "https://www.linkedin.com/in/willbarkoff",
-        "github": "https://github.com/willbarkoff/",
-        "bio": "He is currently the President of Cornell Hillel, and a member of Cornell Amateur Radio Club. He also TA's ECE 4750 Computer Architecture. In his free time, he enjoys biking and running!"
-      },
-      {
         "name": "Dean Sheerer",
         "subteam": "Recovery and Payload",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Mechanical Engineering",
         "minor": "Design Strategy",
         "college": "Engineering",
@@ -185,18 +100,9 @@
         "bio": "Outside of Rocketry he enjoys hiking, drawing, longboarding, and hanging out with friends. "
       },
       {
-        "name": "Gavin Block",
-        "subteam": "Structures",
-        "position": "subteam lead",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "bio": "Outside of Rocketry, he likes 3D printing, building his own projects, baking, playing guitar, and programming. "
-      },
-      {
         "name": "Katlyn Moulia Arriola",
         "subteam": "Structures",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2025,
@@ -205,7 +111,7 @@
       {
         "name": "Cameron Goddard",
         "subteam": "Software",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Computer Science",
         "minor": "Electrical and Computer Engineering, Infomation Science",
         "college": "Arts and Sciences",
@@ -217,7 +123,7 @@
       {
         "name": "Yuvan Chugh",
         "subteam": "Business",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Engineering",
         "college": "Engineering",
         "gradYear": 2025,
@@ -234,27 +140,9 @@
         "bio": "She loves to sing, and has been singing for about 14 years!"
       },
       {
-        "name": "Matt Bryan",
-        "subteam": "Recovery and Payload",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "bio": "Outside of rocketry, he enjoys working for the Cornell Athletic Communications department as a student statistician. He also enjoys researching topics in sports analytics at both the professional and college level. "
-      },
-      {
-        "name": "Antti Meriluoto",
-        "subteam": "Software",
-        "position": "member",
-        "major": "Computer Science",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "bio": "Outside of Rocketry, he likes to play guitar, play soccer, give campus tours, and watch Game of Thrones."
-      },
-      {
         "name": "Ashley Espinosa",
         "subteam": "Propulsion",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Mechanical Engineering",
         "minor": "Aerospace Engineering",
         "college": "Engineering",
@@ -265,7 +153,7 @@
       {
         "name": "Nissi Ragland",
         "subteam": "Software",
-        "position": "subteam lead",
+        "position": "team lead",
         "major": "Computer Science",
         "minor": "Cognitive Science",
         "college": "Arts and Sciences",
@@ -276,45 +164,13 @@
       {
         "name": "Daria Kot",
         "subteam": "Recovery and Payload",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Computer Science",
         "minor": "Robotics",
         "college": "Engineering",
         "gradYear": 2025,
         "linkedin": "https://www.linkedin.com/in/daria-kot-7a8518253/",
         "bio": "Outside of Rocketry, she enjoys a dabble in art. She also enjoys woodworking and has recently gotten into boxing."
-      },
-      {
-        "name": "Charles Chen",
-        "subteam": "Business",
-        "position": "member",
-        "major": "Economics and Government",
-        "minor": "Law and Society, Astrobiology",
-        "college": "Arts and Sciences",
-        "gradYear": 2025,
-        "bio": "Outside of rocketry, he is an active as an ambassador for the College of Arts and Sciences, and he is researching data analytics at Cornell's Planetary Habitability and Technology Lab. He is passionate about philanthropy and non-profit service — on campus, he leads the Zambia Community Education Initiative with the goal of constructing a secondary school in Chisekesi, Zambia, and he is the VP of Philanthropy for the Professional Fraternity Council. In my spare time, he likes to play tennis with the university's reserve team, practice my cooking skills, and learn new things! "
-      },
-      {
-        "name": "Julia VanPutte",
-        "subteam": "Business",
-        "position": "member",
-        "major": "Operations Research and Information Engineering",
-        "minor": "Data Science",
-        "college": "Engineering",
-        "gradYear": "Fall 2023",
-        "linkedin": "https://www.linkedin.com/in/julia-vanputte-5043791b7/",
-        "bio": "Outside of Rocketry, she is a member of a social sorority, the Secretary of the Engineering Honors society, and works at Cafe Jennie! In her free time, she likes to cuddle with her cat Rory, listen to indie music, cook (lots of rice!), read about Data Science, hike, online shop, hangout with her friends, and watch the beautiful ithaca sunsets. Her nickname is JVP the MVP."
-      },
-      {
-        "name": "Zach Garcia",
-        "subteam": "Software",
-        "position": "member",
-        "major": "Computer Science, Electrical and Computer Engineering",
-        "minor": "Robotics",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "linkedin": "https://www.linkedin.com/in/zachgarcia42",
-        "bio": "Oustside of Rocketry, he is a member of the Cornell Amateur Radio Club and does research in the Space Systems Design Studio."
       },
       {
         "name": "Priya Abiram",
@@ -326,17 +182,6 @@
         "gradYear": 2026,
         "linkedin": "https://www.linkedin.com/in/priya-abiram/",
         "bio": "Outside of Rocketry, she is a member of the Alpha CubeSat Satellite Research Team. She is also a pilot, scuba diver, and adrenaline junkie."
-      },
-      {
-        "name": "Nicholas Natsoulas",
-        "subteam": "Propulsion",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2023,
-        "linkedin": "https://www.linkedin.com/in/nicholasnatsoulas",
-        "github": "https://github.com/Natsoulas",
-        "bio": "She enjoys playing musical instruments, learning foreign languages, reading books, and traveling!"
       },
       {
         "name": "Murphy Klein",
@@ -369,7 +214,7 @@
       {
         "name": "Matthew Lew",
         "subteam": "Structures",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "minor": "Computer Science",
         "college": "Engineering",
@@ -388,7 +233,7 @@
       {
         "name": "Claire Cahill",
         "subteam": "Structures",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2026,
@@ -464,7 +309,7 @@
       {
         "name": "Ruth Zhao",
         "subteam": "Business",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Design and Environmental Analysis",
         "college": "Human Ecology",
         "gradYear": 2027
@@ -472,7 +317,7 @@
       {
         "name": "Amanda Park",
         "subteam": "Business",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Operations Research and Information Engineering",
         "college": "Engineering",
         "gradYear": 2027
@@ -528,7 +373,7 @@
       {
         "name": "Aidan Friedman",
         "subteam": "Propulsion",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2027
