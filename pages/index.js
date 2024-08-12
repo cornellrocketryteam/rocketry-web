@@ -163,10 +163,10 @@ export default function Home() {
               justifyContent='space-between'
               spacing={3}
             >
-              <StatsNumber number={55} label={'Team Members'} />
+              <StatsNumber number={50} label={'Team Members'} />
               <StatsNumber number={6} label={'Subteams'} />
               <StatsNumber number={10} label={'Majors'} />
-              <StatsNumber number={7} label={'Rockets Launched'} />
+              <StatsNumber number={8} label={'Rockets Launched'} />
             </Grid>
           </div>
         </Container>
