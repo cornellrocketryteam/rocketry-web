@@ -70,16 +70,6 @@
         "bio": "Outside of Rocketry, he enjoys hiking, flying FPV drones, and traveling the world."
       },
       {
-        "name": "Stephen Felce",
-        "subteam": "Structures",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "linkedin": "https://www.linkedin.com/in/stephen-felce-055254221/",
-        "bio": "Is is a part of Cornell Christian Union, enjoys going on hikes, road trips, and watching movies with his friends."
-      },
-      {
         "name": "Beth Polito",
         "subteam": "Electrical",
         "position": "member",
@@ -203,7 +193,7 @@
       },
       {
         "name": "Mary Yuan",
-        "subteam": "Structures",
+        "subteam": "Software",
         "position": "member",
         "major": "Computer Science",
         "minor": "Mechanical Engineering",
@@ -260,7 +250,7 @@
       },
       {
         "name": "Arya Bhandari",
-        "subteam": "Propulsion",
+        "subteam": "Electrical",
         "position": "member",
         "major": "Computer Science",
         "college": "Engineering",
@@ -268,7 +258,7 @@
       },
       {
         "name": "Gabriella Best",
-        "subteam": "Recovery and Payload",
+        "subteam": "Software",
         "position": "member",
         "major": "Computer Science",
         "college": "Arts and Sciences",
@@ -307,14 +297,6 @@
         "gradYear": 2026
       },
       {
-        "name": "Ruth Zhao",
-        "subteam": "Business",
-        "position": "subteam lead",
-        "major": "Design and Environmental Analysis",
-        "college": "Human Ecology",
-        "gradYear": 2027
-      },
-      {
         "name": "Amanda Park",
         "subteam": "Business",
         "position": "subteam lead",
@@ -351,14 +333,6 @@
         "subteam": "Propulsion",
         "position": "member",
         "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2027
-      },
-      {
-        "name": "Sophia Yang",
-        "subteam": "Structures",
-        "position": "member",
-        "major": "Applied Engineering Physics",
         "college": "Engineering",
         "gradYear": 2027
       },
@@ -418,6 +392,27 @@
         "college": "Engineering",
         "gradYear": 2027
       }
+      {
+        "name": "Zach Garcia",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science, Electrical and Computer Engineering",
+        "minor": "Robotics",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "linkedin": "https://www.linkedin.com/in/zachgarcia42",
+        "bio": "Oustside of Rocketry, he is a member of the Cornell Amateur Radio Club and does research in the Space Systems Design Studio."
+      },
+      {
+        "name": "Christopher Lonergan",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "minor": "Philosophy and Computer Science",
+        "college": "Engineering",
+        "gradYear": 2024,
+        "linkedin": "https://www.linkedin.com/in/christopher-lonergan-71a521237/",
+        "bio": "He likes climbing and petting cats."
+      },
     ]
-  }
 }
