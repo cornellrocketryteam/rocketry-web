@@ -7,7 +7,7 @@
         { "property": "height", "value": "174\""},
         { "property": "diameter", "value": "6.2\""},
         { "property": "launch mass", "value": "138 lb"},
-        { "property": "motor diameter", "value": "5.5\"},
+        { "property": "motor diameter", "value": "5.5\""},
         { "property": "motor", "value": "SRAD Solid"},
         { "property": "airframe filament", "value": "G12 Fiberglass"}
       ],
