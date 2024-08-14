@@ -1,8 +1,8 @@
 {
   "rockets": [
     {
-      "name" : "javelina"
-      "year" : 2024
+      "name" : "javelina",
+      "year" : 2024,
       "data": [
         { "property": "height", "value": "174\""},
         { "property": "diameter", "value": "6.2\""},
