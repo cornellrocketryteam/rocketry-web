@@ -34,10 +34,10 @@ function AlumniCarousel() {
 
   const alumni = [
     {
-      name: "Matt Schneider '21",
-      pic: 'Matt Schneider.png',
+      name: "Ben Rotstein '24",
+      pic: 'Ben Rotstein.jpg',
       quote:
-        "As an incoming freshman, Cornell Rocketry provided me the opportunity to work on challenging problems and be a part of something bigger than myself. Early on I focused my efforts on expressing my creative potential and honing my design instincts, but came to see an equally significant value in the friendships and mentorships gained along the way. The team gave me the chance to develop as a leader, learning in the moment from my mistakes and taking on more responsibilities along the way. Without a doubt, my time on Cornell Rocketry was THE formative experience of my time in college and I'm grateful to have been able to contribute.",
+        "The Cornell Rocketry Team was the most important single element of my Cornell experience. The team gave me an opportunity to learn and grow my applied engineering skills at a fast pace surrounded by people with similar interests. Being a part of the team taught me how to be a skilled leader and engineering team member, giving me confidence in my skills and transition to real companies. Beyond that, the team was my home for the years of my undergraduate degree, and provided me a network of close friends all over the country that I will always share the rocketry bond with.",
     },
     {
       name: "Deniz Tekant '22",
@@ -46,10 +46,10 @@ function AlumniCarousel() {
         "CRT gave me some of the best memories during my 4 years at Cornell. As a freshman, I was lost and confused by the magnitude of clubs and organizations I could join. I was able to find both friendship and good learning experiences applicable towards the real world when I joined CRT's business sub team. Besides, who doesn't think rockets are cool?",
     },
     {
-      name: "Ben Rotstein '24",
-      pic: 'Ben Rotstein.jpg',
+      name: "Matt Schneider '21",
+      pic: 'Matt Schneider.png',
       quote:
-        "The Cornell Rocketry Team was the most important single element of my Cornell experience. The team gave me an opportunity to learn and grow my applied engineering skills at a fast pace surrounded by people with similar interests. Being a part of the team taught me how to be a skilled leader and engineering team member, giving me confidence in my skills and transition to real companies. Beyond that, the team was my home for the years of my undergraduate degree, and provided me a network of close friends all over the country that I will always share the rocketry bond with.",
+        "As an incoming freshman, Cornell Rocketry provided me the opportunity to work on challenging problems and be a part of something bigger than myself. Early on I focused my efforts on expressing my creative potential and honing my design instincts, but came to see an equally significant value in the friendships and mentorships gained along the way. The team gave me the chance to develop as a leader, learning in the moment from my mistakes and taking on more responsibilities along the way. Without a doubt, my time on Cornell Rocketry was THE formative experience of my time in college and I'm grateful to have been able to contribute.",
     },
   ];
 
