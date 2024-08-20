@@ -45,6 +45,12 @@ function AlumniCarousel() {
       quote:
         "CRT gave me some of the best memories during my 4 years at Cornell. As a freshman, I was lost and confused by the magnitude of clubs and organizations I could join. I was able to find both friendship and good learning experiences applicable towards the real world when I joined CRT's business sub team. Besides, who doesn't think rockets are cool?",
     },
+    {
+      name: "Ben Rotstein '24",
+      pic: 'Ben Rotstein.jpg',
+      quote:
+        "The Cornell Rocketry Team was the most important single element of my Cornell experience. The team gave me an opportunity to learn and grow my applied engineering skills at a fast pace surrounded by people with similar interests. Being a part of the team taught me how to be a skilled leader and engineering team member, giving me confidence in my skills and transition to real companies. Beyond that, the team was my home for the years of my undergraduate degree, and provided me a network of close friends all over the country that I will always share the rocketry bond with.",
+    },
   ];
 
   const settings = {
