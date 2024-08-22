@@ -113,16 +113,8 @@ export default function Footer() {
               </Typography>
               <div className={classes.socialMediaIcons}>
                 <SocialMediaButton
-                  link='https://www.facebook.com/CornellRocketry/'
-                  icon={<FacebookIcon />}
-                />
-                <SocialMediaButton
                   link='https://www.instagram.com/cornellrocketry/?hl=en/'
                   icon={<InstagramIcon />}
-                />
-                <SocialMediaButton
-                  link='https://www.youtube.com/channel/UCOIp04IIwcz8YvBcgrMYOhg'
-                  icon={<YouTubeIcon />}
                 />
               </div>
             </CenterLeftAlign>
