@@ -223,18 +223,10 @@ export default function Header({ active, hideMenu }) {
           {!hideMenu && (
             <>
               <div>
-                //<SocialMediaButton
-                  //link='https://www.facebook.com/CornellRocketry/'
-                  //icon={<FacebookIcon />}
-                ///>
                 <SocialMediaButton
                   link='https://www.instagram.com/cornellrocketry/?hl=en/'
                   icon={<InstagramIcon />}
                 />
-                //<SocialMediaButton
-                  //link='https://www.youtube.com/channel/UCOIp04IIwcz8YvBcgrMYOhg'
-                  //icon={<YouTubeIcon />}
-                ///>
                 <SocialMediaButton
                   link='mailto:rocketry@cornell.edu'
                   icon={<EmailRounded />}
