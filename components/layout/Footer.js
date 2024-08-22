@@ -132,7 +132,7 @@ export default function Footer() {
           Registered Project Team of Cornell University
         </Typography>
         <Typography variant='body1' className={classes.copyright}>
-          &copy; {new Date().getFullYear()} Cornell Rocketry Team
+          &copy; {new Date().getFullYear()} Cornell Rocketry Project Team
         </Typography>
       </Container>
     </div>
