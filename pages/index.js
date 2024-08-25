@@ -147,7 +147,7 @@ export default function Home() {
       </div>
       <div className={classes.content}>
         <div className={classes.h100}>
-          <Typography variant='h1' className={(classes.title, classes.center)}>
+          <Typography variant='h2' className={(classes.title, classes.center)}>
             Cornell Rocketry Project Team
           </Typography>
         </div>
