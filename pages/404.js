@@ -41,7 +41,7 @@ export default function Custom404() {
   return (
     <div className={classes.root}>
       <div className={classes.background}>
-        <Head title='404 | Cornell Rocketry Team' />
+        <Head title='404 | Cornell Rocketry Project Team' />
         <Header />
         <div className={classes.text}>
           <Typography variant='h1' align='center' className={classes.error}>
