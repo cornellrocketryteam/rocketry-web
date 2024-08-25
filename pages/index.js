@@ -148,7 +148,7 @@ export default function Home() {
       <div className={classes.content}>
         <div className={classes.h100}>
           <Typography variant='h1' className={(classes.title, classes.center)}>
-            Cornell Rocketry Team
+            Cornell Rocketry Project Team
           </Typography>
         </div>
 
