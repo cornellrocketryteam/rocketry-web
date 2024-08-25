@@ -45,7 +45,7 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>Cornell Rocketry Team</title>
+        <title>Cornell Rocketry Project Team</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <StyledEngineProvider injectFirst>
