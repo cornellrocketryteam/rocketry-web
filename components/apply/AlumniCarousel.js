@@ -44,6 +44,7 @@ function AlumniCarousel() {
       pic: 'Matt Bryan.jpg',
       quote: 
         "Cornell Rocketry was the most important educational experience of my undergraduate career. During my time on the team, I gained technical skills that are extremely useful to aspiring engineers. I learned lessons about design and manufacturing that I would not have been exposed to in the classroom. I developed systems that I could talk about in internship applications and interviews. On Cornell Rocketry, I had the opportunity to work on challenging projects with amazing people. My four years on the team were invaluable to my education, and I highly recommend that anyone seeking to gain real-life engineering skills in a practical setting apply to Cornell Rocketry."
+    },
     {
       name: "Deniz Tekant '22",
       pic: 'Deniz Tekant.jpg',
