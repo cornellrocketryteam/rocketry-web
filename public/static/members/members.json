@@ -3,6 +3,46 @@
     "imageDir": "/static/images/members-page/",
     "members": [
       {
+        "name": "Stanley Shen",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Sebastian Jean-Francois",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Langston Johnson",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Jamayne Gyimah-Danquah",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Eva Pérez",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Biology and Information Sciences",
+        "college": "Agriculture and Life Sciences",
+        "gradYear": 2027
+      },
+      {
         "name": "Akshitha Jupally",
         "subteam": "Recovery and Payload",
         "position": "member",
