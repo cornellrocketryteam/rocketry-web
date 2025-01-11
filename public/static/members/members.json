@@ -3,6 +3,86 @@
     "imageDir": "/static/images/members-page/",
     "members": [
       {
+        "name": "Ulderic Boisvert",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Applied Economics and Management",
+        "college": "Dyson",
+        "gradYear": 2028
+      },
+      {
+        "name": "Hilary Kuang",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Information Science",
+        "college": "Engineering",
+        "gradYear": 2028
+      },
+      {
+        "name": "Johan Karukayil",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+      },
+      {
+        "name": "Deepti Kousik",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+      },
+      {
+        "name": "Ronit Totlani",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2028
+      },
+      {
+        "name": "Zoe Chiu",
+        "subteam": "Strucutures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+      },
+      {
+        "name": "Michelangelo Foschi",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+      },
+      {
+        "name": "Issac Kahn",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+      },
+      {
+        "name": "Bridget McAvoy",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+      },
+      {
+        "name": "Jenny Chen",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Biology and Society",
+        "college": "Agriculutre and Life Sciencesg",
+        "gradYear": 2028
+      },
+      {
         "name": "Stanley Shen",
         "subteam": "Electrical",
         "position": "member",
