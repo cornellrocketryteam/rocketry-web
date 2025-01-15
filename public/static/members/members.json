@@ -3,6 +3,14 @@
     "imageDir": "/static/images/members-page/",
     "members": [
       {
+        "name": "Zoe Chiu",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+      },
+      {
         "name": "Ulderic Boisvert",
         "subteam": "Business",
         "position": "member",
@@ -39,14 +47,6 @@
         "subteam": "Software",
         "position": "member",
         "major": "Computer Science",
-        "college": "Engineering",
-        "gradYear": 2028
-      },
-      {
-        "name": "Zoe Chiu",
-        "subteam": "Strucutures",
-        "position": "member",
-        "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2028
       },
