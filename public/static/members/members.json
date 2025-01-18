@@ -115,14 +115,6 @@
         "gradYear": 2027
       },
       {
-        "name": "Eva Pérez",
-        "subteam": "Business",
-        "position": "member",
-        "major": "Biology and Information Sciences",
-        "college": "Agriculture and Life Sciences",
-        "gradYear": 2027
-      },
-      {
         "name": "Akshitha Jupally",
         "subteam": "Recovery and Payload",
         "position": "member",
@@ -229,15 +221,6 @@
         "linkedin": "https://www.linkedin.com/in/cameron-goddard/",
         "github": "https://github.com/cameron-goddard",
         "bio": "Outside of Rocketry, he likes to watch movies, play the saxophone, and listen to music."
-      },
-      {
-        "name": "Yuvan Chugh",
-        "subteam": "Business",
-        "position": "member",
-        "major": "Engineering",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "bio": "Outside of Rocketry, he enjoys singing, playing the guitar, and a capella. He also likes playing soccer, table tennis, and lawn tennis."
       },
       {
         "name": "Nandita Nagarajan",
@@ -352,14 +335,6 @@
         "bio": "Outside of Rocketry, she enjoys watching movies, travelling, playing the piano, and going on boba runs. She is also a roller coaster enthusiast."
       },
       {
-        "name": "Anushka Singh",
-        "subteam": "Business",
-        "position": "member",
-        "major": "Applied Economics and Management and Information Science",
-        "college": "Dyson",
-        "gradYear": 2026
-      },
-      {
         "name": "Arya Bhandari",
         "subteam": "Software",
         "position": "member",
@@ -413,14 +388,6 @@
         "position": "subteam lead",
         "major": "Operations Research and Information Engineering",
         "college": "Engineering",
-        "gradYear": 2027
-      },
-      {
-        "name": "Dev Shukla",
-        "subteam": "Business",
-        "position": "member",
-        "major": "Applied Economics and Management and Information Science",
-        "college": "Dyson",
         "gradYear": 2027
       },
       {
