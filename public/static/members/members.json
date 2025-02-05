@@ -3,6 +3,13 @@
     "imageDir": "/static/images/members-page/",
     "members": [
       {
+        "name": "Tim Lu",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+      {
         "name": "Zoe Chiu",
         "subteam": "Structures",
         "position": "member",
