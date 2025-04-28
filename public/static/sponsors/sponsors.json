@@ -54,6 +54,10 @@
         {
           "name": "kennametal",
           "link": "https://www.kennametal.com/us/en/home.html"
+        },
+        {
+          "name": "xmake",
+          "link": "www.xmake.com/"
         }
       ],
       "gold": [
@@ -90,10 +94,6 @@
         {
           "name": "winsource",
           "link": "https://www.win-source.net/"
-        },
-        {
-          "name": "xmake",
-          "link": "www.xmake.com/"
         }
       ],
       "bronze": [
