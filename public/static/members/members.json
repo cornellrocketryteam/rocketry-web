@@ -21,7 +21,7 @@
       {
         "name": "Ulderic Boisvert",
         "subteam": "Business",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Applied Economics and Management",
         "college": "Dyson",
         "gradYear": 2028
@@ -45,7 +45,7 @@
       {
         "name": "Deepti Kousik",
         "subteam": "Propulsion",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2028
@@ -85,7 +85,7 @@
       {
         "name": "Jenny Chen",
         "subteam": "Business",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Biology and Society",
         "college": "Agriculutre and Life Sciencesg",
         "gradYear": 2028
@@ -93,16 +93,8 @@
       {
         "name": "Stanley Shen",
         "subteam": "Electrical",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Electrical and Computer Engineering",
-        "college": "Engineering",
-        "gradYear": 2027
-      },
-      {
-        "name": "Sebastian Jean-Francois",
-        "subteam": "Software",
-        "position": "member",
-        "major": "Computer Science",
         "college": "Engineering",
         "gradYear": 2027
       },
@@ -117,172 +109,10 @@
       {
         "name": "Jamayne Gyimah-Danquah",
         "subteam": "Electrical",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Electrical and Computer Engineering",
         "college": "Engineering",
         "gradYear": 2027
-      },
-      {
-        "name": "Akshitha Jupally",
-        "subteam": "Recovery and Payload",
-        "position": "member",
-        "major": "Applied Engineering Physics",
-        "college": "Engineering",
-        "gradYear": 2026
-      },
-      {
-        "name": "Sarah Hawes",
-        "subteam": "Electrical",
-        "position": "member",
-        "major": "Electrical and Computer Engineering",
-        "minor": "Computer Science",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "linkedin": "https://www.linkedin.com/in/sarah-hawes-54352222a/",
-        "bio": "Outside of Rocketry, she enjoys playing volleyball, hiking, watching movies with friends, and reading about space science."
-      },
-      {
-        "name": "Alice Herz",
-        "subteam": "Recovery and Payload",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "minor": "Theatre",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "bio": "Outside of Rocketry, they enjoy participating in the Risley community and doing theatre."
-      },
-      {
-        "name": "Matthew Chekhlov",
-        "subteam": "Propulsion",
-        "position": "subteam lead",
-        "major": "Math and Physics",
-        "college": "Arts and Sciences",
-        "gradYear": 2025,
-        "bio": "He likes to fish many of the lakes and streams around Ithaca, as well as surfcast around Long Island and primarily Montauk. He also enjoys biking and running, and frequently bikes very large distances to fish. Finally, he likes to forge and cast metals in my small home foundry, as well as mess around with amateur chemistry when he has time."
-      },
-      {
-        "name": "Katarina Duric",
-        "subteam": "Electrical",
-        "position": "member",
-        "major": "Electrical and Computer Engineering",
-        "minor": "Computer Science",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "bio": "Outside of Rocketry, she plays the piano, enjoys long walks and trying out new places to eat at with her friends. She love reading classics, listening to rock and alt rock, playing board games, and watching thriller movies."
-      },
-      {
-        "name": "Reva Nair",
-        "subteam": "Software",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "minor": "Computer Science",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "bio": "Outside of Rocketry, she loves dancing. She has done dance for over 12 years and is on Cornell Nazaqat. She also enjoys all aerospace stuff and loves designing satellites through SSDS's Cislunar Explorers. She is also a member of Cornell Theta Tau. "
-      },
-      {
-        "name": "Caleb Farrelly",
-        "subteam": "Propulsion",
-        "position": "team lead",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "bio": "Outside of Rocketry, he enjoys hiking, flying FPV drones, and traveling the world."
-      },
-      {
-        "name": "Beth Polito",
-        "subteam": "Electrical",
-        "position": "member",
-        "major": "Electrical and Computer Engineering",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "bio": "Outside of Rocketry, she is involved in music at Cornell and has performed with various ensembles as a harpist. She is also the Vice President of the Amateur Radio Club at Cornell."
-      },
-      {
-        "name": "Dean Sheerer",
-        "subteam": "Recovery and Payload",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "minor": "Design Strategy",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "linkedin": "www.linkedin.com/in/dean-sheerer",
-        "bio": "Outside of Rocketry he enjoys hiking, drawing, longboarding, and hanging out with friends. "
-      },
-      {
-        "name": "Katlyn Moulia Arriola",
-        "subteam": "Structures",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "bio": "She is the captain of Cornell's Quidditch Team and sings in the Chorale! She is also a part of the Meinig Family Cornell National Scholars, so she is working on improving her leadership skills. She enjoys costume designing, drawing, and creating future game ideas!"
-      },
-      {
-        "name": "Cameron Goddard",
-        "subteam": "Software",
-        "position": "subteam lead",
-        "major": "Computer Science",
-        "minor": "Electrical and Computer Engineering, Infomation Science",
-        "college": "Arts and Sciences",
-        "gradYear": 2025,
-        "linkedin": "https://www.linkedin.com/in/cameron-goddard/",
-        "github": "https://github.com/cameron-goddard",
-        "bio": "Outside of Rocketry, he likes to watch movies, play the saxophone, and listen to music."
-      },
-      {
-        "name": "Nandita Nagarajan",
-        "subteam": "Electrical",
-        "position": "subteam lead",
-        "major": "Electrical and Computer Engineering",
-        "minor": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "bio": "She loves to sing, and has been singing for about 14 years!"
-      },
-      {
-        "name": "Ashley Espinosa",
-        "subteam": "Propulsion",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "minor": "Aerospace Engineering",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "linkedin": "https://www.linkedin.com/in/ashley-espinosa/",
-        "bio": "Outside of rocketry, she enjoys hanging out with her friends and exploring what the area has to offer, whether it's skiing at Greek Peak or Collegetown boba runs."
-      },
-      {
-        "name": "Nissi Ragland",
-        "subteam": "Software",
-        "position": "team lead",
-        "major": "Computer Science",
-        "minor": "Cognitive Science",
-        "college": "Arts and Sciences",
-        "gradYear": 2025,
-        "linkedin": "https://www.linkedin.com/in/nissi-ragland/",
-        "bio": "Outside of Rocketry, she really enjoys going to the beach, playing tennis, and exploring new places!"
-      },
-      {
-        "name": "Daria Kot",
-        "subteam": "Recovery and Payload",
-        "position": "subteam lead",
-        "major": "Computer Science",
-        "minor": "Robotics",
-        "college": "Engineering",
-        "gradYear": 2025,
-        "linkedin": "https://www.linkedin.com/in/daria-kot-7a8518253/",
-        "bio": "Outside of Rocketry, she enjoys a dabble in art. She also enjoys woodworking and has recently gotten into boxing."
-      },
-      {
-        "name": "Priya Abiram",
-        "subteam": "Recovery and Payload",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "minor": "Aerospace Engineering",
-        "college": "Engineering",
-        "gradYear": 2026,
-        "linkedin": "https://www.linkedin.com/in/priya-abiram/",
-        "bio": "Outside of Rocketry, she is a member of the Alpha CubeSat Satellite Research Team. She is also a pilot, scuba diver, and adrenaline junkie."
       },
       {
         "name": "Murphy Klein",
@@ -303,29 +133,9 @@
         "gradYear": 2026
       },
       {
-        "name": "Mary Yuan",
-        "subteam": "Software",
-        "position": "member",
-        "major": "Computer Science",
-        "minor": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2026,
-        "bio": "Outside of Rocketry, she likes to play sudoku, crochet, draw, and read."
-      },
-      {
-        "name": "Matthew Lew",
-        "subteam": "Structures",
-        "position": "subteam lead",
-        "major": "Mechanical Engineering",
-        "minor": "Computer Science",
-        "college": "Engineering",
-        "gradYear": 2026,
-        "bio": "Outside of Rocketry, he loves rock climbing, playing chess, and having a good time with friends. He also loves hiking Ithaca falls and walking around Beebe lake when the weather is nice!"
-      },
-      {
         "name": "Claire Cahill",
         "subteam": "Structures",
-        "position": "subteam lead",
+        "position": "team lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2026,
@@ -343,17 +153,9 @@
         "bio": "Outside of Rocketry, she enjoys watching movies, travelling, playing the piano, and going on boba runs. She is also a roller coaster enthusiast."
       },
       {
-        "name": "Arya Bhandari",
-        "subteam": "Software",
-        "position": "member",
-        "major": "Computer Science",
-        "college": "Engineering",
-        "gradYear": 2026
-      },
-      {
         "name": "Gabriella Best",
         "subteam": "Software",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Computer Science",
         "college": "Arts and Sciences",
         "gradYear": 2026
@@ -375,28 +177,12 @@
         "gradYear": 2026
       },
       {
-        "name": "Sebastian Bachman",
-        "subteam": "Electrical",
-        "position": "member",
-        "major": "Electrical and Computer Engineering",
-        "college": "Engineering",
-        "gradYear": 2026
-      },
-      {
         "name": "Trevor Dales",
         "subteam": "Recovery and Payload",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2026
-      },
-      {
-        "name": "Amanda Park",
-        "subteam": "Business",
-        "position": "subteam lead",
-        "major": "Operations Research and Information Engineering",
-        "college": "Engineering",
-        "gradYear": 2027
       },
       {
         "name": "Ben Zou",
@@ -417,16 +203,16 @@
       {
         "name": "Ayanna Fulga",
         "subteam": "Propulsion",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2027,
-        "linkedin" : "https://www.linkedin.com/in/ayanna-fulga-91ba521a3/"
+        "linkedin": "https://www.linkedin.com/in/ayanna-fulga-91ba521a3/"
       },
       {
         "name": "Naga Nagamuralee",
         "subteam": "Structures",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2027
@@ -434,7 +220,7 @@
       {
         "name": "Aidan Friedman",
         "subteam": "Propulsion",
-        "position": "subteam lead",
+        "position": "team lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2027
@@ -444,14 +230,6 @@
         "subteam": "Propulsion",
         "position": "member",
         "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2027
-      },
-      {
-        "name": "Aly Nathoo",
-        "subteam": "Software",
-        "position": "member",
-        "major": "Computer Science",
         "college": "Engineering",
         "gradYear": 2027
       },
@@ -471,38 +249,16 @@
         "minor": "Aerospace Engineering",
         "college": "Engineering",
         "gradYear": 2027,
-        "linkedin" : "https://www.linkedin.com/in/shankar-pranav?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        "linkedin": "https://www.linkedin.com/in/shankar-pranav?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         "bio": "He enjoys singing with the Chorale and Cornell Saarang, as well as learning to play piano and learning languages, particularly French."
       },
       {
         "name": "Max Larsson",
         "subteam": "Software",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Computer Science, Electrical and Computer Engineering",
         "college": "Engineering",
         "gradYear": 2027
-      },
-      {
-        "name": "Zach Garcia",
-        "subteam": "Software",
-        "position": "member",
-        "major": "Computer Science, Electrical and Computer Engineering",
-        "minor": "Robotics",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "linkedin": "https://www.linkedin.com/in/zachgarcia42",
-        "bio": "Oustside of Rocketry, he is a member of the Cornell Amateur Radio Club and does research in the Space Systems Design Studio."
-      },
-      {
-        "name": "Christopher Lonergan",
-        "subteam": "Electrical",
-        "position": "member",
-        "major": "Electrical and Computer Engineering",
-        "minor": "Philosophy and Computer Science",
-        "college": "Engineering",
-        "gradYear": 2024,
-        "linkedin": "https://www.linkedin.com/in/christopher-lonergan-71a521237/",
-        "bio": "He likes climbing and petting cats."
       }
     ]
   }
