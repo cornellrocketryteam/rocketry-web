@@ -16,11 +16,6 @@
       "location": "Upson 225"
     },
     {
-      "date": "9/09 5:00 pm",
-      "label": "Information Session #2",
-      "location": "Hollister 320"
-    },
-    {
       "date": "9/4 4:00 pm",
       "label": "Project Team Fest",
       "location": "Duffield Atrium"
@@ -28,6 +23,11 @@
     {
       "date": "9/4 11:59 pm",
       "label": "Upperclass Apps Due"
+    },
+    {
+      "date": "9/09 5:00 pm",
+      "label": "Information Session #2",
+      "location": "Hollister 320"
     },
     {
       "date": "9/13 12:00 pm",

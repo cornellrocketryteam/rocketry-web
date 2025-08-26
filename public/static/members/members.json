@@ -12,7 +12,7 @@
       },
       {
         "name": "Zoe Chiu",
-        "subteam": "Structures",
+        "subteam": "Electrical",
         "position": "member",
         "major": "Mechanical Engineering",
         "college": "Engineering",
@@ -112,17 +112,8 @@
         "position": "subteam lead",
         "major": "Electrical and Computer Engineering",
         "college": "Engineering",
-        "gradYear": 2027
-      },
-      {
-        "name": "Murphy Klein",
-        "subteam": "Propulsion",
-        "position": "member",
-        "major": "Engineering Physics",
-        "minor": "Potentially Mechanical Engineering or Aerospace Engineering.",
-        "college": "Engineering",
-        "gradYear": 2026,
-        "bio": "Outside of Rocketry, he likes to play ice hockey, and he is currently a member on the club ice hockey team. He also enjoys playing the electric guitar and weightlifting."
+        "gradYear": 2027,
+        "linkedin": "https://www.linkedin.com/in/jamayne/"
       },
       {
         "name": "James Montague",
@@ -158,15 +149,9 @@
         "position": "subteam lead",
         "major": "Computer Science",
         "college": "Arts and Sciences",
-        "gradYear": 2026
-      },
-      {
-        "name": "Italivi Diaz",
-        "subteam": "Structures",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2026
+        "gradYear": 2026,
+        "linkedin": "www.linkedin.com/in/gabriella-best",
+        "bio": "Gabriella is a Milstein Scholar who enjoys hiking, rock climbing, and trying new things."
       },
       {
         "name": "Nikhil Sampath",
@@ -180,6 +165,14 @@
         "name": "Trevor Dales",
         "subteam": "Recovery and Payload",
         "position": "subteam lead",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2026
+      },
+      {
+        "name": "Priya Abiram",
+        "subteam": "Recovery and Payload",
+        "position": "member",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2026
@@ -210,12 +203,13 @@
         "linkedin": "https://www.linkedin.com/in/ayanna-fulga-91ba521a3/"
       },
       {
-        "name": "Naga Nagamuralee",
+        "name": "Nagamitesh Nagamuralee",
         "subteam": "Structures",
         "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
-        "gradYear": 2027
+        "gradYear": 2027,
+        "linkedin": "https://www.linkedin.com/in/nagamitesh-nagamuralee/"
       },
       {
         "name": "Aidan Friedman",
