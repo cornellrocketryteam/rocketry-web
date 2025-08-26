@@ -251,9 +251,11 @@
         "name": "Max Larsson",
         "subteam": "Software",
         "position": "subteam lead",
-        "major": "Computer Science, Electrical and Computer Engineering",
+        "major": "Computer Science",
+        "minor": "Electrical and Computer Engineering",
         "college": "Engineering",
-        "gradYear": 2027
+        "gradYear": 2027,
+        "linkedin": "www.linkedin.com/in/maxslarsson"
       }
     ]
   }
