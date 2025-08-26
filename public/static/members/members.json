@@ -66,7 +66,16 @@
         "position": "member",
         "major": "Electrical and Computer Engineering",
         "college": "Engineering",
-        "gradYear": 2028
+        "gradYear": 2028,
+        "linkedin": "https://www.linkedin.com/in/michelangelo-foschi-7a6374167/"
+      },
+      {
+        "name": "Aly Nathoo",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2027
       },
       {
         "name": "Issac Kahn",
