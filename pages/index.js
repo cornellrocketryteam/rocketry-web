@@ -80,9 +80,9 @@ export default function Home() {
   const rocketParts = [
     {
       ref: drillRef,
-      name: 'Vertical Drill',
+      name: 'Payload',
       description:
-        'The rocket payload is a mechanism that ejects from the airframe, lands on the ground, and deploys an auger drill that actuates and collects a soil sample for analysis.',
+        'Each year, our rocket carries a new payload to its target apogee of 10,000 feet. This year\’s payload is a deployable camera system designed to capture in-flight footage of the rocket\’s guided descent under a steerable parafoil.',
     },
     {
       ref: blimsRef,
@@ -100,7 +100,7 @@ export default function Home() {
       ref: motorRef,
       name: 'Rocket Motor',
       description:
-        'Constructed from aluminum and steel, our ammonium-perchlorate solid motor is engineered to lift the launch vehicle to the target altitude, generating over 1,000 pounds of thrust at take-off.',
+        'Machined in-house from aluminum, our N2O-HTPB Hybrid motor is engineered to lift the launch vehicle to the target altitude of 10,000 feet, generating over 1,300 pounds of thrust.',
     },
   ];
 
@@ -260,9 +260,8 @@ export default function Home() {
       trigger: ref.current,
       pin: true,
       scrub: true,
-      start: `top ${
-        50 - (ref.current.clientHeight / window.innerHeight) * 50
-      }%`, // makes the content appear in the center of the screen
+      start: `top ${50 - (ref.current.clientHeight / window.innerHeight) * 50
+        }%`, // makes the content appear in the center of the screen
       end: '+=' + duration,
       // markers: true //debug markers
     };
