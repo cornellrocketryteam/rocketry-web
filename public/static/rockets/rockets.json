@@ -1,6 +1,19 @@
 {
   "rockets": [
     {
+      "name" : "andromeda",
+      "year" : 2025,
+      "data": [
+        { "property": "height", "value": "216\""},
+        { "property": "diameter", "value": "6.2\""},
+        { "property": "launch mass", "value": "134 lb"},
+        { "property": "motor diameter", "value": "5.5\""},
+        { "property": "motor", "value": "SRAD Hybrid"},
+        { "property": "airframe filament", "value": "G12 Fiberglass"}
+      ],
+      "description": "Andromeda was CRT’s competition rocket for the 2025 Spaceport America Cup. This was our first ever student research and designed (SRAD) hybrid rocket. From the avionics bay to the guided descent system to the fluid system, every component was SRAD. Three years of research and development culminated in a rocket that reached 12,100 ft on test flight, powered by 1,385 lbf of thrust from its hybrid motor. With Andromeda, Cornell Rocketry proudly took home 3rd place in the 10K Hybrid SRAD category!"
+    },
+    {
       "name" : "javelina",
       "year" : 2024,
       "data": [
