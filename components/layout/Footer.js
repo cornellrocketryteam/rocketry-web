@@ -58,6 +58,15 @@ const useStyles = makeStyles((theme) => ({
     color: 'lightgrey',
     fontSize: 12,
   },
+  equalOpportunityEmployer: {
+    textAlign: 'center',
+    display: 'block',
+    color: 'lightgrey',
+    fontSize: 12,
+  },
+  underlineLink: {
+    textDecoration: 'underline',
+  },
 }));
 
 export default function Footer() {
@@ -123,6 +132,9 @@ export default function Footer() {
         <Typography variant='body1' className={classes.projectteam}>
           Registered Project Team of Cornell University
         </Typography>
+        <Typography variant='body1' className={classes.equalOpportunityEmployer}>
+          Rocketry is an <a className={classes.underlineLink} href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment" target="_blank" rel="noopener noreferrer">equal opportunity employer</a>
+        </Typography>
         <Typography variant='body1' className={classes.copyright}>
           &copy; {new Date().getFullYear()} Cornell Rocketry Project Team
         </Typography>
@@ -143,11 +155,11 @@ export default function Footer() {
 
   function SocialMediaButton({ link, icon }) {
     return (
-      <Link href={link} passHref>
+      <a href={link} target="_blank" rel="noopener noreferrer">
         <IconButton className={classes.iconButton} target='_blank' size='large'>
           <icon.type className={classes.icon} />
         </IconButton>
-      </Link>
+      </a>
     );
   }
 }
