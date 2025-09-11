@@ -14,9 +14,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#0C0C0C',
     borderTop: '1px solid #646464',
     overflow: 'hidden',
+    height: '340px',
+  },
+  container: {
     display: 'flex',
     flexDirection: 'column',
-    padding: '16px 0',
   },
   grid: {
     flex: '1 1 auto',
@@ -76,71 +78,73 @@ export default function Footer() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth='md' disableGutters className={classes.root}>
-      <Grid
-        container
-        spacing={5}
-        className={classes.grid}
-        justifyContent='space-evenly'
-        alignItems='center'
-      >
-        <Grid item xs>
-          <img src='/static/crt.png' alt='logo' className={classes.logo} />
-        </Grid>
-        <Grid item xs>
-          <CenterLeftAlign>
-            <Typography variant='h6' className={classes.heading}>
-              Site Map
-            </Typography>
-            <Link href='/' passHref>
-              <Typography variant='body1' className={classes.link}>
-                Home
+    <div className={classes.root}>
+      <Container maxWidth='md' disableGutters className={classes.container}>
+        <Grid
+          container
+          spacing={5}
+          className={classes.grid}
+          justifyContent='space-evenly'
+          alignItems='center'
+        >
+          <Grid item xs>
+            <img src='/static/crt.png' alt='logo' className={classes.logo} />
+          </Grid>
+          <Grid item xs>
+            <CenterLeftAlign>
+              <Typography variant='h6' className={classes.heading}>
+                Site Map
               </Typography>
-            </Link>
-            {[
-              'Members',
-              'Subteams',
-              'Rockets',
-              'Sponsors',
-              'FAQ',
-              'Apply',
-            ].map((text) => (
-              <Link href={`/${text.toLowerCase()}`} key={text} passHref>
+              <Link href='/' passHref>
                 <Typography variant='body1' className={classes.link}>
-                  {text}
+                  Home
                 </Typography>
               </Link>
-            ))}
-          </CenterLeftAlign>
+              {[
+                'Members',
+                'Subteams',
+                'Rockets',
+                'Sponsors',
+                'FAQ',
+                'Apply',
+              ].map((text) => (
+                <Link href={`/${text.toLowerCase()}`} key={text} passHref>
+                  <Typography variant='body1' className={classes.link}>
+                    {text}
+                  </Typography>
+                </Link>
+              ))}
+            </CenterLeftAlign>
+          </Grid>
+          <Grid item xs>
+            <CenterLeftAlign>
+              <Typography
+                variant='h6'
+                className={classes.heading}
+                align='center'
+              >
+                Social Media
+              </Typography>
+              <div className={classes.socialMediaIcons}>
+                <SocialMediaButton
+                  link='https://www.instagram.com/cornellrocketry/?hl=en/'
+                  icon={<InstagramIcon />}
+                />
+              </div>
+            </CenterLeftAlign>
+          </Grid>
         </Grid>
-        <Grid item xs>
-          <CenterLeftAlign>
-            <Typography
-              variant='h6'
-              className={classes.heading}
-              align='center'
-            >
-              Social Media
-            </Typography>
-            <div className={classes.socialMediaIcons}>
-              <SocialMediaButton
-                link='https://www.instagram.com/cornellrocketry/?hl=en/'
-                icon={<InstagramIcon />}
-              />
-            </div>
-          </CenterLeftAlign>
-        </Grid>
-      </Grid>
-      <Typography variant='body1' className={classes.projectteam}>
-        Registered Project Team of Cornell University
-      </Typography>
-      <Typography variant='body1' className={classes.equalOpportunityEmployer}>
-        Rocketry is an <a className={classes.underlineLink} href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment" target="_blank" rel="noopener noreferrer">equal opportunity employer</a>
-      </Typography>
-      <Typography variant='body1' className={classes.copyright}>
-        &copy; {new Date().getFullYear()} Cornell Rocketry Project Team
-      </Typography>
-    </Container>
+        <Typography variant='body1' className={classes.projectteam}>
+          Registered Project Team of Cornell University
+        </Typography>
+        <Typography variant='body1' className={classes.equalOpportunityEmployer}>
+          Rocketry is an <a className={classes.underlineLink} href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment" target="_blank" rel="noopener noreferrer">equal opportunity employer</a>
+        </Typography>
+        <Typography variant='body1' className={classes.copyright}>
+          &copy; {new Date().getFullYear()} Cornell Rocketry Project Team
+        </Typography>
+      </Container>
+    </div>
   );
 
   function CenterLeftAlign(children) {
