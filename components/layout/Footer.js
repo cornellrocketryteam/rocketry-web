@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#0C0C0C',
     borderTop: '1px solid #646464',
-    height: 320,
+    height: 340,
     overflow: 'hidden',
   },
   fullHeight: {
