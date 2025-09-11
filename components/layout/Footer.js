@@ -17,8 +17,10 @@ const useStyles = makeStyles((theme) => ({
     height: '340px',
   },
   container: {
+    height: '100%',
     display: 'flex',
     flexDirection: 'column',
+    marginBottom: '10px',
   },
   grid: {
     flex: '1 1 auto',
