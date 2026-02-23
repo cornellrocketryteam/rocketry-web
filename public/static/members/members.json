@@ -9,13 +9,13 @@
         "major": "Electrical and Computer Engineering",
         "college": "Engineering",
         "gradYear": 2028,
-        "linkedin": "http://linkedin.com/in/timothy-lu-915711291"
+        "linkedin": "https://www.linkedin.com/in/timskylu"
       },
       {
         "name": "Zoe Chiu",
         "subteam": "Electrical",
         "position": "member",
-        "major": "Mechanical Engineering",
+        "major": "Electrical and Computer Engineering",
         "college": "Engineering",
         "gradYear": 2028
       },
@@ -237,6 +237,7 @@
         "position": "team lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
+        "linkedin":"https://www.linkedin.com/in/aidan-friedman-b75528293/",
         "gradYear": 2027
       },
       {
@@ -275,7 +276,268 @@
         "college": "Engineering",
         "gradYear": 2027,
         "linkedin": "www.linkedin.com/in/maxslarsson"
-      }
+      },
+           {
+        "name": "Apollo Casino",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+        
+      },
+      {
+        "name": "Jamie Dalvito",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+        
+      },
+      {
+        "name": "James Haines",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
+      {
+        "name": "Joseph D'Arcangelo",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+        
+      },
+      {
+        "name": "Samuel Castellon",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
+      {
+        "name": "Natasha Samant",
+        "subteam": "Structures",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
+      {
+        "name": "Nicholas Schneider",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2027
+      },
+      {
+        "name": "Amy Klanderman",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
+      {
+        "name": "Craig Holm-Joergensen",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
+      {
+        "name": "Ethan Wang",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2029,
+        "linkedin": "https://www.linkedin.com/in/eyw29/"
+      },
+      {
+        "name": "Balint Szegletes",
+        "subteam": "Propulsion",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
+      {
+        "name": "Declan Wright",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
+       {
+        "name": "William Chen",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Operations Research and Information Engineering",
+        "minor": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2028
+        
+      },
+       {
+        "name": "Charlie Dantzker",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Mechanical Engineering",
+        "college": "Engineering",
+        "gradYear": 2029,
+        "linkedin": "https://www.linkedin.com/in/charlie-dantzker-b358592b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+      },
+       {
+        "name": "Aadya Jain",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Physics",
+        "college": "Arts and Sciences",
+        "gradYear": 2029
+        
+      },
+       {
+        "name": "Asa Tussing",
+        "subteam": "Recovery and Payload",
+        "position": "member",
+        "major": "Applied Engineering Physics",
+        "college": "Engineering",
+        "gradYear": 2029,
+        "linkedin": "http://www.linkedin.com/in/asa-tussing"
+      },
+       {
+        "name": "Owen Qu",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2028,
+        "linkedin": "https://www.linkedin.com/in/quowen"
+      },
+       {
+        "name": "Amira Razack",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2028,
+        "linkedin": "http://www.linkedin.com/in/amira-razack"
+      },
+           {
+        "name": "Nandini Venkatesh",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
+           {
+        "name": "Elizabeth Chen",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
+           {
+        "name": "Kaleb Getachew",
+        "subteam": "Software",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
+           {
+        "name": "Rebecca Hu",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Economics",
+        "college": "Arts and Sciences",
+        "gradYear": 2028
+        
+      },
+           {
+        "name": "Mei Knight",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Statistical Science",
+        "college": "Arts and Sciences",
+        "gradYear": 2028
+        
+      },
+      {
+        "name": "Laiba Babar",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Government",
+        "college": "Arts and Sciences",
+        "gradYear": 2028
+        
+      },
+      {
+        "name": "Dheeraj Thota",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2028
+        
+      },
+      {
+        "name": "Ethan Li",
+        "subteam": "Business",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2028
+        
+      },
+      {
+        "name": "Jack Ni",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2028
+        
+      },
+      {
+        "name": "Yvonne Wu",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Computer Science",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
+      {
+        "name": "Lishi Shi",
+        "subteam": "Electrical",
+        "position": "member",
+        "major": "Electrical and Computer Engineering",
+        "college": "Engineering",
+        "gradYear": 2029
+        
+      },
     ]
   }
 }
