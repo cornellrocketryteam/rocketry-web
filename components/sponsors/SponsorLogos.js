@@ -12,7 +12,7 @@ export default function SponsorLogos({ imageDir, levels, contributers }) {
           sponsors={levels[levelName]}
         />
       ))}
-      <Contributers contributers={contributors} />
+      <Contributers contributers={contributers} />
     </>
   );
 }
