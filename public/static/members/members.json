@@ -541,13 +541,15 @@
       {
         "name":"Helen Xiang",
         "subteam":"Business",
+        "position":"member",
         "major": "Applied Economics and Management",
         "college": "Dyson",
         "gradYear":2029
       },
       {
-        "name":"Sanithu Parattu",
+        "name":"Sanithu Kethaka Parattu Mohottige",
         "subteam":"Structures",
+        "position":"member",
         "major":"Mechanical Engineering",
         "college":"Engineering",
         "gradYear":2029
