@@ -94,6 +94,10 @@
         {
           "name": "winsource",
           "link": "https://www.win-source.net/"
+        },
+          {
+          "name": "secoseals",
+          "link": "https://secoseals.com/"
         }
       ],
       "bronze": [
@@ -112,10 +116,6 @@
         {
           "name": "graphitestore",
           "link": "https://www.graphitestore.com/"
-        },
-        {
-          "name": "secoseals",
-          "link": "https://secoseals.com/"
         }
       ]
     },
