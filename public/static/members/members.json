@@ -537,6 +537,20 @@
         "college": "Engineering",
         "gradYear": 2029
         
+      },
+      {
+        "name":"Helen Xiang",
+        "subteam":"Business",
+        "major": "Applied Economics and Management",
+        "college": "Dyson",
+        "gradYear":2029
+      },
+      {
+        "name":"Sanithu Kethaka Parattu Mohottige",
+        "subteam":"Structures",
+        "major":"Mechanical Engineering",
+        "college":"Engineering",
+        "gradYear":2029
       }
     ]
   }
