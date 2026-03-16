@@ -20,14 +20,6 @@
         "gradYear": 2028
       },
       {
-        "name": "Ulderic Boisvert",
-        "subteam": "Business",
-        "position": "subteam lead",
-        "major": "Applied Economics and Management",
-        "college": "Dyson",
-        "gradYear": 2028
-      },
-      {
         "name": "Hilary Kuang",
         "subteam": "Structures",
         "position": "member",
@@ -46,19 +38,12 @@
         "linkedin": "https://www.linkedin.com/in/johan-karukayil-91683b210/"
       },
       {
-        "name": "Akshitha Jupally",
-        "subteam": "Recovery and Payload",
-        "position": "member",
-        "major": "Applied Engineering Physics",
-        "college": "Engineering",
-        "gradYear": 2026
-      },
-      {
         "name": "Deepti Kousik",
         "subteam": "Propulsion",
         "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
+        "linkedin": "https://www.linkedin.com/in/deepti-kousik-502129329/",
         "gradYear": 2028
       },
       {
@@ -154,16 +139,6 @@
         "bio": "She has studied ballet since she was 3, writes science fiction, and is a big nerd about astronomy and telescopes."
       },
       {
-        "name": "Nicole Li",
-        "subteam": "Electrical",
-        "position": "member",
-        "major": "Electrical and Computer Engineering",
-        "minor": "Computer Science and Philosophy (potentially)",
-        "college": "Engineering",
-        "gradYear": 2026,
-        "bio": "Outside of Rocketry, she enjoys watching movies, travelling, playing the piano, and going on boba runs. She is also a roller coaster enthusiast."
-      },
-      {
         "name": "Gabriella Best",
         "subteam": "Software",
         "position": "subteam lead",
@@ -174,25 +149,9 @@
         "bio": "Gabriella is a Milstein Scholar who enjoys hiking, rock climbing, and trying new things."
       },
       {
-        "name": "Nikhil Sampath",
-        "subteam": "Electrical",
-        "position": "member",
-        "major": "Electrical and Computer Engineering",
-        "college": "Engineering",
-        "gradYear": 2026
-      },
-      {
         "name": "Trevor Dales",
         "subteam": "Recovery and Payload",
         "position": "subteam lead",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2026
-      },
-      {
-        "name": "Priya Abiram",
-        "subteam": "Recovery and Payload",
-        "position": "member",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2026
