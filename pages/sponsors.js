@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   thankYou: {
     [theme.breakpoints.down('md')]: {
       marginTop: 50,
+      marginBottom: 50,
     },
   },
   skyline: {
