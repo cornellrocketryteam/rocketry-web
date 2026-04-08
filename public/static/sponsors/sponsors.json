@@ -2,6 +2,12 @@
   "SponsorsInfo": {
     "imageDir": "/static/images/sponsors-page/logos/",
     "levels": {
+      "diamond":[
+       {
+          "name": "marotta",
+          "link": "https://marotta.com/"
+        }
+      ],
       "platinum": [
         {
           "name": "altium",
@@ -34,10 +40,6 @@
         {
           "name": "omega",
           "link": "https://www.omega.com/"
-        },
-        {
-          "name": "marotta",
-          "link": "https://marotta.com/"
         },
         {
           "name": "titan",
