@@ -30,7 +30,7 @@ export default function SponsorLevelBlock({ imageDir, levelName, sponsors }) {
       <Typography variant='h5' className={classes.sponsorLevel}>
         {levelName.toUpperCase() + ' SPONSORS'}
       </Typography>
-      <Grid container spacing={3} justifyContent='center' alignItems='center'>
+      <Grid container spacing={3} justifyContent='center' alignItems='center' style={{ minHeight: 220 }}>
         {sponsors.map(({ name, link }) => (
           <Grid item key={name} xs={12} sm={4} md={3}>
             <a href={link} target='_blank' rel='noopener noreferrer'>
