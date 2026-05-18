@@ -97,9 +97,13 @@
           "name": "winsource",
           "link": "https://www.win-source.net/"
         },
-          {
+        {
           "name": "secoseals",
           "link": "https://secoseals.com/"
+        },
+        {
+          "name": "determinatesystems",
+          "link": "https://determinate.systems/"
         }
       ],
       "bronze": [
@@ -118,6 +122,10 @@
         {
           "name": "graphitestore",
           "link": "https://www.graphitestore.com/"
+        },
+        {
+          "name": "northwood",
+          "link": "https://www.northwoodspace.io/"
         }
       ]
     },
