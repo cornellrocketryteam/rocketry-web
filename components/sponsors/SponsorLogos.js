@@ -1,7 +1,7 @@
-import Contributers from './Contributers';
+import Contributors from './Contributors';
 import SponsorLevelBlock from './SponsorLevelBlock';
 
-export default function SponsorLogos({ imageDir, levels, contributers }) {
+export default function SponsorLogos({ imageDir, levels, contributors }) {
   return (
     <>
       {Object.keys(levels).map((levelName) => (
@@ -12,7 +12,7 @@ export default function SponsorLogos({ imageDir, levels, contributers }) {
           sponsors={levels[levelName]}
         />
       ))}
-      <Contributers contributers={contributers} />
+      <Contributors contributors={contributors} />
     </>
   );
 }
