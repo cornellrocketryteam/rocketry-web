@@ -14,7 +14,7 @@
       {
         "name": "Zoe Chiu",
         "subteam": "Electrical",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Electrical and Computer Engineering",
         "college": "Engineering",
         "gradYear": 2028
@@ -22,7 +22,7 @@
       {
         "name": "Hilary Kuang",
         "subteam": "Structures",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Information Science",
         "college": "Engineering",
         "gradYear": 2028,
@@ -31,7 +31,7 @@
       {
         "name": "Johan Karukayil",
         "subteam": "Propulsion",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2028,
@@ -40,7 +40,7 @@
       {
         "name": "Deepti Kousik",
         "subteam": "Propulsion",
-        "position": "subteam lead",
+        "position": "team lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "linkedin": "https://www.linkedin.com/in/deepti-kousik-502129329/",
@@ -57,7 +57,7 @@
       {
         "name": "Michelangelo Foschi",
         "subteam": "Electrical",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Electrical and Computer Engineering",
         "college": "Engineering",
         "gradYear": 2028,
@@ -74,7 +74,7 @@
       {
         "name": "Isaac Kahn",
         "subteam": "Recovery and Payload",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Electrical and Computer Engineering",
         "college": "Engineering",
         "gradYear": 2028
@@ -90,7 +90,7 @@
       {
         "name": "Jenny Chen",
         "subteam": "Business",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Biology and Society",
         "college": "Agriculutre and Life Sciencesg",
         "gradYear": 2028
@@ -98,7 +98,7 @@
       {
         "name": "Stanley Shen",
         "subteam": "Electrical",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Electrical and Computer Engineering",
         "college": "Engineering",
         "gradYear": 2027
@@ -114,47 +114,11 @@
       {
         "name": "Jamayne Gyimah-Danquah",
         "subteam": "Electrical",
-        "position": "subteam lead",
+        "position": "team lead",
         "major": "Electrical and Computer Engineering",
         "college": "Engineering",
         "gradYear": 2027,
         "linkedin": "https://www.linkedin.com/in/jamayne/"
-      },
-      {
-        "name": "James Montague",
-        "subteam": "Propulsion",
-        "position": "member",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2026
-      },
-      {
-        "name": "Claire Cahill",
-        "subteam": "Structures",
-        "position": "team lead",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2026,
-        "linkedin": "https://www.linkedin.com/in/claire-cahill-852176218/",
-        "bio": "She has studied ballet since she was 3, writes science fiction, and is a big nerd about astronomy and telescopes."
-      },
-      {
-        "name": "Gabriella Best",
-        "subteam": "Software",
-        "position": "subteam lead",
-        "major": "Computer Science",
-        "college": "Arts and Sciences",
-        "gradYear": 2026,
-        "linkedin": "www.linkedin.com/in/gabriella-best",
-        "bio": "Gabriella is a Milstein Scholar who enjoys hiking, rock climbing, and trying new things."
-      },
-      {
-        "name": "Trevor Dales",
-        "subteam": "Recovery and Payload",
-        "position": "subteam lead",
-        "major": "Mechanical Engineering",
-        "college": "Engineering",
-        "gradYear": 2026
       },
       {
         "name": "Ben Zou",
@@ -167,7 +131,7 @@
       {
         "name": "Thomas Rimer",
         "subteam": "Recovery and Payload",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Applied Engineering Physics",
         "college": "Engineering",
         "gradYear": 2027
@@ -175,7 +139,7 @@
       {
         "name": "Ayanna Fulga",
         "subteam": "Propulsion",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2027,
@@ -184,7 +148,7 @@
       {
         "name": "Nagamitesh Nagamuralee",
         "subteam": "Structures",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2027,
@@ -193,7 +157,7 @@
       {
         "name": "Aidan Friedman",
         "subteam": "Propulsion",
-        "position": "team lead",
+        "position": "member",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "linkedin":"https://www.linkedin.com/in/aidan-friedman-b75528293/",
@@ -229,7 +193,7 @@
       {
         "name": "Max Larsson",
         "subteam": "Software",
-        "position": "subteam lead",
+        "position": "member",
         "major": "Computer Science",
         "minor": "Electrical and Computer Engineering",
         "college": "Engineering",
@@ -248,7 +212,7 @@
       {
         "name": "Jamie Dalvito",
         "subteam": "Structures",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Mechanical Engineering",
         "college": "Engineering",
         "gradYear": 2028
@@ -392,7 +356,7 @@
        {
         "name": "Amira Razack",
         "subteam": "Software",
-        "position": "member",
+        "position": "subteam lead",
         "major": "Electrical and Computer Engineering",
         "college": "Engineering",
         "gradYear": 2028,
@@ -500,7 +464,7 @@
       {
         "name":"Helen Xiang",
         "subteam":"Business",
-        "position":"member",
+        "position":"subteam lead",
         "major": "Applied Economics and Management",
         "college": "Dyson",
         "gradYear":2029
