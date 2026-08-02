@@ -3,50 +3,50 @@
   "applicationOpen": true,
   "upperclassDueDate": "9/4 11:59 pm",
   "firstYearDueDate": "10/16 11:59 pm",
-  "upperclassApplicationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdAKD-lIHALsEoCRZLEDebx0vgULw9hpkMtlGZ3B6W7ka1FYw/viewform",
-  "firstYearApplicationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdAKD-lIHALsEoCRZLEDebx0vgULw9hpkMtlGZ3B6W7ka1FYw/viewform",
+  "upperclassApplicationLink": "https://forms.gle/7CRhxwnA7NbSwbiH9",
+  "firstYearApplicationLink": "https://forms.gle/7CRhxwnA7NbSwbiH9",
   "timelineData": [
     {
-      "date": "8/18 11:59 pm",
+      "date": "8/15 11:59 pm",
       "label": "Applications Open"
     },
     {
-      "date": "8/28 5:00 pm",
+      "date": "TBD",
       "label": "Information Session #1",
-      "location": "Tang 205"
+      "location": "TBD"
     },
     {
-      "date": "9/4 4:00 pm",
+      "date": "9/3 4:00 pm",
       "label": "Project Team Fest",
       "location": "Duffield Atrium"
     },
     {
-      "date": "9/4 11:59 pm",
+      "date": "9/3 11:59 pm",
       "label": "Upperclass Apps Due"
     },
     {
-      "date": "9/09 5:00 pm",
+      "date": "TBD",
       "label": "Information Session #2",
-      "location": "Hollister 320"
+      "location": "TBD"
     },
     {
-      "date": "9/13 12:00 pm",
+      "date": "TBD",
       "label": "Club Fest",
       "location": "Arts Quad"
     },
     {
-      "date": "9/17 6:00 pm",
+      "date": "TBD",
       "label": "Information Session #3",
       "location": "TBD"
     },
     {
-      "date": "9/30 5:30 pm",
+      "date": "TBD",
       "label": "Information Session #4",
-      "location": "Upson 216"
+      "location": "TBD"
     },
     {
-      "date": "10/16 11:59 pm",
-      "label": "First-year Apps Due"
+      "date": "10/15 11:59 pm",
+      "label": "First-year & Transfer Apps Due"
     }
   ]
 }

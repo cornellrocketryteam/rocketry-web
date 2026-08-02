@@ -72,7 +72,7 @@ export default function MainTimeline({ timelineData }) {
   useEffect(() => {
     var now = dayjs();
     for (let [index, val] of timelineData.entries()) {
-      if (now.isAfter(val.date)) {
+      if (val.date && now.isAfter(val.date)) {
         setActiveStep(index + 1);
       }
     }
@@ -95,7 +95,7 @@ export default function MainTimeline({ timelineData }) {
               {data.label.toUpperCase()}
               <br />
               <span className={classes.timelineLabelDate}>
-                {data.date.format('M/D')}
+                {data.date ? data.date.format('M/D') : 'TBD'}
               </span>
             </StepLabel>
           </Step>

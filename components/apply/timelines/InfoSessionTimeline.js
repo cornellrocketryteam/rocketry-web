@@ -18,7 +18,7 @@ export default function InfoSessionTimeline({ timelineData }) {
         <TimelineItem key={index}>
           <TimelineOppositeContent style={{ flex: 0.2 }}>
             <Typography color='textSecondary'>
-              {data.date.format('M/D')}
+              {data.date ? data.date.format('M/D') : 'TBD'}
             </Typography>
           </TimelineOppositeContent>
           <TimelineSeparator>
@@ -32,8 +32,9 @@ export default function InfoSessionTimeline({ timelineData }) {
             </Box>
 
             <Typography variant='body1'>
-              {data.date.format('h:mm A')}
-              {data.location && ' @ ' + data.location.toUpperCase()}
+              {data.date && data.date.format('h:mm A')}
+              {data.location &&
+                (data.date ? ' @ ' : '') + data.location.toUpperCase()}
             </Typography>
             {data.link && (
               <Box mt={1}>

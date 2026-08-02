@@ -61,9 +61,13 @@ export default function Apply() {
 }
 
 function parseTimelineData(timelineData, dayjsFormatString) {
-  timelineData.forEach((event) => {
-    event['date'] = dayjs(event['date'], dayjsFormatString);
-  });
+  return timelineData.map((event) => {
+    const rawDate = event['date'];
+    const isTbd = typeof rawDate === 'string' && rawDate.trim().toLowerCase() === 'tbd';
 
-  return timelineData;
+    return {
+      ...event,
+      date: isTbd ? null : dayjs(rawDate, dayjsFormatString),
+    };
+  });
 }
