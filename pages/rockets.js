@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Footer from '../components/layout/Footer';
 import Head from '../components/layout/Head';
 import Header from '../components/layout/Header';
@@ -41,6 +42,49 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 80,
     [theme.breakpoints.only('xs')]: {
       paddingBottom: 100,
+    },
+  },
+  // pinned to the viewport (not the content) so it's always visible on
+  // load regardless of how tall the hero content is, and doesn't add any
+  // extra document height that would push the subsystems section down
+  scrollIndicator: {
+    position: 'fixed',
+    left: '50%',
+    bottom: 24,
+    transform: 'translateX(-50%)',
+    zIndex: 2,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: 'fit-content',
+    cursor: 'pointer',
+    color: theme.typography.h5.color,
+    opacity: 1,
+    pointerEvents: 'auto',
+    transition: 'opacity 300ms ease',
+    '&[data-hidden="true"]': {
+      opacity: 0,
+      pointerEvents: 'none',
+    },
+    '&:hover $scrollIndicatorChevron': {
+      animation: '$scrollIndicatorBounce 1.6s ease-in-out infinite',
+    },
+  },
+  scrollIndicatorChevron: {
+    fontSize: 32,
+    marginTop: -18,
+    '&:last-child': {
+      animationDelay: '150ms',
+    },
+  },
+  '@keyframes scrollIndicatorBounce': {
+    '0%, 100%': {
+      transform: 'translateY(0)',
+      opacity: 0.5,
+    },
+    '50%': {
+      transform: 'translateY(8px)',
+      opacity: 1,
     },
   },
   title: {
@@ -350,6 +394,15 @@ export default function Rockets({
   const rocketSlider = useRef(null);
   const timelineSlider = useRef(null);
   const [slideIndex, setSlideIndex] = useState(0);
+  const subsystemsRef = useRef(null);
+  // hide the scroll cue once the user has already started scrolling past it
+  const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrollIndicatorHidden(window.scrollY > 50);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     setRocketNav(rocketSlider.current);
@@ -538,11 +591,27 @@ export default function Rockets({
               </div>
             </Grid>
           </Grid>
+          <div
+            className={classes.scrollIndicator}
+            data-hidden={scrollIndicatorHidden.toString()}
+            onClick={() =>
+              subsystemsRef.current?.scrollIntoView({ behavior: 'smooth' })
+            }
+            role='button'
+            aria-label='Scroll to subsystems'
+          >
+            <KeyboardArrowDownIcon className={classes.scrollIndicatorChevron} />
+            <KeyboardArrowDownIcon className={classes.scrollIndicatorChevron} />
+          </div>
         </div>
 
       </Container>
 
-      <Container maxWidth='lg' className={classes.content}>
+      <Container
+        maxWidth='lg'
+        className={classes.content}
+        ref={subsystemsRef}
+      >
         <Typography variant='h2' className={classes.subsystemsTitle}>
           Subsystems
         </Typography>
