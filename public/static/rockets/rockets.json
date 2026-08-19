@@ -34,7 +34,7 @@
         },
         {
           "name": "Airbrakes",
-          "image": "",
+          "image": "valkyrie-airbrakes.jpg",
           "description": "Airbrakes is a new system on Valkyrie. It consists of four metal plates that extend out of slots in the airframe to increase drag and lower the apogee of the rockt. The airbrakes deploy symmetrically, controlled by a single servo to ensure stability of the rocket. The airbrakes use live state estimation from flight data to determine when to deploy."
         },
         {
