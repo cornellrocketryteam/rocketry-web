@@ -31,6 +31,74 @@ const ACTIVE_ROCKET_SCALE = 1.08;
 const ROCKET_SCALE_OVERFLOW = (ROCKET_HEIGHT * (ACTIVE_ROCKET_SCALE - 1)) / 2;
 const ROCKET_NAME_HEIGHT = 34;
 
+const ROCKETS_PAGE_IMAGE_DIR = '/static/images/rockets-page';
+const ROCKETS_IMAGE_DIR = `${ROCKETS_PAGE_IMAGE_DIR}/rockets`;
+const ACCOLADES_IMAGE_DIR = ROCKETS_PAGE_IMAGE_DIR;
+const SUBSYSTEMS_IMAGE_DIR = `${ROCKETS_PAGE_IMAGE_DIR}/subsystems`;
+
+// valkyrie-drawing.svg is a 1024x768 drawing sheet: the vehicle runs down the
+// middle of it, with the callout labels laid out in the margins either side.
+// Blown up to the height of a page section the sheet's own labels set larger
+// than the copy they'd sit behind, so the backdrop shows only this band of it
+// - wide enough for the vehicle, narrow enough to leave every label out.
+const DRAWING_SHEET_WIDTH = 1024;
+const DRAWING_SHEET_HEIGHT = 768;
+const DRAWING_BAND_LEFT = 483;
+const DRAWING_BAND_RIGHT = 597;
+// the band is faded out rather than cut, so the fin tips it clips taper off
+const DRAWING_BAND_FADE = 12;
+// parses markdown-style [link text](url) spans out of description strings
+// (see rockets.json) into clickable <a> elements, leaving everything else as
+// plain text
+const LINK_PATTERN = /\[([^\]]+)\]\(([^)]+)\)/g;
+const renderWithLinks = (text, linkClassName) => {
+  if (!text || !text.includes('](')) return text;
+
+  const nodes = [];
+  let lastIndex = 0;
+  let match;
+  let key = 0;
+
+  LINK_PATTERN.lastIndex = 0;
+  while ((match = LINK_PATTERN.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      nodes.push(text.slice(lastIndex, match.index));
+    }
+    nodes.push(
+      <a
+        key={key++}
+        href={match[2]}
+        target='_blank'
+        rel='noopener noreferrer'
+        className={linkClassName}
+      >
+        {match[1]}
+      </a>
+    );
+    lastIndex = LINK_PATTERN.lastIndex;
+  }
+  if (lastIndex < text.length) {
+    nodes.push(text.slice(lastIndex));
+  }
+  return nodes;
+};
+
+const sheetFraction = (x) => `${((x / DRAWING_SHEET_WIDTH) * 100).toFixed(2)}%`;
+const DRAWING_BAND_MASK = `linear-gradient(to right, transparent ${sheetFraction(
+  DRAWING_BAND_LEFT
+)}, #000 ${sheetFraction(
+  DRAWING_BAND_LEFT + DRAWING_BAND_FADE
+)}, #000 ${sheetFraction(
+  DRAWING_BAND_RIGHT - DRAWING_BAND_FADE
+)}, transparent ${sheetFraction(DRAWING_BAND_RIGHT)})`;
+// how much wider than the band the whole sheet is: scaling the sheet by this
+// much sizes the band itself to 100% of whatever it sits in
+const DRAWING_BAND_SCALE =
+  DRAWING_SHEET_WIDTH / (DRAWING_BAND_RIGHT - DRAWING_BAND_LEFT);
+// how far past the height of the subsystems section the drawing is blown up on
+// a wide window
+const DRAWING_LARGE_SCALE = 1;
+
 const useStyles = makeStyles((theme) => ({
   content: {
     padding: '120px 50px 50px 50px',
@@ -154,6 +222,14 @@ const useStyles = makeStyles((theme) => ({
   },
   // roughly half the details column, so it sits alongside the description
   // rather than spanning the full width; wraps to full width on mobile
+  inlineLink: {
+    color: theme.palette.secondary.main,
+    textDecoration: 'underline',
+    textUnderlineOffset: 2,
+    '&:hover': {
+      opacity: 0.8,
+    },
+  },
   accolades: {
     marginTop: 20,
     display: 'flex',
@@ -329,11 +405,68 @@ const useStyles = makeStyles((theme) => ({
     margin: '10px auto 10px auto',
     display: 'block',
   },
+  // the backdrop is absolutely positioned against this. It isn't clipped here:
+  // on a wide window the drawing sits out in the page margin, past the edge of
+  // the container, so the clipping is done by its own full-window wrapper
+  subsystemsSection: {
+    position: 'relative',
+  },
+  // narrow windows: the drawing is clipped to the container it sits behind
+  subsystemsBackdropClip: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: '100%',
+    overflow: 'hidden',
+    pointerEvents: 'none',
+    // wide windows: it reaches out past the container to the left edge of the
+    // window. It stops at the container's right edge rather than the window's,
+    // so nothing can overhang to the right and widen the page - overhang to
+    // the left isn't scrollable in a left-to-right page, so it costs nothing
+    [theme.breakpoints.up('lg')]: {
+      left: `calc((${theme.breakpoints.values.lg}px - 100vw) / 2)`,
+      right: 0,
+    },
+  },
+  // the rocket's technical drawing, sized to the full height of the section so
+  // it scrolls down past the subsystem rows as the reader works through them
+  subsystemsBackdrop: {
+    position: 'absolute',
+    top: 0,
+    aspectRatio: `${DRAWING_SHEET_WIDTH} / ${DRAWING_SHEET_HEIGHT}`,
+    maskImage: DRAWING_BAND_MASK,
+    WebkitMaskImage: DRAWING_BAND_MASK,
+    backgroundSize: '100% 100%',
+    backgroundRepeat: 'no-repeat',
+    // narrow windows: the whole vehicle sized to the width of the window and
+    // centred, sitting behind the copy - so it's held well back from it
+    left: '50%',
+    width: `${(DRAWING_BAND_SCALE * 100).toFixed(2)}%`,
+    height: 'auto',
+    transform: `translateX(-${sheetFraction(
+      (DRAWING_BAND_LEFT + DRAWING_BAND_RIGHT) / 2
+    )})`,
+    opacity: 0.3,
+    // wide windows: the drawing is the graphic on the page rather than a wash
+    // behind it - full strength, flush to the left edge of the window, and
+    // scaled up past the height of the section, which crops the vehicle at the
+    // bottom of the section and runs it over the copy on its way there
+    [theme.breakpoints.up('lg')]: {
+      left: -120,
+      width: 'auto',
+      height: `${DRAWING_LARGE_SCALE * 100}%`,
+      transform: `translateX(-${sheetFraction(DRAWING_BAND_LEFT)})`,
+      opacity: 1,
+    },
+  },
   subsystemsTitle: {
+    position: 'relative',
     textAlign: 'center',
     marginBottom: 60,
   },
   subsystemRow: {
+    position: 'relative',
     marginBottom: 80,
     '&:last-child': {
       marginBottom: 0,
@@ -341,6 +474,11 @@ const useStyles = makeStyles((theme) => ({
   },
   subsystemHeader: {
     marginBottom: 20,
+  },
+  subsystemImage: {
+    display: 'block',
+    width: '100%',
+    height: 'auto',
   },
   subsystemImagePlaceholder: {
     width: '100%',
@@ -354,33 +492,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
 }));
-
-const ROCKETS_IMAGE_DIR = '/static/images/rockets-page/rockets';
-const ACCOLADES_IMAGE_DIR = '/static/images/rockets-page';
-
-// placeholder copy — swap in real subsystem writeups later
-const SUBSYSTEMS = [
-  {
-    name: 'Payload',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?',
-  },
-  {
-    name: 'BLiMS',
-    description:
-      'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.',
-  },
-  {
-    name: 'AV Bay',
-    description:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  {
-    name: 'Propulsion',
-    description:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio, nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-  },
-];
 
 export default function Rockets({
   patchesDirectory,
@@ -430,6 +541,10 @@ export default function Rockets({
   const atNewestRocket = slideIndex === 0;
 
   const activeRocket = rocketTimelineData[slideIndex];
+  // subsystems are per-rocket; older rockets have none written up yet, and the
+  // whole section (heading included) stays out of the page for those
+  const subsystems = activeRocket.subsystems ?? [];
+  const hasSubsystems = subsystems.length > 0;
 
   // rockets without artwork yet (e.g. an upcoming vehicle) get the placeholder
   const rocketImageSrc = (name) =>
@@ -464,7 +579,7 @@ export default function Rockets({
                     data-active={(slideIndex === index).toString()}
                     aria-hidden={slideIndex !== index}
                   >
-                    {data.description}
+                    {renderWithLinks(data.description, classes.inlineLink)}
                   </Typography>
                 ))}
               </div>
@@ -593,7 +708,7 @@ export default function Rockets({
           </Grid>
           <div
             className={classes.scrollIndicator}
-            data-hidden={scrollIndicatorHidden.toString()}
+            data-hidden={(scrollIndicatorHidden || !hasSubsystems).toString()}
             onClick={() =>
               subsystemsRef.current?.scrollIntoView({ behavior: 'smooth' })
             }
@@ -607,61 +722,81 @@ export default function Rockets({
 
       </Container>
 
-      <Container
-        maxWidth='lg'
-        className={classes.content}
-        ref={subsystemsRef}
-      >
-        <Typography variant='h2' className={classes.subsystemsTitle}>
-          Subsystems
-        </Typography>
-        {SUBSYSTEMS.map((subsystem, index) => {
-          const textOnRight = index % 2 === 1;
-          return (
-            <Grid
-              container
-              spacing={5}
-              alignItems='center'
-              className={classes.subsystemRow}
-              key={subsystem.name}
-            >
+      {hasSubsystems && (
+        <Container
+          maxWidth='lg'
+          className={[classes.content, classes.subsystemsSection].join(' ')}
+          ref={subsystemsRef}
+        >
+          {activeRocket.subsystemsBackdrop && (
+            <div className={classes.subsystemsBackdropClip} aria-hidden='true'>
+              <div
+                className={classes.subsystemsBackdrop}
+                style={{
+                  backgroundImage: `url('${ROCKETS_PAGE_IMAGE_DIR}/${activeRocket.subsystemsBackdrop}')`,
+                }}
+              />
+            </div>
+          )}
+          <Typography variant='h2' className={classes.subsystemsTitle}>
+            Subsystems
+          </Typography>
+          {subsystems.map((subsystem, index) => {
+            const textOnRight = index % 2 === 1;
+            return (
               <Grid
-                item
-                xs={12}
-                md={6}
-                sx={{ order: { xs: 1, md: textOnRight ? 2 : 1 } }}
+                container
+                spacing={5}
+                alignItems='center'
+                className={classes.subsystemRow}
+                key={subsystem.name}
               >
-                <Typography
-                  variant='h4'
-                  color='secondary'
-                  className={classes.subsystemHeader}
-                  align={textOnRight ? 'right' : 'left'}
+                <Grid
+                  item
+                  xs={12}
+                  md={6}
+                  sx={{ order: { xs: 1, md: textOnRight ? 2 : 1 } }}
                 >
-                  {subsystem.name.toUpperCase()}
-                </Typography>
-                <Typography
-                  variant='body1'
-                  align={textOnRight ? 'right' : 'left'}
-                >
-                  {subsystem.description}
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={6}
-                sx={{ order: { xs: 2, md: textOnRight ? 1 : 2 } }}
-              >
-                <div className={classes.subsystemImagePlaceholder}>
-                  <Typography variant='body1'>
-                    {subsystem.name} image coming soon
+                  <Typography
+                    variant='h4'
+                    color='secondary'
+                    className={classes.subsystemHeader}
+                    align={textOnRight ? 'right' : 'left'}
+                  >
+                    {subsystem.name.toUpperCase()}
                   </Typography>
-                </div>
+                  <Typography
+                    variant='body1'
+                    align={textOnRight ? 'right' : 'left'}
+                  >
+                    {renderWithLinks(subsystem.description, classes.inlineLink)}
+                  </Typography>
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  md={6}
+                  sx={{ order: { xs: 2, md: textOnRight ? 1 : 2 } }}
+                >
+                  {subsystem.image ? (
+                    <img
+                      src={`${SUBSYSTEMS_IMAGE_DIR}/${subsystem.image}`}
+                      alt={subsystem.name}
+                      className={classes.subsystemImage}
+                    />
+                  ) : (
+                    <div className={classes.subsystemImagePlaceholder}>
+                      <Typography variant='body1'>
+                        {subsystem.name} image coming soon
+                      </Typography>
+                    </div>
+                  )}
+                </Grid>
               </Grid>
-            </Grid>
-          );
-        })}
-      </Container>
+            );
+          })}
+        </Container>
+      )}
 
       <Box className={classes.patchesContainer}>
         {patchesFileNames.map((fileName) => (
