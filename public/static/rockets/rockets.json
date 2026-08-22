@@ -1,6 +1,50 @@
 {
   "rockets": [
     {
+      "name" : "valkyrie",
+      "year" : 2026,
+      "data": [
+        { "property": "height", "value": "216\""},
+        { "property": "diameter", "value": "6.2\""},
+        { "property": "launch mass", "value": "134 lb"},
+        { "property": "motor diameter", "value": "5.5\""},
+        { "property": "motor", "value": "SRAD Hybrid"},
+        { "property": "airframe filament", "value": "G12 Fiberglass"}
+      ],
+      "description": "Valkyrie was CRT’s second student research and developed (SRAD) hybrid rocket and our competition rocket for the 2026 IREC. On the launch vehicle, we flew our SRAD parachute guidance system, BLiMS, for the second time successfully as well as SRAD airbrakes for the first time. The payload was a deployable 360º camera on an arm to take a video of Valkyrie's apogee and descent. At competition, Valkyrie placed third in the 10,000ft SRAD hybrid category.",
+      "accolades": [
+        { "text": "3rd place 10k SRAD Hybrid", "image": "ireclogo.png" }
+      ],
+      "subsystemsBackdrop": "valkyrie-drawing.svg",
+      "subsystems": [
+        {
+          "name": "BLiMS",
+          "image": "blims.png",
+          "description": "BliMS (Brake Line Manupulation System) is used to control the descent of the rocket by manipulating the brake lines of the ram air parafoil parachute, similar to how a skydiver controls their descent. BliMS is fully autonomous, using a PID controller to guide the rocket on a certain heading or to a GPS coordinate. This is the team's second time flying BliMS on a competition rocket, after flying it on Andromeda in 2025, several flights on a L3 test bed, and [dropping it out of a plane](https://youtu.be/LtoIiEbj9go?si=wL7RTdeqCquDHlXz)."
+        },
+        {
+          "name": "Payload",
+          "image": "payload.png",
+          "description": "Valkyrie's payload was a deployable 360º camera. It used an insta360 camera on a sero-actuated arm which deployed the camera at apogee through a slot in the airframe, acting as a selfie stick for the rocket. The camera was also positioned slightly outside of the rocket for flight to capture ascent before deployment."
+        },
+        {
+          "name": "AV Bay",
+          "image": "valkyrie-av-bay.jpg",
+          "description": "The AV bay holds all the electronics to control the rocket, including the central fight computer, senseboard, and backplane. It commands the launch sequence of the motor, deployment of the chute, activation of other systems as well as logging flight data. All of the PCBs in the AV bay are SRAD, with a 3d printed board housing and machined bulkheads which interface with the wiring harness."
+        },
+        {
+          "name": "Airbrakes",
+          "image": "valkyrie-airbrakes.jpg",
+          "description": "Airbrakes is a new system on Valkyrie. It consists of four metal plates that extend out of slots in the airframe to increase drag and lower the apogee of the rockt. The airbrakes deploy symmetrically, controlled by a single servo to ensure stability of the rocket. The airbrakes use live state estimation from flight data to determine when to deploy."
+        },
+        {
+          "name": "Propulsion",
+          "image": "prop.jpg",
+          "description": "Valkyrie flew on a SRAD hybrid motor, delivering 1,385lbf of thrust and 20,000 Ns of impulse. It burns a mixture of liquid nitrous oxide and solid HTPB (hydroxyl-terminated polybutadiene) fuel. The motor was designed and built in-house by Cornell Rocketry, and is the second hybrid motor to be flown by the team."
+        }
+      ]
+    },
+    {
       "name" : "andromeda",
       "year" : 2025,
       "data": [
@@ -11,7 +55,10 @@
         { "property": "motor", "value": "SRAD Hybrid"},
         { "property": "airframe filament", "value": "G12 Fiberglass"}
       ],
-      "description": "Andromeda was CRT’s competition rocket for the 2025 Spaceport America Cup. This was our first ever student research and designed (SRAD) hybrid rocket. From the avionics bay to the guided descent system to the fluid system, every component was SRAD. Three years of research and development culminated in a rocket that reached 12,100 ft on test flight, powered by 1,385 lbf of thrust from its hybrid motor. With Andromeda, Cornell Rocketry proudly took home 3rd place in the 10K Hybrid SRAD category!"
+      "description": "Andromeda was CRT’s competition rocket for the 2025 Spaceport America Cup. This was our first ever student research and designed (SRAD) hybrid rocket. From the avionics bay to the guided descent system to the fluid system, every component was SRAD. Three years of research and development culminated in a rocket that reached 12,100 ft on test flight, powered by 1,385 lbf of thrust from its hybrid motor. With Andromeda, Cornell Rocketry proudly took home 3rd place in the 10K Hybrid SRAD category!",
+      "accolades": [
+        { "text": "3rd place 10k SRAD Hybrid", "image": "ireclogo.png" }
+      ]
     },
     {
       "name" : "javelina",
@@ -24,7 +71,14 @@
         { "property": "motor", "value": "SRAD Solid"},
         { "property": "airframe filament", "value": "G12 Fiberglass"}
       ],
-      "description": "Javelina was CRT's competition rocket for the 2024 Spaceport America Cup. Javelina's systems were nearly all Student Researched and Developed (SRAD), from its avionic electronics and software to its motor casing and grains. This was our second rocket to compete in the 10,000 ft SRAD solid motor category, and we are proud to say we had a successful flight with all SRAD systems working as expected!"
+      "description": "Javelina was CRT's competition rocket for the 2024 Spaceport America Cup. Javelina's systems were nearly all Student Researched and Developed (SRAD), from its avionic electronics and software to its motor casing and grains. This was our second rocket to compete in the 10,000 ft SRAD solid motor category, and we are proud to say we had a successful flight with all SRAD systems working as expected!",
+      "subsystems": [
+        {
+          "name": "Propulsion",
+          "image": "",
+          "description": "Placeholder"
+        }
+      ]
     },
     {
       "name": "ursa major",
@@ -37,7 +91,11 @@
         { "property": "motor", "value": "SRAD Solid" },
         { "property": "airframe filament", "value": "G12 Fiberglass" }
       ],
-      "description": "Ursa Major was CRT's competition rocket for the 2023 Spaceport America Cup. Our first ever rocket with a student researched and developed (SRAD) motor, Ursa Major successfully launched and achieved a 10,115 ft apogee out of the predicted 10,201 ft, earning an excellent flight score on the first day of launches. Both parachutes were also successfully deployed at the correct altitudes, and the rocket was recovered with no damage! Cornell Rocketry took home first place in the 10K Solid SRAD category, and was awarded second place overall out of all competing teams!"
+      "description": "Ursa Major was CRT's competition rocket for the 2023 Spaceport America Cup. Our first ever rocket with a student researched and developed (SRAD) motor, Ursa Major successfully launched and achieved a 10,115 ft apogee out of the predicted 10,201 ft, earning an excellent flight score on the first day of launches. Both parachutes were also successfully deployed at the correct altitudes, and the rocket was recovered with no damage! Cornell Rocketry took home first place in the 10K Solid SRAD category, and was awarded second place overall out of all competing teams!",
+       "accolades": [
+        { "text": "1st place 10k SRAD Solid", "image": "spaceport.png" },
+        { "text": "2nd place overall", "image": "spaceport.png" }
+      ]
     },
     {
       "name": "big red 1",
