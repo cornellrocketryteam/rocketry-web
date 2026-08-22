@@ -19,12 +19,12 @@
       "subsystems": [
         {
           "name": "BLiMS",
-          "image": "",
+          "image": "blims.png",
           "description": "BliMS (Brake Line Manupulation System) is used to control the descent of the rocket by manipulating the brake lines of the ram air parafoil parachute, similar to how a skydiver controls their descent. BliMS is fully autonomous, using a PID controller to guide the rocket on a certain heading or to a GPS coordinate. This is the team's second time flying BliMS on a competition rocket, after flying it on Andromeda in 2025, several flights on a L3 test bed, and [dropping it out of a plane](https://youtu.be/LtoIiEbj9go?si=wL7RTdeqCquDHlXz)."
         },
         {
           "name": "Payload",
-          "image": "",
+          "image": "payload.png",
           "description": "Valkyrie's payload was a deployable 360º camera. It used an insta360 camera on a sero-actuated arm which deployed the camera at apogee through a slot in the airframe, acting as a selfie stick for the rocket. The camera was also positioned slightly outside of the rocket for flight to capture ascent before deployment."
         },
         {
