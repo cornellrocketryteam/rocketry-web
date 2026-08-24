@@ -820,8 +820,7 @@ export default function Rockets({
           </Typography>
 
           <Typography variant='h6'>
-            Every year, over 1,700 students and faculty gather in Southern New
-            Mexico to compete in the Spaceport America Cup &mdash;
+            Every year, over 1,700 students and faculty gather in West Texas to compete in the International Rocket Engineering Competition (IREC) &mdash;
             <b>
               the world’s largest intercollegiate rocket engineering competition
             </b>
@@ -870,8 +869,8 @@ export default function Rockets({
             <Grid item xs={12} sm={3}>
               <img
                 className={classes.spaceport}
-                src='/static/images/rockets-page/spaceport.png'
-                alt='Spaceport America Cup'
+                src='/static/images/rockets-page/ireclogo.png'
+                alt='IREC'
                 height={150}
               />
               <Typography
@@ -880,7 +879,7 @@ export default function Rockets({
                 color='secondary'
                 align='center'
               >
-                SPACEPORT <br /> AMERICA <br /> CUP
+                IREC
               </Typography>
             </Grid>
           </Grid>
