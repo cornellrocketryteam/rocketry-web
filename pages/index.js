@@ -166,7 +166,7 @@ export default function Home() {
               <StatsNumber number={50} label={'Team Members'} />
               <StatsNumber number={6} label={'Subteams'} />
               <StatsNumber number={10} label={'Majors'} />
-              <StatsNumber number={8} label={'Rockets Launched'} />
+              <StatsNumber number={10} label={'Rockets Launched'} />
             </Grid>
           </div>
         </Container>
@@ -179,7 +179,8 @@ export default function Home() {
             <Typography variant='h5'>
               Cornell Rocketry is an engineering project team dedicated to
               designing, assembling, and launching high-powered rockets to
-              compete in the annual Spaceport America Cup.
+              compete in the annual International Rocket Engineering Competition
+              (IREC).
             </Typography>
           </div>
         </Container>
