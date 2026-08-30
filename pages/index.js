@@ -179,8 +179,7 @@ export default function Home() {
             <Typography variant='h5'>
               Cornell Rocketry is an engineering project team dedicated to
               designing, assembling, and launching high-powered rockets to
-              compete in the annual International Rocket Engineering Competition
-              (IREC).
+              compete in the annual International Rocket Engineering Competition.
             </Typography>
           </div>
         </Container>
