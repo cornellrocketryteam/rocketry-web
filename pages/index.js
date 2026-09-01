@@ -88,7 +88,7 @@ export default function Home() {
       ref: blimsRef,
       name: 'BLiMS',
       description:
-        'The Break Line Manipulation System autonomously pulls the parachute’s brake lines, steering the descending rocket to a predetermined GPS coordinate.',
+        'The Brake Line Manipulation System autonomously pulls the parachute’s brake lines, steering the descending rocket to a predetermined GPS coordinate.',
     },
     {
       ref: avRef,
