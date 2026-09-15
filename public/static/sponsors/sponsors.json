@@ -3,10 +3,14 @@
     "imageDir": "/static/images/sponsors-page/logos/",
     "levels": {
       "diamond":[
-       {
+        {
           "name": "marotta",
-          "link": "https://marotta.com/"
-        }
+          "link": "https://www.marotta.com/"
+        },
+        {
+          "name": "fluke",
+          "link": "https://www.fluke.com/"
+        },
       ],
       "platinum": [
         {
@@ -78,7 +82,11 @@
         {
           "name": "firebird",
           "link": "https://www.flyfirebird.com/fb/"
-        }
+        },
+		{
+		  "name": "keysight",
+		  "link": "https://www.keysight.com"
+		}
       ],
       "silver": [
         {
