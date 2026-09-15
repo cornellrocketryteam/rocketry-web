@@ -11,12 +11,20 @@
           "name": "fluke",
           "link": "https://www.fluke.com/"
         }
-      ],
-      "platinum": [
         {
           "name": "altium",
           "link": "https://www.altium.com/"
         },
+        {
+          "name": "solidworks",
+          "link": "https://www.solidworks.com/"
+        },
+        {
+          "name": "cornell",
+          "link": "https://www.engineering.cornell.edu/"
+        }
+      ],
+      "platinum": [
         {
           "name": "ansys",
           "link": "https://www.ansys.com/"
@@ -26,16 +34,8 @@
           "link": "https://www.boeing.com/"
         },
         {
-          "name": "cornell",
-          "link": "https://www.engineering.cornell.edu/"
-        },
-        {
           "name": "monster",
           "link": "https://www.monstertool.com/"
-        },
-        {
-          "name": "solidworks",
-          "link": "https://www.solidworks.com/"
         },
         {
           "name": "varda",
@@ -112,7 +112,11 @@
         {
           "name": "determinatesystems",
           "link": "https://determinate.systems/"
-        }
+        },
+		{
+		  "name": "sandia",
+		  "link": "https://www.sandia.gov/"
+		}
       ],
       "bronze": [
         {
