@@ -116,7 +116,11 @@
 		{
 		  "name": "sandia",
 		  "link": "https://www.sandia.gov/"
-		}
+		},
+        {
+          "name": "graphitestore",
+          "link": "https://www.graphitestore.com/"
+        }
       ],
       "bronze": [
         {
@@ -130,10 +134,6 @@
         {
           "name": "celsius",
           "link": "https://www.celsius.com/"
-        },
-        {
-          "name": "graphitestore",
-          "link": "https://www.graphitestore.com/"
         },
         {
           "name": "northwood",
