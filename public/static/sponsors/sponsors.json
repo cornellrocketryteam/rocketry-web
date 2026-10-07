@@ -85,8 +85,12 @@
         },
 		{
 		  "name": "keysight",
-		  "link": "https://www.keysight.com"
-		}
+		  "link": "https://www.keysight.com/"
+		},
+		{
+          "name": "ashcroft",
+          "link": "https://www.ashcroft.com/"
+        }
       ],
       "silver": [
         {
