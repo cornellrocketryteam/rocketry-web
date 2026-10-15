@@ -64,7 +64,19 @@
         {
           "name": "xmake",
           "link": "https://www.xmake.com/"
-        }
+        },
+		{
+		  "name": "amphenol",
+		  "link": "https://amphenol.com/"
+		},
+		{
+		  "name": "swagelok",
+		  "link: "https://www.swagelok.com/en"
+		},
+		{
+		  "name": "sandia",
+		  "link": "https://www.sandia.gov/"
+		}
       ],
       "gold": [
         {
@@ -90,7 +102,11 @@
 		{
           "name": "ashcroft",
           "link": "https://www.ashcroft.com/"
-        }
+        },
+		{
+		  "name": "genehaasfoundation",
+		  "link": "https://www.ghaasfoundation.org/"
+		}
       ],
       "silver": [
         {
@@ -117,10 +133,6 @@
           "name": "determinatesystems",
           "link": "https://determinate.systems/"
         },
-		{
-		  "name": "sandia",
-		  "link": "https://www.sandia.gov/"
-		},
         {
           "name": "graphitestore",
           "link": "https://www.graphitestore.com/"
@@ -142,7 +154,15 @@
         {
           "name": "northwood",
           "link": "https://www.northwoodspace.io/"
-        }
+        },
+		{
+		  "name": "maxon",
+		  "link": "https://www.maxongroup.com/en-us"
+		},
+		{
+		  "name": "sendcutsend",
+		  "link": "https://sendcutsend.com/"
+		}
       ]
     },
     "contributors": [
