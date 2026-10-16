@@ -22,13 +22,13 @@
         {
           "name": "cornell",
           "link": "https://www.engineering.cornell.edu/"
-        }
-      ],
-      "platinum": [
+        },
         {
           "name": "ansys",
           "link": "https://www.ansys.com/"
-        },
+        }
+      ],
+      "platinum": [
         {
           "name": "boeing",
           "link": "https://www.boeing.com/"
