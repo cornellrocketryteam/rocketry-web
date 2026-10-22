@@ -136,7 +136,11 @@
         {
           "name": "graphitestore",
           "link": "https://www.graphitestore.com/"
-        }
+        },
+		{
+		  "name": "steelhead",
+		  "link": "https://steelheadcomposites.com/"
+		}
       ],
       "bronze": [
         {
