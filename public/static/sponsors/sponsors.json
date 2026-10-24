@@ -26,7 +26,11 @@
         {
           "name": "ansys",
           "link": "https://www.ansys.com/"
-        }
+        },
+		{
+		  "name": "spi"
+		  "link": "https://spiborescopes.com/"
+		}
       ],
       "platinum": [
         {
