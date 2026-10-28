@@ -71,14 +71,7 @@
         { "property": "motor", "value": "SRAD Solid"},
         { "property": "airframe filament", "value": "G12 Fiberglass"}
       ],
-      "description": "Javelina was CRT's competition rocket for the 2024 Spaceport America Cup. Javelina's systems were nearly all Student Researched and Developed (SRAD), from its avionic electronics and software to its motor casing and grains. This was our second rocket to compete in the 10,000 ft SRAD solid motor category, and we are proud to say we had a successful flight with all SRAD systems working as expected!",
-      "subsystems": [
-        {
-          "name": "Propulsion",
-          "image": "",
-          "description": "Placeholder"
-        }
-      ]
+      "description": "Javelina was CRT's competition rocket for the 2024 Spaceport America Cup. Javelina's systems were nearly all Student Researched and Developed (SRAD), from its avionic electronics and software to its motor casing and grains. This was our second rocket to compete in the 10,000 ft SRAD solid motor category, and we are proud to say we had a successful flight with all SRAD systems working as expected!"
     },
     {
       "name": "ursa major",
